@@ -125,6 +125,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addMotorcycle.Designer.vb">
+      <DependentUpon>addMotorcycle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addMotorcycle.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Global_Procedure.vb" />
     <Compile Include="Main.vb">
       <SubType>Form</SubType>
@@ -140,6 +146,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Global_var.vb" />
+    <Compile Include="MainBranchInventory.Designer.vb">
+      <DependentUpon>MainBranchInventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainBranchInventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -158,11 +170,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="addMotorcycle.resx">
+      <DependentUpon>addMotorcycle.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainBranchInventory.resx">
+      <DependentUpon>MainBranchInventory.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

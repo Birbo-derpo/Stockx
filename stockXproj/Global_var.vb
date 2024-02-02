@@ -1,5 +1,4 @@
-﻿
-Imports MySql.Data.MySqlClient
+﻿Imports MySql.Data.MySqlClient
 
 Module Global_Var
     Public con_stockX As New MySqlConnection
@@ -9,5 +8,6 @@ Module Global_Var
     Public strconnection, servername, databasename, databaseuserid,
             databasepassword, action, port As String
     Public carphotopath, Email, Password As String
+    Public row As Integer
 
 End Module
