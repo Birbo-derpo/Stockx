@@ -131,6 +131,12 @@
     <Compile Include="addMotorcycle.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DisplayAllCustomers.Designer.vb">
+      <DependentUpon>DisplayAllCustomers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayAllCustomers.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Global_Procedure.vb" />
     <Compile Include="Main.vb">
       <SubType>Form</SubType>
@@ -152,6 +158,24 @@
     <Compile Include="MainBranchInventory.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MainOffice\Resereved.Designer.vb">
+      <DependentUpon>Resereved.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainOffice\Resereved.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainOffice\TRANSIT.Designer.vb">
+      <DependentUpon>TRANSIT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainOffice\TRANSIT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainOffice\UPDATE.Designer.vb">
+      <DependentUpon>UPDATE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainOffice\UPDATE.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -168,10 +192,49 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="TagumBranchInventory\AllStock.Designer.vb">
+      <DependentUpon>AllStock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TagumBranchInventory\AllStock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TagumBranchInventory\Customer.Designer.vb">
+      <DependentUpon>Customer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TagumBranchInventory\Customer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TagumBranchInventory\Diposited.Designer.vb">
+      <DependentUpon>Diposited.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TagumBranchInventory\Diposited.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TagumBranchInventory\Released.Designer.vb">
+      <DependentUpon>Released.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TagumBranchInventory\Released.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TagumBranchInventory\Reposes.Designer.vb">
+      <DependentUpon>Reposes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TagumBranchInventory\Reposes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TagumBranchInventory\UpdateStocks.Designer.vb">
+      <DependentUpon>UpdateStocks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TagumBranchInventory\UpdateStocks.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="addMotorcycle.resx">
       <DependentUpon>addMotorcycle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayAllCustomers.resx">
+      <DependentUpon>DisplayAllCustomers.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
@@ -182,11 +245,38 @@
     <EmbeddedResource Include="MainBranchInventory.resx">
       <DependentUpon>MainBranchInventory.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainOffice\Resereved.resx">
+      <DependentUpon>Resereved.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainOffice\TRANSIT.resx">
+      <DependentUpon>TRANSIT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainOffice\UPDATE.resx">
+      <DependentUpon>UPDATE.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TagumBranchInventory\AllStock.resx">
+      <DependentUpon>AllStock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TagumBranchInventory\Customer.resx">
+      <DependentUpon>Customer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TagumBranchInventory\Diposited.resx">
+      <DependentUpon>Diposited.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TagumBranchInventory\Released.resx">
+      <DependentUpon>Released.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TagumBranchInventory\Reposes.resx">
+      <DependentUpon>Reposes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TagumBranchInventory\UpdateStocks.resx">
+      <DependentUpon>UpdateStocks.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
