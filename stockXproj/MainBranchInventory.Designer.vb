@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MainBranchInventory
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class MainBranchInventory
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.btnEdit = New System.Windows.Forms.Button()
         Me.btndelete = New System.Windows.Forms.Button()
@@ -34,8 +34,10 @@ Partial Class MainBranchInventory
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.cmbSearchType = New System.Windows.Forms.ComboBox()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
+        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.chkAuto = New System.Windows.Forms.CheckBox()
         CType(Me.grdMotorcycle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -79,11 +81,11 @@ Partial Class MainBranchInventory
         '
         Me.grdMotorcycle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdMotorcycle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
-        Me.grdMotorcycle.Location = New System.Drawing.Point(99, 133)
+        Me.grdMotorcycle.Location = New System.Drawing.Point(113, 145)
         Me.grdMotorcycle.Name = "grdMotorcycle"
         Me.grdMotorcycle.RowHeadersWidth = 51
         Me.grdMotorcycle.RowTemplate.Height = 24
-        Me.grdMotorcycle.Size = New System.Drawing.Size(978, 193)
+        Me.grdMotorcycle.Size = New System.Drawing.Size(978, 267)
         Me.grdMotorcycle.TabIndex = 5
         '
         'Column1
@@ -135,30 +137,51 @@ Partial Class MainBranchInventory
         Me.Column7.Name = "Column7"
         Me.Column7.Width = 125
         '
-        'ComboBox1
+        'cmbSearchType
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(99, 103)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 24)
-        Me.ComboBox1.TabIndex = 10
+        Me.cmbSearchType.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
+        Me.cmbSearchType.FormattingEnabled = True
+        Me.cmbSearchType.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
+        Me.cmbSearchType.Location = New System.Drawing.Point(164, 82)
+        Me.cmbSearchType.Name = "cmbSearchType"
+        Me.cmbSearchType.Size = New System.Drawing.Size(121, 24)
+        Me.cmbSearchType.TabIndex = 10
         '
-        'Button1
+        'txtSearch
         '
-        Me.Button1.Location = New System.Drawing.Point(655, 462)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 11
-        Me.Button1.Text = "Update"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.txtSearch.Location = New System.Drawing.Point(164, 54)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(212, 22)
+        Me.txtSearch.TabIndex = 11
+        '
+        'btnSearch
+        '
+        Me.btnSearch.Location = New System.Drawing.Point(418, 54)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(75, 23)
+        Me.btnSearch.TabIndex = 12
+        Me.btnSearch.Text = "search"
+        Me.btnSearch.UseVisualStyleBackColor = True
+        '
+        'chkAuto
+        '
+        Me.chkAuto.AutoSize = True
+        Me.chkAuto.Location = New System.Drawing.Point(164, 112)
+        Me.chkAuto.Name = "chkAuto"
+        Me.chkAuto.Size = New System.Drawing.Size(114, 20)
+        Me.chkAuto.TabIndex = 13
+        Me.chkAuto.Text = "AutoComplete"
+        Me.chkAuto.UseVisualStyleBackColor = True
         '
         'MainBranchInventory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1123, 526)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.chkAuto)
+        Me.Controls.Add(Me.btnSearch)
+        Me.Controls.Add(Me.txtSearch)
+        Me.Controls.Add(Me.cmbSearchType)
         Me.Controls.Add(Me.btnEdit)
         Me.Controls.Add(Me.btndelete)
         Me.Controls.Add(Me.btnAdd)
@@ -184,6 +207,8 @@ Partial Class MainBranchInventory
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents cmbSearchType As ComboBox
+    Friend WithEvents txtSearch As TextBox
+    Friend WithEvents btnSearch As Button
+    Friend WithEvents chkAuto As CheckBox
 End Class

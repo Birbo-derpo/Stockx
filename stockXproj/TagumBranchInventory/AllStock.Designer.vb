@@ -35,7 +35,7 @@ Partial Class AllStock
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(104, 111)
+        Me.Button4.Location = New System.Drawing.Point(104, 83)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(143, 61)
         Me.Button4.TabIndex = 12
@@ -44,7 +44,7 @@ Partial Class AllStock
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(104, 245)
+        Me.Button3.Location = New System.Drawing.Point(104, 217)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(143, 61)
         Me.Button3.TabIndex = 11
@@ -53,7 +53,7 @@ Partial Class AllStock
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(104, 312)
+        Me.Button2.Location = New System.Drawing.Point(104, 284)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(143, 61)
         Me.Button2.TabIndex = 10
@@ -71,7 +71,7 @@ Partial Class AllStock
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(104, 178)
+        Me.Button1.Location = New System.Drawing.Point(104, 150)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(143, 61)
         Me.Button1.TabIndex = 8
@@ -81,7 +81,7 @@ Partial Class AllStock
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(322, 77)
+        Me.DataGridView1.Location = New System.Drawing.Point(253, 59)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
@@ -99,7 +99,7 @@ Partial Class AllStock
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(104, 379)
+        Me.Button6.Location = New System.Drawing.Point(104, 351)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(143, 61)
         Me.Button6.TabIndex = 14

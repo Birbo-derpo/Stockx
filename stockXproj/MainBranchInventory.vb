@@ -16,7 +16,7 @@ Public Class MainBranchInventory
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prcDisplayMotorcycle"
+                .CommandText = "prcDisplayMotorcycleInMainInventory"
                 .CommandType = CommandType.StoredProcedure
                 sqlUMTCAdapter.SelectCommand = command
                 datUMTC.Clear()
@@ -55,6 +55,52 @@ Public Class MainBranchInventory
             MessageBox.Show("" & ex.Message)
         End Try
     End Sub
+    Private Sub prcDisplayMotorcycleWithAutoCompleteInMainInventory()
+        sqlUMTCAdapter = New MySqlDataAdapter
+        datUMTC = New DataTable
+        Try
+
+            With command
+                .Parameters.Clear()
+                .CommandText = "prcDisplayMotorcycleWithAutoCompleteInMainInventory"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
+                .Parameters.AddWithValue("@p_search", txtSearch.Text)
+                sqlUMTCAdapter.SelectCommand = command
+                datUMTC.Clear()
+                sqlUMTCAdapter.Fill(datUMTC)
+                lblTotal.Text = "TOTAL RECORDS: " & datUMTC.Rows.Count
+                If datUMTC.Rows.Count > 0 Then
+                    grdMotorcycle.RowCount = datUMTC.Rows.Count
+                    row = 0
+                    While Not datUMTC.Rows.Count - 1 < row
+
+                        grdMotorcycle.Rows(row).Cells(0).Value = datUMTC.Rows(row).Item("Invoice").ToString
+                        grdMotorcycle.Rows(row).Cells(1).Value = Format(Convert.ToDateTime(datUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
+                        grdMotorcycle.Rows(row).Cells(2).Value = datUMTC.Rows(row).Item("Model").ToString
+                        grdMotorcycle.Rows(row).Cells(3).Value = datUMTC.Rows(row).Item("Color").ToString
+                        grdMotorcycle.Rows(row).Cells(4).Value = datUMTC.Rows(row).Item("Price").ToString
+                        grdMotorcycle.Rows(row).Cells(5).Value = datUMTC.Rows(row).Item("EngineNum").ToString
+                        grdMotorcycle.Rows(row).Cells(6).Value = datUMTC.Rows(row).Item("Framenum").ToString
+
+                        row = row + 1
+
+                    End While
+
+                Else
+                    txtSearch.Clear()
+                    cmbSearchType.SelectedIndex = -1
+                    MessageBox.Show("No Available Records", "Records", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
+            End With
+            sqlUMTCAdapter.Dispose()
+            datUMTC.Dispose()
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+
+    End Sub
+
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles lblTotal.Click
 
@@ -102,6 +148,60 @@ Public Class MainBranchInventory
             .ShowDialog()
         End With
         prcDisplayUnits()
+
+    End Sub
+
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        If chkAuto.Checked = True Then
+            prcDisplayMotorcycleWithAutoCompleteInMainInventory()
+        Else
+
+        End If
+    End Sub
+
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        sqlUMTCAdapter = New MySqlDataAdapter
+        datUMTC = New DataTable
+        Try
+
+            With command
+                .Parameters.Clear()
+                .CommandText = "prcDisplayMotorcycleByFilter"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
+                .Parameters.AddWithValue("@p_search", txtSearch.Text)
+                sqlUMTCAdapter.SelectCommand = command
+                datUMTC.Clear()
+                sqlUMTCAdapter.Fill(datUMTC)
+                lblTotal.Text = "TOTAL RECORDS: " & datUMTC.Rows.Count
+                If datUMTC.Rows.Count > 0 Then
+                    grdMotorcycle.RowCount = datUMTC.Rows.Count
+                    row = 0
+                    While Not datUMTC.Rows.Count - 1 < row
+                        grdMotorcycle.Rows(row).Cells(0).Value = datUMTC.Rows(row).Item("Invoice").ToString
+                        grdMotorcycle.Rows(row).Cells(1).Value = Format(Convert.ToDateTime(datUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
+                        grdMotorcycle.Rows(row).Cells(2).Value = datUMTC.Rows(row).Item("Model").ToString
+                        grdMotorcycle.Rows(row).Cells(3).Value = datUMTC.Rows(row).Item("Color").ToString
+                        grdMotorcycle.Rows(row).Cells(4).Value = datUMTC.Rows(row).Item("Price").ToString
+                        grdMotorcycle.Rows(row).Cells(5).Value = datUMTC.Rows(row).Item("EngineNum").ToString
+                        grdMotorcycle.Rows(row).Cells(6).Value = datUMTC.Rows(row).Item("Framenum").ToString
+
+
+                        row = row + 1
+
+                    End While
+                    txtSearch.Clear()
+                    cmbSearchType.SelectedIndex = -1
+
+                Else
+                    MessageBox.Show("No Available Records", "Records", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
+            End With
+            sqlUMTCAdapter.Dispose()
+            datUMTC.Dispose()
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
 
     End Sub
 End Class

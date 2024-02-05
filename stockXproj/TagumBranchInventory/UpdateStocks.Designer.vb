@@ -46,6 +46,8 @@ Partial Class UpdateStocks
         Me.Label12 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Motor
@@ -243,11 +245,30 @@ Partial Class UpdateStocks
         Me.Button5.Text = "Update"
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(473, 474)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(116, 16)
+        Me.Label1.TabIndex = 76
+        Me.Label1.Text = "Types of Payment"
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(675, 466)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox3.TabIndex = 77
+        '
         'UpdateStocks
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1277, 531)
+        Me.Controls.Add(Me.ComboBox3)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.TextBox3)
@@ -303,4 +324,6 @@ Partial Class UpdateStocks
     Friend WithEvents Label12 As Label
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Button5 As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents ComboBox3 As ComboBox
 End Class
