@@ -22,103 +22,113 @@ Partial Class AllStock
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Btn_AllStock = New System.Windows.Forms.Button()
+        Me.Btn_Deposited = New System.Windows.Forms.Button()
+        Me.Btn_Repossess = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Btn_Released = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Btn_Customer = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button4
+        'Btn_AllStock
         '
-        Me.Button4.Location = New System.Drawing.Point(104, 83)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(143, 61)
-        Me.Button4.TabIndex = 12
-        Me.Button4.Text = "All Stock"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Btn_AllStock.Location = New System.Drawing.Point(78, 67)
+        Me.Btn_AllStock.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_AllStock.Name = "Btn_AllStock"
+        Me.Btn_AllStock.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_AllStock.TabIndex = 12
+        Me.Btn_AllStock.Text = "All Stock"
+        Me.Btn_AllStock.UseVisualStyleBackColor = True
         '
-        'Button3
+        'Btn_Deposited
         '
-        Me.Button3.Location = New System.Drawing.Point(104, 217)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(143, 61)
-        Me.Button3.TabIndex = 11
-        Me.Button3.Text = "Diposited"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Btn_Deposited.Location = New System.Drawing.Point(78, 176)
+        Me.Btn_Deposited.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Deposited.Name = "Btn_Deposited"
+        Me.Btn_Deposited.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_Deposited.TabIndex = 11
+        Me.Btn_Deposited.Text = "Deposited"
+        Me.Btn_Deposited.UseVisualStyleBackColor = True
         '
-        'Button2
+        'Btn_Repossess
         '
-        Me.Button2.Location = New System.Drawing.Point(104, 284)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(143, 61)
-        Me.Button2.TabIndex = 10
-        Me.Button2.Text = "Reposes"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Btn_Repossess.Location = New System.Drawing.Point(78, 231)
+        Me.Btn_Repossess.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Repossess.Name = "Btn_Repossess"
+        Me.Btn_Repossess.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_Repossess.TabIndex = 10
+        Me.Btn_Repossess.TabStop = False
+        Me.Btn_Repossess.Text = "Repossess"
+        Me.Btn_Repossess.UseVisualStyleBackColor = True
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
+        Me.Label1.Location = New System.Drawing.Point(9, 7)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(116, 16)
+        Me.Label1.Size = New System.Drawing.Size(94, 13)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "TAGUM BRANCH"
         '
-        'Button1
+        'Btn_Released
         '
-        Me.Button1.Location = New System.Drawing.Point(104, 150)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(143, 61)
-        Me.Button1.TabIndex = 8
-        Me.Button1.Text = "Released "
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Btn_Released.Location = New System.Drawing.Point(78, 122)
+        Me.Btn_Released.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Released.Name = "Btn_Released"
+        Me.Btn_Released.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_Released.TabIndex = 8
+        Me.Btn_Released.Text = "Released "
+        Me.Btn_Released.UseVisualStyleBackColor = True
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(253, 59)
+        Me.DataGridView1.Location = New System.Drawing.Point(190, 48)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(940, 376)
+        Me.DataGridView1.Size = New System.Drawing.Size(705, 306)
         Me.DataGridView1.TabIndex = 7
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(558, 459)
+        Me.Button5.Location = New System.Drawing.Point(418, 373)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(143, 61)
+        Me.Button5.Size = New System.Drawing.Size(107, 50)
         Me.Button5.TabIndex = 13
         Me.Button5.Text = "Update"
         Me.Button5.UseVisualStyleBackColor = True
         '
-        'Button6
+        'Btn_Customer
         '
-        Me.Button6.Location = New System.Drawing.Point(104, 351)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(143, 61)
-        Me.Button6.TabIndex = 14
-        Me.Button6.Text = "Custumer"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.Btn_Customer.Location = New System.Drawing.Point(78, 285)
+        Me.Btn_Customer.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Customer.Name = "Btn_Customer"
+        Me.Btn_Customer.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_Customer.TabIndex = 14
+        Me.Btn_Customer.Text = "Customer"
+        Me.Btn_Customer.UseVisualStyleBackColor = True
         '
         'AllStock
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1349, 522)
-        Me.Controls.Add(Me.Button6)
+        Me.ClientSize = New System.Drawing.Size(1012, 424)
+        Me.Controls.Add(Me.Btn_Customer)
         Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Btn_AllStock)
+        Me.Controls.Add(Me.Btn_Deposited)
+        Me.Controls.Add(Me.Btn_Repossess)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Btn_Released)
         Me.Controls.Add(Me.DataGridView1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "AllStock"
         Me.Text = "AllStock"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -127,12 +137,12 @@ Partial Class AllStock
 
     End Sub
 
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents Btn_AllStock As Button
+    Friend WithEvents Btn_Deposited As Button
+    Friend WithEvents Btn_Repossess As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents Btn_Released As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
+    Friend WithEvents Btn_Customer As Button
 End Class
