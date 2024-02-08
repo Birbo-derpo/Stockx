@@ -24,11 +24,11 @@ Partial Class Reserved
     Private Sub InitializeComponent()
         Me.Btn_Transit = New System.Windows.Forms.Button()
         Me.Btn_Reserved = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Grd_Stock = New System.Windows.Forms.DataGridView()
         Me.Btn_AvStock = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Grd_Stock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Btn_Transit
@@ -51,16 +51,16 @@ Partial Class Reserved
         Me.Btn_Reserved.Text = "Reserved"
         Me.Btn_Reserved.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'Grd_Stock
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(246, 50)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(705, 306)
-        Me.DataGridView1.TabIndex = 15
+        Me.Grd_Stock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Grd_Stock.Location = New System.Drawing.Point(246, 50)
+        Me.Grd_Stock.Margin = New System.Windows.Forms.Padding(2)
+        Me.Grd_Stock.Name = "Grd_Stock"
+        Me.Grd_Stock.RowHeadersWidth = 51
+        Me.Grd_Stock.RowTemplate.Height = 24
+        Me.Grd_Stock.Size = New System.Drawing.Size(705, 306)
+        Me.Grd_Stock.TabIndex = 15
         '
         'Btn_AvStock
         '
@@ -101,18 +101,18 @@ Partial Class Reserved
         Me.Controls.Add(Me.Btn_Transit)
         Me.Controls.Add(Me.Btn_AvStock)
         Me.Controls.Add(Me.Btn_Reserved)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.Grd_Stock)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Reserved"
         Me.Text = "Reserved"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Grd_Stock, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Btn_Transit As Button
     Friend WithEvents Btn_Reserved As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Grd_Stock As DataGridView
     Friend WithEvents Btn_AvStock As Button
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Button1 As Button
