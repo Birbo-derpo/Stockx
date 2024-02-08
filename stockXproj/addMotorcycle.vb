@@ -5,7 +5,7 @@
 
                 With command
                     .Parameters.Clear()
-                    .CommandText = "prcAddMotorcycel"
+                    .CommandText = "prc_AddMotorcycle"
                     .CommandType = CommandType.StoredProcedure
                     .Parameters.AddWithValue("@p_invoice", txtInvoiceNumber.Text)
                     .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
@@ -14,11 +14,8 @@
                     .Parameters.AddWithValue("@p_price", txtPrice.Text)
                     .Parameters.AddWithValue("@p_engine", txtEngineNumber.Text)
                     .Parameters.AddWithValue("@p_frame", txtFrameNumber.Text)
-
-
                     .ExecuteNonQuery()
                 End With
-
             Else
 
                 With command
@@ -32,8 +29,6 @@
                     .Parameters.AddWithValue("@p_price", txtPrice.Text)
                     .Parameters.AddWithValue("@p_engine", txtEngineNumber.Text)
                     .Parameters.AddWithValue("@p_frame", txtFrameNumber.Text)
-
-
                 End With
             End If
 
@@ -46,9 +41,5 @@
         Catch ex As Exception
             MessageBox.Show("" & ex.Message)
         End Try
-    End Sub
-
-    Private Sub addMotorcycle_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 End Class

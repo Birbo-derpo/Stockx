@@ -26,17 +26,18 @@ Partial Class AllStock
         Me.Btn_Deposited = New System.Windows.Forms.Button()
         Me.Btn_Repossess = New System.Windows.Forms.Button()
         Me.Btn_Released = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Grd_Stock = New System.Windows.Forms.DataGridView()
         Me.Btn_Update = New System.Windows.Forms.Button()
         Me.Btn_Customer = New System.Windows.Forms.Button()
         Me.Lbl_Branch = New System.Windows.Forms.Label()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Grd_Stock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Btn_AllStock
@@ -80,17 +81,17 @@ Partial Class AllStock
         Me.Btn_Released.Text = "Released "
         Me.Btn_Released.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'Grd_Stock
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column6, Me.Column4, Me.Column5})
-        Me.DataGridView1.Location = New System.Drawing.Point(190, 48)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(705, 306)
-        Me.DataGridView1.TabIndex = 7
+        Me.Grd_Stock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Grd_Stock.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column7, Me.Column1, Me.Column2, Me.Column3, Me.Column6, Me.Column4, Me.Column5})
+        Me.Grd_Stock.Location = New System.Drawing.Point(190, 48)
+        Me.Grd_Stock.Margin = New System.Windows.Forms.Padding(2)
+        Me.Grd_Stock.Name = "Grd_Stock"
+        Me.Grd_Stock.RowHeadersWidth = 51
+        Me.Grd_Stock.RowTemplate.Height = 24
+        Me.Grd_Stock.Size = New System.Drawing.Size(705, 306)
+        Me.Grd_Stock.TabIndex = 7
         '
         'Btn_Update
         '
@@ -121,6 +122,11 @@ Partial Class AllStock
         Me.Lbl_Branch.Size = New System.Drawing.Size(62, 13)
         Me.Lbl_Branch.TabIndex = 16
         Me.Lbl_Branch.Text = "X BRANCH"
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Branch"
+        Me.Column7.Name = "Column7"
         '
         'Column1
         '
@@ -170,11 +176,11 @@ Partial Class AllStock
         Me.Controls.Add(Me.Btn_Deposited)
         Me.Controls.Add(Me.Btn_Repossess)
         Me.Controls.Add(Me.Btn_Released)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.Grd_Stock)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "AllStock"
         Me.Text = "AllStock"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Grd_Stock, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -184,10 +190,11 @@ Partial Class AllStock
     Friend WithEvents Btn_Deposited As Button
     Friend WithEvents Btn_Repossess As Button
     Friend WithEvents Btn_Released As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Grd_Stock As DataGridView
     Friend WithEvents Btn_Update As Button
     Friend WithEvents Btn_Customer As Button
     Friend WithEvents Lbl_Branch As Label
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn

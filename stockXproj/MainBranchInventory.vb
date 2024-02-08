@@ -8,7 +8,7 @@ Public Class MainBranchInventory
         prcDisplayUnits()
     End Sub
 
-    Private Sub prcDisplayUnits()
+    Private Sub PrcDisplayUnits()
 
         Try
             sqlUMTCAdapter = New MySqlDataAdapter
@@ -16,7 +16,7 @@ Public Class MainBranchInventory
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prcDisplayMotorcycleInMainInventory"
+                .CommandText = "prc_DisplayMotorcycleInMainInventory"
                 .CommandType = CommandType.StoredProcedure
                 sqlUMTCAdapter.SelectCommand = command
                 datUMTC.Clear()
@@ -34,11 +34,7 @@ Public Class MainBranchInventory
                         grdMotorcycle.Rows(row).Cells(5).Value = datUMTC.Rows(row).Item("EngineNum").ToString
                         grdMotorcycle.Rows(row).Cells(6).Value = datUMTC.Rows(row).Item("Framenum").ToString
 
-
-
-
                         row = row + 1
-
 
                     End While
                     sqlUMTCAdapter.Dispose()
@@ -55,14 +51,14 @@ Public Class MainBranchInventory
             MessageBox.Show("" & ex.Message)
         End Try
     End Sub
-    Private Sub prcDisplayMotorcycleWithAutoCompleteInMainInventory()
+    Private Sub PrcDisplayMotorcycleWithAutoCompleteInMainInventory()
         sqlUMTCAdapter = New MySqlDataAdapter
         datUMTC = New DataTable
         Try
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prcDisplayMotorcycleWithAutoCompleteInMainInventory"
+                .CommandText = "prc_DisplayMotorcycleWithAutoCompleteInMainInventory"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
                 .Parameters.AddWithValue("@p_search", txtSearch.Text)
@@ -101,38 +97,33 @@ Public Class MainBranchInventory
 
     End Sub
 
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles lblTotal.Click
-
-    End Sub
-
-    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+    Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         With addMotorcycle
 
             action = "Insert"
             .ShowDialog()
         End With
-        prcDisplayUnits()
+        PrcDisplayUnits()
     End Sub
 
-    Private Sub btndelete_Click(sender As Object, e As EventArgs) Handles btndelete.Click
+    Private Sub Btndelete_Click(sender As Object, e As EventArgs) Handles btndelete.Click
         Try
             With command
                 .Parameters.Clear()
-                .CommandText = "DeleteUnitbyInvoice"
+                .CommandText = "prc_DeleteUnitbyInvoice"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_invoice", (grdMotorcycle.CurrentRow.Cells(0).Value))
                 .ExecuteNonQuery()
             End With
             MessageBox.Show("Student Successfully Deleted", "Delete Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            prcDisplayUnits()
+            PrcDisplayUnits()
 
         Catch ex As Exception
             MessageBox.Show("" & ex.Message)
         End Try
     End Sub
 
-    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
+    Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
         With addMotorcycle
 
             action = "Update"
@@ -147,11 +138,11 @@ Public Class MainBranchInventory
             .txtFrameNumber.Text = grdMotorcycle.CurrentRow.Cells(6).Value
             .ShowDialog()
         End With
-        prcDisplayUnits()
+        PrcDisplayUnits()
 
     End Sub
 
-    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+    Private Sub TxtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
         If chkAuto.Checked = True Then
             prcDisplayMotorcycleWithAutoCompleteInMainInventory()
         Else
@@ -159,14 +150,14 @@ Public Class MainBranchInventory
         End If
     End Sub
 
-    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+    Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
         sqlUMTCAdapter = New MySqlDataAdapter
         datUMTC = New DataTable
         Try
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prcDisplayMotorcycleByFilter"
+                .CommandText = "prc_DisplayMotorcycleByFilter"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
                 .Parameters.AddWithValue("@p_search", txtSearch.Text)
@@ -185,7 +176,6 @@ Public Class MainBranchInventory
                         grdMotorcycle.Rows(row).Cells(4).Value = datUMTC.Rows(row).Item("Price").ToString
                         grdMotorcycle.Rows(row).Cells(5).Value = datUMTC.Rows(row).Item("EngineNum").ToString
                         grdMotorcycle.Rows(row).Cells(6).Value = datUMTC.Rows(row).Item("Framenum").ToString
-
 
                         row = row + 1
 
