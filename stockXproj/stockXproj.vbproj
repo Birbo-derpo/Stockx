@@ -158,10 +158,10 @@
     <Compile Include="MainBranchInventory.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainOffice\ConfirmReservation.Designer.vb">
-      <DependentUpon>ConfirmReservation.vb</DependentUpon>
+    <Compile Include="MainOffice\ConfirmReserve.Designer.vb">
+      <DependentUpon>ConfirmReserve.vb</DependentUpon>
     </Compile>
-    <Compile Include="MainOffice\ConfirmReservation.vb">
+    <Compile Include="MainOffice\ConfirmReserve.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainOffice\Reserve.Designer.vb">
