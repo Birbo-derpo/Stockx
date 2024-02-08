@@ -18,9 +18,4 @@
         Customer.Show()
         Me.Hide()
     End Sub
-
-    Private Sub Btn_Update_Click(sender As Object, e As EventArgs) Handles Btn_Update.Click
-        UpdateStocks.Show()
-        Me.Hide()
-    End Sub
 End Class

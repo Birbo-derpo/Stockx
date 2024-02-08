@@ -27,15 +27,9 @@ Partial Class AllStock
         Me.Btn_Repossess = New System.Windows.Forms.Button()
         Me.Btn_Released = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Btn_Update = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.Btn_Customer = New System.Windows.Forms.Button()
         Me.Lbl_Branch = New System.Windows.Forms.Label()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -83,7 +77,6 @@ Partial Class AllStock
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column6, Me.Column4, Me.Column5})
         Me.DataGridView1.Location = New System.Drawing.Point(190, 48)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView1.Name = "DataGridView1"
@@ -92,15 +85,15 @@ Partial Class AllStock
         Me.DataGridView1.Size = New System.Drawing.Size(705, 306)
         Me.DataGridView1.TabIndex = 7
         '
-        'Btn_Update
+        'Button5
         '
-        Me.Btn_Update.Location = New System.Drawing.Point(418, 373)
-        Me.Btn_Update.Margin = New System.Windows.Forms.Padding(2)
-        Me.Btn_Update.Name = "Btn_Update"
-        Me.Btn_Update.Size = New System.Drawing.Size(107, 50)
-        Me.Btn_Update.TabIndex = 13
-        Me.Btn_Update.Text = "Update"
-        Me.Btn_Update.UseVisualStyleBackColor = True
+        Me.Button5.Location = New System.Drawing.Point(418, 373)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(107, 50)
+        Me.Button5.TabIndex = 13
+        Me.Button5.Text = "Update"
+        Me.Button5.UseVisualStyleBackColor = True
         '
         'Btn_Customer
         '
@@ -122,42 +115,6 @@ Partial Class AllStock
         Me.Lbl_Branch.TabIndex = 16
         Me.Lbl_Branch.Text = "X BRANCH"
         '
-        'Column1
-        '
-        Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column1.HeaderText = "invoice"
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column2.HeaderText = "Date Arrived"
-        Me.Column2.Name = "Column2"
-        '
-        'Column3
-        '
-        Me.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column3.HeaderText = "Model"
-        Me.Column3.Name = "Column3"
-        '
-        'Column6
-        '
-        Me.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column6.HeaderText = "Price"
-        Me.Column6.Name = "Column6"
-        '
-        'Column4
-        '
-        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column4.HeaderText = "Engine no."
-        Me.Column4.Name = "Column4"
-        '
-        'Column5
-        '
-        Me.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column5.HeaderText = "Frame no"
-        Me.Column5.Name = "Column5"
-        '
         'AllStock
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -165,7 +122,7 @@ Partial Class AllStock
         Me.ClientSize = New System.Drawing.Size(1012, 424)
         Me.Controls.Add(Me.Lbl_Branch)
         Me.Controls.Add(Me.Btn_Customer)
-        Me.Controls.Add(Me.Btn_Update)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Btn_AllStock)
         Me.Controls.Add(Me.Btn_Deposited)
         Me.Controls.Add(Me.Btn_Repossess)
@@ -185,13 +142,7 @@ Partial Class AllStock
     Friend WithEvents Btn_Repossess As Button
     Friend WithEvents Btn_Released As Button
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Btn_Update As Button
+    Friend WithEvents Button5 As Button
     Friend WithEvents Btn_Customer As Button
     Friend WithEvents Lbl_Branch As Label
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
 End Class
