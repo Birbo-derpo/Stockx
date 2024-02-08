@@ -158,10 +158,16 @@
     <Compile Include="MainBranchInventory.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainOffice\Reserved.Designer.vb">
-      <DependentUpon>Reserved.vb</DependentUpon>
+    <Compile Include="MainOffice\ConfirmReservation.Designer.vb">
+      <DependentUpon>ConfirmReservation.vb</DependentUpon>
     </Compile>
-    <Compile Include="MainOffice\Reserved.vb">
+    <Compile Include="MainOffice\ConfirmReservation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainOffice\Reserve.Designer.vb">
+      <DependentUpon>Reserve.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainOffice\Reserve.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainOffice\TRANSIT.Designer.vb">
@@ -245,8 +251,8 @@
     <EmbeddedResource Include="MainBranchInventory.resx">
       <DependentUpon>MainBranchInventory.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainOffice\Reserved.resx">
-      <DependentUpon>Reserved.vb</DependentUpon>
+    <EmbeddedResource Include="MainOffice\Reserve.resx">
+      <DependentUpon>Reserve.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainOffice\TRANSIT.resx">
       <DependentUpon>TRANSIT.vb</DependentUpon>
