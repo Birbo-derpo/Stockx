@@ -251,6 +251,9 @@
     <EmbeddedResource Include="MainBranchInventory.resx">
       <DependentUpon>MainBranchInventory.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainOffice\ConfirmReserve.resx">
+      <DependentUpon>ConfirmReserve.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainOffice\Reserve.resx">
       <DependentUpon>Reserve.vb</DependentUpon>
     </EmbeddedResource>
