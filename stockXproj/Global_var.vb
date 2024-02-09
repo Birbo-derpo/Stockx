@@ -6,8 +6,8 @@ Module Global_Var
     Public sqlUMTCAdapter As New MySqlDataAdapter
     Public DataUMTC As DataTable
     Public strconnection, servername, databasename, databaseuserid,
-            databasepassword, action, port As String
-    Public carphotopath, Email, Password, State As String
+            databasepassword, action, State, port As String
+    Public carphotopath, Email, Password As String
     Public row As Integer
 
 End Module
