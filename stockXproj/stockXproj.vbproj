@@ -152,10 +152,10 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Global_var.vb" />
-    <Compile Include="MainBranchInventory.Designer.vb">
+    <Compile Include="MainOffice\MainBranchInventory.Designer.vb">
       <DependentUpon>MainBranchInventory.vb</DependentUpon>
     </Compile>
-    <Compile Include="MainBranchInventory.vb">
+    <Compile Include="MainOffice\MainBranchInventory.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainOffice\ConfirmReserve.Designer.vb">
@@ -248,7 +248,7 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainBranchInventory.resx">
+    <EmbeddedResource Include="MainOffice\MainBranchInventory.resx">
       <DependentUpon>MainBranchInventory.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainOffice\ConfirmReserve.resx">
