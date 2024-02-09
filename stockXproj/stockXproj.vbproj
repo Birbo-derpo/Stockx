@@ -301,5 +301,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add a subheading.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add a subheading %281%29.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
