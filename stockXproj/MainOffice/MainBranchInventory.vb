@@ -32,6 +32,8 @@ Public Class MainBranchInventory
                         grdMotorcycle.Rows(row).Cells(4).Value = datUMTC.Rows(row).Item("Price").ToString
                         grdMotorcycle.Rows(row).Cells(5).Value = datUMTC.Rows(row).Item("EngineNum").ToString
                         grdMotorcycle.Rows(row).Cells(6).Value = datUMTC.Rows(row).Item("Framenum").ToString
+                        grdMotorcycle.Rows(row).Cells(7).Value = datUMTC.Rows(row).Item("Brnch").ToString
+                        grdMotorcycle.Rows(row).Cells(8).Value = datUMTC.Rows(row).Item("Stat").ToString
 
                         row = row + 1
 
@@ -132,6 +134,8 @@ Public Class MainBranchInventory
                         grdMotorcycle.Rows(row).Cells(4).Value = datUMTC.Rows(row).Item("Price").ToString
                         grdMotorcycle.Rows(row).Cells(5).Value = datUMTC.Rows(row).Item("EngineNum").ToString
                         grdMotorcycle.Rows(row).Cells(6).Value = datUMTC.Rows(row).Item("Framenum").ToString
+                        grdMotorcycle.Rows(row).Cells(7).Value = datUMTC.Rows(row).Item("Brnch").ToString
+                        grdMotorcycle.Rows(row).Cells(8).Value = datUMTC.Rows(row).Item("Stat").ToString
 
                         row = row + 1
                     End While
@@ -172,6 +176,8 @@ Public Class MainBranchInventory
                         grdMotorcycle.Rows(row).Cells(4).Value = datUMTC.Rows(row).Item("Price").ToString
                         grdMotorcycle.Rows(row).Cells(5).Value = datUMTC.Rows(row).Item("EngineNum").ToString
                         grdMotorcycle.Rows(row).Cells(6).Value = datUMTC.Rows(row).Item("Framenum").ToString
+                        grdMotorcycle.Rows(row).Cells(7).Value = datUMTC.Rows(row).Item("Brnch").ToString
+                        grdMotorcycle.Rows(row).Cells(8).Value = datUMTC.Rows(row).Item("Stat").ToString
 
                         row = row + 1
 

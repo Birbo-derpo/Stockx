@@ -30,7 +30,6 @@ Partial Class ConfirmReserve
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.cmbSearchType = New System.Windows.Forms.ComboBox()
         Me.grdMotorcycle = New System.Windows.Forms.DataGridView()
-        Me.Btn_back = New System.Windows.Forms.Button()
         Me.Column8 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -39,6 +38,7 @@ Partial Class ConfirmReserve
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Btn_back = New System.Windows.Forms.Button()
         CType(Me.grdMotorcycle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -56,7 +56,6 @@ Partial Class ConfirmReserve
         '
         Me.cmb_tobranch.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
         Me.cmb_tobranch.FormattingEnabled = True
-        Me.cmb_tobranch.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
         Me.cmb_tobranch.Location = New System.Drawing.Point(593, 95)
         Me.cmb_tobranch.Margin = New System.Windows.Forms.Padding(2)
         Me.cmb_tobranch.Name = "cmb_tobranch"
@@ -125,16 +124,6 @@ Partial Class ConfirmReserve
         Me.grdMotorcycle.Size = New System.Drawing.Size(791, 217)
         Me.grdMotorcycle.TabIndex = 21
         '
-        'Btn_back
-        '
-        Me.Btn_back.Location = New System.Drawing.Point(127, 364)
-        Me.Btn_back.Margin = New System.Windows.Forms.Padding(2)
-        Me.Btn_back.Name = "Btn_back"
-        Me.Btn_back.Size = New System.Drawing.Size(104, 19)
-        Me.Btn_back.TabIndex = 29
-        Me.Btn_back.Text = "Back"
-        Me.Btn_back.UseVisualStyleBackColor = True
-        '
         'Column8
         '
         Me.Column8.DataPropertyName = "Check_state"
@@ -198,6 +187,16 @@ Partial Class ConfirmReserve
         Me.Column7.Name = "Column7"
         Me.Column7.ReadOnly = True
         Me.Column7.Width = 125
+        '
+        'Btn_back
+        '
+        Me.Btn_back.Location = New System.Drawing.Point(127, 364)
+        Me.Btn_back.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_back.Name = "Btn_back"
+        Me.Btn_back.Size = New System.Drawing.Size(104, 19)
+        Me.Btn_back.TabIndex = 29
+        Me.Btn_back.Text = "Back"
+        Me.Btn_back.UseVisualStyleBackColor = True
         '
         'ConfirmReserve
         '

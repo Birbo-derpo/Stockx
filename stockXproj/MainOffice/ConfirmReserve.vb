@@ -3,12 +3,14 @@ Imports MySql.Data.MySqlClient
 
 Public Class ConfirmReserve
     Private Sub ConfirmReserve_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CheckDatabaseConnection()
         prcdisplayBranch()
         PrcDisplayAvailableUnits()
     End Sub
 
     'dataloader
     Private Sub prcdisplayBranch()
+        'need a seperate branch or need to manually fill the combobox than get from database
         Try
             sqlUMTCAdapter = New MySqlDataAdapter
             DataUMTC = New DataTable
@@ -50,7 +52,7 @@ Public Class ConfirmReserve
                 .Parameters.Clear()
                 .CommandText = "prc_DisplayStock"
                 .CommandType = CommandType.StoredProcedure
-                .Parameters.AddWithValue("@p_filter", "Satus")
+                .Parameters.AddWithValue("@p_filter", "Status")
                 .Parameters.AddWithValue("@p_search", "available")
                 sqlUMTCAdapter.SelectCommand = command
                 DataUMTC.Clear()
@@ -119,7 +121,7 @@ Public Class ConfirmReserve
                         grdMotorcycle.Rows(row).Cells(3).Value = DataUMTC.Rows(row).Item("Model").ToString
                         grdMotorcycle.Rows(row).Cells(4).Value = DataUMTC.Rows(row).Item("Color").ToString
                         grdMotorcycle.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Price").ToString
-                        grdMotorcycle.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
+                        grdMotorcycle.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
                         grdMotorcycle.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("Framenum").ToString
 
                         row = row + 1
@@ -138,6 +140,29 @@ Public Class ConfirmReserve
     'Buttons
     Private Sub Btn_Confirm(sender As Object, e As EventArgs) Handles Btn_ConfirmReserve.Click
         State = "Reserve"
+        For Each Checkcell As DataGridViewRow In grdMotorcycle.Rows
+            'needs to accept only when branches combobox is selected
+            If Checkcell.Cells("Column8").Value = True Then
+                Try
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_ChangeStat"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(6).Value.ToString)
+                        .Parameters.AddWithValue("@p_Branch", cmb_tobranch.Text)
+                        .Parameters.AddWithValue("@p_Stat", State)
+                        .ExecuteNonQuery()
+                    End With
+
+                    MessageBox.Show("vehicle reserved", "reserved", MessageBoxButtons.OK)
+
+
+                Catch ex As Exception
+
+                End Try
+            End If
+
+        Next
 
         PrcDisplayAvailableUnits()
         'checked list must be changed state only when reserved
@@ -165,7 +190,7 @@ Public Class ConfirmReserve
                         grdMotorcycle.Rows(row).Cells(3).Value = DataUMTC.Rows(row).Item("Model").ToString
                         grdMotorcycle.Rows(row).Cells(4).Value = DataUMTC.Rows(row).Item("Color").ToString
                         grdMotorcycle.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Price").ToString
-                        grdMotorcycle.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
+                        grdMotorcycle.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
                         grdMotorcycle.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("Framenum").ToString
 
                         row = row + 1
