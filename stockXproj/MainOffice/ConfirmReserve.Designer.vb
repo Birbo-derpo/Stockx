@@ -45,7 +45,7 @@ Partial Class ConfirmReserve
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(688, 102)
+        Me.Label1.Location = New System.Drawing.Point(689, 98)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(74, 13)

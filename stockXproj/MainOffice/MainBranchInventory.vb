@@ -205,8 +205,7 @@ Public Class MainBranchInventory
 
     End Sub
     Private Sub Btn_Toreservation_Click(sender As Object, e As EventArgs) Handles Btn_ReservationPage.Click
-        ConfirmReserve.Show()
-        Me.Hide()
+        ConfirmReserve.ShowDialog()
     End Sub
     'button end
 

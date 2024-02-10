@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class TRANSIT
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class TRANSIT
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Btn_Transit = New System.Windows.Forms.Button()
         Me.Btn_AvStock = New System.Windows.Forms.Button()
@@ -29,7 +29,7 @@ Partial Class TRANSIT
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cmb_tobranch = New System.Windows.Forms.ComboBox()
         Me.grdMotorcycle = New System.Windows.Forms.DataGridView()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -37,14 +37,13 @@ Partial Class TRANSIT
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.grdMotorcycle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Btn_Transit
         '
-        Me.Btn_Transit.Location = New System.Drawing.Point(43, 282)
-        Me.Btn_Transit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_Transit.Location = New System.Drawing.Point(32, 229)
+        Me.Btn_Transit.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Transit.Name = "Btn_Transit"
         Me.Btn_Transit.Size = New System.Drawing.Size(143, 62)
         Me.Btn_Transit.TabIndex = 24
@@ -53,8 +52,8 @@ Partial Class TRANSIT
         '
         'Btn_AvStock
         '
-        Me.Btn_AvStock.Location = New System.Drawing.Point(43, 148)
-        Me.Btn_AvStock.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_AvStock.Location = New System.Drawing.Point(32, 120)
+        Me.Btn_AvStock.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_AvStock.Name = "Btn_AvStock"
         Me.Btn_AvStock.Size = New System.Drawing.Size(143, 62)
         Me.Btn_AvStock.TabIndex = 23
@@ -63,8 +62,8 @@ Partial Class TRANSIT
         '
         'Btn_Reserved
         '
-        Me.Btn_Reserved.Location = New System.Drawing.Point(43, 214)
-        Me.Btn_Reserved.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_Reserved.Location = New System.Drawing.Point(32, 174)
+        Me.Btn_Reserved.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Reserved.Name = "Btn_Reserved"
         Me.Btn_Reserved.Size = New System.Drawing.Size(143, 62)
         Me.Btn_Reserved.TabIndex = 22
@@ -73,12 +72,12 @@ Partial Class TRANSIT
         '
         'Btn_transfer
         '
-        Me.Btn_transfer.Location = New System.Drawing.Point(1005, 444)
-        Me.Btn_transfer.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_transfer.Location = New System.Drawing.Point(777, 371)
+        Me.Btn_transfer.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_transfer.Name = "Btn_transfer"
-        Me.Btn_transfer.Size = New System.Drawing.Size(116, 46)
+        Me.Btn_transfer.Size = New System.Drawing.Size(141, 37)
         Me.Btn_transfer.TabIndex = 26
-        Me.Btn_transfer.Text = "Tramsfer To Each Branch Inventory"
+        Me.Btn_transfer.Text = "Transfer To Selected Branch"
         Me.Btn_transfer.UseVisualStyleBackColor = True
         '
         'Label1
@@ -92,30 +91,30 @@ Partial Class TRANSIT
         '
         'cmb_tobranch
         '
-        Me.cmb_tobranch.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
         Me.cmb_tobranch.FormattingEnabled = True
-        Me.cmb_tobranch.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
-        Me.cmb_tobranch.Location = New System.Drawing.Point(640, 25)
-        Me.cmb_tobranch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.cmb_tobranch.Items.AddRange(New Object() {"Bajada", "Davao", "Digos", "Kidapawan", "Tagum", "General Santos"})
+        Me.cmb_tobranch.Location = New System.Drawing.Point(479, 24)
+        Me.cmb_tobranch.Margin = New System.Windows.Forms.Padding(2)
         Me.cmb_tobranch.Name = "cmb_tobranch"
-        Me.cmb_tobranch.Size = New System.Drawing.Size(121, 24)
-        Me.cmb_tobranch.TabIndex = 32
+        Me.cmb_tobranch.Size = New System.Drawing.Size(92, 21)
+        Me.cmb_tobranch.TabIndex = 36
         '
         'grdMotorcycle
         '
         Me.grdMotorcycle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdMotorcycle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
-        Me.grdMotorcycle.Location = New System.Drawing.Point(192, 122)
-        Me.grdMotorcycle.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.grdMotorcycle.Location = New System.Drawing.Point(171, 60)
+        Me.grdMotorcycle.Margin = New System.Windows.Forms.Padding(2)
         Me.grdMotorcycle.Name = "grdMotorcycle"
         Me.grdMotorcycle.RowHeadersWidth = 51
         Me.grdMotorcycle.RowTemplate.Height = 24
-        Me.grdMotorcycle.Size = New System.Drawing.Size(1054, 267)
-        Me.grdMotorcycle.TabIndex = 36
+        Me.grdMotorcycle.Size = New System.Drawing.Size(791, 291)
+        Me.grdMotorcycle.TabIndex = 37
         '
         'Column8
         '
-        Me.Column8.HeaderText = "Merchandise Transfer"
+        Me.Column8.DataPropertyName = "Check_state"
+        Me.Column8.HeaderText = "Check select"
         Me.Column8.MinimumWidth = 6
         Me.Column8.Name = "Column8"
         Me.Column8.Width = 125
@@ -176,8 +175,6 @@ Partial Class TRANSIT
         Me.Column7.ReadOnly = True
         Me.Column7.Width = 125
         '
-        'Button1
-        '
         Me.Button1.Location = New System.Drawing.Point(868, 444)
         Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
@@ -190,16 +187,15 @@ Partial Class TRANSIT
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1296, 529)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(1006, 430)
         Me.Controls.Add(Me.grdMotorcycle)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cmb_tobranch)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Btn_transfer)
         Me.Controls.Add(Me.Btn_Transit)
         Me.Controls.Add(Me.Btn_AvStock)
         Me.Controls.Add(Me.Btn_Reserved)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "TRANSIT"
         Me.Text = "TRANSIT"
         CType(Me.grdMotorcycle, System.ComponentModel.ISupportInitialize).EndInit()
@@ -215,7 +211,7 @@ Partial Class TRANSIT
     Friend WithEvents Label1 As Label
     Friend WithEvents cmb_tobranch As ComboBox
     Friend WithEvents grdMotorcycle As DataGridView
-    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewCheckBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
@@ -223,5 +219,4 @@ Partial Class TRANSIT
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
-    Friend WithEvents Button1 As Button
 End Class
