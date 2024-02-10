@@ -27,9 +27,6 @@ Partial Class AllStock
         Me.Btn_Repossess = New System.Windows.Forms.Button()
         Me.Btn_Released = New System.Windows.Forms.Button()
         Me.Grd_Stock = New System.Windows.Forms.DataGridView()
-        Me.Btn_Update = New System.Windows.Forms.Button()
-        Me.Btn_Customer = New System.Windows.Forms.Button()
-        Me.Lbl_Branch = New System.Windows.Forms.Label()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -37,6 +34,9 @@ Partial Class AllStock
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Btn_Update = New System.Windows.Forms.Button()
+        Me.Btn_Customer = New System.Windows.Forms.Button()
+        Me.Lbl_Branch = New System.Windows.Forms.Label()
         CType(Me.Grd_Stock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -93,36 +93,6 @@ Partial Class AllStock
         Me.Grd_Stock.Size = New System.Drawing.Size(705, 306)
         Me.Grd_Stock.TabIndex = 7
         '
-        'Btn_Update
-        '
-        Me.Btn_Update.Location = New System.Drawing.Point(418, 373)
-        Me.Btn_Update.Margin = New System.Windows.Forms.Padding(2)
-        Me.Btn_Update.Name = "Btn_Update"
-        Me.Btn_Update.Size = New System.Drawing.Size(107, 50)
-        Me.Btn_Update.TabIndex = 13
-        Me.Btn_Update.Text = "Update"
-        Me.Btn_Update.UseVisualStyleBackColor = True
-        '
-        'Btn_Customer
-        '
-        Me.Btn_Customer.Location = New System.Drawing.Point(78, 285)
-        Me.Btn_Customer.Margin = New System.Windows.Forms.Padding(2)
-        Me.Btn_Customer.Name = "Btn_Customer"
-        Me.Btn_Customer.Size = New System.Drawing.Size(107, 50)
-        Me.Btn_Customer.TabIndex = 14
-        Me.Btn_Customer.Text = "Customer"
-        Me.Btn_Customer.UseVisualStyleBackColor = True
-        '
-        'Lbl_Branch
-        '
-        Me.Lbl_Branch.AutoSize = True
-        Me.Lbl_Branch.Location = New System.Drawing.Point(11, 9)
-        Me.Lbl_Branch.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Lbl_Branch.Name = "Lbl_Branch"
-        Me.Lbl_Branch.Size = New System.Drawing.Size(62, 13)
-        Me.Lbl_Branch.TabIndex = 16
-        Me.Lbl_Branch.Text = "X BRANCH"
-        '
         'Column7
         '
         Me.Column7.HeaderText = "Branch"
@@ -163,6 +133,36 @@ Partial Class AllStock
         Me.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Column5.HeaderText = "Frame no"
         Me.Column5.Name = "Column5"
+        '
+        'Btn_Update
+        '
+        Me.Btn_Update.Location = New System.Drawing.Point(475, 363)
+        Me.Btn_Update.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_Update.Name = "Btn_Update"
+        Me.Btn_Update.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_Update.TabIndex = 13
+        Me.Btn_Update.Text = "Update"
+        Me.Btn_Update.UseVisualStyleBackColor = True
+        '
+        'Btn_Customer
+        '
+        Me.Btn_Customer.Location = New System.Drawing.Point(78, 285)
+        Me.Btn_Customer.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_Customer.Name = "Btn_Customer"
+        Me.Btn_Customer.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_Customer.TabIndex = 14
+        Me.Btn_Customer.Text = "Customer"
+        Me.Btn_Customer.UseVisualStyleBackColor = True
+        '
+        'Lbl_Branch
+        '
+        Me.Lbl_Branch.AutoSize = True
+        Me.Lbl_Branch.Location = New System.Drawing.Point(11, 9)
+        Me.Lbl_Branch.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Lbl_Branch.Name = "Lbl_Branch"
+        Me.Lbl_Branch.Size = New System.Drawing.Size(62, 13)
+        Me.Lbl_Branch.TabIndex = 16
+        Me.Lbl_Branch.Text = "X BRANCH"
         '
         'AllStock
         '

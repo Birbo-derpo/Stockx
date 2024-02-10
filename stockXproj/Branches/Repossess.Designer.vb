@@ -23,13 +23,20 @@ Partial Class Repossess
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Lbl_Branch = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Btn_Customer = New System.Windows.Forms.Button()
         Me.Btn_AllStock = New System.Windows.Forms.Button()
         Me.Btn_Deposited = New System.Windows.Forms.Button()
         Me.Btn_Repossess = New System.Windows.Forms.Button()
         Me.Btn_Released = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Grd_StockRepossessed = New System.Windows.Forms.DataGridView()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        CType(Me.Grd_StockRepossessed, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Lbl_Branch
@@ -41,17 +48,6 @@ Partial Class Repossess
         Me.Lbl_Branch.Size = New System.Drawing.Size(62, 13)
         Me.Lbl_Branch.TabIndex = 15
         Me.Lbl_Branch.Text = "X BRANCH"
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(230, 72)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(705, 306)
-        Me.DataGridView1.TabIndex = 13
         '
         'Btn_Customer
         '
@@ -104,31 +100,91 @@ Partial Class Repossess
         Me.Btn_Released.Text = "Released "
         Me.Btn_Released.UseVisualStyleBackColor = True
         '
+        'Grd_StockRepossessed
+        '
+        Me.Grd_StockRepossessed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Grd_StockRepossessed.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column7, Me.Column1, Me.Column2, Me.Column3, Me.Column6, Me.Column4, Me.Column5})
+        Me.Grd_StockRepossessed.Location = New System.Drawing.Point(202, 71)
+        Me.Grd_StockRepossessed.Margin = New System.Windows.Forms.Padding(2)
+        Me.Grd_StockRepossessed.Name = "Grd_StockRepossessed"
+        Me.Grd_StockRepossessed.RowHeadersWidth = 51
+        Me.Grd_StockRepossessed.RowTemplate.Height = 24
+        Me.Grd_StockRepossessed.Size = New System.Drawing.Size(705, 306)
+        Me.Grd_StockRepossessed.TabIndex = 23
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Branch"
+        Me.Column7.Name = "Column7"
+        '
+        'Column1
+        '
+        Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column1.HeaderText = "invoice"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column2.HeaderText = "Date Arrived"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column3.HeaderText = "Model"
+        Me.Column3.Name = "Column3"
+        '
+        'Column6
+        '
+        Me.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column6.HeaderText = "Price"
+        Me.Column6.Name = "Column6"
+        '
+        'Column4
+        '
+        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column4.HeaderText = "Engine no."
+        Me.Column4.Name = "Column4"
+        '
+        'Column5
+        '
+        Me.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column5.HeaderText = "Frame no"
+        Me.Column5.Name = "Column5"
+        '
         'Repossess
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(994, 427)
+        Me.Controls.Add(Me.Grd_StockRepossessed)
         Me.Controls.Add(Me.Btn_Customer)
         Me.Controls.Add(Me.Btn_AllStock)
         Me.Controls.Add(Me.Btn_Deposited)
         Me.Controls.Add(Me.Btn_Repossess)
         Me.Controls.Add(Me.Btn_Released)
         Me.Controls.Add(Me.Lbl_Branch)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Repossess"
         Me.Text = "Reposes"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Grd_StockRepossessed, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Lbl_Branch As Label
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Btn_Customer As Button
     Friend WithEvents Btn_AllStock As Button
     Friend WithEvents Btn_Deposited As Button
     Friend WithEvents Btn_Repossess As Button
     Friend WithEvents Btn_Released As Button
+    Friend WithEvents Grd_StockRepossessed As DataGridView
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
 End Class

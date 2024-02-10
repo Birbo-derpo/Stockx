@@ -8,39 +8,6 @@ Public Class ConfirmReserve
     End Sub
 
     'dataloader
-    Private Sub prcdisplayBranch()
-        'need a seperate branch or need to manually fill the combobox than get from database
-        Try
-            sqlUMTCAdapter = New MySqlDataAdapter
-            DataUMTC = New DataTable
-
-            With command
-                .Parameters.Clear()
-                .CommandText = "prc_BranchList"
-                .CommandType = CommandType.StoredProcedure
-                sqlUMTCAdapter.SelectCommand = command
-                DataUMTC.Clear()
-                sqlUMTCAdapter.Fill(DataUMTC)
-
-                If DataUMTC.Rows.Count > 0 Then
-                    row = 0
-                    While Not DataUMTC.Rows.Count - 1 < row
-                        cmb_tobranch.Items.Add("" & DataUMTC.Rows(row).Item("Brnch").ToString())
-                        row = row + 1
-
-                    End While
-                Else
-                    MessageBox.Show("No Available Records", "Records", MessageBoxButtons.OK, MessageBoxIcon.Question)
-                End If
-            End With
-
-            sqlUMTCAdapter.Dispose()
-            DataUMTC.Dispose()
-
-        Catch ex As Exception
-            MessageBox.Show("" & ex.Message)
-        End Try
-    End Sub
 
     Private Sub PrcDisplayAvailableUnits()
         Try
@@ -204,7 +171,6 @@ Public Class ConfirmReserve
         End Try
     End Sub
     Private Sub Btn_back_Click(sender As Object, e As EventArgs) Handles Btn_back.Click
-        MainBranchInventory.Show()
         Me.Hide()
     End Sub
     'Buttons end

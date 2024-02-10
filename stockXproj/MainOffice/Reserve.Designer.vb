@@ -25,17 +25,26 @@ Partial Class Reserve
         Me.Btn_Transit = New System.Windows.Forms.Button()
         Me.Btn_AvStock = New System.Windows.Forms.Button()
         Me.Btn_Reserved = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Btn_AddReserve = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cmb_tobranch = New System.Windows.Forms.ComboBox()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grdMotorcycle = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        CType(Me.grdMotorcycle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Btn_Transit
         '
         Me.Btn_Transit.Location = New System.Drawing.Point(38, 250)
-        Me.Btn_Transit.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Transit.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Transit.Name = "Btn_Transit"
         Me.Btn_Transit.Size = New System.Drawing.Size(107, 50)
         Me.Btn_Transit.TabIndex = 28
@@ -45,7 +54,7 @@ Partial Class Reserve
         'Btn_AvStock
         '
         Me.Btn_AvStock.Location = New System.Drawing.Point(38, 141)
-        Me.Btn_AvStock.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_AvStock.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_AvStock.Name = "Btn_AvStock"
         Me.Btn_AvStock.Size = New System.Drawing.Size(107, 50)
         Me.Btn_AvStock.TabIndex = 27
@@ -55,28 +64,17 @@ Partial Class Reserve
         'Btn_Reserved
         '
         Me.Btn_Reserved.Location = New System.Drawing.Point(38, 195)
-        Me.Btn_Reserved.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Reserved.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Reserved.Name = "Btn_Reserved"
         Me.Btn_Reserved.Size = New System.Drawing.Size(107, 50)
         Me.Btn_Reserved.TabIndex = 26
         Me.Btn_Reserved.Text = "Reserved"
         Me.Btn_Reserved.UseVisualStyleBackColor = True
         '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(202, 72)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(705, 306)
-        Me.DataGridView1.TabIndex = 25
-        '
         'Btn_AddReserve
         '
         Me.Btn_AddReserve.Location = New System.Drawing.Point(744, 382)
-        Me.Btn_AddReserve.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_AddReserve.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_AddReserve.Name = "Btn_AddReserve"
         Me.Btn_AddReserve.Size = New System.Drawing.Size(107, 50)
         Me.Btn_AddReserve.TabIndex = 29
@@ -99,26 +97,101 @@ Partial Class Reserve
         Me.cmb_tobranch.FormattingEnabled = True
         Me.cmb_tobranch.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
         Me.cmb_tobranch.Location = New System.Drawing.Point(578, 37)
-        Me.cmb_tobranch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmb_tobranch.Margin = New System.Windows.Forms.Padding(2)
         Me.cmb_tobranch.Name = "cmb_tobranch"
         Me.cmb_tobranch.Size = New System.Drawing.Size(92, 21)
         Me.cmb_tobranch.TabIndex = 32
+        '
+        'grdMotorcycle
+        '
+        Me.grdMotorcycle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.grdMotorcycle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9})
+        Me.grdMotorcycle.Location = New System.Drawing.Point(159, 93)
+        Me.grdMotorcycle.Margin = New System.Windows.Forms.Padding(2)
+        Me.grdMotorcycle.Name = "grdMotorcycle"
+        Me.grdMotorcycle.RowHeadersWidth = 51
+        Me.grdMotorcycle.RowTemplate.Height = 24
+        Me.grdMotorcycle.Size = New System.Drawing.Size(751, 285)
+        Me.grdMotorcycle.TabIndex = 34
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Invoice Number"
+        Me.Column1.MinimumWidth = 6
+        Me.Column1.Name = "Column1"
+        Me.Column1.Width = 125
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Date& Time"
+        Me.Column2.MinimumWidth = 6
+        Me.Column2.Name = "Column2"
+        Me.Column2.Width = 125
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Model"
+        Me.Column3.MinimumWidth = 6
+        Me.Column3.Name = "Column3"
+        Me.Column3.Width = 125
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Color"
+        Me.Column4.MinimumWidth = 6
+        Me.Column4.Name = "Column4"
+        Me.Column4.Width = 125
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Price"
+        Me.Column5.MinimumWidth = 6
+        Me.Column5.Name = "Column5"
+        Me.Column5.Width = 125
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Engine Number"
+        Me.Column6.MinimumWidth = 6
+        Me.Column6.Name = "Column6"
+        Me.Column6.Width = 125
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Frame Number"
+        Me.Column7.MinimumWidth = 6
+        Me.Column7.Name = "Column7"
+        Me.Column7.Width = 125
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Status"
+        Me.Column8.MinimumWidth = 6
+        Me.Column8.Name = "Column8"
+        Me.Column8.Width = 125
+        '
+        'Column9
+        '
+        Me.Column9.HeaderText = "Branch"
+        Me.Column9.MinimumWidth = 6
+        Me.Column9.Name = "Column9"
+        Me.Column9.Width = 125
         '
         'Reserve
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(945, 450)
+        Me.Controls.Add(Me.grdMotorcycle)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cmb_tobranch)
         Me.Controls.Add(Me.Btn_AddReserve)
         Me.Controls.Add(Me.Btn_Transit)
         Me.Controls.Add(Me.Btn_AvStock)
         Me.Controls.Add(Me.Btn_Reserved)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Name = "Reserve"
         Me.Text = "Reserve"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grdMotorcycle, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -127,8 +200,17 @@ Partial Class Reserve
     Friend WithEvents Btn_Transit As Button
     Friend WithEvents Btn_AvStock As Button
     Friend WithEvents Btn_Reserved As Button
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Btn_AddReserve As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents cmb_tobranch As ComboBox
+    Friend WithEvents grdMotorcycle As DataGridView
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Column9 As DataGridViewTextBoxColumn
 End Class
