@@ -42,50 +42,51 @@ Partial Class TRANSIT
         '
         'Btn_Transit
         '
-        Me.Btn_Transit.Location = New System.Drawing.Point(32, 229)
+        Me.Btn_Transit.Location = New System.Drawing.Point(24, 186)
         Me.Btn_Transit.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Transit.Name = "Btn_Transit"
-        Me.Btn_Transit.Size = New System.Drawing.Size(143, 62)
+        Me.Btn_Transit.Size = New System.Drawing.Size(107, 50)
         Me.Btn_Transit.TabIndex = 24
         Me.Btn_Transit.Text = "Transit"
         Me.Btn_Transit.UseVisualStyleBackColor = True
         '
         'Btn_AvStock
         '
-        Me.Btn_AvStock.Location = New System.Drawing.Point(32, 120)
+        Me.Btn_AvStock.Location = New System.Drawing.Point(24, 98)
         Me.Btn_AvStock.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_AvStock.Name = "Btn_AvStock"
-        Me.Btn_AvStock.Size = New System.Drawing.Size(143, 62)
+        Me.Btn_AvStock.Size = New System.Drawing.Size(107, 50)
         Me.Btn_AvStock.TabIndex = 23
         Me.Btn_AvStock.Text = "Available Stock"
         Me.Btn_AvStock.UseVisualStyleBackColor = True
         '
         'Btn_Reserved
         '
-        Me.Btn_Reserved.Location = New System.Drawing.Point(32, 174)
+        Me.Btn_Reserved.Location = New System.Drawing.Point(24, 141)
         Me.Btn_Reserved.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Reserved.Name = "Btn_Reserved"
-        Me.Btn_Reserved.Size = New System.Drawing.Size(143, 62)
+        Me.Btn_Reserved.Size = New System.Drawing.Size(107, 50)
         Me.Btn_Reserved.TabIndex = 22
         Me.Btn_Reserved.Text = "Reserved"
         Me.Btn_Reserved.UseVisualStyleBackColor = True
         '
         'Btn_transfer
         '
-        Me.Btn_transfer.Location = New System.Drawing.Point(777, 371)
-        Me.Btn_transfer.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_transfer.Location = New System.Drawing.Point(651, 361)
+        Me.Btn_transfer.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Btn_transfer.Name = "Btn_transfer"
-        Me.Btn_transfer.Size = New System.Drawing.Size(141, 37)
-        Me.Btn_transfer.TabIndex = 26
-        Me.Btn_transfer.Text = "Transfer To Selected Branch"
+        Me.Btn_transfer.Size = New System.Drawing.Size(87, 37)
+        Me.Btn_transfer.TabIndex = 37
+        Me.Btn_transfer.Text = "Tramsfer To Each Branch Inventory"
         Me.Btn_transfer.UseVisualStyleBackColor = True
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(767, 33)
+        Me.Label1.Location = New System.Drawing.Point(575, 27)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(90, 16)
+        Me.Label1.Size = New System.Drawing.Size(74, 13)
         Me.Label1.TabIndex = 33
         Me.Label1.Text = "Select Branch"
         '
@@ -93,22 +94,22 @@ Partial Class TRANSIT
         '
         Me.cmb_tobranch.FormattingEnabled = True
         Me.cmb_tobranch.Items.AddRange(New Object() {"Bajada", "Davao", "Digos", "Kidapawan", "Tagum", "General Santos"})
-        Me.cmb_tobranch.Location = New System.Drawing.Point(479, 24)
+        Me.cmb_tobranch.Location = New System.Drawing.Point(359, 20)
         Me.cmb_tobranch.Margin = New System.Windows.Forms.Padding(2)
         Me.cmb_tobranch.Name = "cmb_tobranch"
-        Me.cmb_tobranch.Size = New System.Drawing.Size(92, 21)
+        Me.cmb_tobranch.Size = New System.Drawing.Size(70, 21)
         Me.cmb_tobranch.TabIndex = 36
         '
         'grdMotorcycle
         '
         Me.grdMotorcycle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdMotorcycle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
-        Me.grdMotorcycle.Location = New System.Drawing.Point(171, 60)
+        Me.grdMotorcycle.Location = New System.Drawing.Point(135, 45)
         Me.grdMotorcycle.Margin = New System.Windows.Forms.Padding(2)
         Me.grdMotorcycle.Name = "grdMotorcycle"
         Me.grdMotorcycle.RowHeadersWidth = 51
         Me.grdMotorcycle.RowTemplate.Height = 24
-        Me.grdMotorcycle.Size = New System.Drawing.Size(791, 291)
+        Me.grdMotorcycle.Size = New System.Drawing.Size(593, 236)
         Me.grdMotorcycle.TabIndex = 37
         '
         'Column8
@@ -175,19 +176,11 @@ Partial Class TRANSIT
         Me.Column7.ReadOnly = True
         Me.Column7.Width = 125
         '
-        Me.Button1.Location = New System.Drawing.Point(868, 444)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(116, 46)
-        Me.Button1.TabIndex = 37
-        Me.Button1.Text = "Tramsfer To Each Branch Inventory"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'TRANSIT
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1006, 430)
+        Me.ClientSize = New System.Drawing.Size(754, 349)
         Me.Controls.Add(Me.grdMotorcycle)
         Me.Controls.Add(Me.cmb_tobranch)
         Me.Controls.Add(Me.Label1)
