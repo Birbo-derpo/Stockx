@@ -25,6 +25,7 @@ Public Class AllStock
                     row = 0
                     While Not DataUMTC.Rows.Count - 1 < row
                         If DataUMTC.Rows(row).Item("Brnch").ToString = "Main" Then
+                            'skip
                             row = row + 1
                         Else
                             Grd_Stock.Rows(row).Cells(0).Value = DataUMTC.Rows(row).Item("Brnch").ToString
