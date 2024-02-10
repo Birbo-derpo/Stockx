@@ -29,7 +29,6 @@ Partial Class AllStock
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.cmbSearchType = New System.Windows.Forms.ComboBox()
         Me.Btn_Customer = New System.Windows.Forms.Button()
-        Me.Btn_Update = New System.Windows.Forms.Button()
         Me.Btn_AllStock = New System.Windows.Forms.Button()
         Me.Btn_Deposited = New System.Windows.Forms.Button()
         Me.Btn_Repossess = New System.Windows.Forms.Button()
@@ -44,8 +43,6 @@ Partial Class AllStock
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Btn_Update = New System.Windows.Forms.Button()
-        Me.Btn_Customer = New System.Windows.Forms.Button()
-        Me.Lbl_Branch = New System.Windows.Forms.Label()
         CType(Me.Grd_Stock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
