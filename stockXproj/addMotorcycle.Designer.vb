@@ -37,11 +37,13 @@ Partial Class addMotorcycle
         Me.txtColor = New System.Windows.Forms.TextBox()
         Me.txtModel = New System.Windows.Forms.TextBox()
         Me.txtInvoiceNumber = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(450, 388)
+        Me.btnAdd.Location = New System.Drawing.Point(374, 388)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(75, 23)
         Me.btnAdd.TabIndex = 50
@@ -160,11 +162,31 @@ Partial Class addMotorcycle
         Me.txtInvoiceNumber.Size = New System.Drawing.Size(318, 22)
         Me.txtInvoiceNumber.TabIndex = 36
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(465, 388)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 51
+        Me.Button1.Text = "CLEAR"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(568, 388)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 52
+        Me.Button2.Text = "CLOSE"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'addMotorcycle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1009, 450)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -202,4 +224,6 @@ Partial Class addMotorcycle
     Friend WithEvents txtColor As TextBox
     Friend WithEvents txtModel As TextBox
     Friend WithEvents txtInvoiceNumber As TextBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class

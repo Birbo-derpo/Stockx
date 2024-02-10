@@ -152,6 +152,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Global_var.vb" />
+    <Compile Include="MainOffice\Add MT Number.Designer.vb">
+      <DependentUpon>Add MT Number.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainOffice\Add MT Number.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainOffice\MainBranchInventory.Designer.vb">
       <DependentUpon>MainBranchInventory.vb</DependentUpon>
     </Compile>
@@ -247,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainOffice\Add MT Number.resx">
+      <DependentUpon>Add MT Number.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainOffice\MainBranchInventory.resx">
       <DependentUpon>MainBranchInventory.vb</DependentUpon>

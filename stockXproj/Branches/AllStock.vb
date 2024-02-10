@@ -52,27 +52,27 @@ Public Class AllStock
     End Sub
 
     'left screen buttons
-    Private Sub Btn_Released_Click(sender As Object, e As EventArgs) Handles Btn_Released.Click
+    Private Sub Btn_Released_Click(sender As Object, e As EventArgs)
         Released.Show()
         Me.Hide()
     End Sub
 
-    Private Sub Btn_Deposited_Click(sender As Object, e As EventArgs) Handles Btn_Deposited.Click
+    Private Sub Btn_Deposited_Click(sender As Object, e As EventArgs)
         Deposited.Show()
         Me.Hide()
     End Sub
 
-    Private Sub Btn_Repossess_Click(sender As Object, e As EventArgs) Handles Btn_Repossess.Click
+    Private Sub Btn_Repossess_Click(sender As Object, e As EventArgs)
         Repossess.Show()
         Me.Hide()
     End Sub
 
-    Private Sub Btn_Customer_Click(sender As Object, e As EventArgs) Handles Btn_Customer.Click
+    Private Sub Btn_Customer_Click(sender As Object, e As EventArgs)
         Customer.Show()
         Me.Hide()
     End Sub
 
-    Private Sub Btn_Update_Click(sender As Object, e As EventArgs) Handles Btn_Update.Click
+    Private Sub Btn_Update_Click(sender As Object, e As EventArgs)
         UpdateStocks.Show()
         Me.Hide()
     End Sub

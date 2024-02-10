@@ -52,7 +52,7 @@ Public Class Reserve
 
     End Sub
 
-    Private Sub Btn_AddReserve_Click(sender As Object, e As EventArgs) Handles Btn_AddReserve.Click
+    Private Sub Btn_AddReserve_Click(sender As Object, e As EventArgs)
         ConfirmReserve.Show()
         Me.Hide()
     End Sub

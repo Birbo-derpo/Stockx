@@ -46,30 +46,30 @@ Partial Class MainBranchInventory
         '
         'btnEdit
         '
-        Me.btnEdit.Location = New System.Drawing.Point(412, 375)
-        Me.btnEdit.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnEdit.Location = New System.Drawing.Point(549, 462)
+        Me.btnEdit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(56, 19)
+        Me.btnEdit.Size = New System.Drawing.Size(75, 23)
         Me.btnEdit.TabIndex = 9
         Me.btnEdit.Text = "Edit"
         Me.btnEdit.UseVisualStyleBackColor = True
         '
         'btndelete
         '
-        Me.btndelete.Location = New System.Drawing.Point(332, 375)
-        Me.btndelete.Margin = New System.Windows.Forms.Padding(2)
+        Me.btndelete.Location = New System.Drawing.Point(443, 462)
+        Me.btndelete.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btndelete.Name = "btndelete"
-        Me.btndelete.Size = New System.Drawing.Size(56, 19)
+        Me.btndelete.Size = New System.Drawing.Size(75, 23)
         Me.btndelete.TabIndex = 8
         Me.btndelete.Text = "Delete"
         Me.btndelete.UseVisualStyleBackColor = True
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(272, 378)
-        Me.btnAdd.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnAdd.Location = New System.Drawing.Point(363, 465)
+        Me.btnAdd.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(56, 19)
+        Me.btnAdd.Size = New System.Drawing.Size(75, 23)
         Me.btnAdd.TabIndex = 7
         Me.btnAdd.Text = "Add"
         Me.btnAdd.UseVisualStyleBackColor = True
@@ -77,10 +77,9 @@ Partial Class MainBranchInventory
         'lblTotal
         '
         Me.lblTotal.AutoSize = True
-        Me.lblTotal.Location = New System.Drawing.Point(132, 378)
-        Me.lblTotal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblTotal.Location = New System.Drawing.Point(176, 465)
         Me.lblTotal.Name = "lblTotal"
-        Me.lblTotal.Size = New System.Drawing.Size(31, 13)
+        Me.lblTotal.Size = New System.Drawing.Size(38, 16)
         Me.lblTotal.TabIndex = 6
         Me.lblTotal.Text = "Total"
         '
@@ -88,12 +87,12 @@ Partial Class MainBranchInventory
         '
         Me.grdMotorcycle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdMotorcycle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9})
-        Me.grdMotorcycle.Location = New System.Drawing.Point(76, 126)
-        Me.grdMotorcycle.Margin = New System.Windows.Forms.Padding(2)
+        Me.grdMotorcycle.Location = New System.Drawing.Point(90, 160)
+        Me.grdMotorcycle.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.grdMotorcycle.Name = "grdMotorcycle"
         Me.grdMotorcycle.RowHeadersWidth = 51
         Me.grdMotorcycle.RowTemplate.Height = 24
-        Me.grdMotorcycle.Size = New System.Drawing.Size(880, 217)
+        Me.grdMotorcycle.Size = New System.Drawing.Size(1173, 267)
         Me.grdMotorcycle.TabIndex = 5
         '
         'Column1
@@ -164,26 +163,26 @@ Partial Class MainBranchInventory
         Me.cmbSearchType.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
         Me.cmbSearchType.FormattingEnabled = True
         Me.cmbSearchType.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
-        Me.cmbSearchType.Location = New System.Drawing.Point(123, 67)
-        Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(2)
+        Me.cmbSearchType.Location = New System.Drawing.Point(164, 82)
+        Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cmbSearchType.Name = "cmbSearchType"
-        Me.cmbSearchType.Size = New System.Drawing.Size(92, 21)
+        Me.cmbSearchType.Size = New System.Drawing.Size(121, 24)
         Me.cmbSearchType.TabIndex = 10
         '
         'txtSearch
         '
-        Me.txtSearch.Location = New System.Drawing.Point(123, 44)
-        Me.txtSearch.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtSearch.Location = New System.Drawing.Point(164, 54)
+        Me.txtSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(160, 20)
+        Me.txtSearch.Size = New System.Drawing.Size(212, 22)
         Me.txtSearch.TabIndex = 11
         '
         'btnSearch
         '
-        Me.btnSearch.Location = New System.Drawing.Point(314, 44)
-        Me.btnSearch.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnSearch.Location = New System.Drawing.Point(419, 54)
+        Me.btnSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(56, 19)
+        Me.btnSearch.Size = New System.Drawing.Size(75, 23)
         Me.btnSearch.TabIndex = 12
         Me.btnSearch.Text = "search"
         Me.btnSearch.UseVisualStyleBackColor = True
@@ -191,29 +190,29 @@ Partial Class MainBranchInventory
         'chkAuto
         '
         Me.chkAuto.AutoSize = True
-        Me.chkAuto.Location = New System.Drawing.Point(123, 91)
-        Me.chkAuto.Margin = New System.Windows.Forms.Padding(2)
+        Me.chkAuto.Location = New System.Drawing.Point(164, 112)
+        Me.chkAuto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.chkAuto.Name = "chkAuto"
-        Me.chkAuto.Size = New System.Drawing.Size(92, 17)
+        Me.chkAuto.Size = New System.Drawing.Size(114, 20)
         Me.chkAuto.TabIndex = 13
         Me.chkAuto.Text = "AutoComplete"
         Me.chkAuto.UseVisualStyleBackColor = True
         '
         'Btn_ReservationPage
         '
-        Me.Btn_ReservationPage.Location = New System.Drawing.Point(699, 378)
-        Me.Btn_ReservationPage.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_ReservationPage.Location = New System.Drawing.Point(932, 465)
+        Me.Btn_ReservationPage.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_ReservationPage.Name = "Btn_ReservationPage"
-        Me.Btn_ReservationPage.Size = New System.Drawing.Size(90, 19)
+        Me.Btn_ReservationPage.Size = New System.Drawing.Size(120, 23)
         Me.Btn_ReservationPage.TabIndex = 14
         Me.Btn_ReservationPage.Text = "Reserve"
         Me.Btn_ReservationPage.UseVisualStyleBackColor = True
         '
         'MainBranchInventory
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(985, 427)
+        Me.ClientSize = New System.Drawing.Size(1313, 526)
         Me.Controls.Add(Me.Btn_ReservationPage)
         Me.Controls.Add(Me.chkAuto)
         Me.Controls.Add(Me.btnSearch)
@@ -224,7 +223,7 @@ Partial Class MainBranchInventory
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.lblTotal)
         Me.Controls.Add(Me.grdMotorcycle)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "MainBranchInventory"
         Me.Text = "MainBranchInventory"
         CType(Me.grdMotorcycle, System.ComponentModel.ISupportInitialize).EndInit()

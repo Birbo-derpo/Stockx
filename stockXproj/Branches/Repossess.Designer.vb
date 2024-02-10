@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Repossess
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Repossess
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Lbl_Branch = New System.Windows.Forms.Label()
         Me.Btn_Customer = New System.Windows.Forms.Button()
@@ -42,49 +42,48 @@ Partial Class Repossess
         'Lbl_Branch
         '
         Me.Lbl_Branch.AutoSize = True
-        Me.Lbl_Branch.Location = New System.Drawing.Point(198, 41)
-        Me.Lbl_Branch.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Lbl_Branch.Location = New System.Drawing.Point(264, 50)
         Me.Lbl_Branch.Name = "Lbl_Branch"
-        Me.Lbl_Branch.Size = New System.Drawing.Size(62, 13)
+        Me.Lbl_Branch.Size = New System.Drawing.Size(75, 16)
         Me.Lbl_Branch.TabIndex = 15
         Me.Lbl_Branch.Text = "X BRANCH"
         '
         'Btn_Customer
         '
-        Me.Btn_Customer.Location = New System.Drawing.Point(91, 307)
-        Me.Btn_Customer.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_Customer.Location = New System.Drawing.Point(121, 378)
+        Me.Btn_Customer.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Customer.Name = "Btn_Customer"
-        Me.Btn_Customer.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_Customer.Size = New System.Drawing.Size(143, 62)
         Me.Btn_Customer.TabIndex = 20
         Me.Btn_Customer.Text = "Customer"
         Me.Btn_Customer.UseVisualStyleBackColor = True
         '
         'Btn_AllStock
         '
-        Me.Btn_AllStock.Location = New System.Drawing.Point(91, 89)
-        Me.Btn_AllStock.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_AllStock.Location = New System.Drawing.Point(121, 110)
+        Me.Btn_AllStock.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_AllStock.Name = "Btn_AllStock"
-        Me.Btn_AllStock.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_AllStock.Size = New System.Drawing.Size(143, 62)
         Me.Btn_AllStock.TabIndex = 19
         Me.Btn_AllStock.Text = "All Stock"
         Me.Btn_AllStock.UseVisualStyleBackColor = True
         '
         'Btn_Deposited
         '
-        Me.Btn_Deposited.Location = New System.Drawing.Point(91, 198)
-        Me.Btn_Deposited.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_Deposited.Location = New System.Drawing.Point(121, 244)
+        Me.Btn_Deposited.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Deposited.Name = "Btn_Deposited"
-        Me.Btn_Deposited.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_Deposited.Size = New System.Drawing.Size(143, 62)
         Me.Btn_Deposited.TabIndex = 18
         Me.Btn_Deposited.Text = "Deposited"
         Me.Btn_Deposited.UseVisualStyleBackColor = True
         '
         'Btn_Repossess
         '
-        Me.Btn_Repossess.Location = New System.Drawing.Point(91, 253)
-        Me.Btn_Repossess.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_Repossess.Location = New System.Drawing.Point(121, 311)
+        Me.Btn_Repossess.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Repossess.Name = "Btn_Repossess"
-        Me.Btn_Repossess.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_Repossess.Size = New System.Drawing.Size(143, 62)
         Me.Btn_Repossess.TabIndex = 17
         Me.Btn_Repossess.TabStop = False
         Me.Btn_Repossess.Text = "Repossess"
@@ -92,10 +91,10 @@ Partial Class Repossess
         '
         'Btn_Released
         '
-        Me.Btn_Released.Location = New System.Drawing.Point(91, 144)
-        Me.Btn_Released.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_Released.Location = New System.Drawing.Point(121, 177)
+        Me.Btn_Released.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Released.Name = "Btn_Released"
-        Me.Btn_Released.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_Released.Size = New System.Drawing.Size(143, 62)
         Me.Btn_Released.TabIndex = 16
         Me.Btn_Released.Text = "Released "
         Me.Btn_Released.UseVisualStyleBackColor = True
@@ -155,7 +154,7 @@ Partial Class Repossess
         '
         'Repossess
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(994, 427)
         Me.Controls.Add(Me.Grd_StockRepossessed)

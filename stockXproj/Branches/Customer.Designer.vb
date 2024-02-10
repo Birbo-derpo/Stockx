@@ -38,87 +38,86 @@ Partial Class Customer
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(243, 77)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DataGridView1.Location = New System.Drawing.Point(257, 98)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(757, 306)
+        Me.DataGridView1.Size = New System.Drawing.Size(1009, 377)
         Me.DataGridView1.TabIndex = 21
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(243, 21)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TextBox1.Location = New System.Drawing.Point(324, 26)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(86, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(113, 22)
         Me.TextBox1.TabIndex = 27
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(185, 26)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(247, 32)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(41, 13)
+        Me.Label1.Size = New System.Drawing.Size(50, 16)
         Me.Label1.TabIndex = 28
         Me.Label1.Text = "Search"
         '
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(243, 44)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ComboBox1.Location = New System.Drawing.Point(324, 54)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(86, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(113, 24)
         Me.ComboBox1.TabIndex = 29
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(877, 26)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button5.Location = New System.Drawing.Point(1169, 32)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(107, 50)
+        Me.Button5.Size = New System.Drawing.Size(143, 62)
         Me.Button5.TabIndex = 30
         Me.Button5.Text = "Edit"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Btn_Customer
         '
-        Me.Btn_Customer.Location = New System.Drawing.Point(81, 313)
-        Me.Btn_Customer.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_Customer.Location = New System.Drawing.Point(108, 385)
+        Me.Btn_Customer.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Customer.Name = "Btn_Customer"
-        Me.Btn_Customer.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_Customer.Size = New System.Drawing.Size(143, 62)
         Me.Btn_Customer.TabIndex = 35
         Me.Btn_Customer.Text = "Customer"
         Me.Btn_Customer.UseVisualStyleBackColor = True
         '
         'Btn_AllStock
         '
-        Me.Btn_AllStock.Location = New System.Drawing.Point(81, 95)
-        Me.Btn_AllStock.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_AllStock.Location = New System.Drawing.Point(108, 117)
+        Me.Btn_AllStock.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_AllStock.Name = "Btn_AllStock"
-        Me.Btn_AllStock.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_AllStock.Size = New System.Drawing.Size(143, 62)
         Me.Btn_AllStock.TabIndex = 34
         Me.Btn_AllStock.Text = "All Stock"
         Me.Btn_AllStock.UseVisualStyleBackColor = True
         '
         'Btn_Deposited
         '
-        Me.Btn_Deposited.Location = New System.Drawing.Point(81, 204)
-        Me.Btn_Deposited.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_Deposited.Location = New System.Drawing.Point(108, 251)
+        Me.Btn_Deposited.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Deposited.Name = "Btn_Deposited"
-        Me.Btn_Deposited.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_Deposited.Size = New System.Drawing.Size(143, 62)
         Me.Btn_Deposited.TabIndex = 33
         Me.Btn_Deposited.Text = "Deposited"
         Me.Btn_Deposited.UseVisualStyleBackColor = True
         '
         'Btn_Repossess
         '
-        Me.Btn_Repossess.Location = New System.Drawing.Point(81, 259)
-        Me.Btn_Repossess.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_Repossess.Location = New System.Drawing.Point(108, 319)
+        Me.Btn_Repossess.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Repossess.Name = "Btn_Repossess"
-        Me.Btn_Repossess.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_Repossess.Size = New System.Drawing.Size(143, 62)
         Me.Btn_Repossess.TabIndex = 32
         Me.Btn_Repossess.TabStop = False
         Me.Btn_Repossess.Text = "Repossess"
@@ -126,19 +125,19 @@ Partial Class Customer
         '
         'Btn_Released
         '
-        Me.Btn_Released.Location = New System.Drawing.Point(81, 150)
-        Me.Btn_Released.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_Released.Location = New System.Drawing.Point(108, 185)
+        Me.Btn_Released.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Released.Name = "Btn_Released"
-        Me.Btn_Released.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_Released.Size = New System.Drawing.Size(143, 62)
         Me.Btn_Released.TabIndex = 31
         Me.Btn_Released.Text = "Released "
         Me.Btn_Released.UseVisualStyleBackColor = True
         '
         'Customer
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1028, 443)
+        Me.ClientSize = New System.Drawing.Size(1371, 545)
         Me.Controls.Add(Me.Btn_Customer)
         Me.Controls.Add(Me.Btn_AllStock)
         Me.Controls.Add(Me.Btn_Deposited)
@@ -149,7 +148,7 @@ Partial Class Customer
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Customer"
         Me.Text = "Customer"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
