@@ -54,8 +54,8 @@ Partial Class ConfirmReserve
         '
         'cmb_tobranch
         '
-        Me.cmb_tobranch.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
         Me.cmb_tobranch.FormattingEnabled = True
+        Me.cmb_tobranch.Items.AddRange(New Object() {"Bajada", "Davao", "Digos", "Kidapawan", "Tagum", "General Santos"})
         Me.cmb_tobranch.Location = New System.Drawing.Point(593, 95)
         Me.cmb_tobranch.Margin = New System.Windows.Forms.Padding(2)
         Me.cmb_tobranch.Name = "cmb_tobranch"

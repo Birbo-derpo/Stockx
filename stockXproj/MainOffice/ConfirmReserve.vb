@@ -4,7 +4,6 @@ Imports MySql.Data.MySqlClient
 Public Class ConfirmReserve
     Private Sub ConfirmReserve_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CheckDatabaseConnection()
-        prcdisplayBranch()
         PrcDisplayAvailableUnits()
     End Sub
 
@@ -73,8 +72,6 @@ Public Class ConfirmReserve
                     End While
                 Else
 
-                    txtSearch.Clear()
-                    cmbSearchType.SelectedIndex = -1
                     MessageBox.Show("No Available Records", "Records", MessageBoxButtons.OK, MessageBoxIcon.Question)
                 End If
             End With
@@ -104,7 +101,7 @@ Public Class ConfirmReserve
             DataUMTC = New DataTable
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_DisplayMotorcycleWithAutoCompleteInMainInventory"
+                .CommandText = "prc_InventorySearchFilter"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
                 .Parameters.AddWithValue("@p_search", txtSearch.Text)
@@ -142,7 +139,7 @@ Public Class ConfirmReserve
         State = "Reserve"
         For Each Checkcell As DataGridViewRow In grdMotorcycle.Rows
             'needs to accept only when branches combobox is selected
-            If Checkcell.Cells("Column8").Value = True Then
+            If Checkcell.Cells("Column8").Value = True And cmb_tobranch.Text <> " " Then
                 Try
                     With command
                         .Parameters.Clear()
@@ -154,11 +151,8 @@ Public Class ConfirmReserve
                         .ExecuteNonQuery()
                     End With
 
-                    MessageBox.Show("vehicle reserved", "reserved", MessageBoxButtons.OK)
-
-
                 Catch ex As Exception
-
+                    MessageBox.Show("unit/s reserved", "reserved", MessageBoxButtons.OK)
                 End Try
             End If
 

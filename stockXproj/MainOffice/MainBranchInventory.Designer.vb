@@ -40,14 +40,14 @@ Partial Class MainBranchInventory
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.chkAuto = New System.Windows.Forms.CheckBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Btn_ReservationPage = New System.Windows.Forms.Button()
         CType(Me.grdMotorcycle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnEdit
         '
         Me.btnEdit.Location = New System.Drawing.Point(412, 375)
-        Me.btnEdit.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnEdit.Margin = New System.Windows.Forms.Padding(2)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Size = New System.Drawing.Size(56, 19)
         Me.btnEdit.TabIndex = 9
@@ -57,7 +57,7 @@ Partial Class MainBranchInventory
         'btndelete
         '
         Me.btndelete.Location = New System.Drawing.Point(332, 375)
-        Me.btndelete.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btndelete.Margin = New System.Windows.Forms.Padding(2)
         Me.btndelete.Name = "btndelete"
         Me.btndelete.Size = New System.Drawing.Size(56, 19)
         Me.btndelete.TabIndex = 8
@@ -67,7 +67,7 @@ Partial Class MainBranchInventory
         'btnAdd
         '
         Me.btnAdd.Location = New System.Drawing.Point(272, 378)
-        Me.btnAdd.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnAdd.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(56, 19)
         Me.btnAdd.TabIndex = 7
@@ -89,7 +89,7 @@ Partial Class MainBranchInventory
         Me.grdMotorcycle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdMotorcycle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9})
         Me.grdMotorcycle.Location = New System.Drawing.Point(76, 126)
-        Me.grdMotorcycle.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.grdMotorcycle.Margin = New System.Windows.Forms.Padding(2)
         Me.grdMotorcycle.Name = "grdMotorcycle"
         Me.grdMotorcycle.RowHeadersWidth = 51
         Me.grdMotorcycle.RowTemplate.Height = 24
@@ -165,7 +165,7 @@ Partial Class MainBranchInventory
         Me.cmbSearchType.FormattingEnabled = True
         Me.cmbSearchType.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
         Me.cmbSearchType.Location = New System.Drawing.Point(123, 67)
-        Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbSearchType.Name = "cmbSearchType"
         Me.cmbSearchType.Size = New System.Drawing.Size(92, 21)
         Me.cmbSearchType.TabIndex = 10
@@ -173,7 +173,7 @@ Partial Class MainBranchInventory
         'txtSearch
         '
         Me.txtSearch.Location = New System.Drawing.Point(123, 44)
-        Me.txtSearch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtSearch.Margin = New System.Windows.Forms.Padding(2)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(160, 20)
         Me.txtSearch.TabIndex = 11
@@ -181,7 +181,7 @@ Partial Class MainBranchInventory
         'btnSearch
         '
         Me.btnSearch.Location = New System.Drawing.Point(314, 44)
-        Me.btnSearch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnSearch.Margin = New System.Windows.Forms.Padding(2)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(56, 19)
         Me.btnSearch.TabIndex = 12
@@ -192,29 +192,29 @@ Partial Class MainBranchInventory
         '
         Me.chkAuto.AutoSize = True
         Me.chkAuto.Location = New System.Drawing.Point(123, 91)
-        Me.chkAuto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.chkAuto.Margin = New System.Windows.Forms.Padding(2)
         Me.chkAuto.Name = "chkAuto"
         Me.chkAuto.Size = New System.Drawing.Size(92, 17)
         Me.chkAuto.TabIndex = 13
         Me.chkAuto.Text = "AutoComplete"
         Me.chkAuto.UseVisualStyleBackColor = True
         '
-        'Button1
+        'Btn_ReservationPage
         '
-        Me.Button1.Location = New System.Drawing.Point(699, 378)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(90, 19)
-        Me.Button1.TabIndex = 14
-        Me.Button1.Text = "Reserve"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Btn_ReservationPage.Location = New System.Drawing.Point(699, 378)
+        Me.Btn_ReservationPage.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_ReservationPage.Name = "Btn_ReservationPage"
+        Me.Btn_ReservationPage.Size = New System.Drawing.Size(90, 19)
+        Me.Btn_ReservationPage.TabIndex = 14
+        Me.Btn_ReservationPage.Text = "Reserve"
+        Me.Btn_ReservationPage.UseVisualStyleBackColor = True
         '
         'MainBranchInventory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(985, 427)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Btn_ReservationPage)
         Me.Controls.Add(Me.chkAuto)
         Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.txtSearch)
@@ -224,7 +224,7 @@ Partial Class MainBranchInventory
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.lblTotal)
         Me.Controls.Add(Me.grdMotorcycle)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "MainBranchInventory"
         Me.Text = "MainBranchInventory"
         CType(Me.grdMotorcycle, System.ComponentModel.ISupportInitialize).EndInit()
@@ -249,7 +249,7 @@ Partial Class MainBranchInventory
     Friend WithEvents txtSearch As TextBox
     Friend WithEvents btnSearch As Button
     Friend WithEvents chkAuto As CheckBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents Btn_ReservationPage As Button
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
 End Class
