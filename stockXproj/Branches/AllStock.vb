@@ -4,6 +4,7 @@ Public Class AllStock
 
     Private Sub AllStock_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         PrcDisplayAllStock()
+        'YAWA
     End Sub
 
     Private Sub PrcDisplayAllStock()
