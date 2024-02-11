@@ -25,6 +25,7 @@ Public Class Reserve
                     grdMotorcycle.RowCount = DataUMTC.Rows.Count
                     row = 0
                     While Not DataUMTC.Rows.Count - 1 < row
+                        grdMotorcycle.Rows(row).Cells(0).Value = DataUMTC.Rows(row).Item("Brnch").ToString
                         grdMotorcycle.Rows(row).Cells(1).Value = DataUMTC.Rows(row).Item("Invoice").ToString
                         grdMotorcycle.Rows(row).Cells(2).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
                         grdMotorcycle.Rows(row).Cells(3).Value = DataUMTC.Rows(row).Item("Model").ToString
@@ -32,8 +33,7 @@ Public Class Reserve
                         grdMotorcycle.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Price").ToString
                         grdMotorcycle.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
                         grdMotorcycle.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("FrameNum").ToString
-                        grdMotorcycle.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("Stat").ToString
-                        grdMotorcycle.Rows(row).Cells(8).Value = DataUMTC.Rows(row).Item("Brnch").ToString
+                        grdMotorcycle.Rows(row).Cells(8).Value = DataUMTC.Rows(row).Item("Stat").ToString
                         row = row + 1
 
                     End While

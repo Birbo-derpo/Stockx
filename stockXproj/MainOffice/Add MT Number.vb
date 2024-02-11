@@ -51,7 +51,7 @@ Public Class Add_MT_Number
     End Sub
 
     Private Sub GrdMotorcycle_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_MotorcycleReserved.CellClick
-        EngineNo = Grd_MotorcycleReserved.Rows(row).Cells(6).Value.ToString
+        EngineNo = Grd_MotorcycleReserved.CurrentRow.Cells(6).Value.ToString
     End Sub
 
     Private Sub Btn_ConfirmTransit_Click(sender As Object, e As EventArgs) Handles Btn_ConfirmTransit.Click
