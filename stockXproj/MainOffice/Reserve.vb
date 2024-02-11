@@ -12,7 +12,6 @@ Public Class Reserve
         DataUMTC = New DataTable
         Try
 
-
             With command
                 .Parameters.Clear()
                 .CommandText = "prc_DisplayStock"
@@ -39,7 +38,6 @@ Public Class Reserve
 
                     End While
                 Else
-
                     MessageBox.Show("No Available Records", "Records", MessageBoxButtons.OK, MessageBoxIcon.Question)
                 End If
             End With
