@@ -29,6 +29,8 @@ Partial Class Reserve
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cmb_tobranch = New System.Windows.Forms.ComboBox()
         Me.grdMotorcycle = New System.Windows.Forms.DataGridView()
+        Me.Btn_Add_MT = New System.Windows.Forms.Button()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -37,7 +39,6 @@ Partial Class Reserve
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.grdMotorcycle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -105,7 +106,7 @@ Partial Class Reserve
         'grdMotorcycle
         '
         Me.grdMotorcycle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.grdMotorcycle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9})
+        Me.grdMotorcycle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column9, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
         Me.grdMotorcycle.Location = New System.Drawing.Point(155, 79)
         Me.grdMotorcycle.Margin = New System.Windows.Forms.Padding(2)
         Me.grdMotorcycle.Name = "grdMotorcycle"
@@ -113,6 +114,23 @@ Partial Class Reserve
         Me.grdMotorcycle.RowTemplate.Height = 24
         Me.grdMotorcycle.Size = New System.Drawing.Size(658, 232)
         Me.grdMotorcycle.TabIndex = 34
+        '
+        'Btn_Add_MT
+        '
+        Me.Btn_Add_MT.Location = New System.Drawing.Point(593, 315)
+        Me.Btn_Add_MT.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_Add_MT.Name = "Btn_Add_MT"
+        Me.Btn_Add_MT.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_Add_MT.TabIndex = 35
+        Me.Btn_Add_MT.Text = "Add MT no."
+        Me.Btn_Add_MT.UseVisualStyleBackColor = True
+        '
+        'Column9
+        '
+        Me.Column9.HeaderText = "Branch"
+        Me.Column9.MinimumWidth = 6
+        Me.Column9.Name = "Column9"
+        Me.Column9.Width = 125
         '
         'Column1
         '
@@ -170,25 +188,19 @@ Partial Class Reserve
         Me.Column8.Name = "Column8"
         Me.Column8.Width = 125
         '
-        'Column9
-        '
-        Me.Column9.HeaderText = "Branch"
-        Me.Column9.MinimumWidth = 6
-        Me.Column9.Name = "Column9"
-        Me.Column9.Width = 125
-        '
         'Reserve
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(859, 366)
+        Me.Controls.Add(Me.Btn_Add_MT)
         Me.Controls.Add(Me.grdMotorcycle)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cmb_tobranch)
         Me.Controls.Add(Me.Btn_Transit)
         Me.Controls.Add(Me.Btn_AvStock)
         Me.Controls.Add(Me.Btn_Reserved)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Reserve"
         Me.Text = "Reserve"
         CType(Me.grdMotorcycle, System.ComponentModel.ISupportInitialize).EndInit()
@@ -204,6 +216,8 @@ Partial Class Reserve
     Friend WithEvents Label1 As Label
     Friend WithEvents cmb_tobranch As ComboBox
     Friend WithEvents grdMotorcycle As DataGridView
+    Friend WithEvents Btn_Add_MT As Button
+    Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
@@ -212,5 +226,4 @@ Partial Class Reserve
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
-    Friend WithEvents Column9 As DataGridViewTextBoxColumn
 End Class

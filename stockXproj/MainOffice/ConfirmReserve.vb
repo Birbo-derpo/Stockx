@@ -110,7 +110,7 @@ Public Class ConfirmReserve
                 Try
                     With command
                         .Parameters.Clear()
-                        .CommandText = "prc_ChangeStat"
+                        .CommandText = "prc_ReserveTo"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(6).Value.ToString)
                         .Parameters.AddWithValue("@p_Branch", cmb_tobranch.Text)

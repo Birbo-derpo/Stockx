@@ -57,5 +57,7 @@ Public Class Reserve
         Me.Hide()
     End Sub
 
-
+    Private Sub Btn_Add_MT_Click(sender As Object, e As EventArgs) Handles Btn_Add_MT.Click
+        Add_MT_Number.Show()
+    End Sub
 End Class

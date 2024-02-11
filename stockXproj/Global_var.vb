@@ -7,7 +7,7 @@ Module Global_Var
     Public DataUMTC As DataTable
     Public strconnection, servername, databasename, databaseuserid,
             databasepassword, action, State, port As String
-    Public carphotopath, Email, Password As String
+    Public EngineNo, Email, Password As String
     Public row As Integer
 
 End Module

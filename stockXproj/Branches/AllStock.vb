@@ -5,7 +5,6 @@ Public Class AllStock
     Private Sub AllStock_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CheckDatabaseConnection()
         PrcDisplayAllStock()
-        'YAWA
     End Sub
 
     Private Sub PrcDisplayAllStock()
@@ -29,12 +28,14 @@ Public Class AllStock
                             row = row + 1
                         Else
                             Grd_Stock.Rows(row).Cells(0).Value = DataUMTC.Rows(row).Item("Brnch").ToString
-                            Grd_Stock.Rows(row).Cells(1).Value = DataUMTC.Rows(row).Item("Invoice").ToString
+                            Grd_Stock.Rows(row).Cells(1).Value = DataUMTC.Rows(row).Item("MTN").ToString
                             Grd_Stock.Rows(row).Cells(2).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
                             Grd_Stock.Rows(row).Cells(3).Value = DataUMTC.Rows(row).Item("model").ToString
-                            Grd_Stock.Rows(row).Cells(4).Value = DataUMTC.Rows(row).Item("Color").ToString
-                            Grd_Stock.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Price").ToString
-                            Grd_Stock.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
+                            Grd_Stock.Rows(row).Cells(4).Value = DataUMTC.Rows(row).Item("Price").ToString
+                            Grd_Stock.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Color").ToString
+                            Grd_Stock.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
+                            Grd_Stock.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("Framenum").ToString
+                            Grd_Stock.Rows(row).Cells(8).Value = DataUMTC.Rows(row).Item("Stat").ToString
 
                             row = row + 1
                         End If

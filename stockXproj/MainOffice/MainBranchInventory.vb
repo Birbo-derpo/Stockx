@@ -26,18 +26,18 @@ Public Class MainBranchInventory
                 sqlUMTCAdapter.Fill(datUMTC)
                 lblTotal.Text = "TOTAL RECORDS: " & datUMTC.Rows.Count
                 If datUMTC.Rows.Count > 0 Then
-                    grdMotorcycle.RowCount = datUMTC.Rows.Count
+                    Grd_Motorcycle.RowCount = datUMTC.Rows.Count
                     row = 0
                     While Not datUMTC.Rows.Count - 1 < row
-                        grdMotorcycle.Rows(row).Cells(0).Value = datUMTC.Rows(row).Item("Invoice").ToString
-                        grdMotorcycle.Rows(row).Cells(1).Value = Format(Convert.ToDateTime(datUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
-                        grdMotorcycle.Rows(row).Cells(2).Value = datUMTC.Rows(row).Item("Model").ToString
-                        grdMotorcycle.Rows(row).Cells(3).Value = datUMTC.Rows(row).Item("Color").ToString
-                        grdMotorcycle.Rows(row).Cells(4).Value = datUMTC.Rows(row).Item("Price").ToString
-                        grdMotorcycle.Rows(row).Cells(5).Value = datUMTC.Rows(row).Item("EngineNum").ToString
-                        grdMotorcycle.Rows(row).Cells(6).Value = datUMTC.Rows(row).Item("Framenum").ToString
-                        grdMotorcycle.Rows(row).Cells(7).Value = datUMTC.Rows(row).Item("Stat").ToString
-                        grdMotorcycle.Rows(row).Cells(8).Value = datUMTC.Rows(row).Item("Brnch").ToString
+                        Grd_Motorcycle.Rows(row).Cells(0).Value = datUMTC.Rows(row).Item("Invoice").ToString
+                        Grd_Motorcycle.Rows(row).Cells(1).Value = Format(Convert.ToDateTime(datUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
+                        Grd_Motorcycle.Rows(row).Cells(2).Value = datUMTC.Rows(row).Item("Model").ToString
+                        Grd_Motorcycle.Rows(row).Cells(3).Value = datUMTC.Rows(row).Item("Color").ToString
+                        Grd_Motorcycle.Rows(row).Cells(4).Value = datUMTC.Rows(row).Item("Price").ToString
+                        Grd_Motorcycle.Rows(row).Cells(5).Value = datUMTC.Rows(row).Item("EngineNum").ToString
+                        Grd_Motorcycle.Rows(row).Cells(6).Value = datUMTC.Rows(row).Item("Framenum").ToString
+                        Grd_Motorcycle.Rows(row).Cells(7).Value = datUMTC.Rows(row).Item("Stat").ToString
+                        Grd_Motorcycle.Rows(row).Cells(8).Value = datUMTC.Rows(row).Item("Brnch").ToString
 
                         row = row + 1
 
@@ -84,19 +84,19 @@ Public Class MainBranchInventory
                 sqlUMTCAdapter.Fill(datUMTC)
                 lblTotal.Text = "TOTAL RECORDS: " & datUMTC.Rows.Count
                 If datUMTC.Rows.Count > 0 Then
-                    grdMotorcycle.RowCount = datUMTC.Rows.Count
+                    Grd_Motorcycle.RowCount = datUMTC.Rows.Count
                     row = 0
                     While Not datUMTC.Rows.Count - 1 < row
 
-                        grdMotorcycle.Rows(row).Cells(0).Value = datUMTC.Rows(row).Item("Invoice").ToString
-                        grdMotorcycle.Rows(row).Cells(1).Value = Format(Convert.ToDateTime(datUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
-                        grdMotorcycle.Rows(row).Cells(2).Value = datUMTC.Rows(row).Item("Model").ToString
-                        grdMotorcycle.Rows(row).Cells(3).Value = datUMTC.Rows(row).Item("Color").ToString
-                        grdMotorcycle.Rows(row).Cells(4).Value = datUMTC.Rows(row).Item("Price").ToString
-                        grdMotorcycle.Rows(row).Cells(5).Value = datUMTC.Rows(row).Item("EngineNum").ToString
-                        grdMotorcycle.Rows(row).Cells(6).Value = datUMTC.Rows(row).Item("Framenum").ToString
-                        grdMotorcycle.Rows(row).Cells(7).Value = datUMTC.Rows(row).Item("Stat").ToString
-                        grdMotorcycle.Rows(row).Cells(8).Value = datUMTC.Rows(row).Item("Brnch").ToString
+                        Grd_Motorcycle.Rows(row).Cells(0).Value = datUMTC.Rows(row).Item("Invoice").ToString
+                        Grd_Motorcycle.Rows(row).Cells(1).Value = Format(Convert.ToDateTime(datUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
+                        Grd_Motorcycle.Rows(row).Cells(2).Value = datUMTC.Rows(row).Item("Model").ToString
+                        Grd_Motorcycle.Rows(row).Cells(3).Value = datUMTC.Rows(row).Item("Color").ToString
+                        Grd_Motorcycle.Rows(row).Cells(4).Value = datUMTC.Rows(row).Item("Price").ToString
+                        Grd_Motorcycle.Rows(row).Cells(5).Value = datUMTC.Rows(row).Item("EngineNum").ToString
+                        Grd_Motorcycle.Rows(row).Cells(6).Value = datUMTC.Rows(row).Item("Framenum").ToString
+                        Grd_Motorcycle.Rows(row).Cells(7).Value = datUMTC.Rows(row).Item("Stat").ToString
+                        Grd_Motorcycle.Rows(row).Cells(8).Value = datUMTC.Rows(row).Item("Brnch").ToString
 
                         row = row + 1
                     End While
@@ -145,14 +145,14 @@ Public Class MainBranchInventory
 
             action = "Update"
 
-            .txtInvoiceNumber.Text = grdMotorcycle.CurrentRow.Cells(0).Value
-            .dt.Value = Format(Convert.ToDateTime(grdMotorcycle.CurrentRow.Cells(1).Value), "yyyy,MMM,dd")
+            .txtInvoiceNumber.Text = Grd_Motorcycle.CurrentRow.Cells(0).Value
+            .dt.Value = Format(Convert.ToDateTime(Grd_Motorcycle.CurrentRow.Cells(1).Value), "yyyy,MMM,dd")
 
-            .txtModel.Text = grdMotorcycle.CurrentRow.Cells(2).Value
-            .txtColor.Text = grdMotorcycle.CurrentRow.Cells(3).Value
-            .txtPrice.Text = grdMotorcycle.CurrentRow.Cells(4).Value
-            .txtEngineNumber.Text = grdMotorcycle.CurrentRow.Cells(5).Value
-            .txtFrameNumber.Text = grdMotorcycle.CurrentRow.Cells(6).Value
+            .txtModel.Text = Grd_Motorcycle.CurrentRow.Cells(2).Value
+            .txtColor.Text = Grd_Motorcycle.CurrentRow.Cells(3).Value
+            .txtPrice.Text = Grd_Motorcycle.CurrentRow.Cells(4).Value
+            .txtEngineNumber.Text = Grd_Motorcycle.CurrentRow.Cells(5).Value
+            .txtFrameNumber.Text = Grd_Motorcycle.CurrentRow.Cells(6).Value
             .ShowDialog()
         End With
         PrcDisplayUnits()
@@ -174,18 +174,18 @@ Public Class MainBranchInventory
                 sqlUMTCAdapter.Fill(datUMTC)
                 lblTotal.Text = "TOTAL RECORDS: " & datUMTC.Rows.Count
                 If datUMTC.Rows.Count > 0 Then
-                    grdMotorcycle.RowCount = datUMTC.Rows.Count
+                    Grd_Motorcycle.RowCount = datUMTC.Rows.Count
                     row = 0
                     While Not datUMTC.Rows.Count - 1 < row
-                        grdMotorcycle.Rows(row).Cells(0).Value = datUMTC.Rows(row).Item("Invoice").ToString
-                        grdMotorcycle.Rows(row).Cells(1).Value = Format(Convert.ToDateTime(datUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
-                        grdMotorcycle.Rows(row).Cells(2).Value = datUMTC.Rows(row).Item("Model").ToString
-                        grdMotorcycle.Rows(row).Cells(3).Value = datUMTC.Rows(row).Item("Color").ToString
-                        grdMotorcycle.Rows(row).Cells(4).Value = datUMTC.Rows(row).Item("Price").ToString
-                        grdMotorcycle.Rows(row).Cells(5).Value = datUMTC.Rows(row).Item("EngineNum").ToString
-                        grdMotorcycle.Rows(row).Cells(6).Value = datUMTC.Rows(row).Item("Framenum").ToString
-                        grdMotorcycle.Rows(row).Cells(7).Value = datUMTC.Rows(row).Item("Stat").ToString
-                        grdMotorcycle.Rows(row).Cells(8).Value = datUMTC.Rows(row).Item("Brnch").ToString
+                        Grd_Motorcycle.Rows(row).Cells(0).Value = datUMTC.Rows(row).Item("Invoice").ToString
+                        Grd_Motorcycle.Rows(row).Cells(1).Value = Format(Convert.ToDateTime(datUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
+                        Grd_Motorcycle.Rows(row).Cells(2).Value = datUMTC.Rows(row).Item("Model").ToString
+                        Grd_Motorcycle.Rows(row).Cells(3).Value = datUMTC.Rows(row).Item("Color").ToString
+                        Grd_Motorcycle.Rows(row).Cells(4).Value = datUMTC.Rows(row).Item("Price").ToString
+                        Grd_Motorcycle.Rows(row).Cells(5).Value = datUMTC.Rows(row).Item("EngineNum").ToString
+                        Grd_Motorcycle.Rows(row).Cells(6).Value = datUMTC.Rows(row).Item("Framenum").ToString
+                        Grd_Motorcycle.Rows(row).Cells(7).Value = datUMTC.Rows(row).Item("Stat").ToString
+                        Grd_Motorcycle.Rows(row).Cells(8).Value = datUMTC.Rows(row).Item("Brnch").ToString
 
                         row = row + 1
 
@@ -209,8 +209,8 @@ Public Class MainBranchInventory
     End Sub
     'button end
 
-    Private Sub grdMotorcycle_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles grdMotorcycle.CellClick
-        invoice = grdMotorcycle.Rows(row).Cells(0).Value.ToString
+    Private Sub GrdMotorcycle_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_Motorcycle.CellClick
+        invoice = Grd_Motorcycle.Rows(row).Cells(0).Value.ToString
     End Sub
 
 End Class

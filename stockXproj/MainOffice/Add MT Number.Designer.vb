@@ -22,10 +22,11 @@ Partial Class Add_MT_Number
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Btn_ConfirmTransit = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.grdMotorcycle = New System.Windows.Forms.DataGridView()
+        Me.Grd_MotorcycleReserved = New System.Windows.Forms.DataGridView()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -33,45 +34,54 @@ Partial Class Add_MT_Number
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.grdMotorcycle, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Grd_MotorcycleReserved, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button1
+        'Btn_ConfirmTransit
         '
-        Me.Button1.Location = New System.Drawing.Point(580, 390)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(114, 23)
-        Me.Button1.TabIndex = 42
-        Me.Button1.Text = "Confirm Transit"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Btn_ConfirmTransit.Location = New System.Drawing.Point(435, 317)
+        Me.Btn_ConfirmTransit.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_ConfirmTransit.Name = "Btn_ConfirmTransit"
+        Me.Btn_ConfirmTransit.Size = New System.Drawing.Size(86, 19)
+        Me.Btn_ConfirmTransit.TabIndex = 42
+        Me.Btn_ConfirmTransit.Text = "Confirm Transit"
+        Me.Btn_ConfirmTransit.UseVisualStyleBackColor = True
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(411, 61)
+        Me.Label1.Location = New System.Drawing.Point(308, 50)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(112, 16)
+        Me.Label1.Size = New System.Drawing.Size(91, 13)
         Me.Label1.TabIndex = 41
         Me.Label1.Text = "Enter MT Number"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(539, 55)
+        Me.TextBox1.Location = New System.Drawing.Point(404, 45)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(76, 20)
         Me.TextBox1.TabIndex = 40
         '
-        'grdMotorcycle
+        'Grd_MotorcycleReserved
         '
-        Me.grdMotorcycle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.grdMotorcycle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
-        Me.grdMotorcycle.Location = New System.Drawing.Point(157, 97)
-        Me.grdMotorcycle.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.grdMotorcycle.Name = "grdMotorcycle"
-        Me.grdMotorcycle.RowHeadersWidth = 51
-        Me.grdMotorcycle.RowTemplate.Height = 24
-        Me.grdMotorcycle.Size = New System.Drawing.Size(942, 267)
-        Me.grdMotorcycle.TabIndex = 39
+        Me.Grd_MotorcycleReserved.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Grd_MotorcycleReserved.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
+        Me.Grd_MotorcycleReserved.Location = New System.Drawing.Point(118, 79)
+        Me.Grd_MotorcycleReserved.Margin = New System.Windows.Forms.Padding(2)
+        Me.Grd_MotorcycleReserved.Name = "Grd_MotorcycleReserved"
+        Me.Grd_MotorcycleReserved.RowHeadersWidth = 51
+        Me.Grd_MotorcycleReserved.RowTemplate.Height = 24
+        Me.Grd_MotorcycleReserved.Size = New System.Drawing.Size(706, 217)
+        Me.Grd_MotorcycleReserved.TabIndex = 39
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Branch"
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
         '
         'Column1
         '
@@ -131,25 +141,27 @@ Partial Class Add_MT_Number
         '
         'Add_MT_Number
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1256, 468)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(942, 380)
+        Me.Controls.Add(Me.Btn_ConfirmTransit)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.grdMotorcycle)
+        Me.Controls.Add(Me.Grd_MotorcycleReserved)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Add_MT_Number"
         Me.Text = "Add_MT_Number"
-        CType(Me.grdMotorcycle, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Grd_MotorcycleReserved, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Button1 As Button
+    Friend WithEvents Btn_ConfirmTransit As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents grdMotorcycle As DataGridView
+    Friend WithEvents Grd_MotorcycleReserved As DataGridView
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn

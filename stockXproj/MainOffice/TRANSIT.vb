@@ -24,14 +24,14 @@ Public Class TRANSIT
                     row = 0
                     While Not DataUMTC.Rows.Count - 1 < row
                         grdMotorcycle.Rows(row).Cells(1).Value = DataUMTC.Rows(row).Item("Invoice").ToString
-                        grdMotorcycle.Rows(row).Cells(2).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
-                        grdMotorcycle.Rows(row).Cells(3).Value = DataUMTC.Rows(row).Item("Model").ToString
-                        grdMotorcycle.Rows(row).Cells(4).Value = DataUMTC.Rows(row).Item("Color").ToString
-                        grdMotorcycle.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Price").ToString
-                        grdMotorcycle.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
-                        grdMotorcycle.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("FrameNum").ToString
-                        grdMotorcycle.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("Stat").ToString
-                        grdMotorcycle.Rows(row).Cells(8).Value = DataUMTC.Rows(row).Item("Brnch").ToString
+                        grdMotorcycle.Rows(row).Cells(2).Value = DataUMTC.Rows(row).Item("Brnch").ToString
+                        grdMotorcycle.Rows(row).Cells(3).Value = DataUMTC.Rows(row).Item("MTN").ToString
+                        grdMotorcycle.Rows(row).Cells(4).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
+                        grdMotorcycle.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Model").ToString
+                        grdMotorcycle.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("Color").ToString
+                        grdMotorcycle.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("Price").ToString
+                        grdMotorcycle.Rows(row).Cells(8).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
+                        grdMotorcycle.Rows(row).Cells(9).Value = DataUMTC.Rows(row).Item("FrameNum").ToString
                         row = row + 1
 
                     End While
@@ -54,24 +54,23 @@ Public Class TRANSIT
         Me.Hide()
     End Sub
 
-    Private Sub Btn_transfer_Click(sender As Object, e As EventArgs) Handles Btn_transfer.Click
-        State = "Reserve"
+    Private Sub Btn_Transfer_Click(sender As Object, e As EventArgs) Handles Btn_Transfer.Click
+        State = "in branch"
         For Each Checkcell As DataGridViewRow In grdMotorcycle.Rows
             'needs to accept only when branches combobox is selected
-            If Checkcell.Cells("Column8").Value = True And cmb_tobranch.Text <> " " Then
+            If Checkcell.Cells("Column8").Value = True And cmb_tobranch.Text <> "" Then
                 Try
                     With command
                         .Parameters.Clear()
                         .CommandText = "prc_ChangeStat"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(6).Value.ToString)
-                        .Parameters.AddWithValue("@p_Branch", cmb_tobranch.Text)
                         .Parameters.AddWithValue("@p_Stat", State)
                         .ExecuteNonQuery()
                     End With
 
                 Catch ex As Exception
-                    MessageBox.Show("unit/s reserved", "reserved", MessageBoxButtons.OK)
+                    MessageBox.Show("unit/s now in branch", "in branch", MessageBoxButtons.OK)
                 End Try
             End If
 
