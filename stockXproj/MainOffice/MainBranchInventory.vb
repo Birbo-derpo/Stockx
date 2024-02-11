@@ -226,4 +226,8 @@ Public Class MainBranchInventory
         TRANSIT.Show()
         Me.Hide()
     End Sub
+
+    Private Sub Grd_Motorcycle_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_Motorcycle.CellContentClick
+
+    End Sub
 End Class

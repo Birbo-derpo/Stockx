@@ -17,7 +17,7 @@ Public Class ConfirmReserve
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_DisplayStock"
+                .CommandText = "prc_DisplayAllAvailableStock"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", "Status")
                 .Parameters.AddWithValue("@p_search", "available")
@@ -35,6 +35,8 @@ Public Class ConfirmReserve
                         grdMotorcycle.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Price").ToString
                         grdMotorcycle.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
                         grdMotorcycle.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("FrameNum").ToString
+                        grdMotorcycle.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("Stat").ToString
+                        grdMotorcycle.Rows(row).Cells(8).Value = DataUMTC.Rows(row).Item("Brnch").ToString
                         row = row + 1
 
                     End While
@@ -175,6 +177,10 @@ Public Class ConfirmReserve
     End Sub
     Private Sub Btn_back_Click(sender As Object, e As EventArgs) Handles Btn_back.Click
         Me.Hide()
+    End Sub
+
+    Private Sub grdMotorcycle_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grdMotorcycle.CellContentClick
+
     End Sub
     'Buttons end
 End Class
