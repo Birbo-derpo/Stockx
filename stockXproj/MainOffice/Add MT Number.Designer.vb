@@ -24,7 +24,7 @@ Partial Class Add_MT_Number
     Private Sub InitializeComponent()
         Me.Btn_ConfirmTransit = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txt_MTN = New System.Windows.Forms.TextBox()
         Me.Grd_MotorcycleReserved = New System.Windows.Forms.DataGridView()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -57,13 +57,13 @@ Partial Class Add_MT_Number
         Me.Label1.TabIndex = 41
         Me.Label1.Text = "Enter MT Number"
         '
-        'TextBox1
+        'txt_MTN
         '
-        Me.TextBox1.Location = New System.Drawing.Point(404, 45)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(76, 20)
-        Me.TextBox1.TabIndex = 40
+        Me.txt_MTN.Location = New System.Drawing.Point(404, 45)
+        Me.txt_MTN.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_MTN.Name = "txt_MTN"
+        Me.txt_MTN.Size = New System.Drawing.Size(76, 20)
+        Me.txt_MTN.TabIndex = 40
         '
         'Grd_MotorcycleReserved
         '
@@ -146,7 +146,7 @@ Partial Class Add_MT_Number
         Me.ClientSize = New System.Drawing.Size(942, 380)
         Me.Controls.Add(Me.Btn_ConfirmTransit)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txt_MTN)
         Me.Controls.Add(Me.Grd_MotorcycleReserved)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Add_MT_Number"
@@ -159,7 +159,7 @@ Partial Class Add_MT_Number
 
     Friend WithEvents Btn_ConfirmTransit As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txt_MTN As TextBox
     Friend WithEvents Grd_MotorcycleReserved As DataGridView
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn

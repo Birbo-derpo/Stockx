@@ -62,15 +62,10 @@ Public Class Add_MT_Number
                 .Parameters.Clear()
                 .CommandText = "prc_AddMTN"
                 .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_MTN", txt_MTN.Text)
                 .Parameters.AddWithValue("@p_EngineNum", EngineNo)
                 .ExecuteNonQuery()
             End With
-
-        Catch ex As Exception
-            MessageBox.Show("unit now in transit", "in transit", MessageBoxButtons.OK)
-        End Try
-
-        Try
             With command
                 .Parameters.Clear()
                 .CommandText = "prc_ChangeStat"
@@ -79,9 +74,8 @@ Public Class Add_MT_Number
                 .Parameters.AddWithValue("@p_Stat", State)
                 .ExecuteNonQuery()
             End With
-
+            MessageBox.Show("unit now in transit", "in transit", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Catch ex As Exception
-            MessageBox.Show("unit now in transit", "in transit", MessageBoxButtons.OK)
         End Try
 
         PrcDisplayReservedUnits()
