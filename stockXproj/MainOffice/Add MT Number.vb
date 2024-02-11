@@ -51,7 +51,7 @@ Public Class Add_MT_Number
     End Sub
 
     Private Sub GrdMotorcycle_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_MotorcycleReserved.CellClick
-        EngineNo = Grd_MotorcycleReserved.CurrentRow.Cells(6).Value.ToString
+        EngineNo = Grd_MotorcycleReserved.CurrentRow.Cells(6).Value
     End Sub
 
     Private Sub Btn_ConfirmTransit_Click(sender As Object, e As EventArgs) Handles Btn_ConfirmTransit.Click
@@ -66,6 +66,11 @@ Public Class Add_MT_Number
                 .ExecuteNonQuery()
             End With
 
+        Catch ex As Exception
+            MessageBox.Show("unit now in transit", "in transit", MessageBoxButtons.OK)
+        End Try
+
+        Try
             With command
                 .Parameters.Clear()
                 .CommandText = "prc_ChangeStat"
@@ -79,6 +84,7 @@ Public Class Add_MT_Number
             MessageBox.Show("unit now in transit", "in transit", MessageBoxButtons.OK)
         End Try
 
+        PrcDisplayReservedUnits()
     End Sub
 
 End Class
