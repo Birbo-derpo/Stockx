@@ -34,6 +34,7 @@ Partial Class Add_MT_Number
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Btn_back = New System.Windows.Forms.Button()
         CType(Me.Grd_MotorcycleReserved, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -139,11 +140,22 @@ Partial Class Add_MT_Number
         Me.Column7.ReadOnly = True
         Me.Column7.Width = 125
         '
+        'Btn_back
+        '
+        Me.Btn_back.Location = New System.Drawing.Point(136, 317)
+        Me.Btn_back.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_back.Name = "Btn_back"
+        Me.Btn_back.Size = New System.Drawing.Size(86, 19)
+        Me.Btn_back.TabIndex = 43
+        Me.Btn_back.Text = "Back"
+        Me.Btn_back.UseVisualStyleBackColor = True
+        '
         'Add_MT_Number
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(942, 380)
+        Me.Controls.Add(Me.Btn_back)
         Me.Controls.Add(Me.Btn_ConfirmTransit)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txt_MTN)
@@ -169,4 +181,5 @@ Partial Class Add_MT_Number
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Btn_back As Button
 End Class

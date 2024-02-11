@@ -81,4 +81,10 @@ Public Class Add_MT_Number
         PrcDisplayReservedUnits()
     End Sub
 
+    Private Sub Btn_back_Click(sender As Object, e As EventArgs) Handles Btn_back.Click
+        With Reserve
+            .Show()
+        End With
+        Me.Hide()
+    End Sub
 End Class

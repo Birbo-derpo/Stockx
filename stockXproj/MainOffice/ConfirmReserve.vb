@@ -10,9 +10,10 @@ Public Class ConfirmReserve
     'dataloader
 
     Private Sub PrcDisplayAvailableUnits()
+        sqlUMTCAdapter = New MySqlDataAdapter
+        DataUMTC = New DataTable
         Try
-            sqlUMTCAdapter = New MySqlDataAdapter
-            DataUMTC = New DataTable
+
 
             With command
                 .Parameters.Clear()
@@ -63,9 +64,10 @@ Public Class ConfirmReserve
     End Sub
 
     Private Sub PrcDisplayMotorcycleWithAutoCompleteInMainInventory()
+        sqlUMTCAdapter = New MySqlDataAdapter
+        DataUMTC = New DataTable
         Try
-            sqlUMTCAdapter = New MySqlDataAdapter
-            DataUMTC = New DataTable
+
             With command
                 .Parameters.Clear()
                 .CommandText = "prc_InventorySearchFilter"
@@ -130,9 +132,10 @@ Public Class ConfirmReserve
 
     End Sub
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        sqlUMTCAdapter = New MySqlDataAdapter
+        DataUMTC = New DataTable
         Try
-            sqlUMTCAdapter = New MySqlDataAdapter
-            DataUMTC = New DataTable
+
             With command
                 .Parameters.Clear()
                 .CommandText = "prc_DisplayStock"
