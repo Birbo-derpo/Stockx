@@ -29,7 +29,6 @@ Partial Class Reserve
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cmb_tobranch = New System.Windows.Forms.ComboBox()
         Me.grdMotorcycle = New System.Windows.Forms.DataGridView()
-        Me.Btn_Add_MT = New System.Windows.Forms.Button()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -39,35 +38,36 @@ Partial Class Reserve
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Btn_Add_MT = New System.Windows.Forms.Button()
         CType(Me.grdMotorcycle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Btn_Transit
         '
-        Me.Btn_Transit.Location = New System.Drawing.Point(28, 203)
-        Me.Btn_Transit.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_Transit.Location = New System.Drawing.Point(37, 250)
+        Me.Btn_Transit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Transit.Name = "Btn_Transit"
-        Me.Btn_Transit.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_Transit.Size = New System.Drawing.Size(143, 62)
         Me.Btn_Transit.TabIndex = 28
         Me.Btn_Transit.Text = "Transit"
         Me.Btn_Transit.UseVisualStyleBackColor = True
         '
         'Btn_AvStock
         '
-        Me.Btn_AvStock.Location = New System.Drawing.Point(28, 115)
-        Me.Btn_AvStock.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_AvStock.Location = New System.Drawing.Point(37, 142)
+        Me.Btn_AvStock.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_AvStock.Name = "Btn_AvStock"
-        Me.Btn_AvStock.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_AvStock.Size = New System.Drawing.Size(143, 62)
         Me.Btn_AvStock.TabIndex = 27
         Me.Btn_AvStock.Text = "Available Stock"
         Me.Btn_AvStock.UseVisualStyleBackColor = True
         '
         'Btn_Reserved
         '
-        Me.Btn_Reserved.Location = New System.Drawing.Point(28, 158)
-        Me.Btn_Reserved.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_Reserved.Location = New System.Drawing.Point(37, 194)
+        Me.Btn_Reserved.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Reserved.Name = "Btn_Reserved"
-        Me.Btn_Reserved.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_Reserved.Size = New System.Drawing.Size(143, 62)
         Me.Btn_Reserved.TabIndex = 26
         Me.Btn_Reserved.Text = "Reserved"
         Me.Btn_Reserved.UseVisualStyleBackColor = True
@@ -85,10 +85,9 @@ Partial Class Reserve
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(559, 33)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(745, 41)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(74, 13)
+        Me.Label1.Size = New System.Drawing.Size(90, 16)
         Me.Label1.TabIndex = 33
         Me.Label1.Text = "Select Branch"
         '
@@ -97,33 +96,23 @@ Partial Class Reserve
         Me.cmb_tobranch.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
         Me.cmb_tobranch.FormattingEnabled = True
         Me.cmb_tobranch.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
-        Me.cmb_tobranch.Location = New System.Drawing.Point(463, 30)
-        Me.cmb_tobranch.Margin = New System.Windows.Forms.Padding(2)
+        Me.cmb_tobranch.Location = New System.Drawing.Point(617, 37)
+        Me.cmb_tobranch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cmb_tobranch.Name = "cmb_tobranch"
-        Me.cmb_tobranch.Size = New System.Drawing.Size(92, 21)
+        Me.cmb_tobranch.Size = New System.Drawing.Size(121, 24)
         Me.cmb_tobranch.TabIndex = 32
         '
         'grdMotorcycle
         '
         Me.grdMotorcycle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdMotorcycle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column9, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
-        Me.grdMotorcycle.Location = New System.Drawing.Point(155, 79)
-        Me.grdMotorcycle.Margin = New System.Windows.Forms.Padding(2)
+        Me.grdMotorcycle.Location = New System.Drawing.Point(207, 97)
+        Me.grdMotorcycle.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.grdMotorcycle.Name = "grdMotorcycle"
         Me.grdMotorcycle.RowHeadersWidth = 51
         Me.grdMotorcycle.RowTemplate.Height = 24
-        Me.grdMotorcycle.Size = New System.Drawing.Size(658, 232)
+        Me.grdMotorcycle.Size = New System.Drawing.Size(877, 286)
         Me.grdMotorcycle.TabIndex = 34
-        '
-        'Btn_Add_MT
-        '
-        Me.Btn_Add_MT.Location = New System.Drawing.Point(593, 315)
-        Me.Btn_Add_MT.Margin = New System.Windows.Forms.Padding(2)
-        Me.Btn_Add_MT.Name = "Btn_Add_MT"
-        Me.Btn_Add_MT.Size = New System.Drawing.Size(107, 50)
-        Me.Btn_Add_MT.TabIndex = 35
-        Me.Btn_Add_MT.Text = "Add MT no."
-        Me.Btn_Add_MT.UseVisualStyleBackColor = True
         '
         'Column9
         '
@@ -188,11 +177,21 @@ Partial Class Reserve
         Me.Column8.Name = "Column8"
         Me.Column8.Width = 125
         '
+        'Btn_Add_MT
+        '
+        Me.Btn_Add_MT.Location = New System.Drawing.Point(791, 388)
+        Me.Btn_Add_MT.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_Add_MT.Name = "Btn_Add_MT"
+        Me.Btn_Add_MT.Size = New System.Drawing.Size(143, 62)
+        Me.Btn_Add_MT.TabIndex = 35
+        Me.Btn_Add_MT.Text = "Add MT no."
+        Me.Btn_Add_MT.UseVisualStyleBackColor = True
+        '
         'Reserve
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(859, 366)
+        Me.ClientSize = New System.Drawing.Size(1145, 450)
         Me.Controls.Add(Me.Btn_Add_MT)
         Me.Controls.Add(Me.grdMotorcycle)
         Me.Controls.Add(Me.Label1)
@@ -200,7 +199,7 @@ Partial Class Reserve
         Me.Controls.Add(Me.Btn_Transit)
         Me.Controls.Add(Me.Btn_AvStock)
         Me.Controls.Add(Me.Btn_Reserved)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Reserve"
         Me.Text = "Reserve"
         CType(Me.grdMotorcycle, System.ComponentModel.ISupportInitialize).EndInit()

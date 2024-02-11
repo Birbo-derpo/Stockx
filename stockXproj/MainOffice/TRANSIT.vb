@@ -77,4 +77,15 @@ Public Class TRANSIT
         Next
         PrcDisplayTransitUnits()
     End Sub
+
+    Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs) Handles Btn_AvStock.Click
+        MainBranchInventory.Show()
+
+        Me.Hide()
+    End Sub
+
+    Private Sub Btn_Transit_Click(sender As Object, e As EventArgs) Handles Btn_Transit.Click
+        Me.Show()
+
+    End Sub
 End Class

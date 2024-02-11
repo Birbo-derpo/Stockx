@@ -60,4 +60,18 @@ Public Class Reserve
     Private Sub Btn_Add_MT_Click(sender As Object, e As EventArgs) Handles Btn_Add_MT.Click
         Add_MT_Number.Show()
     End Sub
+
+    Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs) Handles Btn_AvStock.Click
+        MainBranchInventory.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Btn_Reserved_Click(sender As Object, e As EventArgs) Handles Btn_Reserved.Click
+        Me.Show()
+    End Sub
+
+    Private Sub Btn_Transit_Click(sender As Object, e As EventArgs) Handles Btn_Transit.Click
+        TRANSIT.Show()
+        Me.Hide()
+    End Sub
 End Class

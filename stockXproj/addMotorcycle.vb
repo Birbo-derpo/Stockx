@@ -20,7 +20,7 @@
 
                 With command
                     .Parameters.Clear()
-                    .CommandText = ""
+                    .CommandText = "prc_UpdateMotorcycleByEngineNumber"
                     .CommandType = CommandType.StoredProcedure
                     .Parameters.AddWithValue("@p_invoice", txtInvoiceNumber.Text)
                     .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))

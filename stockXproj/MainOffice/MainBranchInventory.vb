@@ -128,7 +128,7 @@ Public Class MainBranchInventory
         Try
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_DeleteUnitbyInvoice"
+                .CommandText = "prc_DeleteUnitbyEngineNumber"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_invoice", invoice)
                 .ExecuteNonQuery()
@@ -213,4 +213,17 @@ Public Class MainBranchInventory
         invoice = Grd_Motorcycle.Rows(row).Cells(0).Value.ToString
     End Sub
 
+    Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs) Handles Btn_AvStock.Click
+        Me.Show()
+    End Sub
+
+    Private Sub Btn_Reserved_Click(sender As Object, e As EventArgs) Handles Btn_Reserved.Click
+        Reserve.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Btn_Transit_Click(sender As Object, e As EventArgs) Handles Btn_Transit.Click
+        TRANSIT.Show()
+        Me.Hide()
+    End Sub
 End Class
