@@ -14,7 +14,6 @@ Public Class ConfirmReserve
         DataUMTC = New DataTable
         Try
 
-
             With command
                 .Parameters.Clear()
                 .CommandText = "prc_DisplayAllAvailableStock"

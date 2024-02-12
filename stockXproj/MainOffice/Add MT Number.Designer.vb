@@ -26,6 +26,8 @@ Partial Class Add_MT_Number
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_MTN = New System.Windows.Forms.TextBox()
         Me.Grd_MotorcycleReserved = New System.Windows.Forms.DataGridView()
+        Me.Btn_back = New System.Windows.Forms.Button()
+        Me.Column9 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -34,7 +36,6 @@ Partial Class Add_MT_Number
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Btn_back = New System.Windows.Forms.Button()
         CType(Me.Grd_MotorcycleReserved, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -69,7 +70,7 @@ Partial Class Add_MT_Number
         'Grd_MotorcycleReserved
         '
         Me.Grd_MotorcycleReserved.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Grd_MotorcycleReserved.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
+        Me.Grd_MotorcycleReserved.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column9, Me.Column8, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
         Me.Grd_MotorcycleReserved.Location = New System.Drawing.Point(118, 79)
         Me.Grd_MotorcycleReserved.Margin = New System.Windows.Forms.Padding(2)
         Me.Grd_MotorcycleReserved.Name = "Grd_MotorcycleReserved"
@@ -77,6 +78,21 @@ Partial Class Add_MT_Number
         Me.Grd_MotorcycleReserved.RowTemplate.Height = 24
         Me.Grd_MotorcycleReserved.Size = New System.Drawing.Size(706, 217)
         Me.Grd_MotorcycleReserved.TabIndex = 39
+        '
+        'Btn_back
+        '
+        Me.Btn_back.Location = New System.Drawing.Point(136, 317)
+        Me.Btn_back.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_back.Name = "Btn_back"
+        Me.Btn_back.Size = New System.Drawing.Size(86, 19)
+        Me.Btn_back.TabIndex = 43
+        Me.Btn_back.Text = "Back"
+        Me.Btn_back.UseVisualStyleBackColor = True
+        '
+        'Column9
+        '
+        Me.Column9.HeaderText = "Check Select"
+        Me.Column9.Name = "Column9"
         '
         'Column8
         '
@@ -140,16 +156,6 @@ Partial Class Add_MT_Number
         Me.Column7.ReadOnly = True
         Me.Column7.Width = 125
         '
-        'Btn_back
-        '
-        Me.Btn_back.Location = New System.Drawing.Point(136, 317)
-        Me.Btn_back.Margin = New System.Windows.Forms.Padding(2)
-        Me.Btn_back.Name = "Btn_back"
-        Me.Btn_back.Size = New System.Drawing.Size(86, 19)
-        Me.Btn_back.TabIndex = 43
-        Me.Btn_back.Text = "Back"
-        Me.Btn_back.UseVisualStyleBackColor = True
-        '
         'Add_MT_Number
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -173,6 +179,8 @@ Partial Class Add_MT_Number
     Friend WithEvents Label1 As Label
     Friend WithEvents txt_MTN As TextBox
     Friend WithEvents Grd_MotorcycleReserved As DataGridView
+    Friend WithEvents Btn_back As Button
+    Friend WithEvents Column9 As DataGridViewCheckBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
@@ -181,5 +189,4 @@ Partial Class Add_MT_Number
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
-    Friend WithEvents Btn_back As Button
 End Class

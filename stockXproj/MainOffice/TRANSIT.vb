@@ -23,9 +23,9 @@ Public Class TRANSIT
                     grdMotorcycle.RowCount = DataUMTC.Rows.Count
                     row = 0
                     While Not DataUMTC.Rows.Count - 1 < row
-                        grdMotorcycle.Rows(row).Cells(1).Value = DataUMTC.Rows(row).Item("Invoice").ToString
-                        grdMotorcycle.Rows(row).Cells(2).Value = DataUMTC.Rows(row).Item("Brnch").ToString
-                        grdMotorcycle.Rows(row).Cells(3).Value = DataUMTC.Rows(row).Item("MTN").ToString
+                        grdMotorcycle.Rows(row).Cells(1).Value = DataUMTC.Rows(row).Item("Brnch").ToString
+                        grdMotorcycle.Rows(row).Cells(2).Value = DataUMTC.Rows(row).Item("Mtn").ToString
+                        grdMotorcycle.Rows(row).Cells(3).Value = DataUMTC.Rows(row).Item("Invoice").ToString
                         grdMotorcycle.Rows(row).Cells(4).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
                         grdMotorcycle.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Model").ToString
                         grdMotorcycle.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("Color").ToString
@@ -58,23 +58,23 @@ Public Class TRANSIT
         State = "in branch"
         For Each Checkcell As DataGridViewRow In grdMotorcycle.Rows
             'needs to accept only when branches combobox is selected
-            If Checkcell.Cells("Column8").Value = True And cmb_tobranch.Text <> "" Then
+            If Checkcell.Cells("Column8").Value = True Then
                 Try
                     With command
                         .Parameters.Clear()
                         .CommandText = "prc_ChangeStat"
                         .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(6).Value.ToString)
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(8).Value.ToString)
                         .Parameters.AddWithValue("@p_Stat", State)
                         .ExecuteNonQuery()
                     End With
 
                 Catch ex As Exception
-                    MessageBox.Show("unit/s now in branch", "in branch", MessageBoxButtons.OK)
                 End Try
             End If
 
         Next
+        MessageBox.Show("unit/s now in branch", "in branch", MessageBoxButtons.OK)
         PrcDisplayTransitUnits()
     End Sub
 
