@@ -19,8 +19,8 @@ Public Class MainBranchInventory
                 .Parameters.Clear()
                 .CommandText = "prc_DisplayStock"
                 .CommandType = CommandType.StoredProcedure
-                .Parameters.AddWithValue("@p_filter", "Status")
-                .Parameters.AddWithValue("@p_search", "available")
+                .Parameters.AddWithValue("@p_filter", "")
+                .Parameters.AddWithValue("@p_search", "")
                 sqlUMTCAdapter.SelectCommand = command
                 datUMTC.Clear()
                 sqlUMTCAdapter.Fill(datUMTC)
