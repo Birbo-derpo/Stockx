@@ -75,7 +75,7 @@ Public Class MainBranchInventory
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_InventorySearchFilter"
+                .CommandText = "prc_DisplayStock"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
                 .Parameters.AddWithValue("@p_search", txtSearch.Text)

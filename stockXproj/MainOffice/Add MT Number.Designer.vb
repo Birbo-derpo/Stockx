@@ -26,7 +26,6 @@ Partial Class Add_MT_Number
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_MTN = New System.Windows.Forms.TextBox()
         Me.Grd_MotorcycleReserved = New System.Windows.Forms.DataGridView()
-        Me.Btn_back = New System.Windows.Forms.Button()
         Me.Column9 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -36,6 +35,11 @@ Partial Class Add_MT_Number
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Btn_back = New System.Windows.Forms.Button()
+        Me.chkAuto = New System.Windows.Forms.CheckBox()
+        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
+        Me.cmbSearchType = New System.Windows.Forms.ComboBox()
         CType(Me.Grd_MotorcycleReserved, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -78,16 +82,6 @@ Partial Class Add_MT_Number
         Me.Grd_MotorcycleReserved.RowTemplate.Height = 24
         Me.Grd_MotorcycleReserved.Size = New System.Drawing.Size(706, 217)
         Me.Grd_MotorcycleReserved.TabIndex = 39
-        '
-        'Btn_back
-        '
-        Me.Btn_back.Location = New System.Drawing.Point(136, 317)
-        Me.Btn_back.Margin = New System.Windows.Forms.Padding(2)
-        Me.Btn_back.Name = "Btn_back"
-        Me.Btn_back.Size = New System.Drawing.Size(86, 19)
-        Me.Btn_back.TabIndex = 43
-        Me.Btn_back.Text = "Back"
-        Me.Btn_back.UseVisualStyleBackColor = True
         '
         'Column9
         '
@@ -156,11 +150,65 @@ Partial Class Add_MT_Number
         Me.Column7.ReadOnly = True
         Me.Column7.Width = 125
         '
+        'Btn_back
+        '
+        Me.Btn_back.Location = New System.Drawing.Point(136, 317)
+        Me.Btn_back.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_back.Name = "Btn_back"
+        Me.Btn_back.Size = New System.Drawing.Size(86, 19)
+        Me.Btn_back.TabIndex = 43
+        Me.Btn_back.Text = "Back"
+        Me.Btn_back.UseVisualStyleBackColor = True
+        '
+        'chkAuto
+        '
+        Me.chkAuto.AutoSize = True
+        Me.chkAuto.Location = New System.Drawing.Point(21, 58)
+        Me.chkAuto.Margin = New System.Windows.Forms.Padding(2)
+        Me.chkAuto.Name = "chkAuto"
+        Me.chkAuto.Size = New System.Drawing.Size(92, 17)
+        Me.chkAuto.TabIndex = 47
+        Me.chkAuto.Text = "AutoComplete"
+        Me.chkAuto.UseVisualStyleBackColor = True
+        '
+        'btnSearch
+        '
+        Me.btnSearch.Location = New System.Drawing.Point(212, 11)
+        Me.btnSearch.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(56, 19)
+        Me.btnSearch.TabIndex = 46
+        Me.btnSearch.Text = "search"
+        Me.btnSearch.UseVisualStyleBackColor = True
+        '
+        'txtSearch
+        '
+        Me.txtSearch.Location = New System.Drawing.Point(21, 11)
+        Me.txtSearch.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(160, 20)
+        Me.txtSearch.TabIndex = 45
+        '
+        'cmbSearchType
+        '
+        Me.cmbSearchType.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
+        Me.cmbSearchType.FormattingEnabled = True
+        Me.cmbSearchType.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
+        Me.cmbSearchType.Location = New System.Drawing.Point(21, 34)
+        Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(2)
+        Me.cmbSearchType.Name = "cmbSearchType"
+        Me.cmbSearchType.Size = New System.Drawing.Size(92, 21)
+        Me.cmbSearchType.TabIndex = 44
+        '
         'Add_MT_Number
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(942, 380)
+        Me.Controls.Add(Me.chkAuto)
+        Me.Controls.Add(Me.btnSearch)
+        Me.Controls.Add(Me.txtSearch)
+        Me.Controls.Add(Me.cmbSearchType)
         Me.Controls.Add(Me.Btn_back)
         Me.Controls.Add(Me.Btn_ConfirmTransit)
         Me.Controls.Add(Me.Label1)
@@ -189,4 +237,8 @@ Partial Class Add_MT_Number
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents chkAuto As CheckBox
+    Friend WithEvents btnSearch As Button
+    Friend WithEvents txtSearch As TextBox
+    Friend WithEvents cmbSearchType As ComboBox
 End Class

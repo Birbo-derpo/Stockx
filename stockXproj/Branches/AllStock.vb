@@ -14,8 +14,10 @@ Public Class AllStock
 
             With command
                 .Parameters.Clear()
-                .CommandText = "procDisplayAllStock"
+                .CommandText = "prc_DisplayStock"
                 .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_filter", "")
+                .Parameters.AddWithValue("@p_search", "")
                 sqlUMTCAdapter.SelectCommand = command
                 DataUMTC.Clear()
                 sqlUMTCAdapter.Fill(DataUMTC)
