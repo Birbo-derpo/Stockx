@@ -16,7 +16,7 @@ Public Class ConfirmReserve
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_DisplayAllAvailableStock"
+                .CommandText = "prc_DisplayMainStock"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", "Status")
                 .Parameters.AddWithValue("@p_search", "available")
@@ -35,7 +35,7 @@ Public Class ConfirmReserve
                         grdMotorcycle.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
                         grdMotorcycle.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("FrameNum").ToString
                         grdMotorcycle.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("Stat").ToString
-                        grdMotorcycle.Rows(row).Cells(8).Value = DataUMTC.Rows(row).Item("Brnch").ToString
+
                         row = row + 1
 
                     End While
@@ -71,7 +71,7 @@ Public Class ConfirmReserve
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_InventorySearchFilter"
+                .CommandText = "prc_DisplayMainStock"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
                 .Parameters.AddWithValue("@p_search", txtSearch.Text)
@@ -106,28 +106,31 @@ Public Class ConfirmReserve
 
     'Buttons
     Private Sub Btn_Confirm(sender As Object, e As EventArgs) Handles Btn_ConfirmReserve.Click
-        State = "Reserve"
-        For Each Checkcell As DataGridViewRow In grdMotorcycle.Rows
-            'needs to accept only when branches combobox is selected
-            If Checkcell.Cells("Column8").Value = True And cmb_tobranch.Text <> " " Then
-                Try
-                    With command
-                        .Parameters.Clear()
-                        .CommandText = "prc_ReserveTo"
-                        .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(6).Value.ToString)
-                        .Parameters.AddWithValue("@p_Branch", cmb_tobranch.Text)
-                        .Parameters.AddWithValue("@p_Stat", State)
-                        .ExecuteNonQuery()
-                    End With
+        If cmb_tobranch.Text <> "" Then
 
-                Catch ex As Exception
-                    MessageBox.Show("unit/s reserved", "reserved", MessageBoxButtons.OK)
-                End Try
-            End If
 
-        Next
+            For Each Checkcell As DataGridViewRow In grdMotorcycle.Rows
+                'needs to accept only when branches combobox is selected
+                If Checkcell.Cells("Column8").Value = True And cmb_tobranch.Text <> " " Then
+                    Try
+                        With command
+                            .Parameters.Clear()
+                            .CommandText = "prc_ReserveTo"
+                            .CommandType = CommandType.StoredProcedure
+                            .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(6).Value.ToString)
+                            .Parameters.AddWithValue("@p_Branch", cmb_tobranch.Text)
+                            .ExecuteNonQuery()
+                        End With
 
+                    Catch ex As Exception
+                        MessageBox.Show("unit/s reserved", "reserved", MessageBoxButtons.OK)
+                    End Try
+                End If
+
+            Next
+        Else
+            MessageBox.Show("branch destination not selected", "reservation error", MessageBoxButtons.OK)
+        End If
         PrcDisplayAvailableUnits()
         'checked list must be changed state only when reserved
 
@@ -139,7 +142,7 @@ Public Class ConfirmReserve
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_DisplayStock"
+                .CommandText = "prc_DisplayMainStock"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
                 .Parameters.AddWithValue("@p_search", txtSearch.Text)

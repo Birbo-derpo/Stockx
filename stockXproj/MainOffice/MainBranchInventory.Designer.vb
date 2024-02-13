@@ -44,6 +44,7 @@ Partial Class MainBranchInventory
         Me.Btn_Transit = New System.Windows.Forms.Button()
         Me.Btn_AvStock = New System.Windows.Forms.Button()
         Me.Btn_Reserved = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.Grd_Motorcycle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -241,11 +242,21 @@ Partial Class MainBranchInventory
         Me.Btn_Reserved.Text = "Reserved"
         Me.Btn_Reserved.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(1188, 465)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(162, 23)
+        Me.Button1.TabIndex = 35
+        Me.Button1.Text = "Back to DashBoard"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'MainBranchInventory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1381, 526)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Btn_Transit)
         Me.Controls.Add(Me.Btn_AvStock)
         Me.Controls.Add(Me.Btn_Reserved)
@@ -290,4 +301,5 @@ Partial Class MainBranchInventory
     Friend WithEvents Btn_Transit As Button
     Friend WithEvents Btn_AvStock As Button
     Friend WithEvents Btn_Reserved As Button
+    Friend WithEvents Button1 As Button
 End Class

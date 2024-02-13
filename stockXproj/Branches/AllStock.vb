@@ -14,7 +14,7 @@ Public Class AllStock
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_DisplayStock"
+                .CommandText = "prc_DisplayMainStock"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", "")
                 .Parameters.AddWithValue("@p_search", "")
@@ -80,6 +80,15 @@ Public Class AllStock
     Private Sub Btn_Update_Click(sender As Object, e As EventArgs)
         UpdateStocks.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        DashBoard.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Grd_Stock_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_Stock.CellContentClick
+
     End Sub
     'end of left screen buttons
 

@@ -17,7 +17,7 @@ Public Class MainBranchInventory
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_DisplayStock"
+                .CommandText = "prc_DisplayMainStock"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", "")
                 .Parameters.AddWithValue("@p_search", "")
@@ -75,7 +75,7 @@ Public Class MainBranchInventory
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_DisplayStock"
+                .CommandText = "prc_DisplayMainStock"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
                 .Parameters.AddWithValue("@p_search", txtSearch.Text)
@@ -94,7 +94,7 @@ Public Class MainBranchInventory
                         Grd_Motorcycle.Rows(row).Cells(3).Value = datUMTC.Rows(row).Item("Color").ToString
                         Grd_Motorcycle.Rows(row).Cells(4).Value = datUMTC.Rows(row).Item("Price").ToString
                         Grd_Motorcycle.Rows(row).Cells(5).Value = datUMTC.Rows(row).Item("EngineNum").ToString
-                        Grd_Motorcycle.Rows(row).Cells(6).Value = datUMTC.Rows(row).Item("Framenum").ToString
+                        Grd_Motorcycle.Rows(row).Cells(6).Value = datUMTC.Rows(row).Item("FrameNum").ToString
                         Grd_Motorcycle.Rows(row).Cells(7).Value = datUMTC.Rows(row).Item("Stat").ToString
                         Grd_Motorcycle.Rows(row).Cells(8).Value = datUMTC.Rows(row).Item("Brnch").ToString
 
@@ -165,7 +165,7 @@ Public Class MainBranchInventory
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_DisplayStock"
+                .CommandText = "prc_DisplayMainStock"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
                 .Parameters.AddWithValue("@p_search", txtSearch.Text)
@@ -183,7 +183,7 @@ Public Class MainBranchInventory
                         Grd_Motorcycle.Rows(row).Cells(3).Value = datUMTC.Rows(row).Item("Color").ToString
                         Grd_Motorcycle.Rows(row).Cells(4).Value = datUMTC.Rows(row).Item("Price").ToString
                         Grd_Motorcycle.Rows(row).Cells(5).Value = datUMTC.Rows(row).Item("EngineNum").ToString
-                        Grd_Motorcycle.Rows(row).Cells(6).Value = datUMTC.Rows(row).Item("Framenum").ToString
+                        Grd_Motorcycle.Rows(row).Cells(6).Value = datUMTC.Rows(row).Item("FrameNum").ToString
                         Grd_Motorcycle.Rows(row).Cells(7).Value = datUMTC.Rows(row).Item("Stat").ToString
                         Grd_Motorcycle.Rows(row).Cells(8).Value = datUMTC.Rows(row).Item("Brnch").ToString
 
@@ -210,7 +210,7 @@ Public Class MainBranchInventory
     'button end
 
     Private Sub GrdMotorcycle_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_Motorcycle.CellClick
-        invoice = Grd_Motorcycle.Rows(row).Cells(0).Value.ToString
+
     End Sub
 
     Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs) Handles Btn_AvStock.Click
@@ -227,7 +227,9 @@ Public Class MainBranchInventory
         Me.Hide()
     End Sub
 
-    Private Sub Grd_Motorcycle_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_Motorcycle.CellContentClick
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        DashBoard.Show()
+        Me.Hide()
 
     End Sub
 End Class
