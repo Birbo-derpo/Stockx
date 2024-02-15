@@ -36,10 +36,9 @@ Partial Class Add_MT_Number
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Btn_back = New System.Windows.Forms.Button()
-        Me.chkAuto = New System.Windows.Forms.CheckBox()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.txtSearch = New System.Windows.Forms.TextBox()
-        Me.cmbSearchType = New System.Windows.Forms.ComboBox()
+        Me.chkAuto = New System.Windows.Forms.CheckBox()
         CType(Me.Grd_MotorcycleReserved, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -160,20 +159,9 @@ Partial Class Add_MT_Number
         Me.Btn_back.Text = "Back"
         Me.Btn_back.UseVisualStyleBackColor = True
         '
-        'chkAuto
-        '
-        Me.chkAuto.AutoSize = True
-        Me.chkAuto.Location = New System.Drawing.Point(21, 58)
-        Me.chkAuto.Margin = New System.Windows.Forms.Padding(2)
-        Me.chkAuto.Name = "chkAuto"
-        Me.chkAuto.Size = New System.Drawing.Size(92, 17)
-        Me.chkAuto.TabIndex = 47
-        Me.chkAuto.Text = "AutoComplete"
-        Me.chkAuto.UseVisualStyleBackColor = True
-        '
         'btnSearch
         '
-        Me.btnSearch.Location = New System.Drawing.Point(212, 11)
+        Me.btnSearch.Location = New System.Drawing.Point(185, 11)
         Me.btnSearch.Margin = New System.Windows.Forms.Padding(2)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(56, 19)
@@ -189,16 +177,16 @@ Partial Class Add_MT_Number
         Me.txtSearch.Size = New System.Drawing.Size(160, 20)
         Me.txtSearch.TabIndex = 45
         '
-        'cmbSearchType
+        'chkAuto
         '
-        Me.cmbSearchType.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
-        Me.cmbSearchType.FormattingEnabled = True
-        Me.cmbSearchType.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
-        Me.cmbSearchType.Location = New System.Drawing.Point(21, 34)
-        Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(2)
-        Me.cmbSearchType.Name = "cmbSearchType"
-        Me.cmbSearchType.Size = New System.Drawing.Size(92, 21)
-        Me.cmbSearchType.TabIndex = 44
+        Me.chkAuto.AutoSize = True
+        Me.chkAuto.Location = New System.Drawing.Point(21, 35)
+        Me.chkAuto.Margin = New System.Windows.Forms.Padding(2)
+        Me.chkAuto.Name = "chkAuto"
+        Me.chkAuto.Size = New System.Drawing.Size(92, 17)
+        Me.chkAuto.TabIndex = 47
+        Me.chkAuto.Text = "AutoComplete"
+        Me.chkAuto.UseVisualStyleBackColor = True
         '
         'Add_MT_Number
         '
@@ -208,7 +196,6 @@ Partial Class Add_MT_Number
         Me.Controls.Add(Me.chkAuto)
         Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.txtSearch)
-        Me.Controls.Add(Me.cmbSearchType)
         Me.Controls.Add(Me.Btn_back)
         Me.Controls.Add(Me.Btn_ConfirmTransit)
         Me.Controls.Add(Me.Label1)
@@ -237,8 +224,7 @@ Partial Class Add_MT_Number
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
-    Friend WithEvents chkAuto As CheckBox
     Friend WithEvents btnSearch As Button
     Friend WithEvents txtSearch As TextBox
-    Friend WithEvents cmbSearchType As ComboBox
+    Friend WithEvents chkAuto As CheckBox
 End Class

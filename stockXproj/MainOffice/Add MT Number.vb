@@ -3,6 +3,8 @@ Imports MySql.Data.MySqlClient
 
 Public Class Add_MT_Number
     Dim branch As String
+
+    'dataloader
     Private Sub Add_MT_Number_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CheckDatabaseConnection()
         PrcDisplayReservedUnits()
@@ -15,10 +17,11 @@ Public Class Add_MT_Number
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_DisplayMainStock"
+                .CommandText = "prc_DisplayStock"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", "Status")
                 .Parameters.AddWithValue("@p_search", "Reserved")
+                .Parameters.AddWithValue("@p_GBranch", "Main")
                 sqlUMTCAdapter.SelectCommand = command
                 DataUMTC.Clear()
                 sqlUMTCAdapter.Fill(DataUMTC)
@@ -50,13 +53,9 @@ Public Class Add_MT_Number
             MessageBox.Show("" & ex.Message)
         End Try
     End Sub
+    'dataloader end
 
-
-
-    Private Sub GrdMotorcycle_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_MotorcycleReserved.CellClick
-        EngineNo = Grd_MotorcycleReserved.CurrentRow.Cells(6).Value
-    End Sub
-
+    'buttons
     Private Sub Btn_ConfirmTransit_Click(sender As Object, e As EventArgs) Handles Btn_ConfirmTransit.Click
         'sends to delivery for transit
         State = "Transit"
@@ -107,4 +106,5 @@ Public Class Add_MT_Number
         End With
         Me.Hide()
     End Sub
+    'buttons end
 End Class

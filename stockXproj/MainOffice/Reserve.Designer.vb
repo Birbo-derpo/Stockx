@@ -45,7 +45,7 @@ Partial Class Reserve
         'Btn_Transit
         '
         Me.Btn_Transit.Location = New System.Drawing.Point(28, 203)
-        Me.Btn_Transit.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Transit.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Transit.Name = "Btn_Transit"
         Me.Btn_Transit.Size = New System.Drawing.Size(107, 50)
         Me.Btn_Transit.TabIndex = 28
@@ -55,7 +55,7 @@ Partial Class Reserve
         'Btn_AvStock
         '
         Me.Btn_AvStock.Location = New System.Drawing.Point(28, 115)
-        Me.Btn_AvStock.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_AvStock.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_AvStock.Name = "Btn_AvStock"
         Me.Btn_AvStock.Size = New System.Drawing.Size(107, 50)
         Me.Btn_AvStock.TabIndex = 27
@@ -65,7 +65,7 @@ Partial Class Reserve
         'Btn_Reserved
         '
         Me.Btn_Reserved.Location = New System.Drawing.Point(28, 158)
-        Me.Btn_Reserved.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Reserved.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Reserved.Name = "Btn_Reserved"
         Me.Btn_Reserved.Size = New System.Drawing.Size(107, 50)
         Me.Btn_Reserved.TabIndex = 26
@@ -88,16 +88,16 @@ Partial Class Reserve
         Me.Label1.Location = New System.Drawing.Point(559, 33)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(74, 13)
+        Me.Label1.Size = New System.Drawing.Size(121, 13)
         Me.Label1.TabIndex = 33
-        Me.Label1.Text = "Select Branch"
+        Me.Label1.Text = "Display selected Branch"
         '
         'grdMotorcycle
         '
         Me.grdMotorcycle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdMotorcycle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column9, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
         Me.grdMotorcycle.Location = New System.Drawing.Point(155, 79)
-        Me.grdMotorcycle.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.grdMotorcycle.Margin = New System.Windows.Forms.Padding(2)
         Me.grdMotorcycle.Name = "grdMotorcycle"
         Me.grdMotorcycle.RowHeadersWidth = 51
         Me.grdMotorcycle.RowTemplate.Height = 24
@@ -170,7 +170,7 @@ Partial Class Reserve
         'Btn_Add_MT
         '
         Me.Btn_Add_MT.Location = New System.Drawing.Point(593, 315)
-        Me.Btn_Add_MT.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Add_MT.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Add_MT.Name = "Btn_Add_MT"
         Me.Btn_Add_MT.Size = New System.Drawing.Size(107, 50)
         Me.Btn_Add_MT.TabIndex = 35
@@ -199,7 +199,7 @@ Partial Class Reserve
         Me.Controls.Add(Me.Btn_Transit)
         Me.Controls.Add(Me.Btn_AvStock)
         Me.Controls.Add(Me.Btn_Reserved)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Reserve"
         Me.Text = "Reserve"
         CType(Me.grdMotorcycle, System.ComponentModel.ISupportInitialize).EndInit()

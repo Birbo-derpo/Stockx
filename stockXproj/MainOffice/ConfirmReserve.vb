@@ -16,10 +16,11 @@ Public Class ConfirmReserve
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_DisplayMainStock"
+                .CommandText = "prc_DisplayStock"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", "Status")
                 .Parameters.AddWithValue("@p_search", "available")
+                .Parameters.AddWithValue("@p_GBranch", "Main")
                 sqlUMTCAdapter.SelectCommand = command
                 DataUMTC.Clear()
                 sqlUMTCAdapter.Fill(DataUMTC)
@@ -71,10 +72,12 @@ Public Class ConfirmReserve
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_DisplayMainStock"
+                .CommandText = "prc_DisplayStock"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
                 .Parameters.AddWithValue("@p_search", txtSearch.Text)
+                .Parameters.AddWithValue("@p_GBranch", "Main")
+
                 sqlUMTCAdapter.SelectCommand = command
                 DataUMTC.Clear()
                 sqlUMTCAdapter.Fill(DataUMTC)
@@ -142,10 +145,11 @@ Public Class ConfirmReserve
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_DisplayMainStock"
+                .CommandText = "prc_DisplayStock"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
                 .Parameters.AddWithValue("@p_search", txtSearch.Text)
+                .Parameters.AddWithValue("@p_GBranch", "Main")
                 sqlUMTCAdapter.SelectCommand = command
                 DataUMTC.Clear()
                 sqlUMTCAdapter.Fill(DataUMTC)

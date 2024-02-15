@@ -18,6 +18,7 @@ Public Class Reserve
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", "Status")
                 .Parameters.AddWithValue("@p_search", "Reserved")
+                .Parameters.AddWithValue("@p_GBranch", "Main")
                 sqlUMTCAdapter.SelectCommand = command
                 DataUMTC.Clear()
                 sqlUMTCAdapter.Fill(DataUMTC)

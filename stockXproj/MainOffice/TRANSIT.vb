@@ -12,10 +12,11 @@ Public Class TRANSIT
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_DisplayMainStock"
+                .CommandText = "prc_DisplayStock"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", "Status")
                 .Parameters.AddWithValue("@p_search", "in Transit")
+                .Parameters.AddWithValue("@p_GBranch", "Main")
                 sqlUMTCAdapter.SelectCommand = command
                 DataUMTC.Clear()
                 sqlUMTCAdapter.Fill(DataUMTC)
