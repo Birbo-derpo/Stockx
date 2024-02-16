@@ -27,7 +27,7 @@ Partial Class Reserve
         Me.Btn_Reserved = New System.Windows.Forms.Button()
         Me.Btn_AddReserve = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.grd_Motorcycle = New System.Windows.Forms.DataGridView()
+        Me.Grd_MotorcycleReserved = New System.Windows.Forms.DataGridView()
         Me.Column10 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -40,7 +40,9 @@ Partial Class Reserve
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Btn_Add_MT = New System.Windows.Forms.Button()
         Me.cmb_branch = New System.Windows.Forms.ComboBox()
-        CType(Me.grd_Motorcycle, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txt_MTN = New System.Windows.Forms.TextBox()
+        CType(Me.Grd_MotorcycleReserved, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Btn_Transit
@@ -86,24 +88,29 @@ Partial Class Reserve
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(559, 33)
+        Me.Label1.Location = New System.Drawing.Point(251, 46)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(121, 13)
         Me.Label1.TabIndex = 33
         Me.Label1.Text = "Display selected Branch"
         '
-        'grd_Motorcycle
+        'Grd_MotorcycleReserved
         '
-        Me.grd_Motorcycle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.grd_Motorcycle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column10, Me.Column9, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
-        Me.grd_Motorcycle.Location = New System.Drawing.Point(155, 79)
-        Me.grd_Motorcycle.Margin = New System.Windows.Forms.Padding(2)
-        Me.grd_Motorcycle.Name = "grd_Motorcycle"
-        Me.grd_Motorcycle.RowHeadersWidth = 51
-        Me.grd_Motorcycle.RowTemplate.Height = 24
-        Me.grd_Motorcycle.Size = New System.Drawing.Size(658, 232)
-        Me.grd_Motorcycle.TabIndex = 34
+        Me.Grd_MotorcycleReserved.AllowUserToAddRows = False
+        Me.Grd_MotorcycleReserved.AllowUserToDeleteRows = False
+        Me.Grd_MotorcycleReserved.AllowUserToOrderColumns = True
+        Me.Grd_MotorcycleReserved.AllowUserToResizeColumns = False
+        Me.Grd_MotorcycleReserved.AllowUserToResizeRows = False
+        Me.Grd_MotorcycleReserved.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Grd_MotorcycleReserved.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column10, Me.Column9, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
+        Me.Grd_MotorcycleReserved.Location = New System.Drawing.Point(155, 79)
+        Me.Grd_MotorcycleReserved.Margin = New System.Windows.Forms.Padding(2)
+        Me.Grd_MotorcycleReserved.Name = "Grd_MotorcycleReserved"
+        Me.Grd_MotorcycleReserved.RowHeadersWidth = 51
+        Me.Grd_MotorcycleReserved.RowTemplate.Height = 24
+        Me.Grd_MotorcycleReserved.Size = New System.Drawing.Size(658, 232)
+        Me.Grd_MotorcycleReserved.TabIndex = 34
         '
         'Column10
         '
@@ -187,20 +194,40 @@ Partial Class Reserve
         '
         Me.cmb_branch.FormattingEnabled = True
         Me.cmb_branch.Items.AddRange(New Object() {"Bajada", "Davao", "Digos", "Kidapawan", "Tagum", "General Santos"})
-        Me.cmb_branch.Location = New System.Drawing.Point(463, 30)
+        Me.cmb_branch.Location = New System.Drawing.Point(155, 43)
         Me.cmb_branch.Margin = New System.Windows.Forms.Padding(2)
         Me.cmb_branch.Name = "cmb_branch"
         Me.cmb_branch.Size = New System.Drawing.Size(92, 21)
         Me.cmb_branch.TabIndex = 36
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(624, 49)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(91, 13)
+        Me.Label2.TabIndex = 43
+        Me.Label2.Text = "Enter MT Number"
+        '
+        'txt_MTN
+        '
+        Me.txt_MTN.Location = New System.Drawing.Point(720, 44)
+        Me.txt_MTN.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_MTN.Name = "txt_MTN"
+        Me.txt_MTN.Size = New System.Drawing.Size(76, 20)
+        Me.txt_MTN.TabIndex = 42
         '
         'Reserve
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(859, 366)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.txt_MTN)
         Me.Controls.Add(Me.cmb_branch)
         Me.Controls.Add(Me.Btn_Add_MT)
-        Me.Controls.Add(Me.grd_Motorcycle)
+        Me.Controls.Add(Me.Grd_MotorcycleReserved)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Btn_Transit)
         Me.Controls.Add(Me.Btn_AvStock)
@@ -208,7 +235,7 @@ Partial Class Reserve
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Reserve"
         Me.Text = "Reserve"
-        CType(Me.grd_Motorcycle, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Grd_MotorcycleReserved, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -219,7 +246,7 @@ Partial Class Reserve
     Friend WithEvents Btn_Reserved As Button
     Friend WithEvents Btn_AddReserve As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents grd_Motorcycle As DataGridView
+    Friend WithEvents Grd_MotorcycleReserved As DataGridView
     Friend WithEvents Btn_Add_MT As Button
     Friend WithEvents cmb_branch As ComboBox
     Friend WithEvents Column10 As DataGridViewCheckBoxColumn
@@ -232,4 +259,6 @@ Partial Class Reserve
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Label2 As Label
+    Friend WithEvents txt_MTN As TextBox
 End Class

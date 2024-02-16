@@ -23,19 +23,19 @@ Public Class Reserve
                 DataUMTC.Clear()
                 sqlUMTCAdapter.Fill(DataUMTC)
                 If DataUMTC.Rows.Count > 0 Then
-                    grd_Motorcycle.RowCount = DataUMTC.Rows.Count
+                    Grd_MotorcycleReserved.RowCount = DataUMTC.Rows.Count
                     row = 0
 
                     While Not DataUMTC.Rows.Count - 1 < row
-                        grd_Motorcycle.Rows(row).Cells(1).Value = DataUMTC.Rows(row).Item("Brnch").ToString
-                        grd_Motorcycle.Rows(row).Cells(2).Value = DataUMTC.Rows(row).Item("Invoice").ToString
-                        grd_Motorcycle.Rows(row).Cells(3).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
-                        grd_Motorcycle.Rows(row).Cells(4).Value = DataUMTC.Rows(row).Item("Model").ToString
-                        grd_Motorcycle.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Color").ToString
-                        grd_Motorcycle.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("Price").ToString
-                        grd_Motorcycle.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
-                        grd_Motorcycle.Rows(row).Cells(8).Value = DataUMTC.Rows(row).Item("FrameNum").ToString
-                        grd_Motorcycle.Rows(row).Cells(9).Value = DataUMTC.Rows(row).Item("Stat").ToString
+                        Grd_MotorcycleReserved.Rows(row).Cells(1).Value = DataUMTC.Rows(row).Item("Brnch").ToString
+                        Grd_MotorcycleReserved.Rows(row).Cells(2).Value = DataUMTC.Rows(row).Item("Invoice").ToString
+                        Grd_MotorcycleReserved.Rows(row).Cells(3).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
+                        Grd_MotorcycleReserved.Rows(row).Cells(4).Value = DataUMTC.Rows(row).Item("Model").ToString
+                        Grd_MotorcycleReserved.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Color").ToString
+                        Grd_MotorcycleReserved.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("Price").ToString
+                        Grd_MotorcycleReserved.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
+                        Grd_MotorcycleReserved.Rows(row).Cells(8).Value = DataUMTC.Rows(row).Item("FrameNum").ToString
+                        Grd_MotorcycleReserved.Rows(row).Cells(9).Value = DataUMTC.Rows(row).Item("Stat").ToString
                         row = row + 1
 
                     End While
@@ -57,28 +57,49 @@ Public Class Reserve
         Me.Hide()
     End Sub
 
+    'button start
     Private Sub Btn_Add_MT_Click(sender As Object, e As EventArgs) Handles Btn_Add_MT.Click
-        For Each Checkcell As DataGridViewRow In grd_Motorcycle.Rows
-            'needs to accept only when branches combobox is selected
+        'sends to delivery for transit
+        State = "Transit"
+        If txt_MTN.Text <> "" Then
+            For Each Checkcell As DataGridViewRow In Grd_MotorcycleReserved.Rows
+                'needs to accept only when branches combobox is selected
 
-            If Checkcell.Cells("Column10").Value = True Then
-                Try
-                    With Add_MT_Number
-                        .ShowDialog()
-                        .Grd_MotorcycleReserved.Rows(row).Cells(1).Value = Checkcell.Cells(0).Value("Brnch").ToString
-                        .Grd_MotorcycleReserved.Rows(row).Cells(2).Value = Checkcell.Cells(1).Value("Invoice").ToString
-                        .Grd_MotorcycleReserved.Rows(row).Cells(3).Value = Format(Convert.ToDateTime(Checkcell.Cells(2).Value("Datearrive").ToString), "MMM dd, yyyy")
-                        .Grd_MotorcycleReserved.Rows(row).Cells(4).Value = Checkcell.Cells(3).Value("Model").ToString
-                        .Grd_MotorcycleReserved.Rows(row).Cells(5).Value = Checkcell.Cells(4).Value("Color").ToString
-                        .Grd_MotorcycleReserved.Rows(row).Cells(6).Value = Checkcell.Cells(5).Value("Price").ToString
-                        .Grd_MotorcycleReserved.Rows(row).Cells(7).Value = Checkcell.Cells(6).Value("EngineNum").ToString
-                        .Grd_MotorcycleReserved.Rows(row).Cells(8).Value = Checkcell.Cells(7).Value("FrameNum").ToString
-                    End With
-                Catch ex As Exception
-                End Try
-            End If
+                If Checkcell.Cells("Column10").Value = True Then
+                    Try
+                        With command
+                            .Parameters.Clear()
+                            .CommandText = "prc_AddMTN"
+                            .CommandType = CommandType.StoredProcedure
+                            .Parameters.AddWithValue("@p_MTN", txt_MTN.Text)
+                            .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
+                            .ExecuteNonQuery()
+                        End With
 
-        Next
+                    Catch ex As Exception
+                    End Try
+                    Try
+                        With command
+                            .Parameters.Clear()
+                            .CommandText = "prc_ChangeStat"
+                            .CommandType = CommandType.StoredProcedure
+                            .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
+                            .Parameters.AddWithValue("@p_Stat", State)
+                            .ExecuteNonQuery()
+                        End With
+                    Catch ex As Exception
+                    End Try
+                    Checkcell.Cells("Column10").Value = False
+                End If
+
+            Next
+            MessageBox.Show("unit/s are now in Transit", "In transit", MessageBoxButtons.OK)
+        Else
+            MessageBox.Show("MT number not inputted", "MT number", MessageBoxButtons.OK)
+        End If
+
+
+        PrcDisplayReservedUnits()
     End Sub
 
     Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs) Handles Btn_AvStock.Click
@@ -94,7 +115,7 @@ Public Class Reserve
         TRANSIT.Show()
         Me.Hide()
     End Sub
-
+    'buttons end
     Private Sub Cmb_tobranch_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_branch.SelectedIndexChanged
         sqlUMTCAdapter = New MySqlDataAdapter
         DataUMTC = New DataTable
@@ -109,17 +130,17 @@ Public Class Reserve
                 DataUMTC.Clear()
                 sqlUMTCAdapter.Fill(DataUMTC)
                 If DataUMTC.Rows.Count > 0 Then
-                    grd_Motorcycle.RowCount = DataUMTC.Rows.Count
+                    Grd_MotorcycleReserved.RowCount = DataUMTC.Rows.Count
                     row = 0
                     While Not DataUMTC.Rows.Count - 1 < row
-                        grd_Motorcycle.Rows(row).Cells(1).Value = DataUMTC.Rows(row).Item("Brnch").ToString
-                        grd_Motorcycle.Rows(row).Cells(2).Value = DataUMTC.Rows(row).Item("Invoice").ToString
-                        grd_Motorcycle.Rows(row).Cells(3).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
-                        grd_Motorcycle.Rows(row).Cells(4).Value = DataUMTC.Rows(row).Item("Model").ToString
-                        grd_Motorcycle.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Color").ToString
-                        grd_Motorcycle.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("Price").ToString
-                        grd_Motorcycle.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
-                        grd_Motorcycle.Rows(row).Cells(8).Value = DataUMTC.Rows(row).Item("Framenum").ToString
+                        Grd_MotorcycleReserved.Rows(row).Cells(1).Value = DataUMTC.Rows(row).Item("Brnch").ToString
+                        Grd_MotorcycleReserved.Rows(row).Cells(2).Value = DataUMTC.Rows(row).Item("Invoice").ToString
+                        Grd_MotorcycleReserved.Rows(row).Cells(3).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
+                        Grd_MotorcycleReserved.Rows(row).Cells(4).Value = DataUMTC.Rows(row).Item("Model").ToString
+                        Grd_MotorcycleReserved.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Color").ToString
+                        Grd_MotorcycleReserved.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("Price").ToString
+                        Grd_MotorcycleReserved.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
+                        Grd_MotorcycleReserved.Rows(row).Cells(8).Value = DataUMTC.Rows(row).Item("Framenum").ToString
 
                         row = row + 1
 

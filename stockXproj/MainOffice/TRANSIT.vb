@@ -21,18 +21,18 @@ Public Class TRANSIT
                 DataUMTC.Clear()
                 sqlUMTCAdapter.Fill(DataUMTC)
                 If DataUMTC.Rows.Count > 0 Then
-                    grdMotorcycle.RowCount = DataUMTC.Rows.Count
+                    Grd_Motorcycle.RowCount = DataUMTC.Rows.Count
                     row = 0
                     While Not DataUMTC.Rows.Count - 1 < row
-                        grdMotorcycle.Rows(row).Cells(1).Value = DataUMTC.Rows(row).Item("Brnch").ToString
-                        grdMotorcycle.Rows(row).Cells(2).Value = DataUMTC.Rows(row).Item("Mtn").ToString
-                        grdMotorcycle.Rows(row).Cells(3).Value = DataUMTC.Rows(row).Item("Invoice").ToString
-                        grdMotorcycle.Rows(row).Cells(4).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
-                        grdMotorcycle.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Model").ToString
-                        grdMotorcycle.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("Color").ToString
-                        grdMotorcycle.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("Price").ToString
-                        grdMotorcycle.Rows(row).Cells(8).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
-                        grdMotorcycle.Rows(row).Cells(9).Value = DataUMTC.Rows(row).Item("FrameNum").ToString
+                        Grd_Motorcycle.Rows(row).Cells(1).Value = DataUMTC.Rows(row).Item("Brnch").ToString
+                        Grd_Motorcycle.Rows(row).Cells(2).Value = DataUMTC.Rows(row).Item("Mtn").ToString
+                        Grd_Motorcycle.Rows(row).Cells(3).Value = DataUMTC.Rows(row).Item("Invoice").ToString
+                        Grd_Motorcycle.Rows(row).Cells(4).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
+                        Grd_Motorcycle.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Model").ToString
+                        Grd_Motorcycle.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("Color").ToString
+                        Grd_Motorcycle.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("Price").ToString
+                        Grd_Motorcycle.Rows(row).Cells(8).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
+                        Grd_Motorcycle.Rows(row).Cells(9).Value = DataUMTC.Rows(row).Item("FrameNum").ToString
                         row = row + 1
 
                     End While
@@ -57,7 +57,7 @@ Public Class TRANSIT
 
     Private Sub Btn_Transfer_Click(sender As Object, e As EventArgs) Handles Btn_Transfer.Click
         State = "in branch"
-        For Each Checkcell As DataGridViewRow In grdMotorcycle.Rows
+        For Each Checkcell As DataGridViewRow In Grd_Motorcycle.Rows
             'needs to accept only when branches combobox is selected
             If Checkcell.Cells("Column8").Value = True Then
                 Try
@@ -78,7 +78,7 @@ Public Class TRANSIT
         MessageBox.Show("unit/s now in branch", "in branch", MessageBoxButtons.OK)
         PrcDisplayTransitUnits()
     End Sub
-
+   
     Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs) Handles Btn_AvStock.Click
         MainBranchInventory.Show()
 
@@ -87,6 +87,10 @@ Public Class TRANSIT
 
     Private Sub Btn_Transit_Click(sender As Object, e As EventArgs) Handles Btn_Transit.Click
         Me.Show()
+
+    End Sub
+
+    Private Sub Cmb_tobranch_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_branch.SelectedIndexChanged
 
     End Sub
 End Class

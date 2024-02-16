@@ -72,11 +72,16 @@ Partial Class Add_MT_Number
         '
         'Grd_MotorcycleReserved
         '
+        Me.Grd_MotorcycleReserved.AllowUserToAddRows = False
+        Me.Grd_MotorcycleReserved.AllowUserToDeleteRows = False
+        Me.Grd_MotorcycleReserved.AllowUserToResizeColumns = False
+        Me.Grd_MotorcycleReserved.AllowUserToResizeRows = False
         Me.Grd_MotorcycleReserved.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grd_MotorcycleReserved.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column9, Me.Column8, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
         Me.Grd_MotorcycleReserved.Location = New System.Drawing.Point(118, 79)
         Me.Grd_MotorcycleReserved.Margin = New System.Windows.Forms.Padding(2)
         Me.Grd_MotorcycleReserved.Name = "Grd_MotorcycleReserved"
+        Me.Grd_MotorcycleReserved.ReadOnly = True
         Me.Grd_MotorcycleReserved.RowHeadersWidth = 51
         Me.Grd_MotorcycleReserved.RowTemplate.Height = 24
         Me.Grd_MotorcycleReserved.Size = New System.Drawing.Size(706, 217)
@@ -86,6 +91,7 @@ Partial Class Add_MT_Number
         '
         Me.Column9.HeaderText = "Check Select"
         Me.Column9.Name = "Column9"
+        Me.Column9.ReadOnly = True
         '
         'Column8
         '
