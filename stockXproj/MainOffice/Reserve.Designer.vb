@@ -27,7 +27,8 @@ Partial Class Reserve
         Me.Btn_Reserved = New System.Windows.Forms.Button()
         Me.Btn_AddReserve = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.grdMotorcycle = New System.Windows.Forms.DataGridView()
+        Me.grd_Motorcycle = New System.Windows.Forms.DataGridView()
+        Me.Column10 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -39,7 +40,7 @@ Partial Class Reserve
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Btn_Add_MT = New System.Windows.Forms.Button()
         Me.cmb_branch = New System.Windows.Forms.ComboBox()
-        CType(Me.grdMotorcycle, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grd_Motorcycle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Btn_Transit
@@ -92,17 +93,22 @@ Partial Class Reserve
         Me.Label1.TabIndex = 33
         Me.Label1.Text = "Display selected Branch"
         '
-        'grdMotorcycle
+        'grd_Motorcycle
         '
-        Me.grdMotorcycle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.grdMotorcycle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column9, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
-        Me.grdMotorcycle.Location = New System.Drawing.Point(155, 79)
-        Me.grdMotorcycle.Margin = New System.Windows.Forms.Padding(2)
-        Me.grdMotorcycle.Name = "grdMotorcycle"
-        Me.grdMotorcycle.RowHeadersWidth = 51
-        Me.grdMotorcycle.RowTemplate.Height = 24
-        Me.grdMotorcycle.Size = New System.Drawing.Size(658, 232)
-        Me.grdMotorcycle.TabIndex = 34
+        Me.grd_Motorcycle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.grd_Motorcycle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column10, Me.Column9, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
+        Me.grd_Motorcycle.Location = New System.Drawing.Point(155, 79)
+        Me.grd_Motorcycle.Margin = New System.Windows.Forms.Padding(2)
+        Me.grd_Motorcycle.Name = "grd_Motorcycle"
+        Me.grd_Motorcycle.RowHeadersWidth = 51
+        Me.grd_Motorcycle.RowTemplate.Height = 24
+        Me.grd_Motorcycle.Size = New System.Drawing.Size(658, 232)
+        Me.grd_Motorcycle.TabIndex = 34
+        '
+        'Column10
+        '
+        Me.Column10.HeaderText = "To Deliver"
+        Me.Column10.Name = "Column10"
         '
         'Column9
         '
@@ -194,7 +200,7 @@ Partial Class Reserve
         Me.ClientSize = New System.Drawing.Size(859, 366)
         Me.Controls.Add(Me.cmb_branch)
         Me.Controls.Add(Me.Btn_Add_MT)
-        Me.Controls.Add(Me.grdMotorcycle)
+        Me.Controls.Add(Me.grd_Motorcycle)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Btn_Transit)
         Me.Controls.Add(Me.Btn_AvStock)
@@ -202,7 +208,7 @@ Partial Class Reserve
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Reserve"
         Me.Text = "Reserve"
-        CType(Me.grdMotorcycle, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grd_Motorcycle, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -213,8 +219,10 @@ Partial Class Reserve
     Friend WithEvents Btn_Reserved As Button
     Friend WithEvents Btn_AddReserve As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents grdMotorcycle As DataGridView
+    Friend WithEvents grd_Motorcycle As DataGridView
     Friend WithEvents Btn_Add_MT As Button
+    Friend WithEvents cmb_branch As ComboBox
+    Friend WithEvents Column10 As DataGridViewCheckBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
@@ -224,5 +232,4 @@ Partial Class Reserve
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
-    Friend WithEvents cmb_branch As ComboBox
 End Class

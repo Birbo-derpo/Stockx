@@ -7,10 +7,9 @@ Public Class Add_MT_Number
     'dataloader
     Private Sub Add_MT_Number_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CheckDatabaseConnection()
-        PrcDisplayReservedUnits()
     End Sub
 
-    Private Sub PrcDisplayReservedUnits()
+    Private Sub PrcDisplayReservedUnits() 'useless for now
         Try
             sqlUMTCAdapter = New MySqlDataAdapter
             DataUMTC = New DataTable
