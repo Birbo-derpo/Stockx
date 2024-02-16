@@ -64,6 +64,7 @@ Public Class Reserve
             If Checkcell.Cells("Column10").Value = True Then
                 Try
                     With Add_MT_Number
+                        .ShowDialog()
                         .Grd_MotorcycleReserved.Rows(row).Cells(1).Value = Checkcell.Cells(0).Value("Brnch").ToString
                         .Grd_MotorcycleReserved.Rows(row).Cells(2).Value = Checkcell.Cells(1).Value("Invoice").ToString
                         .Grd_MotorcycleReserved.Rows(row).Cells(3).Value = Format(Convert.ToDateTime(Checkcell.Cells(2).Value("Datearrive").ToString), "MMM dd, yyyy")
@@ -73,10 +74,8 @@ Public Class Reserve
                         .Grd_MotorcycleReserved.Rows(row).Cells(7).Value = Checkcell.Cells(6).Value("EngineNum").ToString
                         .Grd_MotorcycleReserved.Rows(row).Cells(8).Value = Checkcell.Cells(7).Value("FrameNum").ToString
                     End With
-
                 Catch ex As Exception
                 End Try
-                Checkcell.Cells("Column9").Value = False
             End If
 
         Next
