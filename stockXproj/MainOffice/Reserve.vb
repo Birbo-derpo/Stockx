@@ -72,7 +72,6 @@ Public Class Reserve
                         .Grd_MotorcycleReserved.Rows(row).Cells(6).Value = Checkcell.Cells(5).Value("Price").ToString
                         .Grd_MotorcycleReserved.Rows(row).Cells(7).Value = Checkcell.Cells(6).Value("EngineNum").ToString
                         .Grd_MotorcycleReserved.Rows(row).Cells(8).Value = Checkcell.Cells(7).Value("FrameNum").ToString
-                        .ShowDialog()
                     End With
 
                 Catch ex As Exception
