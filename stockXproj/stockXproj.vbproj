@@ -131,6 +131,12 @@
     <Compile Include="addMotorcycle.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Branches\All Unit.Designer.vb">
+      <DependentUpon>All Unit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Branches\All Unit.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DashBoard.Designer.vb">
       <DependentUpon>DashBoard.vb</DependentUpon>
     </Compile>
@@ -250,6 +256,9 @@
   <ItemGroup>
     <EmbeddedResource Include="addMotorcycle.resx">
       <DependentUpon>addMotorcycle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Branches\All Unit.resx">
+      <DependentUpon>All Unit.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.vb</DependentUpon>

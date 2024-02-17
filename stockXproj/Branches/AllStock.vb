@@ -58,38 +58,36 @@ Public Class AllStock
     End Sub
 
     'left screen buttons
-    Private Sub Btn_Released_Click(sender As Object, e As EventArgs)
+
+
+    Private Sub Grd_Stock_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_Stock.CellContentClick
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        All_Unit.Show()
+        Me.Hide()
+
+    End Sub
+
+    Private Sub Btn_AllStock_Click(sender As Object, e As EventArgs) Handles Btn_AllStock.Click
+        Me.Show()
+    End Sub
+
+    Private Sub Btn_Released_Click(sender As Object, e As EventArgs) Handles Btn_Released.Click
         Released.Show()
         Me.Hide()
     End Sub
 
-    Private Sub Btn_Deposited_Click(sender As Object, e As EventArgs)
+    Private Sub Btn_Deposited_Click(sender As Object, e As EventArgs) Handles Btn_Deposited.Click
         Deposited.Show()
         Me.Hide()
     End Sub
 
-    Private Sub Btn_Repossess_Click(sender As Object, e As EventArgs)
+    Private Sub Btn_Repossess_Click(sender As Object, e As EventArgs) Handles Btn_Repossess.Click
         Repossess.Show()
+
         Me.Hide()
-    End Sub
-
-    Private Sub Btn_Customer_Click(sender As Object, e As EventArgs)
-        Customer.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub Btn_Update_Click(sender As Object, e As EventArgs)
-        UpdateStocks.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        DashBoard.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub Grd_Stock_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_Stock.CellContentClick
-
     End Sub
     'end of left screen buttons
 

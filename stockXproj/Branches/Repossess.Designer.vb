@@ -22,150 +22,253 @@ Partial Class Repossess
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Lbl_Branch = New System.Windows.Forms.Label()
-        Me.Btn_Customer = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.chkAuto = New System.Windows.Forms.CheckBox()
+        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
+        Me.cmbSearchType = New System.Windows.Forms.ComboBox()
         Me.Btn_AllStock = New System.Windows.Forms.Button()
         Me.Btn_Deposited = New System.Windows.Forms.Button()
         Me.Btn_Repossess = New System.Windows.Forms.Button()
         Me.Btn_Released = New System.Windows.Forms.Button()
         Me.Grd_StockRepossessed = New System.Windows.Forms.DataGridView()
+        Me.Column10 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.Grd_StockRepossessed, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Lbl_Branch
+        'Label1
         '
-        Me.Lbl_Branch.AutoSize = True
-        Me.Lbl_Branch.Location = New System.Drawing.Point(198, 41)
-        Me.Lbl_Branch.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Lbl_Branch.Name = "Lbl_Branch"
-        Me.Lbl_Branch.Size = New System.Drawing.Size(62, 13)
-        Me.Lbl_Branch.TabIndex = 15
-        Me.Lbl_Branch.Text = "X BRANCH"
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(1029, 103)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(64, 16)
+        Me.Label1.TabIndex = 66
+        Me.Label1.Text = "Branches"
         '
-        'Btn_Customer
+        'ComboBox1
         '
-        Me.Btn_Customer.Location = New System.Drawing.Point(91, 307)
-        Me.Btn_Customer.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Btn_Customer.Name = "Btn_Customer"
-        Me.Btn_Customer.Size = New System.Drawing.Size(107, 50)
-        Me.Btn_Customer.TabIndex = 20
-        Me.Btn_Customer.Text = "Customer"
-        Me.Btn_Customer.UseVisualStyleBackColor = True
+        Me.ComboBox1.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
+        Me.ComboBox1.Location = New System.Drawing.Point(1110, 99)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox1.TabIndex = 65
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(1009, 541)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(162, 23)
+        Me.Button2.TabIndex = 64
+        Me.Button2.Text = "Back to DashBoard"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(21, 199)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(143, 62)
+        Me.Button1.TabIndex = 63
+        Me.Button1.Text = "All Units"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'chkAuto
+        '
+        Me.chkAuto.AutoSize = True
+        Me.chkAuto.Location = New System.Drawing.Point(207, 103)
+        Me.chkAuto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.chkAuto.Name = "chkAuto"
+        Me.chkAuto.Size = New System.Drawing.Size(114, 20)
+        Me.chkAuto.TabIndex = 62
+        Me.chkAuto.Text = "AutoComplete"
+        Me.chkAuto.UseVisualStyleBackColor = True
+        '
+        'btnSearch
+        '
+        Me.btnSearch.Location = New System.Drawing.Point(425, 49)
+        Me.btnSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(75, 23)
+        Me.btnSearch.TabIndex = 61
+        Me.btnSearch.Text = "search"
+        Me.btnSearch.UseVisualStyleBackColor = True
+        '
+        'txtSearch
+        '
+        Me.txtSearch.Location = New System.Drawing.Point(207, 49)
+        Me.txtSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(212, 22)
+        Me.txtSearch.TabIndex = 60
+        '
+        'cmbSearchType
+        '
+        Me.cmbSearchType.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
+        Me.cmbSearchType.FormattingEnabled = True
+        Me.cmbSearchType.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
+        Me.cmbSearchType.Location = New System.Drawing.Point(207, 75)
+        Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.cmbSearchType.Name = "cmbSearchType"
+        Me.cmbSearchType.Size = New System.Drawing.Size(121, 24)
+        Me.cmbSearchType.TabIndex = 59
         '
         'Btn_AllStock
         '
-        Me.Btn_AllStock.Location = New System.Drawing.Point(91, 89)
-        Me.Btn_AllStock.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_AllStock.Location = New System.Drawing.Point(21, 265)
+        Me.Btn_AllStock.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_AllStock.Name = "Btn_AllStock"
-        Me.Btn_AllStock.Size = New System.Drawing.Size(107, 50)
-        Me.Btn_AllStock.TabIndex = 19
-        Me.Btn_AllStock.Text = "All Stock"
+        Me.Btn_AllStock.Size = New System.Drawing.Size(143, 62)
+        Me.Btn_AllStock.TabIndex = 57
+        Me.Btn_AllStock.Text = "All Available Stock"
         Me.Btn_AllStock.UseVisualStyleBackColor = True
         '
         'Btn_Deposited
         '
-        Me.Btn_Deposited.Location = New System.Drawing.Point(91, 198)
-        Me.Btn_Deposited.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Deposited.Location = New System.Drawing.Point(21, 397)
+        Me.Btn_Deposited.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Deposited.Name = "Btn_Deposited"
-        Me.Btn_Deposited.Size = New System.Drawing.Size(107, 50)
-        Me.Btn_Deposited.TabIndex = 18
+        Me.Btn_Deposited.Size = New System.Drawing.Size(143, 62)
+        Me.Btn_Deposited.TabIndex = 56
         Me.Btn_Deposited.Text = "Deposited"
         Me.Btn_Deposited.UseVisualStyleBackColor = True
         '
         'Btn_Repossess
         '
-        Me.Btn_Repossess.Location = New System.Drawing.Point(91, 253)
-        Me.Btn_Repossess.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Repossess.Location = New System.Drawing.Point(21, 463)
+        Me.Btn_Repossess.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Repossess.Name = "Btn_Repossess"
-        Me.Btn_Repossess.Size = New System.Drawing.Size(107, 50)
-        Me.Btn_Repossess.TabIndex = 17
+        Me.Btn_Repossess.Size = New System.Drawing.Size(143, 62)
+        Me.Btn_Repossess.TabIndex = 55
         Me.Btn_Repossess.TabStop = False
         Me.Btn_Repossess.Text = "Repossess"
         Me.Btn_Repossess.UseVisualStyleBackColor = True
         '
         'Btn_Released
         '
-        Me.Btn_Released.Location = New System.Drawing.Point(91, 144)
-        Me.Btn_Released.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Released.Location = New System.Drawing.Point(21, 331)
+        Me.Btn_Released.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Released.Name = "Btn_Released"
-        Me.Btn_Released.Size = New System.Drawing.Size(107, 50)
-        Me.Btn_Released.TabIndex = 16
+        Me.Btn_Released.Size = New System.Drawing.Size(143, 62)
+        Me.Btn_Released.TabIndex = 54
         Me.Btn_Released.Text = "Released "
         Me.Btn_Released.UseVisualStyleBackColor = True
         '
         'Grd_StockRepossessed
         '
         Me.Grd_StockRepossessed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Grd_StockRepossessed.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column7, Me.Column1, Me.Column2, Me.Column3, Me.Column6, Me.Column4, Me.Column5})
-        Me.Grd_StockRepossessed.Location = New System.Drawing.Point(261, 89)
-        Me.Grd_StockRepossessed.Margin = New System.Windows.Forms.Padding(2)
+        Me.Grd_StockRepossessed.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column10, Me.Column7, Me.Column1, Me.Column2, Me.Column3, Me.Column6, Me.Column9, Me.Column4, Me.Column5, Me.Column8})
+        Me.Grd_StockRepossessed.Location = New System.Drawing.Point(170, 127)
+        Me.Grd_StockRepossessed.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Grd_StockRepossessed.Name = "Grd_StockRepossessed"
         Me.Grd_StockRepossessed.RowHeadersWidth = 51
         Me.Grd_StockRepossessed.RowTemplate.Height = 24
-        Me.Grd_StockRepossessed.Size = New System.Drawing.Size(624, 249)
-        Me.Grd_StockRepossessed.TabIndex = 23
+        Me.Grd_StockRepossessed.Size = New System.Drawing.Size(1091, 377)
+        Me.Grd_StockRepossessed.TabIndex = 53
+        '
+        'Column10
+        '
+        Me.Column10.HeaderText = "Check"
+        Me.Column10.MinimumWidth = 6
+        Me.Column10.Name = "Column10"
+        Me.Column10.Width = 125
         '
         'Column7
         '
         Me.Column7.HeaderText = "Branch"
+        Me.Column7.MinimumWidth = 6
         Me.Column7.Name = "Column7"
+        Me.Column7.Width = 125
         '
         'Column1
         '
         Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column1.HeaderText = "invoice"
+        Me.Column1.HeaderText = "Merchandise Transfer Number"
+        Me.Column1.MinimumWidth = 6
         Me.Column1.Name = "Column1"
         '
         'Column2
         '
         Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column2.HeaderText = "Date Arrived"
+        Me.Column2.HeaderText = "Date Reposes"
+        Me.Column2.MinimumWidth = 6
         Me.Column2.Name = "Column2"
         '
         'Column3
         '
         Me.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Column3.HeaderText = "Model"
+        Me.Column3.MinimumWidth = 6
         Me.Column3.Name = "Column3"
         '
         'Column6
         '
         Me.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Column6.HeaderText = "Price"
+        Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
+        '
+        'Column9
+        '
+        Me.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column9.HeaderText = "Color"
+        Me.Column9.MinimumWidth = 6
+        Me.Column9.Name = "Column9"
         '
         'Column4
         '
         Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Column4.HeaderText = "Engine no."
+        Me.Column4.MinimumWidth = 6
         Me.Column4.Name = "Column4"
         '
         'Column5
         '
         Me.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Column5.HeaderText = "Frame no"
+        Me.Column5.MinimumWidth = 6
         Me.Column5.Name = "Column5"
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Status"
+        Me.Column8.MinimumWidth = 6
+        Me.Column8.Name = "Column8"
+        Me.Column8.Width = 125
         '
         'Repossess
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(965, 386)
-        Me.Controls.Add(Me.Grd_StockRepossessed)
-        Me.Controls.Add(Me.Btn_Customer)
+        Me.ClientSize = New System.Drawing.Size(1325, 615)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.chkAuto)
+        Me.Controls.Add(Me.btnSearch)
+        Me.Controls.Add(Me.txtSearch)
+        Me.Controls.Add(Me.cmbSearchType)
         Me.Controls.Add(Me.Btn_AllStock)
         Me.Controls.Add(Me.Btn_Deposited)
         Me.Controls.Add(Me.Btn_Repossess)
         Me.Controls.Add(Me.Btn_Released)
-        Me.Controls.Add(Me.Lbl_Branch)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Controls.Add(Me.Grd_StockRepossessed)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Repossess"
         Me.Text = "Reposes"
         CType(Me.Grd_StockRepossessed, System.ComponentModel.ISupportInitialize).EndInit()
@@ -173,18 +276,28 @@ Partial Class Repossess
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Lbl_Branch As Label
-    Friend WithEvents Btn_Customer As Button
+
+    Friend WithEvents Label1 As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents chkAuto As CheckBox
+    Friend WithEvents btnSearch As Button
+    Friend WithEvents txtSearch As TextBox
+    Friend WithEvents cmbSearchType As ComboBox
     Friend WithEvents Btn_AllStock As Button
     Friend WithEvents Btn_Deposited As Button
     Friend WithEvents Btn_Repossess As Button
     Friend WithEvents Btn_Released As Button
     Friend WithEvents Grd_StockRepossessed As DataGridView
+    Friend WithEvents Column10 As DataGridViewCheckBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
 End Class
