@@ -28,13 +28,6 @@ Partial Class All_Unit
         Me.Btn_Deposited = New System.Windows.Forms.Button()
         Me.Btn_AllStock = New System.Windows.Forms.Button()
         Me.Grd_Stock = New System.Windows.Forms.DataGridView()
-        Me.cmbSearchType = New System.Windows.Forms.ComboBox()
-        Me.txtSearch = New System.Windows.Forms.TextBox()
-        Me.btnSearch = New System.Windows.Forms.Button()
-        Me.chkAuto = New System.Windows.Forms.CheckBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Column10 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -45,34 +38,42 @@ Partial Class All_Unit
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cmbSearchType = New System.Windows.Forms.ComboBox()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
+        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.chkAuto = New System.Windows.Forms.CheckBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         CType(Me.Grd_Stock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(1032, 91)
+        Me.Label1.Location = New System.Drawing.Point(774, 74)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(64, 16)
+        Me.Label1.Size = New System.Drawing.Size(52, 13)
         Me.Label1.TabIndex = 66
         Me.Label1.Text = "Branches"
         '
         'Btn_Released
         '
-        Me.Btn_Released.Location = New System.Drawing.Point(24, 319)
-        Me.Btn_Released.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_Released.Location = New System.Drawing.Point(18, 259)
+        Me.Btn_Released.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Btn_Released.Name = "Btn_Released"
-        Me.Btn_Released.Size = New System.Drawing.Size(143, 62)
+        Me.Btn_Released.Size = New System.Drawing.Size(107, 50)
         Me.Btn_Released.TabIndex = 54
         Me.Btn_Released.Text = "Released "
         Me.Btn_Released.UseVisualStyleBackColor = True
         '
         'Btn_Repossess
         '
-        Me.Btn_Repossess.Location = New System.Drawing.Point(24, 451)
-        Me.Btn_Repossess.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_Repossess.Location = New System.Drawing.Point(18, 366)
+        Me.Btn_Repossess.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Btn_Repossess.Name = "Btn_Repossess"
-        Me.Btn_Repossess.Size = New System.Drawing.Size(143, 62)
+        Me.Btn_Repossess.Size = New System.Drawing.Size(107, 50)
         Me.Btn_Repossess.TabIndex = 55
         Me.Btn_Repossess.TabStop = False
         Me.Btn_Repossess.Text = "Repossess"
@@ -80,20 +81,20 @@ Partial Class All_Unit
         '
         'Btn_Deposited
         '
-        Me.Btn_Deposited.Location = New System.Drawing.Point(24, 385)
-        Me.Btn_Deposited.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_Deposited.Location = New System.Drawing.Point(18, 313)
+        Me.Btn_Deposited.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Btn_Deposited.Name = "Btn_Deposited"
-        Me.Btn_Deposited.Size = New System.Drawing.Size(143, 62)
+        Me.Btn_Deposited.Size = New System.Drawing.Size(107, 50)
         Me.Btn_Deposited.TabIndex = 56
         Me.Btn_Deposited.Text = "Deposited"
         Me.Btn_Deposited.UseVisualStyleBackColor = True
         '
         'Btn_AllStock
         '
-        Me.Btn_AllStock.Location = New System.Drawing.Point(24, 253)
-        Me.Btn_AllStock.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_AllStock.Location = New System.Drawing.Point(18, 206)
+        Me.Btn_AllStock.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Btn_AllStock.Name = "Btn_AllStock"
-        Me.Btn_AllStock.Size = New System.Drawing.Size(143, 62)
+        Me.Btn_AllStock.Size = New System.Drawing.Size(107, 50)
         Me.Btn_AllStock.TabIndex = 57
         Me.Btn_AllStock.Text = "All Available Stock"
         Me.Btn_AllStock.UseVisualStyleBackColor = True
@@ -102,83 +103,13 @@ Partial Class All_Unit
         '
         Me.Grd_Stock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grd_Stock.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column10, Me.Column7, Me.Column1, Me.Column2, Me.Column3, Me.Column6, Me.Column9, Me.Column4, Me.Column5, Me.Column8})
-        Me.Grd_Stock.Location = New System.Drawing.Point(173, 115)
-        Me.Grd_Stock.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Grd_Stock.Location = New System.Drawing.Point(130, 93)
+        Me.Grd_Stock.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Grd_Stock.Name = "Grd_Stock"
         Me.Grd_Stock.RowHeadersWidth = 51
         Me.Grd_Stock.RowTemplate.Height = 24
-        Me.Grd_Stock.Size = New System.Drawing.Size(1091, 377)
+        Me.Grd_Stock.Size = New System.Drawing.Size(818, 306)
         Me.Grd_Stock.TabIndex = 53
-        '
-        'cmbSearchType
-        '
-        Me.cmbSearchType.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
-        Me.cmbSearchType.FormattingEnabled = True
-        Me.cmbSearchType.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
-        Me.cmbSearchType.Location = New System.Drawing.Point(210, 63)
-        Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.cmbSearchType.Name = "cmbSearchType"
-        Me.cmbSearchType.Size = New System.Drawing.Size(121, 24)
-        Me.cmbSearchType.TabIndex = 59
-        '
-        'txtSearch
-        '
-        Me.txtSearch.Location = New System.Drawing.Point(210, 37)
-        Me.txtSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(212, 22)
-        Me.txtSearch.TabIndex = 60
-        '
-        'btnSearch
-        '
-        Me.btnSearch.Location = New System.Drawing.Point(428, 37)
-        Me.btnSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(75, 23)
-        Me.btnSearch.TabIndex = 61
-        Me.btnSearch.Text = "search"
-        Me.btnSearch.UseVisualStyleBackColor = True
-        '
-        'chkAuto
-        '
-        Me.chkAuto.AutoSize = True
-        Me.chkAuto.Location = New System.Drawing.Point(210, 91)
-        Me.chkAuto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.chkAuto.Name = "chkAuto"
-        Me.chkAuto.Size = New System.Drawing.Size(114, 20)
-        Me.chkAuto.TabIndex = 62
-        Me.chkAuto.Text = "AutoComplete"
-        Me.chkAuto.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(24, 187)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(143, 62)
-        Me.Button1.TabIndex = 63
-        Me.Button1.Text = "All Units"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(1012, 529)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(162, 23)
-        Me.Button2.TabIndex = 64
-        Me.Button2.Text = "Back to DashBoard"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
-        Me.ComboBox1.Location = New System.Drawing.Point(1113, 87)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 24)
-        Me.ComboBox1.TabIndex = 65
         '
         'Column10
         '
@@ -250,11 +181,82 @@ Partial Class All_Unit
         Me.Column8.Name = "Column8"
         Me.Column8.Width = 125
         '
+        'cmbSearchType
+        '
+        Me.cmbSearchType.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
+        Me.cmbSearchType.FormattingEnabled = True
+        Me.cmbSearchType.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
+        Me.cmbSearchType.Location = New System.Drawing.Point(158, 51)
+        Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmbSearchType.Name = "cmbSearchType"
+        Me.cmbSearchType.Size = New System.Drawing.Size(92, 21)
+        Me.cmbSearchType.TabIndex = 59
+        '
+        'txtSearch
+        '
+        Me.txtSearch.Location = New System.Drawing.Point(158, 30)
+        Me.txtSearch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(160, 20)
+        Me.txtSearch.TabIndex = 60
+        '
+        'btnSearch
+        '
+        Me.btnSearch.Location = New System.Drawing.Point(321, 30)
+        Me.btnSearch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(56, 19)
+        Me.btnSearch.TabIndex = 61
+        Me.btnSearch.Text = "search"
+        Me.btnSearch.UseVisualStyleBackColor = True
+        '
+        'chkAuto
+        '
+        Me.chkAuto.AutoSize = True
+        Me.chkAuto.Location = New System.Drawing.Point(158, 74)
+        Me.chkAuto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.chkAuto.Name = "chkAuto"
+        Me.chkAuto.Size = New System.Drawing.Size(92, 17)
+        Me.chkAuto.TabIndex = 62
+        Me.chkAuto.Text = "AutoComplete"
+        Me.chkAuto.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(18, 152)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(107, 50)
+        Me.Button1.TabIndex = 63
+        Me.Button1.Text = "All Units"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(759, 430)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(122, 19)
+        Me.Button2.TabIndex = 64
+        Me.Button2.Text = "Back to DashBoard"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
+        Me.ComboBox1.Location = New System.Drawing.Point(835, 71)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(92, 21)
+        Me.ComboBox1.TabIndex = 65
+        '
         'All_Unit
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1353, 639)
+        Me.ClientSize = New System.Drawing.Size(1015, 519)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Button2)
@@ -268,6 +270,7 @@ Partial Class All_Unit
         Me.Controls.Add(Me.Btn_Repossess)
         Me.Controls.Add(Me.Btn_Released)
         Me.Controls.Add(Me.Grd_Stock)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "All_Unit"
         Me.Text = "All_Unit"
         CType(Me.Grd_Stock, System.ComponentModel.ISupportInitialize).EndInit()

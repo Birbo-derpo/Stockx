@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class AllStock
-
+    'dataloader
     Private Sub AllStock_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CheckDatabaseConnection()
         PrcDisplayAllStock()
@@ -56,6 +56,7 @@ Public Class AllStock
             MessageBox.Show("" & ex.Message)
         End Try
     End Sub
+    'dataloader end
 
     'left screen buttons
 
