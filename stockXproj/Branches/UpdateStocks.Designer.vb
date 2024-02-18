@@ -41,13 +41,13 @@ Partial Class UpdateStocks
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Motor
@@ -141,7 +141,7 @@ Partial Class UpdateStocks
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(469, 285)
+        Me.Label8.Location = New System.Drawing.Point(469, 333)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(44, 16)
         Me.Label8.TabIndex = 65
@@ -149,14 +149,14 @@ Partial Class UpdateStocks
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(613, 279)
+        Me.TextBox1.Location = New System.Drawing.Point(613, 327)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(318, 22)
         Me.TextBox1.TabIndex = 64
         '
         'dt
         '
-        Me.dt.Location = New System.Drawing.Point(613, 321)
+        Me.dt.Location = New System.Drawing.Point(613, 369)
         Me.dt.Name = "dt"
         Me.dt.Size = New System.Drawing.Size(200, 22)
         Me.dt.TabIndex = 58
@@ -164,7 +164,7 @@ Partial Class UpdateStocks
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(476, 327)
+        Me.Label3.Location = New System.Drawing.Point(476, 375)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(76, 16)
         Me.Label3.TabIndex = 59
@@ -173,7 +173,7 @@ Partial Class UpdateStocks
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(469, 366)
+        Me.Label9.Location = New System.Drawing.Point(476, 411)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(52, 16)
         Me.Label9.TabIndex = 67
@@ -181,7 +181,7 @@ Partial Class UpdateStocks
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(613, 360)
+        Me.TextBox2.Location = New System.Drawing.Point(613, 408)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(318, 22)
         Me.TextBox2.TabIndex = 66
@@ -203,23 +203,6 @@ Partial Class UpdateStocks
         Me.ComboBox1.Size = New System.Drawing.Size(121, 24)
         Me.ComboBox1.TabIndex = 70
         '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(675, 401)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 24)
-        Me.ComboBox2.TabIndex = 72
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(473, 409)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(116, 16)
-        Me.Label11.TabIndex = 71
-        Me.Label11.Text = "Types of Payment"
-        '
         'Label12
         '
         Me.Label12.AutoSize = True
@@ -238,7 +221,7 @@ Partial Class UpdateStocks
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(900, 436)
+        Me.Button5.Location = New System.Drawing.Point(1011, 453)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(143, 48)
         Me.Button5.TabIndex = 75
@@ -262,18 +245,34 @@ Partial Class UpdateStocks
         Me.ComboBox3.Size = New System.Drawing.Size(121, 24)
         Me.ComboBox3.TabIndex = 77
         '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(407, 260)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(132, 16)
+        Me.Label11.TabIndex = 79
+        Me.Label11.Text = "Sales Ivoice Number"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(551, 254)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(318, 22)
+        Me.TextBox4.TabIndex = 78
+        '
         'UpdateStocks
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1277, 531)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.ComboBox3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
@@ -319,11 +318,11 @@ Partial Class UpdateStocks
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Button5 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents TextBox4 As TextBox
 End Class
