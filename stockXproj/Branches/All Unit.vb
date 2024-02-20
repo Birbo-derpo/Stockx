@@ -78,5 +78,8 @@ Public Class All_Unit
         Me.Hide()
     End Sub
 
-
+    Private Sub Btn_Dashboard_Click(sender As Object, e As EventArgs) Handles Btn_Dashboard.Click
+        DashBoard.Show()
+        Me.Hide()
+    End Sub
 End Class

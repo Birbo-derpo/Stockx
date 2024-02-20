@@ -42,8 +42,8 @@ Partial Class AllStock
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Btn_Update = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Btn_AddCust = New System.Windows.Forms.Button()
+        Me.Btn_Dashboard = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.Grd_Stock, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -224,24 +224,24 @@ Partial Class AllStock
         Me.Column8.Name = "Column8"
         Me.Column8.Width = 125
         '
-        'Btn_Update
+        'Btn_AddCust
         '
-        Me.Btn_Update.Location = New System.Drawing.Point(900, 495)
-        Me.Btn_Update.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Btn_Update.Name = "Btn_Update"
-        Me.Btn_Update.Size = New System.Drawing.Size(143, 46)
-        Me.Btn_Update.TabIndex = 27
-        Me.Btn_Update.Text = "Add Customer"
-        Me.Btn_Update.UseVisualStyleBackColor = True
+        Me.Btn_AddCust.Location = New System.Drawing.Point(900, 495)
+        Me.Btn_AddCust.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_AddCust.Name = "Btn_AddCust"
+        Me.Btn_AddCust.Size = New System.Drawing.Size(143, 46)
+        Me.Btn_AddCust.TabIndex = 27
+        Me.Btn_AddCust.Text = "Add Customer"
+        Me.Btn_AddCust.UseVisualStyleBackColor = True
         '
-        'Button2
+        'Btn_Dashboard
         '
-        Me.Button2.Location = New System.Drawing.Point(1080, 507)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(162, 23)
-        Me.Button2.TabIndex = 36
-        Me.Button2.Text = "Back to DashBoard"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Btn_Dashboard.Location = New System.Drawing.Point(1080, 507)
+        Me.Btn_Dashboard.Name = "Btn_Dashboard"
+        Me.Btn_Dashboard.Size = New System.Drawing.Size(162, 23)
+        Me.Btn_Dashboard.TabIndex = 36
+        Me.Btn_Dashboard.Text = "Back to DashBoard"
+        Me.Btn_Dashboard.UseVisualStyleBackColor = True
         '
         'ComboBox1
         '
@@ -270,13 +270,13 @@ Partial Class AllStock
         Me.ClientSize = New System.Drawing.Size(1349, 552)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Btn_Dashboard)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.chkAuto)
         Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.txtSearch)
         Me.Controls.Add(Me.cmbSearchType)
-        Me.Controls.Add(Me.Btn_Update)
+        Me.Controls.Add(Me.Btn_AddCust)
         Me.Controls.Add(Me.Btn_AllStock)
         Me.Controls.Add(Me.Btn_Deposited)
         Me.Controls.Add(Me.Btn_Repossess)
@@ -297,7 +297,7 @@ Partial Class AllStock
     Friend WithEvents btnSearch As Button
     Friend WithEvents txtSearch As TextBox
     Friend WithEvents cmbSearchType As ComboBox
-    Friend WithEvents Btn_Update As Button
+    Friend WithEvents Btn_AddCust As Button
     Friend WithEvents Btn_AllStock As Button
     Friend WithEvents Btn_Deposited As Button
     Friend WithEvents Btn_Repossess As Button
@@ -312,7 +312,7 @@ Partial Class AllStock
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
-    Friend WithEvents Button2 As Button
+    Friend WithEvents Btn_Dashboard As Button
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label1 As Label
 End Class

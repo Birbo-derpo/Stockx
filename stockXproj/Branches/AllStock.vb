@@ -1,6 +1,8 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class AllStock
+
+    Dim Model, Color, Price, Engine_Num, Frame_Num As String
     'dataloader
     Private Sub AllStock_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CheckDatabaseConnection()
@@ -60,11 +62,6 @@ Public Class AllStock
 
     'left screen buttons
 
-
-    Private Sub Grd_Stock_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_Stock.CellContentClick
-
-    End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         All_Unit.Show()
         Me.Hide()
@@ -80,6 +77,11 @@ Public Class AllStock
         Me.Hide()
     End Sub
 
+    Private Sub Btn_Dashboard_Click(sender As Object, e As EventArgs) Handles Btn_Dashboard.Click
+        DashBoard.Show()
+        Me.Hide()
+    End Sub
+
     Private Sub Btn_Deposited_Click(sender As Object, e As EventArgs) Handles Btn_Deposited.Click
         Deposited.Show()
         Me.Hide()
@@ -90,6 +92,25 @@ Public Class AllStock
 
         Me.Hide()
     End Sub
-    'end of left screen buttons
 
+    'end of left screen buttons
+    Private Sub Btn_AddCust_Click(sender As Object, e As EventArgs) Handles Btn_AddCust.Click
+        With UpdateStocks
+            .Txt_Model.Text = Model
+            .Txt_Color.Text = Color
+            .Txt_Price.Text = Price
+            .Txt_EngineNumber.Text = Engine_Num
+            .Txt_FrameNumber.Text = Frame_Num
+            .Txt_SIN.Text =
+            .ShowDialog()
+        End With
+    End Sub
+
+    Private Sub Grd_Stock_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_Stock.CellClick
+        Model = Grd_Stock.CurrentRow.Cells(3).Value.ToString
+        Color = Grd_Stock.CurrentRow.Cells(5).Value.ToString
+        Price = Grd_Stock.CurrentRow.Cells(4).Value.ToString
+        Engine_Num = Grd_Stock.CurrentRow.Cells(6).Value.ToString
+        Frame_Num = Grd_Stock.CurrentRow.Cells(7).Value.ToString
+    End Sub
 End Class

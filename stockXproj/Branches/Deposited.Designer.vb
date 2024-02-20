@@ -24,7 +24,7 @@ Partial Class Deposited
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Btn_Dashboard = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.chkAuto = New System.Windows.Forms.CheckBox()
         Me.btnSearch = New System.Windows.Forms.Button()
@@ -69,14 +69,14 @@ Partial Class Deposited
         Me.ComboBox1.Size = New System.Drawing.Size(121, 24)
         Me.ComboBox1.TabIndex = 51
         '
-        'Button2
+        'Btn_Dashboard
         '
-        Me.Button2.Location = New System.Drawing.Point(1033, 519)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(162, 23)
-        Me.Button2.TabIndex = 50
-        Me.Button2.Text = "Back to DashBoard"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Btn_Dashboard.Location = New System.Drawing.Point(1033, 519)
+        Me.Btn_Dashboard.Name = "Btn_Dashboard"
+        Me.Btn_Dashboard.Size = New System.Drawing.Size(162, 23)
+        Me.Btn_Dashboard.TabIndex = 50
+        Me.Btn_Dashboard.Text = "Back to DashBoard"
+        Me.Btn_Dashboard.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -268,7 +268,7 @@ Partial Class Deposited
         Me.ClientSize = New System.Drawing.Size(1324, 576)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Btn_Dashboard)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.chkAuto)
         Me.Controls.Add(Me.btnSearch)
@@ -291,7 +291,7 @@ Partial Class Deposited
 
     Friend WithEvents Label1 As Label
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents Btn_Dashboard As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents chkAuto As CheckBox
     Friend WithEvents btnSearch As Button
