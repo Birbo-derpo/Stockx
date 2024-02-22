@@ -185,8 +185,5 @@ Public Class ConfirmReserve
         Me.Hide()
     End Sub
 
-    Private Sub grdMotorcycle_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grdMotorcycle.CellContentClick
-
-    End Sub
     'Buttons end
 End Class

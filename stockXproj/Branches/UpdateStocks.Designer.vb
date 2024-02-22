@@ -34,19 +34,19 @@ Partial Class UpdateStocks
         Me.Txt_Color = New System.Windows.Forms.TextBox()
         Me.Txt_Model = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Txt_Name = New System.Windows.Forms.TextBox()
         Me.dt = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Txt_Amount = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Cmb_Term = New System.Windows.Forms.ComboBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Txt_SIN = New System.Windows.Forms.TextBox()
         Me.Btn_Update = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Cmb_Type = New System.Windows.Forms.ComboBox()
+        Me.Cmb_Stat = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
@@ -112,7 +112,7 @@ Partial Class UpdateStocks
         'Txt_FrameNumber
         '
         Me.Txt_FrameNumber.Location = New System.Drawing.Point(460, 167)
-        Me.Txt_FrameNumber.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_FrameNumber.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_FrameNumber.Name = "Txt_FrameNumber"
         Me.Txt_FrameNumber.ReadOnly = True
         Me.Txt_FrameNumber.Size = New System.Drawing.Size(240, 20)
@@ -121,7 +121,7 @@ Partial Class UpdateStocks
         'Txt_EngineNumber
         '
         Me.Txt_EngineNumber.Location = New System.Drawing.Point(460, 129)
-        Me.Txt_EngineNumber.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_EngineNumber.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_EngineNumber.Name = "Txt_EngineNumber"
         Me.Txt_EngineNumber.ReadOnly = True
         Me.Txt_EngineNumber.Size = New System.Drawing.Size(240, 20)
@@ -130,7 +130,7 @@ Partial Class UpdateStocks
         'Txt_Price
         '
         Me.Txt_Price.Location = New System.Drawing.Point(460, 91)
-        Me.Txt_Price.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_Price.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_Price.Name = "Txt_Price"
         Me.Txt_Price.ReadOnly = True
         Me.Txt_Price.Size = New System.Drawing.Size(240, 20)
@@ -139,7 +139,7 @@ Partial Class UpdateStocks
         'Txt_Color
         '
         Me.Txt_Color.Location = New System.Drawing.Point(460, 54)
-        Me.Txt_Color.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_Color.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_Color.Name = "Txt_Color"
         Me.Txt_Color.ReadOnly = True
         Me.Txt_Color.Size = New System.Drawing.Size(240, 20)
@@ -148,7 +148,7 @@ Partial Class UpdateStocks
         'Txt_Model
         '
         Me.Txt_Model.Location = New System.Drawing.Point(460, 20)
-        Me.Txt_Model.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_Model.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_Model.Name = "Txt_Model"
         Me.Txt_Model.ReadOnly = True
         Me.Txt_Model.Size = New System.Drawing.Size(240, 20)
@@ -164,18 +164,18 @@ Partial Class UpdateStocks
         Me.Label8.TabIndex = 65
         Me.Label8.Text = "Name"
         '
-        'TextBox1
+        'Txt_Name
         '
-        Me.TextBox1.Location = New System.Drawing.Point(460, 240)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(240, 20)
-        Me.TextBox1.TabIndex = 64
+        Me.Txt_Name.Location = New System.Drawing.Point(460, 240)
+        Me.Txt_Name.Margin = New System.Windows.Forms.Padding(2)
+        Me.Txt_Name.Name = "Txt_Name"
+        Me.Txt_Name.Size = New System.Drawing.Size(240, 20)
+        Me.Txt_Name.TabIndex = 64
         '
         'dt
         '
         Me.dt.Location = New System.Drawing.Point(460, 274)
-        Me.dt.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dt.Margin = New System.Windows.Forms.Padding(2)
         Me.dt.Name = "dt"
         Me.dt.Size = New System.Drawing.Size(151, 20)
         Me.dt.TabIndex = 58
@@ -200,13 +200,13 @@ Partial Class UpdateStocks
         Me.Label9.TabIndex = 67
         Me.Label9.Text = "Amount"
         '
-        'TextBox2
+        'Txt_Amount
         '
-        Me.TextBox2.Location = New System.Drawing.Point(460, 306)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(240, 20)
-        Me.TextBox2.TabIndex = 66
+        Me.Txt_Amount.Location = New System.Drawing.Point(460, 306)
+        Me.Txt_Amount.Margin = New System.Windows.Forms.Padding(2)
+        Me.Txt_Amount.Name = "Txt_Amount"
+        Me.Txt_Amount.Size = New System.Drawing.Size(240, 20)
+        Me.Txt_Amount.TabIndex = 66
         '
         'Label10
         '
@@ -218,14 +218,15 @@ Partial Class UpdateStocks
         Me.Label10.TabIndex = 69
         Me.Label10.Text = "Terms of Payment"
         '
-        'ComboBox1
+        'Cmb_Term
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(506, 331)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(92, 21)
-        Me.ComboBox1.TabIndex = 70
+        Me.Cmb_Term.FormattingEnabled = True
+        Me.Cmb_Term.Items.AddRange(New Object() {"test1", "test2"})
+        Me.Cmb_Term.Location = New System.Drawing.Point(506, 331)
+        Me.Cmb_Term.Margin = New System.Windows.Forms.Padding(2)
+        Me.Cmb_Term.Name = "Cmb_Term"
+        Me.Cmb_Term.Size = New System.Drawing.Size(92, 21)
+        Me.Cmb_Term.TabIndex = 70
         '
         'Label12
         '
@@ -240,7 +241,7 @@ Partial Class UpdateStocks
         'Txt_SIN
         '
         Me.Txt_SIN.Location = New System.Drawing.Point(460, 209)
-        Me.Txt_SIN.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_SIN.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_SIN.Name = "Txt_SIN"
         Me.Txt_SIN.Size = New System.Drawing.Size(240, 20)
         Me.Txt_SIN.TabIndex = 73
@@ -248,7 +249,7 @@ Partial Class UpdateStocks
         'Btn_Update
         '
         Me.Btn_Update.Location = New System.Drawing.Point(758, 368)
-        Me.Btn_Update.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Update.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Update.Name = "Btn_Update"
         Me.Btn_Update.Size = New System.Drawing.Size(107, 39)
         Me.Btn_Update.TabIndex = 75
@@ -265,24 +266,25 @@ Partial Class UpdateStocks
         Me.Label1.TabIndex = 76
         Me.Label1.Text = "Types of Payment"
         '
-        'ComboBox3
+        'Cmb_Type
         '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(506, 356)
-        Me.ComboBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(92, 21)
-        Me.ComboBox3.TabIndex = 77
+        Me.Cmb_Type.FormattingEnabled = True
+        Me.Cmb_Type.Items.AddRange(New Object() {"test one", "test two"})
+        Me.Cmb_Type.Location = New System.Drawing.Point(506, 356)
+        Me.Cmb_Type.Margin = New System.Windows.Forms.Padding(2)
+        Me.Cmb_Type.Name = "Cmb_Type"
+        Me.Cmb_Type.Size = New System.Drawing.Size(92, 21)
+        Me.Cmb_Type.TabIndex = 77
         '
-        'ComboBox2
+        'Cmb_Stat
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"Release", "Deposit", "Repossess"})
-        Me.ComboBox2.Location = New System.Drawing.Point(506, 386)
-        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(92, 21)
-        Me.ComboBox2.TabIndex = 79
+        Me.Cmb_Stat.FormattingEnabled = True
+        Me.Cmb_Stat.Items.AddRange(New Object() {"Release", "Deposit", "Repossess"})
+        Me.Cmb_Stat.Location = New System.Drawing.Point(506, 386)
+        Me.Cmb_Stat.Margin = New System.Windows.Forms.Padding(2)
+        Me.Cmb_Stat.Name = "Cmb_Stat"
+        Me.Cmb_Stat.Size = New System.Drawing.Size(92, 21)
+        Me.Cmb_Stat.TabIndex = 79
         '
         'Label11
         '
@@ -299,19 +301,19 @@ Partial Class UpdateStocks
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(958, 431)
-        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.Cmb_Stat)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.ComboBox3)
+        Me.Controls.Add(Me.Cmb_Type)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Btn_Update)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Txt_SIN)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.Cmb_Term)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.Txt_Amount)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Txt_Name)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -325,7 +327,7 @@ Partial Class UpdateStocks
         Me.Controls.Add(Me.Txt_Color)
         Me.Controls.Add(Me.Txt_Model)
         Me.Controls.Add(Me.Motor)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "UpdateStocks"
         Me.Text = "UpdateStocks"
         Me.ResumeLayout(False)
@@ -345,18 +347,18 @@ Partial Class UpdateStocks
     Friend WithEvents Txt_Color As TextBox
     Friend WithEvents Txt_Model As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Txt_Name As TextBox
     Friend WithEvents dt As DateTimePicker
     Friend WithEvents Label3 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Txt_Amount As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Cmb_Term As ComboBox
     Friend WithEvents Label12 As Label
     Friend WithEvents Txt_SIN As TextBox
     Friend WithEvents Btn_Update As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Cmb_Type As ComboBox
+    Friend WithEvents Cmb_Stat As ComboBox
     Friend WithEvents Label11 As Label
 End Class
