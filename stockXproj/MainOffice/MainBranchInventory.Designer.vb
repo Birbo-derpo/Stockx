@@ -173,7 +173,7 @@ Partial Class MainBranchInventory
         Me.Btn_ReservationPage.Location = New System.Drawing.Point(433, 882)
         Me.Btn_ReservationPage.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_ReservationPage.Name = "Btn_ReservationPage"
-        Me.Btn_ReservationPage.Size = New System.Drawing.Size(177, 69)
+        Me.Btn_ReservationPage.Size = New System.Drawing.Size(193, 69)
         Me.Btn_ReservationPage.TabIndex = 14
         Me.Btn_ReservationPage.Text = "RESERVE"
         Me.Btn_ReservationPage.UseVisualStyleBackColor = False

@@ -113,5 +113,9 @@ Public Class Add_MT_Number
     Private Sub chkAuto_CheckedChanged(sender As Object, e As EventArgs) Handles chkAuto.CheckedChanged
 
     End Sub
+
+    Private Sub Grd_MotorcycleReserved_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_MotorcycleReserved.CellContentClick
+
+    End Sub
     'buttons end
 End Class

@@ -197,6 +197,7 @@ Partial Class UPDATE
         Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.DataGridView1)
+        Me.ForeColor = System.Drawing.Color.Gray
         Me.Name = "UPDATE"
         Me.Text = "UPDATE"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

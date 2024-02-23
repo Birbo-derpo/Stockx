@@ -2,7 +2,7 @@
 
 Public Class AllStock
 
-    Dim Model, Color, Price, Engine_Num, Frame_Num As String
+    Dim Model, Color, Price, Engine_Num, Frame_Num, MTN As String
     'dataloader
     Private Sub AllStock_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CheckDatabaseConnection()
@@ -82,6 +82,14 @@ Public Class AllStock
         Me.Hide()
     End Sub
 
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+
+    End Sub
+
+    Private Sub Grd_Stock_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_Stock.CellContentClick
+
+    End Sub
+
     Private Sub Btn_Deposited_Click(sender As Object, e As EventArgs) Handles Btn_Deposited.Click
         Deposited.Show()
         Me.Hide()
@@ -96,6 +104,7 @@ Public Class AllStock
     'end of left screen buttons
     Private Sub Btn_AddCust_Click(sender As Object, e As EventArgs) Handles Btn_AddCust.Click
         With UpdateStocks
+            .Txt_SIN.Text = MTN
             .Txt_Model.Text = Model
             .Txt_Color.Text = Color
             .Txt_Price.Text = Price

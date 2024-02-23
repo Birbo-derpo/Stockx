@@ -185,5 +185,13 @@ Public Class ConfirmReserve
         Me.Hide()
     End Sub
 
+    Private Sub cmb_tobranch_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_tobranch.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub grdMotorcycle_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grdMotorcycle.CellContentClick
+
+    End Sub
+
     'Buttons end
 End Class

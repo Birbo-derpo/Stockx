@@ -44,7 +44,7 @@ Partial Class AllStock
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Btn_AddCust = New System.Windows.Forms.Button()
         Me.Btn_Dashboard = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cmb_branch = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.Grd_Stock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -243,16 +243,16 @@ Partial Class AllStock
         Me.Btn_Dashboard.Text = "Back to DashBoard"
         Me.Btn_Dashboard.UseVisualStyleBackColor = True
         '
-        'ComboBox1
+        'cmb_branch
         '
-        Me.ComboBox1.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
-        Me.ComboBox1.Location = New System.Drawing.Point(1181, 65)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 24)
-        Me.ComboBox1.TabIndex = 37
+        Me.cmb_branch.AutoCompleteCustomSource.AddRange(New String() {"Bajada", "Davao", "Digos", "Kidapawan", "Tagum", "General Santos"})
+        Me.cmb_branch.FormattingEnabled = True
+        Me.cmb_branch.Items.AddRange(New Object() {"Bajada", "Davao", "Digos", "Kidapawan", "Tagum", "General Santos"})
+        Me.cmb_branch.Location = New System.Drawing.Point(1170, 66)
+        Me.cmb_branch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.cmb_branch.Name = "cmb_branch"
+        Me.cmb_branch.Size = New System.Drawing.Size(121, 24)
+        Me.cmb_branch.TabIndex = 37
         '
         'Label1
         '
@@ -269,7 +269,7 @@ Partial Class AllStock
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1349, 552)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cmb_branch)
         Me.Controls.Add(Me.Btn_Dashboard)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.chkAuto)
@@ -313,6 +313,6 @@ Partial Class AllStock
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Btn_Dashboard As Button
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cmb_branch As ComboBox
     Friend WithEvents Label1 As Label
 End Class
