@@ -235,4 +235,28 @@ Public Class MainBranchInventory
         Me.Hide()
 
     End Sub
+
+    Private Sub Grd_Motorcycle_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_Motorcycle.CellContentClick
+
+    End Sub
+
+    Private Sub cmbSearchType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSearchType.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub chkAuto_CheckedChanged(sender As Object, e As EventArgs) Handles chkAuto.CheckedChanged
+
+    End Sub
+
+    Private Sub lblTotal_Click(sender As Object, e As EventArgs) Handles lblTotal.Click
+
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
 End Class
