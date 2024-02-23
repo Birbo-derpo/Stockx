@@ -47,8 +47,10 @@ Partial Class MainBranchInventory
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         CType(Me.Grd_Motorcycle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnEdit
@@ -57,10 +59,10 @@ Partial Class MainBranchInventory
         Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnEdit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnEdit.Location = New System.Drawing.Point(1709, 900)
+        Me.btnEdit.Location = New System.Drawing.Point(1360, 896)
         Me.btnEdit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(112, 51)
+        Me.btnEdit.Size = New System.Drawing.Size(177, 69)
         Me.btnEdit.TabIndex = 9
         Me.btnEdit.Text = "EDIT"
         Me.btnEdit.UseVisualStyleBackColor = False
@@ -71,10 +73,10 @@ Partial Class MainBranchInventory
         Me.btndelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btndelete.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btndelete.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btndelete.Location = New System.Drawing.Point(1827, 900)
+        Me.btndelete.Location = New System.Drawing.Point(1733, 896)
         Me.btndelete.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btndelete.Name = "btndelete"
-        Me.btndelete.Size = New System.Drawing.Size(112, 51)
+        Me.btndelete.Size = New System.Drawing.Size(177, 69)
         Me.btndelete.TabIndex = 8
         Me.btndelete.Text = "DELETE"
         Me.btndelete.UseVisualStyleBackColor = False
@@ -85,10 +87,10 @@ Partial Class MainBranchInventory
         Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnAdd.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnAdd.Location = New System.Drawing.Point(1591, 900)
+        Me.btnAdd.Location = New System.Drawing.Point(1550, 896)
         Me.btnAdd.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(112, 51)
+        Me.btnAdd.Size = New System.Drawing.Size(177, 69)
         Me.btnAdd.TabIndex = 7
         Me.btnAdd.Text = "ADD"
         Me.btnAdd.UseVisualStyleBackColor = False
@@ -97,7 +99,7 @@ Partial Class MainBranchInventory
         '
         Me.lblTotal.AutoSize = True
         Me.lblTotal.Font = New System.Drawing.Font("Baskerville Old Face", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotal.Location = New System.Drawing.Point(1537, 302)
+        Me.lblTotal.Location = New System.Drawing.Point(1623, 313)
         Me.lblTotal.Name = "lblTotal"
         Me.lblTotal.Size = New System.Drawing.Size(247, 32)
         Me.lblTotal.TabIndex = 6
@@ -107,12 +109,12 @@ Partial Class MainBranchInventory
         '
         Me.Grd_Motorcycle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grd_Motorcycle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9})
-        Me.Grd_Motorcycle.Location = New System.Drawing.Point(102, 357)
+        Me.Grd_Motorcycle.Location = New System.Drawing.Point(250, 357)
         Me.Grd_Motorcycle.Margin = New System.Windows.Forms.Padding(0, 0, 0, 0)
         Me.Grd_Motorcycle.Name = "Grd_Motorcycle"
         Me.Grd_Motorcycle.RowHeadersWidth = 51
         Me.Grd_Motorcycle.RowTemplate.Height = 24
-        Me.Grd_Motorcycle.Size = New System.Drawing.Size(1836, 504)
+        Me.Grd_Motorcycle.Size = New System.Drawing.Size(1688, 504)
         Me.Grd_Motorcycle.TabIndex = 26
         '
         'cmbSearchType
@@ -121,7 +123,7 @@ Partial Class MainBranchInventory
         Me.cmbSearchType.Font = New System.Drawing.Font("Arial", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbSearchType.FormattingEnabled = True
         Me.cmbSearchType.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
-        Me.cmbSearchType.Location = New System.Drawing.Point(1000, 94)
+        Me.cmbSearchType.Location = New System.Drawing.Point(250, 294)
         Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cmbSearchType.Name = "cmbSearchType"
         Me.cmbSearchType.Size = New System.Drawing.Size(376, 40)
@@ -131,7 +133,7 @@ Partial Class MainBranchInventory
         '
         Me.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtSearch.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearch.Location = New System.Drawing.Point(1000, 48)
+        Me.txtSearch.Location = New System.Drawing.Point(250, 248)
         Me.txtSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(528, 42)
@@ -143,7 +145,7 @@ Partial Class MainBranchInventory
         Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnSearch.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnSearch.Location = New System.Drawing.Point(1543, 48)
+        Me.btnSearch.Location = New System.Drawing.Point(784, 248)
         Me.btnSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(124, 42)
@@ -155,7 +157,7 @@ Partial Class MainBranchInventory
         '
         Me.chkAuto.AutoSize = True
         Me.chkAuto.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkAuto.Location = New System.Drawing.Point(1382, 101)
+        Me.chkAuto.Location = New System.Drawing.Point(632, 302)
         Me.chkAuto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.chkAuto.Name = "chkAuto"
         Me.chkAuto.Size = New System.Drawing.Size(146, 28)
@@ -166,10 +168,9 @@ Partial Class MainBranchInventory
         'Btn_ReservationPage
         '
         Me.Btn_ReservationPage.BackColor = System.Drawing.Color.Firebrick
-        Me.Btn_ReservationPage.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Btn_ReservationPage.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_ReservationPage.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_ReservationPage.Location = New System.Drawing.Point(290, 882)
+        Me.Btn_ReservationPage.Location = New System.Drawing.Point(433, 882)
         Me.Btn_ReservationPage.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_ReservationPage.Name = "Btn_ReservationPage"
         Me.Btn_ReservationPage.Size = New System.Drawing.Size(177, 69)
@@ -180,12 +181,13 @@ Partial Class MainBranchInventory
         'Btn_Transit
         '
         Me.Btn_Transit.BackColor = System.Drawing.Color.Firebrick
+        Me.Btn_Transit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn_Transit.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Transit.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_Transit.Location = New System.Drawing.Point(604, 272)
+        Me.Btn_Transit.Location = New System.Drawing.Point(0, 209)
         Me.Btn_Transit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Transit.Name = "Btn_Transit"
-        Me.Btn_Transit.Size = New System.Drawing.Size(245, 62)
+        Me.Btn_Transit.Size = New System.Drawing.Size(241, 63)
         Me.Btn_Transit.TabIndex = 34
         Me.Btn_Transit.Text = "TRANSIT STOCKS"
         Me.Btn_Transit.UseVisualStyleBackColor = False
@@ -193,12 +195,13 @@ Partial Class MainBranchInventory
         'Btn_AvStock
         '
         Me.Btn_AvStock.BackColor = System.Drawing.Color.Firebrick
+        Me.Btn_AvStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn_AvStock.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_AvStock.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_AvStock.Location = New System.Drawing.Point(102, 272)
+        Me.Btn_AvStock.Location = New System.Drawing.Point(0, 75)
         Me.Btn_AvStock.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_AvStock.Name = "Btn_AvStock"
-        Me.Btn_AvStock.Size = New System.Drawing.Size(245, 62)
+        Me.Btn_AvStock.Size = New System.Drawing.Size(241, 63)
         Me.Btn_AvStock.TabIndex = 33
         Me.Btn_AvStock.Text = "AVAILABLE STOCKS"
         Me.Btn_AvStock.UseVisualStyleBackColor = False
@@ -206,12 +209,13 @@ Partial Class MainBranchInventory
         'Btn_Reserved
         '
         Me.Btn_Reserved.BackColor = System.Drawing.Color.Firebrick
+        Me.Btn_Reserved.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn_Reserved.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Reserved.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_Reserved.Location = New System.Drawing.Point(353, 272)
+        Me.Btn_Reserved.Location = New System.Drawing.Point(0, 142)
         Me.Btn_Reserved.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Reserved.Name = "Btn_Reserved"
-        Me.Btn_Reserved.Size = New System.Drawing.Size(245, 62)
+        Me.Btn_Reserved.Size = New System.Drawing.Size(241, 63)
         Me.Btn_Reserved.TabIndex = 32
         Me.Btn_Reserved.Text = "RESERVED STOCKS"
         Me.Btn_Reserved.UseVisualStyleBackColor = False
@@ -222,7 +226,7 @@ Partial Class MainBranchInventory
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(102, 882)
+        Me.Button1.Location = New System.Drawing.Point(250, 882)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(177, 69)
         Me.Button1.TabIndex = 35
@@ -234,9 +238,9 @@ Partial Class MainBranchInventory
         Me.PictureBox1.BackgroundImage = Global.stockXproj.My.Resources.Resources.Add_a_subheading__1_
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox1.Location = New System.Drawing.Point(2, 1)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, -2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(992, 174)
+        Me.PictureBox1.Size = New System.Drawing.Size(1898, 209)
         Me.PictureBox1.TabIndex = 36
         Me.PictureBox1.TabStop = False
         '
@@ -244,7 +248,7 @@ Partial Class MainBranchInventory
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Bell MT", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(95, 207)
+        Me.Label1.Location = New System.Drawing.Point(84, 97)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(333, 39)
         Me.Label1.TabIndex = 37
@@ -313,17 +317,28 @@ Partial Class MainBranchInventory
         Me.Column9.Name = "Column9"
         Me.Column9.Width = 125
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.Color.MistyRose
+        Me.GroupBox1.Controls.Add(Me.Btn_AvStock)
+        Me.GroupBox1.Controls.Add(Me.Btn_Reserved)
+        Me.GroupBox1.Controls.Add(Me.Btn_Transit)
+        Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.GroupBox1.Location = New System.Drawing.Point(0, 357)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(247, 504)
+        Me.GroupBox1.TabIndex = 38
+        Me.GroupBox1.TabStop = False
+        '
         'MainBranchInventory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1912, 987)
+        Me.ClientSize = New System.Drawing.Size(148, 0)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Btn_Transit)
-        Me.Controls.Add(Me.Btn_AvStock)
-        Me.Controls.Add(Me.Btn_Reserved)
         Me.Controls.Add(Me.Btn_ReservationPage)
         Me.Controls.Add(Me.chkAuto)
         Me.Controls.Add(Me.btnSearch)
@@ -340,6 +355,7 @@ Partial Class MainBranchInventory
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.Grd_Motorcycle, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -370,4 +386,5 @@ Partial Class MainBranchInventory
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
+    Friend WithEvents GroupBox1 As GroupBox
 End Class

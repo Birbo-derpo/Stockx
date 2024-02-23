@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Add_MT_Number
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Add_MT_Number
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Btn_ConfirmTransit = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -44,30 +44,36 @@ Partial Class Add_MT_Number
         '
         'Btn_ConfirmTransit
         '
-        Me.Btn_ConfirmTransit.Location = New System.Drawing.Point(435, 317)
-        Me.Btn_ConfirmTransit.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_ConfirmTransit.BackColor = System.Drawing.Color.Firebrick
+        Me.Btn_ConfirmTransit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Btn_ConfirmTransit.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_ConfirmTransit.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Btn_ConfirmTransit.Location = New System.Drawing.Point(897, 431)
+        Me.Btn_ConfirmTransit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_ConfirmTransit.Name = "Btn_ConfirmTransit"
-        Me.Btn_ConfirmTransit.Size = New System.Drawing.Size(86, 19)
+        Me.Btn_ConfirmTransit.Size = New System.Drawing.Size(155, 55)
         Me.Btn_ConfirmTransit.TabIndex = 42
-        Me.Btn_ConfirmTransit.Text = "Confirm Transit"
-        Me.Btn_ConfirmTransit.UseVisualStyleBackColor = True
+        Me.Btn_ConfirmTransit.Text = "CONFIRM TRANSIT"
+        Me.Btn_ConfirmTransit.UseVisualStyleBackColor = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(308, 50)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(106, 102)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(91, 13)
+        Me.Label1.Size = New System.Drawing.Size(292, 27)
         Me.Label1.TabIndex = 41
-        Me.Label1.Text = "Enter MT Number"
+        Me.Label1.Text = "Merchandise Transit No.:"
         '
         'txt_MTN
         '
-        Me.txt_MTN.Location = New System.Drawing.Point(404, 45)
-        Me.txt_MTN.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_MTN.BackColor = System.Drawing.SystemColors.Window
+        Me.txt_MTN.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_MTN.Location = New System.Drawing.Point(404, 102)
+        Me.txt_MTN.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txt_MTN.Name = "txt_MTN"
-        Me.txt_MTN.Size = New System.Drawing.Size(76, 20)
+        Me.txt_MTN.Size = New System.Drawing.Size(205, 28)
         Me.txt_MTN.TabIndex = 40
         '
         'Grd_MotorcycleReserved
@@ -78,26 +84,30 @@ Partial Class Add_MT_Number
         Me.Grd_MotorcycleReserved.AllowUserToResizeRows = False
         Me.Grd_MotorcycleReserved.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grd_MotorcycleReserved.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column9, Me.Column8, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
-        Me.Grd_MotorcycleReserved.Location = New System.Drawing.Point(118, 79)
-        Me.Grd_MotorcycleReserved.Margin = New System.Windows.Forms.Padding(2)
+        Me.Grd_MotorcycleReserved.Location = New System.Drawing.Point(22, 160)
+        Me.Grd_MotorcycleReserved.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Grd_MotorcycleReserved.Name = "Grd_MotorcycleReserved"
         Me.Grd_MotorcycleReserved.ReadOnly = True
         Me.Grd_MotorcycleReserved.RowHeadersWidth = 51
         Me.Grd_MotorcycleReserved.RowTemplate.Height = 24
-        Me.Grd_MotorcycleReserved.Size = New System.Drawing.Size(706, 217)
+        Me.Grd_MotorcycleReserved.Size = New System.Drawing.Size(1122, 267)
         Me.Grd_MotorcycleReserved.TabIndex = 39
         '
         'Column9
         '
         Me.Column9.HeaderText = "Check Select"
+        Me.Column9.MinimumWidth = 6
         Me.Column9.Name = "Column9"
         Me.Column9.ReadOnly = True
+        Me.Column9.Width = 125
         '
         'Column8
         '
         Me.Column8.HeaderText = "Branch"
+        Me.Column8.MinimumWidth = 6
         Me.Column8.Name = "Column8"
         Me.Column8.ReadOnly = True
+        Me.Column8.Width = 125
         '
         'Column1
         '
@@ -157,48 +167,58 @@ Partial Class Add_MT_Number
         '
         'Btn_back
         '
-        Me.Btn_back.Location = New System.Drawing.Point(136, 317)
-        Me.Btn_back.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_back.BackColor = System.Drawing.Color.Firebrick
+        Me.Btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Btn_back.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_back.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Btn_back.Location = New System.Drawing.Point(111, 431)
+        Me.Btn_back.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_back.Name = "Btn_back"
-        Me.Btn_back.Size = New System.Drawing.Size(86, 19)
+        Me.Btn_back.Size = New System.Drawing.Size(155, 55)
         Me.Btn_back.TabIndex = 43
-        Me.Btn_back.Text = "Back"
-        Me.Btn_back.UseVisualStyleBackColor = True
+        Me.Btn_back.Text = "BACK"
+        Me.Btn_back.UseVisualStyleBackColor = False
         '
         'btnSearch
         '
-        Me.btnSearch.Location = New System.Drawing.Point(185, 11)
-        Me.btnSearch.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnSearch.BackColor = System.Drawing.Color.Firebrick
+        Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnSearch.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnSearch.Location = New System.Drawing.Point(937, 60)
+        Me.btnSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(56, 19)
+        Me.btnSearch.Size = New System.Drawing.Size(115, 37)
         Me.btnSearch.TabIndex = 46
-        Me.btnSearch.Text = "search"
-        Me.btnSearch.UseVisualStyleBackColor = True
+        Me.btnSearch.Text = "SEARCH"
+        Me.btnSearch.UseVisualStyleBackColor = False
         '
         'txtSearch
         '
-        Me.txtSearch.Location = New System.Drawing.Point(21, 11)
-        Me.txtSearch.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtSearch.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearch.Location = New System.Drawing.Point(603, 66)
+        Me.txtSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(160, 20)
+        Me.txtSearch.Size = New System.Drawing.Size(328, 28)
         Me.txtSearch.TabIndex = 45
         '
         'chkAuto
         '
         Me.chkAuto.AutoSize = True
-        Me.chkAuto.Location = New System.Drawing.Point(21, 35)
-        Me.chkAuto.Margin = New System.Windows.Forms.Padding(2)
+        Me.chkAuto.Location = New System.Drawing.Point(950, 121)
+        Me.chkAuto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.chkAuto.Name = "chkAuto"
-        Me.chkAuto.Size = New System.Drawing.Size(92, 17)
+        Me.chkAuto.Size = New System.Drawing.Size(114, 20)
         Me.chkAuto.TabIndex = 47
         Me.chkAuto.Text = "AutoComplete"
         Me.chkAuto.UseVisualStyleBackColor = True
         '
         'Add_MT_Number
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(942, 380)
+        Me.ClientSize = New System.Drawing.Size(1156, 568)
         Me.Controls.Add(Me.chkAuto)
         Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.txtSearch)
@@ -207,7 +227,7 @@ Partial Class Add_MT_Number
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txt_MTN)
         Me.Controls.Add(Me.Grd_MotorcycleReserved)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Add_MT_Number"
         Me.Text = "Add_MT_Number"
         CType(Me.Grd_MotorcycleReserved, System.ComponentModel.ISupportInitialize).EndInit()

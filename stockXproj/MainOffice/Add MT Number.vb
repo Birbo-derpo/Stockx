@@ -105,5 +105,13 @@ Public Class Add_MT_Number
         End With
         Me.Hide()
     End Sub
+
+    Private Sub txt_MTN_TextChanged(sender As Object, e As EventArgs) Handles txt_MTN.TextChanged
+
+    End Sub
+
+    Private Sub chkAuto_CheckedChanged(sender As Object, e As EventArgs) Handles chkAuto.CheckedChanged
+
+    End Sub
     'buttons end
 End Class
