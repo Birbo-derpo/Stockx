@@ -1,9 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class UpdateStocks
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Cmb_Term.SelectedIndexChanged
-
-    End Sub
 
     Private Sub Btn_Update_Click(sender As Object, e As EventArgs) Handles Btn_Update.Click
 
@@ -64,15 +61,4 @@ Public Class UpdateStocks
         End If
     End Sub
 
-    Private Sub txtterm_Click(sender As Object, e As EventArgs) Handles txtterm.Click
-
-    End Sub
-
-    Private Sub Txt_Name_TextChanged(sender As Object, e As EventArgs) Handles Txt_Fname.TextChanged
-
-    End Sub
-
-    Private Sub Txt_Lname_TextChanged(sender As Object, e As EventArgs) Handles Txt_Lname.TextChanged
-
-    End Sub
 End Class

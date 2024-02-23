@@ -13,10 +13,11 @@ Public Class Deposited
 
             With command
                 .Parameters.Clear()
-                .CommandText = "procDisplayAllStock"
+                .CommandText = "prc_DisplayStock"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", "Status")
                 .Parameters.AddWithValue("@p_search", "Deposited")
+                .Parameters.AddWithValue("@p_GBranch", "Branch")
                 sqlUMTCAdapter.SelectCommand = command
                 DataUMTC.Clear()
                 sqlUMTCAdapter.Fill(DataUMTC)
@@ -27,13 +28,15 @@ Public Class Deposited
                         If DataUMTC.Rows(row).Item("Brnch").ToString = "Main" Then
                             row = row + 1
                         Else
-                            Grd_StockDeposit.Rows(row).Cells(0).Value = DataUMTC.Rows(row).Item("Brnch").ToString
-                            Grd_StockDeposit.Rows(row).Cells(1).Value = DataUMTC.Rows(row).Item("Invoice").ToString
-                            Grd_StockDeposit.Rows(row).Cells(2).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
-                            Grd_StockDeposit.Rows(row).Cells(3).Value = DataUMTC.Rows(row).Item("model").ToString
-                            Grd_StockDeposit.Rows(row).Cells(4).Value = DataUMTC.Rows(row).Item("Color").ToString
-                            Grd_StockDeposit.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Price").ToString
+                            Grd_StockDeposit.Rows(row).Cells(1).Value = DataUMTC.Rows(row).Item("Brnch").ToString
+                            Grd_StockDeposit.Rows(row).Cells(2).Value = DataUMTC.Rows(row).Item("MTN").ToString
+                            Grd_StockDeposit.Rows(row).Cells(3).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
+                            Grd_StockDeposit.Rows(row).Cells(4).Value = DataUMTC.Rows(row).Item("model").ToString
+                            Grd_StockDeposit.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Color").ToString
+                            Grd_StockDeposit.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("Price").ToString
                             Grd_StockDeposit.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
+                            Grd_StockDeposit.Rows(row).Cells(8).Value = DataUMTC.Rows(row).Item("FrameNum").ToString
+                            Grd_StockDeposit.Rows(row).Cells(9).Value = DataUMTC.Rows(row).Item("Stat").ToString
 
                             row = row + 1
                         End If
@@ -75,5 +78,54 @@ Public Class Deposited
     Private Sub Btn_Repossess_Click(sender As Object, e As EventArgs) Handles Btn_Repossess.Click
         Repossess.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub Btn_Search_Click(sender As Object, e As EventArgs) Handles Btn_Search.Click
+        Try
+            sqlUMTCAdapter = New MySqlDataAdapter
+            DataUMTC = New DataTable
+
+            With command
+                .Parameters.Clear()
+                .CommandText = "prc_SearchStockByStatus"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
+                .Parameters.AddWithValue("@p_search", txtSearch.Text)
+                .Parameters.AddWithValue("@p_Stat", "Deposited")
+                sqlUMTCAdapter.SelectCommand = command
+                DataUMTC.Clear()
+                sqlUMTCAdapter.Fill(DataUMTC)
+                If DataUMTC.Rows.Count > 0 Then
+                    Grd_StockDeposit.RowCount = DataUMTC.Rows.Count
+                    row = 0
+                    While Not DataUMTC.Rows.Count - 1 < row
+                        If DataUMTC.Rows(row).Item("Brnch").ToString = "Main" Then
+                            row = row + 1
+                        Else
+                            Grd_StockDeposit.Rows(row).Cells(1).Value = DataUMTC.Rows(row).Item("Brnch").ToString
+                            Grd_StockDeposit.Rows(row).Cells(2).Value = DataUMTC.Rows(row).Item("Invoice").ToString
+                            Grd_StockDeposit.Rows(row).Cells(3).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
+                            Grd_StockDeposit.Rows(row).Cells(4).Value = DataUMTC.Rows(row).Item("model").ToString
+                            Grd_StockDeposit.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Color").ToString
+                            Grd_StockDeposit.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("Price").ToString
+                            Grd_StockDeposit.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
+                            Grd_StockDeposit.Rows(row).Cells(8).Value = DataUMTC.Rows(row).Item("FrameNum").ToString
+                            Grd_StockDeposit.Rows(row).Cells(9).Value = DataUMTC.Rows(row).Item("Stat").ToString
+
+                            row = row + 1
+                        End If
+                    End While
+                Else
+
+                    MessageBox.Show("No Available Records", "Records", MessageBoxButtons.OK, MessageBoxIcon.Question)
+                End If
+            End With
+
+            sqlUMTCAdapter.Dispose()
+            DataUMTC.Dispose()
+
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
     End Sub
 End Class
