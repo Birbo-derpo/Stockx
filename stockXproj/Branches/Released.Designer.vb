@@ -23,7 +23,7 @@ Partial Class Released
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Cmb_Branch = New System.Windows.Forms.ComboBox()
         Me.Btn_Dashboard = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.chkAuto = New System.Windows.Forms.CheckBox()
@@ -52,28 +52,28 @@ Partial Class Released
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(764, 66)
+        Me.Label1.Location = New System.Drawing.Point(744, 66)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(52, 13)
+        Me.Label1.Size = New System.Drawing.Size(77, 13)
         Me.Label1.TabIndex = 66
-        Me.Label1.Text = "Branches"
+        Me.Label1.Text = "Sort by Branch"
         '
-        'ComboBox1
+        'Cmb_Branch
         '
-        Me.ComboBox1.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
-        Me.ComboBox1.Location = New System.Drawing.Point(825, 63)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(92, 21)
-        Me.ComboBox1.TabIndex = 65
+        Me.Cmb_Branch.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
+        Me.Cmb_Branch.FormattingEnabled = True
+        Me.Cmb_Branch.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
+        Me.Cmb_Branch.Location = New System.Drawing.Point(825, 63)
+        Me.Cmb_Branch.Margin = New System.Windows.Forms.Padding(2)
+        Me.Cmb_Branch.Name = "Cmb_Branch"
+        Me.Cmb_Branch.Size = New System.Drawing.Size(92, 21)
+        Me.Cmb_Branch.TabIndex = 65
         '
         'Btn_Dashboard
         '
         Me.Btn_Dashboard.Location = New System.Drawing.Point(749, 422)
-        Me.Btn_Dashboard.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Dashboard.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Dashboard.Name = "Btn_Dashboard"
         Me.Btn_Dashboard.Size = New System.Drawing.Size(122, 19)
         Me.Btn_Dashboard.TabIndex = 64
@@ -83,7 +83,7 @@ Partial Class Released
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(8, 144)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(107, 50)
         Me.Button1.TabIndex = 63
@@ -94,7 +94,7 @@ Partial Class Released
         '
         Me.chkAuto.AutoSize = True
         Me.chkAuto.Location = New System.Drawing.Point(148, 66)
-        Me.chkAuto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.chkAuto.Margin = New System.Windows.Forms.Padding(2)
         Me.chkAuto.Name = "chkAuto"
         Me.chkAuto.Size = New System.Drawing.Size(92, 17)
         Me.chkAuto.TabIndex = 62
@@ -104,7 +104,7 @@ Partial Class Released
         'Btn_Search
         '
         Me.Btn_Search.Location = New System.Drawing.Point(311, 22)
-        Me.Btn_Search.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Search.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Search.Name = "Btn_Search"
         Me.Btn_Search.Size = New System.Drawing.Size(56, 19)
         Me.Btn_Search.TabIndex = 61
@@ -114,7 +114,7 @@ Partial Class Released
         'txtSearch
         '
         Me.txtSearch.Location = New System.Drawing.Point(148, 22)
-        Me.txtSearch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtSearch.Margin = New System.Windows.Forms.Padding(2)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(160, 20)
         Me.txtSearch.TabIndex = 60
@@ -125,7 +125,7 @@ Partial Class Released
         Me.cmbSearchType.FormattingEnabled = True
         Me.cmbSearchType.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
         Me.cmbSearchType.Location = New System.Drawing.Point(148, 43)
-        Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbSearchType.Name = "cmbSearchType"
         Me.cmbSearchType.Size = New System.Drawing.Size(92, 21)
         Me.cmbSearchType.TabIndex = 59
@@ -133,7 +133,7 @@ Partial Class Released
         'Btn_Update
         '
         Me.Btn_Update.Location = New System.Drawing.Point(614, 412)
-        Me.Btn_Update.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Update.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Update.Name = "Btn_Update"
         Me.Btn_Update.Size = New System.Drawing.Size(107, 37)
         Me.Btn_Update.TabIndex = 58
@@ -143,7 +143,7 @@ Partial Class Released
         'Btn_AllStock
         '
         Me.Btn_AllStock.Location = New System.Drawing.Point(8, 197)
-        Me.Btn_AllStock.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_AllStock.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_AllStock.Name = "Btn_AllStock"
         Me.Btn_AllStock.Size = New System.Drawing.Size(107, 50)
         Me.Btn_AllStock.TabIndex = 57
@@ -153,7 +153,7 @@ Partial Class Released
         'Btn_Deposited
         '
         Me.Btn_Deposited.Location = New System.Drawing.Point(8, 305)
-        Me.Btn_Deposited.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Deposited.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Deposited.Name = "Btn_Deposited"
         Me.Btn_Deposited.Size = New System.Drawing.Size(107, 50)
         Me.Btn_Deposited.TabIndex = 56
@@ -163,7 +163,7 @@ Partial Class Released
         'Btn_Repossess
         '
         Me.Btn_Repossess.Location = New System.Drawing.Point(8, 358)
-        Me.Btn_Repossess.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Repossess.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Repossess.Name = "Btn_Repossess"
         Me.Btn_Repossess.Size = New System.Drawing.Size(107, 50)
         Me.Btn_Repossess.TabIndex = 55
@@ -174,7 +174,7 @@ Partial Class Released
         'Btn_Released
         '
         Me.Btn_Released.Location = New System.Drawing.Point(8, 251)
-        Me.Btn_Released.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Released.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Released.Name = "Btn_Released"
         Me.Btn_Released.Size = New System.Drawing.Size(107, 50)
         Me.Btn_Released.TabIndex = 54
@@ -186,7 +186,7 @@ Partial Class Released
         Me.Grd_StockReleased.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grd_StockReleased.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column10, Me.Column7, Me.Column1, Me.Column2, Me.Column3, Me.Column6, Me.Column9, Me.Column4, Me.Column5, Me.Column8})
         Me.Grd_StockReleased.Location = New System.Drawing.Point(120, 85)
-        Me.Grd_StockReleased.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Grd_StockReleased.Margin = New System.Windows.Forms.Padding(2)
         Me.Grd_StockReleased.Name = "Grd_StockReleased"
         Me.Grd_StockReleased.RowHeadersWidth = 51
         Me.Grd_StockReleased.RowTemplate.Height = 24
@@ -269,7 +269,7 @@ Partial Class Released
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(971, 487)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.Cmb_Branch)
         Me.Controls.Add(Me.Btn_Dashboard)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.chkAuto)
@@ -282,7 +282,7 @@ Partial Class Released
         Me.Controls.Add(Me.Btn_Repossess)
         Me.Controls.Add(Me.Btn_Released)
         Me.Controls.Add(Me.Grd_StockReleased)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Released"
         Me.Text = "Released"
         CType(Me.Grd_StockReleased, System.ComponentModel.ISupportInitialize).EndInit()
@@ -292,7 +292,7 @@ Partial Class Released
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Cmb_Branch As ComboBox
     Friend WithEvents Btn_Dashboard As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents chkAuto As CheckBox

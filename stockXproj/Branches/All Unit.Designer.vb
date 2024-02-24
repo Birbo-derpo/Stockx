@@ -43,19 +43,19 @@ Partial Class All_Unit
         Me.chkAuto = New System.Windows.Forms.CheckBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Btn_Dashboard = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Cmb_Branch = New System.Windows.Forms.ComboBox()
         CType(Me.Grd_Stock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(774, 74)
+        Me.Label1.Location = New System.Drawing.Point(756, 75)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(52, 13)
+        Me.Label1.Size = New System.Drawing.Size(74, 13)
         Me.Label1.TabIndex = 66
-        Me.Label1.Text = "Branches"
+        Me.Label1.Text = "sort by branch"
         '
         'Btn_Released
         '
@@ -233,16 +233,16 @@ Partial Class All_Unit
         Me.Btn_Dashboard.Text = "Back to DashBoard"
         Me.Btn_Dashboard.UseVisualStyleBackColor = True
         '
-        'ComboBox1
+        'Cmb_Branch
         '
-        Me.ComboBox1.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
-        Me.ComboBox1.Location = New System.Drawing.Point(835, 71)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(92, 21)
-        Me.ComboBox1.TabIndex = 65
+        Me.Cmb_Branch.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
+        Me.Cmb_Branch.FormattingEnabled = True
+        Me.Cmb_Branch.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
+        Me.Cmb_Branch.Location = New System.Drawing.Point(835, 71)
+        Me.Cmb_Branch.Margin = New System.Windows.Forms.Padding(2)
+        Me.Cmb_Branch.Name = "Cmb_Branch"
+        Me.Cmb_Branch.Size = New System.Drawing.Size(92, 21)
+        Me.Cmb_Branch.TabIndex = 65
         '
         'All_Unit
         '
@@ -250,7 +250,7 @@ Partial Class All_Unit
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1015, 519)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.Cmb_Branch)
         Me.Controls.Add(Me.Btn_Dashboard)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.chkAuto)
@@ -283,7 +283,7 @@ Partial Class All_Unit
     Friend WithEvents chkAuto As CheckBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Btn_Dashboard As Button
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Cmb_Branch As ComboBox
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn

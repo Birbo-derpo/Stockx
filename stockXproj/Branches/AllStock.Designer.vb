@@ -62,7 +62,7 @@ Partial Class AllStock
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(69, 134)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(107, 50)
         Me.Button1.TabIndex = 33
@@ -73,7 +73,7 @@ Partial Class AllStock
         '
         Me.chkAuto.AutoSize = True
         Me.chkAuto.Location = New System.Drawing.Point(208, 56)
-        Me.chkAuto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.chkAuto.Margin = New System.Windows.Forms.Padding(2)
         Me.chkAuto.Name = "chkAuto"
         Me.chkAuto.Size = New System.Drawing.Size(92, 17)
         Me.chkAuto.TabIndex = 32
@@ -83,7 +83,7 @@ Partial Class AllStock
         'Btn_Search
         '
         Me.Btn_Search.Location = New System.Drawing.Point(372, 12)
-        Me.Btn_Search.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Search.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Search.Name = "Btn_Search"
         Me.Btn_Search.Size = New System.Drawing.Size(56, 19)
         Me.Btn_Search.TabIndex = 31
@@ -93,7 +93,7 @@ Partial Class AllStock
         'txtSearch
         '
         Me.txtSearch.Location = New System.Drawing.Point(208, 12)
-        Me.txtSearch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtSearch.Margin = New System.Windows.Forms.Padding(2)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(160, 20)
         Me.txtSearch.TabIndex = 30
@@ -104,7 +104,7 @@ Partial Class AllStock
         Me.cmbSearchType.FormattingEnabled = True
         Me.cmbSearchType.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
         Me.cmbSearchType.Location = New System.Drawing.Point(208, 33)
-        Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbSearchType.Name = "cmbSearchType"
         Me.cmbSearchType.Size = New System.Drawing.Size(92, 21)
         Me.cmbSearchType.TabIndex = 29
@@ -112,7 +112,7 @@ Partial Class AllStock
         'Btn_AllStock
         '
         Me.Btn_AllStock.Location = New System.Drawing.Point(69, 188)
-        Me.Btn_AllStock.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_AllStock.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_AllStock.Name = "Btn_AllStock"
         Me.Btn_AllStock.Size = New System.Drawing.Size(107, 50)
         Me.Btn_AllStock.TabIndex = 26
@@ -122,7 +122,7 @@ Partial Class AllStock
         'Btn_Deposited
         '
         Me.Btn_Deposited.Location = New System.Drawing.Point(69, 295)
-        Me.Btn_Deposited.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Deposited.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Deposited.Name = "Btn_Deposited"
         Me.Btn_Deposited.Size = New System.Drawing.Size(107, 50)
         Me.Btn_Deposited.TabIndex = 25
@@ -132,7 +132,7 @@ Partial Class AllStock
         'Btn_Repossess
         '
         Me.Btn_Repossess.Location = New System.Drawing.Point(69, 349)
-        Me.Btn_Repossess.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Repossess.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Repossess.Name = "Btn_Repossess"
         Me.Btn_Repossess.Size = New System.Drawing.Size(107, 50)
         Me.Btn_Repossess.TabIndex = 24
@@ -143,7 +143,7 @@ Partial Class AllStock
         'Btn_Released
         '
         Me.Btn_Released.Location = New System.Drawing.Point(69, 241)
-        Me.Btn_Released.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Released.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Released.Name = "Btn_Released"
         Me.Btn_Released.Size = New System.Drawing.Size(107, 50)
         Me.Btn_Released.TabIndex = 23
@@ -155,7 +155,7 @@ Partial Class AllStock
         Me.Grd_Stock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grd_Stock.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column7, Me.Column1, Me.Column2, Me.Column3, Me.Column6, Me.Column9, Me.Column4, Me.Column5, Me.Column8})
         Me.Grd_Stock.Location = New System.Drawing.Point(181, 76)
-        Me.Grd_Stock.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Grd_Stock.Margin = New System.Windows.Forms.Padding(2)
         Me.Grd_Stock.Name = "Grd_Stock"
         Me.Grd_Stock.RowHeadersWidth = 51
         Me.Grd_Stock.RowTemplate.Height = 24
@@ -228,7 +228,7 @@ Partial Class AllStock
         'Btn_AddCust
         '
         Me.Btn_AddCust.Location = New System.Drawing.Point(675, 402)
-        Me.Btn_AddCust.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_AddCust.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_AddCust.Name = "Btn_AddCust"
         Me.Btn_AddCust.Size = New System.Drawing.Size(107, 37)
         Me.Btn_AddCust.TabIndex = 27
@@ -238,7 +238,7 @@ Partial Class AllStock
         'Btn_Dashboard
         '
         Me.Btn_Dashboard.Location = New System.Drawing.Point(810, 412)
-        Me.Btn_Dashboard.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Dashboard.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Dashboard.Name = "Btn_Dashboard"
         Me.Btn_Dashboard.Size = New System.Drawing.Size(122, 19)
         Me.Btn_Dashboard.TabIndex = 36
@@ -251,7 +251,7 @@ Partial Class AllStock
         Me.cmb_branch.FormattingEnabled = True
         Me.cmb_branch.Items.AddRange(New Object() {"Bajada", "Davao", "Digos", "Kidapawan", "Tagum", "General Santos"})
         Me.cmb_branch.Location = New System.Drawing.Point(878, 54)
-        Me.cmb_branch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmb_branch.Margin = New System.Windows.Forms.Padding(2)
         Me.cmb_branch.Name = "cmb_branch"
         Me.cmb_branch.Size = New System.Drawing.Size(92, 21)
         Me.cmb_branch.TabIndex = 37
@@ -259,12 +259,12 @@ Partial Class AllStock
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(825, 56)
+        Me.Label1.Location = New System.Drawing.Point(797, 60)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(52, 13)
+        Me.Label1.Size = New System.Drawing.Size(77, 13)
         Me.Label1.TabIndex = 38
-        Me.Label1.Text = "Branches"
+        Me.Label1.Text = "Sort by Branch"
         '
         'AllStock
         '
@@ -286,7 +286,7 @@ Partial Class AllStock
         Me.Controls.Add(Me.Btn_Released)
         Me.Controls.Add(Me.Grd_Stock)
         Me.Controls.Add(Me.Lbl_Branch)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "AllStock"
         Me.Text = "AllStock"
         CType(Me.Grd_Stock, System.ComponentModel.ISupportInitialize).EndInit()

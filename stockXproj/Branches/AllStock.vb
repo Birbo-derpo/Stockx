@@ -82,6 +82,49 @@ Public Class AllStock
         Me.Hide()
     End Sub
 
+    Private Sub cmb_branch_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_branch.SelectedIndexChanged
+        sqlUMTCAdapter = New MySqlDataAdapter
+        DataUMTC = New DataTable
+        Try
+
+            With command
+                .Parameters.Clear()
+                .CommandText = "prc_BranchSort"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_branch", cmb_branch.Text)
+                .Parameters.AddWithValue("@p_Stat", "in branch")
+                sqlUMTCAdapter.SelectCommand = command
+                DataUMTC.Clear()
+                sqlUMTCAdapter.Fill(DataUMTC)
+                If DataUMTC.Rows.Count > 0 Then
+                    Grd_Stock.RowCount = DataUMTC.Rows.Count
+                    row = 0
+                    While Not DataUMTC.Rows.Count - 1 < row
+                        Grd_Stock.Rows(row).Cells(0).Value = DataUMTC.Rows(row).Item("Brnch").ToString
+                        Grd_Stock.Rows(row).Cells(1).Value = DataUMTC.Rows(row).Item("MTN").ToString
+                        Grd_Stock.Rows(row).Cells(2).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
+                        Grd_Stock.Rows(row).Cells(3).Value = DataUMTC.Rows(row).Item("model").ToString
+                        Grd_Stock.Rows(row).Cells(4).Value = DataUMTC.Rows(row).Item("Price").ToString
+                        Grd_Stock.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Color").ToString
+                        Grd_Stock.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
+                        Grd_Stock.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("Framenum").ToString
+                        Grd_Stock.Rows(row).Cells(8).Value = DataUMTC.Rows(row).Item("Stat").ToString
+
+                        row = row + 1
+
+                    End While
+
+                Else
+                    MessageBox.Show("No Available Records", "Records", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
+            End With
+            sqlUMTCAdapter.Dispose()
+            DataUMTC.Dispose()
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+    End Sub
+
     Private Sub Btn_Search_Click(sender As Object, e As EventArgs) Handles Btn_Search.Click
         Try
             sqlUMTCAdapter = New MySqlDataAdapter
@@ -89,11 +132,12 @@ Public Class AllStock
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_DisplayStock"
+                .CommandText = "prc_SearchStockByStatus"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
                 .Parameters.AddWithValue("@p_search", txtSearch.Text)
-                .Parameters.AddWithValue("@p_GBranch", "Branch")
+                .Parameters.AddWithValue("@p_Stat", "In branch")
+                .Parameters.AddWithValue("@p_SBranch", cmb_branch.Text)
                 sqlUMTCAdapter.SelectCommand = command
                 DataUMTC.Clear()
                 sqlUMTCAdapter.Fill(DataUMTC)

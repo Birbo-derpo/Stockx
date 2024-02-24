@@ -97,6 +97,7 @@ Public Class Released
                 .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
                 .Parameters.AddWithValue("@p_search", txtSearch.Text)
                 .Parameters.AddWithValue("@p_Stat", "Released")
+                .Parameters.AddWithValue("@p_SBranch", Cmb_Branch.Text)
                 sqlUMTCAdapter.SelectCommand = command
                 DataUMTC.Clear()
                 sqlUMTCAdapter.Fill(DataUMTC)
@@ -129,6 +130,49 @@ Public Class Released
             sqlUMTCAdapter.Dispose()
             DataUMTC.Dispose()
 
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub Cmb_Branch_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Cmb_Branch.SelectedIndexChanged
+        sqlUMTCAdapter = New MySqlDataAdapter
+        DataUMTC = New DataTable
+        Try
+
+            With command
+                .Parameters.Clear()
+                .CommandText = "prc_BranchSort"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_branch", Cmb_Branch.Text)
+                .Parameters.AddWithValue("@p_Stat", "Released")
+                sqlUMTCAdapter.SelectCommand = command
+                DataUMTC.Clear()
+                sqlUMTCAdapter.Fill(DataUMTC)
+                If DataUMTC.Rows.Count > 0 Then
+                    Grd_StockReleased.RowCount = DataUMTC.Rows.Count
+                    row = 0
+                    While Not DataUMTC.Rows.Count - 1 < row
+                        Grd_StockReleased.Rows(row).Cells(1).Value = DataUMTC.Rows(row).Item("Brnch").ToString
+                        Grd_StockReleased.Rows(row).Cells(2).Value = DataUMTC.Rows(row).Item("MTN").ToString
+                        Grd_StockReleased.Rows(row).Cells(3).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
+                        Grd_StockReleased.Rows(row).Cells(4).Value = DataUMTC.Rows(row).Item("model").ToString
+                        Grd_StockReleased.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Color").ToString
+                        Grd_StockReleased.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("Price").ToString
+                        Grd_StockReleased.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
+                        Grd_StockReleased.Rows(row).Cells(8).Value = DataUMTC.Rows(row).Item("FrameNum").ToString
+                        Grd_StockReleased.Rows(row).Cells(9).Value = DataUMTC.Rows(row).Item("Stat").ToString
+
+                        row = row + 1
+
+                    End While
+
+                Else
+                    MessageBox.Show("No Available Records", "Records", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
+            End With
+            sqlUMTCAdapter.Dispose()
+            DataUMTC.Dispose()
         Catch ex As Exception
             MessageBox.Show("" & ex.Message)
         End Try

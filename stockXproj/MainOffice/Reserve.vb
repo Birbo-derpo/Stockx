@@ -123,9 +123,10 @@ Public Class Reserve
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_BranchReserves"
+                .CommandText = "prc_BranchSort"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_branch", cmb_branch.Text)
+                .Parameters.AddWithValue("@p_Stat", "Reserved")
                 sqlUMTCAdapter.SelectCommand = command
                 DataUMTC.Clear()
                 sqlUMTCAdapter.Fill(DataUMTC)
