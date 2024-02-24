@@ -93,4 +93,8 @@ Public Class TRANSIT
     Private Sub Cmb_tobranch_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_branch.SelectedIndexChanged
 
     End Sub
+
+    Private Sub Grd_Motorcycle_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_Motorcycle.CellContentClick
+
+    End Sub
 End Class

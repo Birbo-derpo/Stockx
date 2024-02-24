@@ -7,20 +7,38 @@ Public Class UpdateStocks
         Try
             sqlUMTCAdapter = New MySqlDataAdapter
             DataUMTC = New DataTable
-            With command
-                .Parameters.Clear()
-                .CommandText = "prc_AddCustomerAndUnit"
-                .CommandType = CommandType.StoredProcedure
-                .Parameters.AddWithValue("@F_name", Txt_Fname.Text)
-                .Parameters.AddWithValue("@L_name", Txt_Lname.Text)
-                .Parameters.AddWithValue("@p_EngineNo", Txt_EngineNumber.Text)
-                .Parameters.AddWithValue("@p_Amount", CDbl(Txt_Amount.Text))
-                .Parameters.AddWithValue("@p_TermOE", Cmb_Term.Text)
-                .Parameters.AddWithValue("@p_TypeOP", Cmb_Type.Text)
-                .Parameters.AddWithValue("@p_SIV", Txt_SIN.Text)
-                .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
-                .ExecuteNonQuery()
-            End With
+
+            If action = "Update" Then
+                With command
+                    .Parameters.Clear()
+                    .CommandText = "prc_AddCustomerAndUnit"
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@F_name", Txt_Fname.Text)
+                    .Parameters.AddWithValue("@L_name", Txt_Lname.Text)
+                    .Parameters.AddWithValue("@p_EngineNo", Txt_EngineNumber.Text)
+                    .Parameters.AddWithValue("@p_Amount", CDbl(Txt_Amount.Text))
+                    .Parameters.AddWithValue("@p_TermOE", Cmb_Term.Text)
+                    .Parameters.AddWithValue("@p_TypeOP", Cmb_Type.Text)
+                    .Parameters.AddWithValue("@p_SIV", Txt_SIN.Text)
+                    .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
+                    .ExecuteNonQuery()
+                End With
+            Else
+                With command
+                    .Parameters.Clear()
+                    .CommandText = "prc_AddCustomerAndUnit"
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@F_name", Txt_Fname.Text)
+                    .Parameters.AddWithValue("@L_name", Txt_Lname.Text)
+                    .Parameters.AddWithValue("@p_EngineNo", Txt_EngineNumber.Text)
+                    .Parameters.AddWithValue("@p_Amount", CDbl(Txt_Amount.Text))
+                    .Parameters.AddWithValue("@p_TermOE", Cmb_Term.Text)
+                    .Parameters.AddWithValue("@p_TypeOP", Cmb_Type.Text)
+                    .Parameters.AddWithValue("@p_SIV", Txt_SIN.Text)
+                    .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
+                    .ExecuteNonQuery()
+                End With
+            End If
         Catch ex As Exception
             MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -28,19 +46,32 @@ Public Class UpdateStocks
         Try
             sqlUMTCAdapter = New MySqlDataAdapter
             DataUMTC = New DataTable
-            With command
-                .Parameters.Clear()
-                .CommandText = "prc_ChangeStat"
-                .CommandType = CommandType.StoredProcedure
-                .Parameters.AddWithValue("@p_EngineNum", Txt_EngineNumber.Text)
-                .Parameters.AddWithValue("@p_Stat", Cmb_Stat.Text)
-                .ExecuteNonQuery()
-            End With
+
+            If action = "Update" Then
+                With command
+                    .Parameters.Clear()
+                    .CommandText = "prc_ChangeStat"
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@p_EngineNum", Txt_EngineNumber.Text)
+                    .Parameters.AddWithValue("@p_Stat", Cmb_Stat.Text)
+                    .ExecuteNonQuery()
+                End With
+            Else
+                With command
+                    .Parameters.Clear()
+                    .CommandText = "prc_ChangeStat"
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@p_EngineNum", Txt_EngineNumber.Text)
+                    .Parameters.AddWithValue("@p_Stat", Cmb_Stat.Text)
+                    .ExecuteNonQuery()
+                End With
+            End If
+
             MessageBox.Show("Data updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.Dispose()
+
         Catch ex As Exception
             MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-
         End Try
     End Sub
 
@@ -61,4 +92,7 @@ Public Class UpdateStocks
         End If
     End Sub
 
+    Private Sub dt_ValueChanged(sender As Object, e As EventArgs) Handles dt.ValueChanged
+
+    End Sub
 End Class

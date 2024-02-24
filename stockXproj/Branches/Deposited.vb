@@ -173,4 +173,31 @@ Public Class Deposited
         End Try
     End Sub
 
+    Private Sub Btn_Update_Click(sender As Object, e As EventArgs) Handles Btn_Update.Click
+        State = "Release"
+        For Each Checkcell As DataGridViewRow In Grd_StockDeposit.Rows
+            'needs to accept only when branches combobox is selected
+            If Checkcell.Cells("Column10").Value = True Then
+                Try
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_ChangeStat"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_Stat", State)
+                        .ExecuteNonQuery()
+                    End With
+
+                Catch ex As Exception
+                End Try
+            End If
+
+        Next
+        MessageBox.Show("unit/s now in branch", "in branch", MessageBoxButtons.OK)
+        PrcDisplayDepositedStock()
+    End Sub
+
+    Private Sub Grd_StockDeposit_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_StockDeposit.CellContentClick
+
+    End Sub
 End Class

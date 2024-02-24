@@ -24,6 +24,7 @@ Partial Class DashBoard
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
@@ -44,11 +45,21 @@ Partial Class DashBoard
         Me.Button2.Text = "BRANCHES"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(811, 79)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(163, 55)
+        Me.Button3.TabIndex = 2
+        Me.Button3.Text = "CUSTOMERS"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'DashBoard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1165, 554)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Name = "DashBoard"
@@ -59,4 +70,5 @@ Partial Class DashBoard
 
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 End Class

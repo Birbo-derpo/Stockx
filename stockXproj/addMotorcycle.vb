@@ -29,6 +29,7 @@
                     .Parameters.AddWithValue("@p_price", txtPrice.Text)
                     .Parameters.AddWithValue("@p_engine", txtEngineNumber.Text)
                     .Parameters.AddWithValue("@p_frame", txtFrameNumber.Text)
+                    .ExecuteNonQuery()
                 End With
             End If
 

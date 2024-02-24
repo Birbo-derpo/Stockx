@@ -80,12 +80,12 @@ Partial Class TRANSIT
         Me.Grd_Motorcycle.AllowUserToResizeRows = False
         Me.Grd_Motorcycle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grd_Motorcycle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column10, Me.Column9, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
-        Me.Grd_Motorcycle.Location = New System.Drawing.Point(180, 55)
+        Me.Grd_Motorcycle.Location = New System.Drawing.Point(199, 53)
         Me.Grd_Motorcycle.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Grd_Motorcycle.Name = "Grd_Motorcycle"
         Me.Grd_Motorcycle.RowHeadersWidth = 51
         Me.Grd_Motorcycle.RowTemplate.Height = 24
-        Me.Grd_Motorcycle.Size = New System.Drawing.Size(791, 290)
+        Me.Grd_Motorcycle.Size = New System.Drawing.Size(1246, 290)
         Me.Grd_Motorcycle.TabIndex = 37
         '
         'Column8
@@ -200,7 +200,7 @@ Partial Class TRANSIT
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1131, 492)
+        Me.ClientSize = New System.Drawing.Size(1440, 492)
         Me.Controls.Add(Me.cmb_branch)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Btn_Transfer)

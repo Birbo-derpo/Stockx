@@ -51,10 +51,9 @@ Partial Class Repossess
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(754, 84)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(1005, 103)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(77, 13)
+        Me.Label1.Size = New System.Drawing.Size(94, 16)
         Me.Label1.TabIndex = 66
         Me.Label1.Text = "Sort by Branch"
         '
@@ -62,29 +61,29 @@ Partial Class Repossess
         '
         Me.Cmb_Branch.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
         Me.Cmb_Branch.FormattingEnabled = True
-        Me.Cmb_Branch.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
-        Me.Cmb_Branch.Location = New System.Drawing.Point(832, 80)
-        Me.Cmb_Branch.Margin = New System.Windows.Forms.Padding(2)
+        Me.Cmb_Branch.Items.AddRange(New Object() {"Bajada", "Davao", "Digos", "Kidapawan", "Tagum", "General Santos"})
+        Me.Cmb_Branch.Location = New System.Drawing.Point(1109, 98)
+        Me.Cmb_Branch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Cmb_Branch.Name = "Cmb_Branch"
-        Me.Cmb_Branch.Size = New System.Drawing.Size(92, 21)
+        Me.Cmb_Branch.Size = New System.Drawing.Size(121, 24)
         Me.Cmb_Branch.TabIndex = 65
         '
         'Btn_Dashboard
         '
-        Me.Btn_Dashboard.Location = New System.Drawing.Point(757, 440)
-        Me.Btn_Dashboard.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_Dashboard.Location = New System.Drawing.Point(1009, 542)
+        Me.Btn_Dashboard.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Dashboard.Name = "Btn_Dashboard"
-        Me.Btn_Dashboard.Size = New System.Drawing.Size(122, 19)
+        Me.Btn_Dashboard.Size = New System.Drawing.Size(163, 23)
         Me.Btn_Dashboard.TabIndex = 64
         Me.Btn_Dashboard.Text = "Back to DashBoard"
         Me.Btn_Dashboard.UseVisualStyleBackColor = True
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(16, 162)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button1.Location = New System.Drawing.Point(21, 199)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(107, 50)
+        Me.Button1.Size = New System.Drawing.Size(143, 62)
         Me.Button1.TabIndex = 63
         Me.Button1.Text = "All Units"
         Me.Button1.UseVisualStyleBackColor = True
@@ -92,30 +91,30 @@ Partial Class Repossess
         'chkAuto
         '
         Me.chkAuto.AutoSize = True
-        Me.chkAuto.Location = New System.Drawing.Point(155, 84)
-        Me.chkAuto.Margin = New System.Windows.Forms.Padding(2)
+        Me.chkAuto.Location = New System.Drawing.Point(207, 103)
+        Me.chkAuto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.chkAuto.Name = "chkAuto"
-        Me.chkAuto.Size = New System.Drawing.Size(92, 17)
+        Me.chkAuto.Size = New System.Drawing.Size(114, 20)
         Me.chkAuto.TabIndex = 62
         Me.chkAuto.Text = "AutoComplete"
         Me.chkAuto.UseVisualStyleBackColor = True
         '
         'Btn_Search
         '
-        Me.Btn_Search.Location = New System.Drawing.Point(319, 40)
-        Me.Btn_Search.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_Search.Location = New System.Drawing.Point(425, 49)
+        Me.Btn_Search.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Search.Name = "Btn_Search"
-        Me.Btn_Search.Size = New System.Drawing.Size(56, 19)
+        Me.Btn_Search.Size = New System.Drawing.Size(75, 23)
         Me.Btn_Search.TabIndex = 61
         Me.Btn_Search.Text = "search"
         Me.Btn_Search.UseVisualStyleBackColor = True
         '
         'txtSearch
         '
-        Me.txtSearch.Location = New System.Drawing.Point(155, 40)
-        Me.txtSearch.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtSearch.Location = New System.Drawing.Point(207, 49)
+        Me.txtSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(160, 20)
+        Me.txtSearch.Size = New System.Drawing.Size(212, 22)
         Me.txtSearch.TabIndex = 60
         '
         'cmbSearchType
@@ -123,38 +122,38 @@ Partial Class Repossess
         Me.cmbSearchType.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
         Me.cmbSearchType.FormattingEnabled = True
         Me.cmbSearchType.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
-        Me.cmbSearchType.Location = New System.Drawing.Point(155, 61)
-        Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(2)
+        Me.cmbSearchType.Location = New System.Drawing.Point(207, 75)
+        Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cmbSearchType.Name = "cmbSearchType"
-        Me.cmbSearchType.Size = New System.Drawing.Size(92, 21)
+        Me.cmbSearchType.Size = New System.Drawing.Size(121, 24)
         Me.cmbSearchType.TabIndex = 59
         '
         'Btn_AllStock
         '
-        Me.Btn_AllStock.Location = New System.Drawing.Point(16, 215)
-        Me.Btn_AllStock.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_AllStock.Location = New System.Drawing.Point(21, 265)
+        Me.Btn_AllStock.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_AllStock.Name = "Btn_AllStock"
-        Me.Btn_AllStock.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_AllStock.Size = New System.Drawing.Size(143, 62)
         Me.Btn_AllStock.TabIndex = 57
         Me.Btn_AllStock.Text = "All Available Stock"
         Me.Btn_AllStock.UseVisualStyleBackColor = True
         '
         'Btn_Deposited
         '
-        Me.Btn_Deposited.Location = New System.Drawing.Point(16, 323)
-        Me.Btn_Deposited.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_Deposited.Location = New System.Drawing.Point(21, 398)
+        Me.Btn_Deposited.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Deposited.Name = "Btn_Deposited"
-        Me.Btn_Deposited.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_Deposited.Size = New System.Drawing.Size(143, 62)
         Me.Btn_Deposited.TabIndex = 56
         Me.Btn_Deposited.Text = "Deposited"
         Me.Btn_Deposited.UseVisualStyleBackColor = True
         '
         'Btn_Repossess
         '
-        Me.Btn_Repossess.Location = New System.Drawing.Point(16, 376)
-        Me.Btn_Repossess.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_Repossess.Location = New System.Drawing.Point(21, 463)
+        Me.Btn_Repossess.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Repossess.Name = "Btn_Repossess"
-        Me.Btn_Repossess.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_Repossess.Size = New System.Drawing.Size(143, 62)
         Me.Btn_Repossess.TabIndex = 55
         Me.Btn_Repossess.TabStop = False
         Me.Btn_Repossess.Text = "Repossess"
@@ -162,10 +161,10 @@ Partial Class Repossess
         '
         'Btn_Released
         '
-        Me.Btn_Released.Location = New System.Drawing.Point(16, 269)
-        Me.Btn_Released.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_Released.Location = New System.Drawing.Point(21, 331)
+        Me.Btn_Released.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Released.Name = "Btn_Released"
-        Me.Btn_Released.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_Released.Size = New System.Drawing.Size(143, 62)
         Me.Btn_Released.TabIndex = 54
         Me.Btn_Released.Text = "Released "
         Me.Btn_Released.UseVisualStyleBackColor = True
@@ -174,12 +173,12 @@ Partial Class Repossess
         '
         Me.Grd_StockRepossessed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grd_StockRepossessed.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column10, Me.Column7, Me.Column1, Me.Column2, Me.Column3, Me.Column6, Me.Column9, Me.Column4, Me.Column5, Me.Column8})
-        Me.Grd_StockRepossessed.Location = New System.Drawing.Point(128, 103)
-        Me.Grd_StockRepossessed.Margin = New System.Windows.Forms.Padding(2)
+        Me.Grd_StockRepossessed.Location = New System.Drawing.Point(171, 127)
+        Me.Grd_StockRepossessed.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Grd_StockRepossessed.Name = "Grd_StockRepossessed"
         Me.Grd_StockRepossessed.RowHeadersWidth = 51
         Me.Grd_StockRepossessed.RowTemplate.Height = 24
-        Me.Grd_StockRepossessed.Size = New System.Drawing.Size(818, 306)
+        Me.Grd_StockRepossessed.Size = New System.Drawing.Size(1091, 377)
         Me.Grd_StockRepossessed.TabIndex = 53
         '
         'Column10
@@ -254,9 +253,9 @@ Partial Class Repossess
         '
         'Repossess
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(994, 500)
+        Me.ClientSize = New System.Drawing.Size(1325, 615)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Cmb_Branch)
         Me.Controls.Add(Me.Btn_Dashboard)
@@ -270,7 +269,7 @@ Partial Class Repossess
         Me.Controls.Add(Me.Btn_Repossess)
         Me.Controls.Add(Me.Btn_Released)
         Me.Controls.Add(Me.Grd_StockRepossessed)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Repossess"
         Me.Text = "Reposes"
         CType(Me.Grd_StockRepossessed, System.ComponentModel.ISupportInitialize).EndInit()
