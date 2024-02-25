@@ -189,6 +189,7 @@ Public Class AllStock
 
     'end of left screen buttons
     Private Sub Btn_AddCust_Click(sender As Object, e As EventArgs) Handles Btn_AddCust.Click
+        action = "update"
         With UpdateStocks
             .Txt_SIN.Text = MTN
             .Txt_Model.Text = Model

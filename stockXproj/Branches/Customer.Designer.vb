@@ -26,7 +26,7 @@ Partial Class Customer
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Btn_Edit = New System.Windows.Forms.Button()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -47,152 +47,153 @@ Partial Class Customer
         '
         Me.grd_AllCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grd_AllCustomer.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column12, Me.Column10, Me.Column13, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column11})
-        Me.grd_AllCustomer.Location = New System.Drawing.Point(-108, 119)
-        Me.grd_AllCustomer.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.grd_AllCustomer.Location = New System.Drawing.Point(74, 109)
+        Me.grd_AllCustomer.Margin = New System.Windows.Forms.Padding(2)
         Me.grd_AllCustomer.Name = "grd_AllCustomer"
         Me.grd_AllCustomer.RowHeadersWidth = 51
         Me.grd_AllCustomer.RowTemplate.Height = 24
-        Me.grd_AllCustomer.Size = New System.Drawing.Size(1648, 306)
+        Me.grd_AllCustomer.Size = New System.Drawing.Size(861, 249)
         Me.grd_AllCustomer.TabIndex = 21
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(324, 26)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TextBox1.Location = New System.Drawing.Point(243, 21)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(113, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(86, 20)
         Me.TextBox1.TabIndex = 27
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(247, 32)
+        Me.Label1.Location = New System.Drawing.Point(185, 26)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(50, 16)
+        Me.Label1.Size = New System.Drawing.Size(41, 13)
         Me.Label1.TabIndex = 28
         Me.Label1.Text = "Search"
         '
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(324, 54)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ComboBox1.Location = New System.Drawing.Point(243, 44)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(113, 24)
+        Me.ComboBox1.Size = New System.Drawing.Size(86, 21)
         Me.ComboBox1.TabIndex = 29
         '
-        'Button5
+        'Btn_Edit
         '
-        Me.Button5.Location = New System.Drawing.Point(1169, 32)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(143, 62)
-        Me.Button5.TabIndex = 30
-        Me.Button5.Text = "Edit"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.Btn_Edit.Location = New System.Drawing.Point(877, 26)
+        Me.Btn_Edit.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_Edit.Name = "Btn_Edit"
+        Me.Btn_Edit.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_Edit.TabIndex = 30
+        Me.Btn_Edit.Text = "Edit"
+        Me.Btn_Edit.UseVisualStyleBackColor = True
         '
         'Column1
         '
+        Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Column1.HeaderText = "LastName"
         Me.Column1.MinimumWidth = 6
         Me.Column1.Name = "Column1"
-        Me.Column1.Width = 125
         '
         'Column2
         '
+        Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Column2.HeaderText = "FirstName"
         Me.Column2.MinimumWidth = 6
         Me.Column2.Name = "Column2"
-        Me.Column2.Width = 125
         '
         'Column3
         '
+        Me.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Column3.HeaderText = "Status"
         Me.Column3.MinimumWidth = 6
         Me.Column3.Name = "Column3"
-        Me.Column3.Width = 125
         '
         'Column12
         '
+        Me.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Column12.HeaderText = "Model"
         Me.Column12.MinimumWidth = 6
         Me.Column12.Name = "Column12"
-        Me.Column12.Width = 125
         '
         'Column10
         '
+        Me.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Column10.HeaderText = "Color"
         Me.Column10.MinimumWidth = 6
         Me.Column10.Name = "Column10"
-        Me.Column10.Width = 125
         '
         'Column13
         '
+        Me.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Column13.HeaderText = "Branch"
         Me.Column13.MinimumWidth = 6
         Me.Column13.Name = "Column13"
-        Me.Column13.Width = 125
         '
         'Column4
         '
+        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Column4.HeaderText = "EngineNumber"
         Me.Column4.MinimumWidth = 6
         Me.Column4.Name = "Column4"
-        Me.Column4.Width = 125
         '
         'Column5
         '
+        Me.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Column5.HeaderText = "FrameNumber"
         Me.Column5.MinimumWidth = 6
         Me.Column5.Name = "Column5"
-        Me.Column5.Width = 125
         '
         'Column6
         '
+        Me.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Column6.HeaderText = "TypeOfPayment"
         Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
-        Me.Column6.Width = 125
         '
         'Column7
         '
+        Me.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Column7.HeaderText = "TermOfPayment"
         Me.Column7.MinimumWidth = 6
         Me.Column7.Name = "Column7"
-        Me.Column7.Width = 125
         '
         'Column8
         '
+        Me.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Column8.HeaderText = "Amount"
         Me.Column8.MinimumWidth = 6
         Me.Column8.Name = "Column8"
-        Me.Column8.Width = 125
         '
         'Column9
         '
+        Me.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Column9.HeaderText = "Date"
         Me.Column9.MinimumWidth = 6
         Me.Column9.Name = "Column9"
-        Me.Column9.Width = 125
         '
         'Column11
         '
+        Me.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Column11.HeaderText = "SIV"
         Me.Column11.MinimumWidth = 6
         Me.Column11.Name = "Column11"
-        Me.Column11.Width = 125
         '
         'Customer
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1478, 545)
-        Me.Controls.Add(Me.Button5)
+        Me.ClientSize = New System.Drawing.Size(1028, 443)
+        Me.Controls.Add(Me.Btn_Edit)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.grd_AllCustomer)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Customer"
         Me.Text = "w"
         CType(Me.grd_AllCustomer, System.ComponentModel.ISupportInitialize).EndInit()
@@ -204,7 +205,7 @@ Partial Class Customer
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Button5 As Button
+    Friend WithEvents Btn_Edit As Button
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
