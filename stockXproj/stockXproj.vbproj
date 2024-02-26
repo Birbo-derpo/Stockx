@@ -51,8 +51,8 @@
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
       <HintPath>..\packages\BouncyCastle.Cryptography.2.3.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
     </Reference>
-    <Reference Include="Google.Protobuf, Version=3.25.2.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
-      <HintPath>..\packages\Google.Protobuf.3.25.2\lib\net45\Google.Protobuf.dll</HintPath>
+    <Reference Include="Google.Protobuf, Version=3.25.3.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.25.3\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.3.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Compression.LZ4.1.3.6\lib\net462\K4os.Compression.LZ4.dll</HintPath>
@@ -164,12 +164,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Global_var.vb" />
-    <Compile Include="MainOffice\Add MT Number.Designer.vb">
-      <DependentUpon>Add MT Number.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MainOffice\Add MT Number.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="MainOffice\MainBranchInventory.Designer.vb">
       <DependentUpon>MainBranchInventory.vb</DependentUpon>
     </Compile>
@@ -192,12 +186,6 @@
       <DependentUpon>TRANSIT.vb</DependentUpon>
     </Compile>
     <Compile Include="MainOffice\TRANSIT.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainOffice\UPDATE.Designer.vb">
-      <DependentUpon>UPDATE.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MainOffice\UPDATE.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -272,9 +260,6 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainOffice\Add MT Number.resx">
-      <DependentUpon>Add MT Number.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainOffice\MainBranchInventory.resx">
       <DependentUpon>MainBranchInventory.vb</DependentUpon>
     </EmbeddedResource>
@@ -286,9 +271,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainOffice\TRANSIT.resx">
       <DependentUpon>TRANSIT.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainOffice\UPDATE.resx">
-      <DependentUpon>UPDATE.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

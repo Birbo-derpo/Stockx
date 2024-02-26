@@ -50,10 +50,6 @@ Public Class TRANSIT
         End Try
 
     End Sub
-    Private Sub Btn_Reserved_Click(sender As Object, e As EventArgs)
-        Reserve.Show()
-        Me.Hide()
-    End Sub
 
     Private Sub Btn_Transfer_Click(sender As Object, e As EventArgs) Handles Btn_Transfer.Click
         State = "in branch"
@@ -79,22 +75,14 @@ Public Class TRANSIT
         PrcDisplayTransitUnits()
     End Sub
 
-    Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs)
-        MainBranchInventory.Show()
-
+    Private Sub Btn_Reserved_Click(sender As Object, e As EventArgs) Handles Btn_Reserved.Click
+        Reserve.Show()
         Me.Hide()
     End Sub
 
-    Private Sub Btn_Transit_Click(sender As Object, e As EventArgs)
-        Me.Show()
-
+    Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs) Handles Btn_AvStock.Click
+        MainBranchInventory.Show()
+        Me.Hide()
     End Sub
 
-    Private Sub Cmb_tobranch_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_branch.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub Grd_Motorcycle_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_Motorcycle.CellContentClick
-
-    End Sub
 End Class
