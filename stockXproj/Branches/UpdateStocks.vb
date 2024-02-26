@@ -39,8 +39,6 @@ Public Class UpdateStocks
         Return result
     End Function
     Private Sub Btn_Update_Click(sender As Object, e As EventArgs) Handles Btn_Update.Click
-        sqlUMTCAdapter = New MySqlDataAdapter
-        DataUMTC = New DataTable
         Try
             If action = "Update" Then
                 With command
@@ -62,8 +60,6 @@ Public Class UpdateStocks
                     'for edit
                 End With
             End If
-            sqlUMTCAdapter.Dispose()
-            DataUMTC.Dispose()
         Catch ex As Exception
         End Try
 
@@ -76,9 +72,9 @@ Public Class UpdateStocks
                 .Parameters.AddWithValue("@p_Stat", Cmb_Stat.Text)
                 .ExecuteNonQuery()
             End With
-
-        Catch ex As Exception
             MessageBox.Show("Data updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Catch ex As Exception
+
         End Try
         Me.Dispose()
     End Sub
