@@ -1,4 +1,8 @@
-﻿Public Class DashBoard
+﻿Imports Microsoft.VisualBasic.ApplicationServices
+Imports MySql.Data.MySqlClient
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+
+Public Class DashBoard
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         MainBranchInventory.Show()
         Me.Hide()
@@ -16,4 +20,9 @@
         Me.Hide()
 
     End Sub
+
+    Private Sub DashBoard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
 End Class

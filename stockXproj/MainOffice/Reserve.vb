@@ -102,16 +102,16 @@ Public Class Reserve
         PrcDisplayReservedUnits()
     End Sub
 
-    Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs) Handles Btn_AvStock.Click
+    Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs)
         MainBranchInventory.Show()
         Me.Hide()
     End Sub
 
-    Private Sub Btn_Reserved_Click(sender As Object, e As EventArgs) Handles Btn_Reserved.Click
+    Private Sub Btn_Reserved_Click(sender As Object, e As EventArgs)
         Me.Show()
     End Sub
 
-    Private Sub Btn_Transit_Click(sender As Object, e As EventArgs) Handles Btn_Transit.Click
+    Private Sub Btn_Transit_Click(sender As Object, e As EventArgs)
         TRANSIT.Show()
         Me.Hide()
     End Sub

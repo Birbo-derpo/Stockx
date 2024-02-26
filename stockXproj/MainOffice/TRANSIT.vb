@@ -50,7 +50,7 @@ Public Class TRANSIT
         End Try
 
     End Sub
-    Private Sub Btn_Reserved_Click(sender As Object, e As EventArgs) Handles Btn_Reserved.Click
+    Private Sub Btn_Reserved_Click(sender As Object, e As EventArgs)
         Reserve.Show()
         Me.Hide()
     End Sub
@@ -78,14 +78,14 @@ Public Class TRANSIT
         MessageBox.Show("unit/s now in branch", "in branch", MessageBoxButtons.OK)
         PrcDisplayTransitUnits()
     End Sub
-   
-    Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs) Handles Btn_AvStock.Click
+
+    Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs)
         MainBranchInventory.Show()
 
         Me.Hide()
     End Sub
 
-    Private Sub Btn_Transit_Click(sender As Object, e As EventArgs) Handles Btn_Transit.Click
+    Private Sub Btn_Transit_Click(sender As Object, e As EventArgs)
         Me.Show()
 
     End Sub

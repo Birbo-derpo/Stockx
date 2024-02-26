@@ -22,9 +22,7 @@ Partial Class Reserve
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Btn_Transit = New System.Windows.Forms.Button()
-        Me.Btn_AvStock = New System.Windows.Forms.Button()
-        Me.Btn_Reserved = New System.Windows.Forms.Button()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Reserve))
         Me.Btn_AddReserve = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Grd_MotorcycleReserved = New System.Windows.Forms.DataGridView()
@@ -42,38 +40,15 @@ Partial Class Reserve
         Me.cmb_branch = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txt_MTN = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Btn_AvStock = New System.Windows.Forms.Button()
+        Me.Btn_Reserved = New System.Windows.Forms.Button()
+        Me.Btn_Transit = New System.Windows.Forms.Button()
         CType(Me.Grd_MotorcycleReserved, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Btn_Transit
-        '
-        Me.Btn_Transit.Location = New System.Drawing.Point(28, 203)
-        Me.Btn_Transit.Margin = New System.Windows.Forms.Padding(2)
-        Me.Btn_Transit.Name = "Btn_Transit"
-        Me.Btn_Transit.Size = New System.Drawing.Size(107, 50)
-        Me.Btn_Transit.TabIndex = 28
-        Me.Btn_Transit.Text = "Transit"
-        Me.Btn_Transit.UseVisualStyleBackColor = True
-        '
-        'Btn_AvStock
-        '
-        Me.Btn_AvStock.Location = New System.Drawing.Point(28, 115)
-        Me.Btn_AvStock.Margin = New System.Windows.Forms.Padding(2)
-        Me.Btn_AvStock.Name = "Btn_AvStock"
-        Me.Btn_AvStock.Size = New System.Drawing.Size(107, 50)
-        Me.Btn_AvStock.TabIndex = 27
-        Me.Btn_AvStock.Text = "Available Stock"
-        Me.Btn_AvStock.UseVisualStyleBackColor = True
-        '
-        'Btn_Reserved
-        '
-        Me.Btn_Reserved.Location = New System.Drawing.Point(28, 158)
-        Me.Btn_Reserved.Margin = New System.Windows.Forms.Padding(2)
-        Me.Btn_Reserved.Name = "Btn_Reserved"
-        Me.Btn_Reserved.Size = New System.Drawing.Size(107, 50)
-        Me.Btn_Reserved.TabIndex = 26
-        Me.Btn_Reserved.Text = "Reserved"
-        Me.Btn_Reserved.UseVisualStyleBackColor = True
         '
         'Btn_AddReserve
         '
@@ -88,10 +63,9 @@ Partial Class Reserve
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(251, 46)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(1076, 310)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(121, 13)
+        Me.Label1.Size = New System.Drawing.Size(153, 16)
         Me.Label1.TabIndex = 33
         Me.Label1.Text = "Display selected Branch"
         '
@@ -104,18 +78,20 @@ Partial Class Reserve
         Me.Grd_MotorcycleReserved.AllowUserToResizeRows = False
         Me.Grd_MotorcycleReserved.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grd_MotorcycleReserved.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column10, Me.Column9, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
-        Me.Grd_MotorcycleReserved.Location = New System.Drawing.Point(155, 79)
-        Me.Grd_MotorcycleReserved.Margin = New System.Windows.Forms.Padding(2)
+        Me.Grd_MotorcycleReserved.Location = New System.Drawing.Point(250, 357)
+        Me.Grd_MotorcycleReserved.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Grd_MotorcycleReserved.Name = "Grd_MotorcycleReserved"
         Me.Grd_MotorcycleReserved.RowHeadersWidth = 51
         Me.Grd_MotorcycleReserved.RowTemplate.Height = 24
-        Me.Grd_MotorcycleReserved.Size = New System.Drawing.Size(658, 232)
+        Me.Grd_MotorcycleReserved.Size = New System.Drawing.Size(1688, 504)
         Me.Grd_MotorcycleReserved.TabIndex = 34
         '
         'Column10
         '
         Me.Column10.HeaderText = "To Deliver"
+        Me.Column10.MinimumWidth = 6
         Me.Column10.Name = "Column10"
+        Me.Column10.Width = 125
         '
         'Column9
         '
@@ -182,68 +158,131 @@ Partial Class Reserve
         '
         'Btn_Add_MT
         '
-        Me.Btn_Add_MT.Location = New System.Drawing.Point(593, 315)
-        Me.Btn_Add_MT.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_Add_MT.BackColor = System.Drawing.Color.Firebrick
+        Me.Btn_Add_MT.Location = New System.Drawing.Point(1535, 865)
+        Me.Btn_Add_MT.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Add_MT.Name = "Btn_Add_MT"
-        Me.Btn_Add_MT.Size = New System.Drawing.Size(107, 50)
+        Me.Btn_Add_MT.Size = New System.Drawing.Size(241, 63)
         Me.Btn_Add_MT.TabIndex = 35
-        Me.Btn_Add_MT.Text = "Add MT no."
-        Me.Btn_Add_MT.UseVisualStyleBackColor = True
+        Me.Btn_Add_MT.Text = "Add " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Merchandise No."
+        Me.Btn_Add_MT.UseVisualStyleBackColor = False
         '
         'cmb_branch
         '
         Me.cmb_branch.FormattingEnabled = True
         Me.cmb_branch.Items.AddRange(New Object() {"Bajada", "Davao", "Digos", "Kidapawan", "Tagum", "General Santos"})
-        Me.cmb_branch.Location = New System.Drawing.Point(155, 43)
-        Me.cmb_branch.Margin = New System.Windows.Forms.Padding(2)
+        Me.cmb_branch.Location = New System.Drawing.Point(937, 310)
+        Me.cmb_branch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cmb_branch.Name = "cmb_branch"
-        Me.cmb_branch.Size = New System.Drawing.Size(92, 21)
+        Me.cmb_branch.Size = New System.Drawing.Size(121, 24)
         Me.cmb_branch.TabIndex = 36
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(624, 49)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(268, 315)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(91, 13)
+        Me.Label2.Size = New System.Drawing.Size(112, 16)
         Me.Label2.TabIndex = 43
         Me.Label2.Text = "Enter MT Number"
         '
         'txt_MTN
         '
-        Me.txt_MTN.Location = New System.Drawing.Point(720, 44)
-        Me.txt_MTN.Margin = New System.Windows.Forms.Padding(2)
+        Me.txt_MTN.Location = New System.Drawing.Point(386, 315)
+        Me.txt_MTN.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txt_MTN.Name = "txt_MTN"
-        Me.txt_MTN.Size = New System.Drawing.Size(76, 20)
+        Me.txt_MTN.Size = New System.Drawing.Size(342, 22)
         Me.txt_MTN.TabIndex = 42
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(1, -2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(1898, 209)
+        Me.PictureBox1.TabIndex = 44
+        Me.PictureBox1.TabStop = False
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.Color.MistyRose
+        Me.GroupBox1.Controls.Add(Me.Btn_AvStock)
+        Me.GroupBox1.Controls.Add(Me.Btn_Reserved)
+        Me.GroupBox1.Controls.Add(Me.Btn_Transit)
+        Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.GroupBox1.Location = New System.Drawing.Point(0, 357)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(247, 504)
+        Me.GroupBox1.TabIndex = 45
+        Me.GroupBox1.TabStop = False
+        '
+        'Btn_AvStock
+        '
+        Me.Btn_AvStock.BackColor = System.Drawing.Color.Firebrick
+        Me.Btn_AvStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_AvStock.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_AvStock.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Btn_AvStock.Location = New System.Drawing.Point(0, 75)
+        Me.Btn_AvStock.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_AvStock.Name = "Btn_AvStock"
+        Me.Btn_AvStock.Size = New System.Drawing.Size(241, 63)
+        Me.Btn_AvStock.TabIndex = 33
+        Me.Btn_AvStock.Text = "AVAILABLE STOCKS"
+        Me.Btn_AvStock.UseVisualStyleBackColor = False
+        '
+        'Btn_Reserved
+        '
+        Me.Btn_Reserved.BackColor = System.Drawing.Color.Firebrick
+        Me.Btn_Reserved.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Reserved.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Reserved.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Btn_Reserved.Location = New System.Drawing.Point(0, 142)
+        Me.Btn_Reserved.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_Reserved.Name = "Btn_Reserved"
+        Me.Btn_Reserved.Size = New System.Drawing.Size(241, 63)
+        Me.Btn_Reserved.TabIndex = 32
+        Me.Btn_Reserved.Text = "RESERVED STOCKS"
+        Me.Btn_Reserved.UseVisualStyleBackColor = False
+        '
+        'Btn_Transit
+        '
+        Me.Btn_Transit.BackColor = System.Drawing.Color.Firebrick
+        Me.Btn_Transit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Transit.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Transit.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Btn_Transit.Location = New System.Drawing.Point(0, 209)
+        Me.Btn_Transit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_Transit.Name = "Btn_Transit"
+        Me.Btn_Transit.Size = New System.Drawing.Size(241, 63)
+        Me.Btn_Transit.TabIndex = 34
+        Me.Btn_Transit.Text = "TRANSIT STOCKS"
+        Me.Btn_Transit.UseVisualStyleBackColor = False
         '
         'Reserve
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(859, 366)
+        Me.ClientSize = New System.Drawing.Size(1912, 987)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txt_MTN)
         Me.Controls.Add(Me.cmb_branch)
         Me.Controls.Add(Me.Btn_Add_MT)
         Me.Controls.Add(Me.Grd_MotorcycleReserved)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Btn_Transit)
-        Me.Controls.Add(Me.Btn_AvStock)
-        Me.Controls.Add(Me.Btn_Reserved)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Reserve"
         Me.Text = "Reserve"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.Grd_MotorcycleReserved, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Btn_Transit As Button
-    Friend WithEvents Btn_AvStock As Button
-    Friend WithEvents Btn_Reserved As Button
     Friend WithEvents Btn_AddReserve As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Grd_MotorcycleReserved As DataGridView
@@ -261,4 +300,9 @@ Partial Class Reserve
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Label2 As Label
     Friend WithEvents txt_MTN As TextBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Btn_AvStock As Button
+    Friend WithEvents Btn_Reserved As Button
+    Friend WithEvents Btn_Transit As Button
 End Class
