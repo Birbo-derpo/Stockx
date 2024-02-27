@@ -55,7 +55,54 @@ Public Class Repossess
         End Try
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub AutofillSearch()
+        sqlUMTCAdapter = New MySqlDataAdapter
+        DataUMTC = New DataTable
+        Try
+
+            With command
+                .Parameters.Clear()
+                .CommandText = "prc_SearchStockByStatusOrBranch"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
+                .Parameters.AddWithValue("@p_search", Txt_Search.Text)
+                .Parameters.AddWithValue("@p_Stat", "Repossessed")
+                .Parameters.AddWithValue("@p_SBranch", Cmb_Branch.Text)
+                sqlUMTCAdapter.SelectCommand = command
+                DataUMTC.Clear()
+                sqlUMTCAdapter.Fill(DataUMTC)
+                If DataUMTC.Rows.Count > 0 Then
+                    Grd_StockRepossessed.RowCount = DataUMTC.Rows.Count
+                    row = 0
+                    While Not DataUMTC.Rows.Count - 1 < row
+                        If DataUMTC.Rows(row).Item("Brnch").ToString = "Main" Then
+                            'skip
+                            row = row + 1
+                        Else
+                            Grd_StockRepossessed.Rows(row).Cells(1).Value = DataUMTC.Rows(row).Item("Brnch").ToString
+                            Grd_StockRepossessed.Rows(row).Cells(2).Value = DataUMTC.Rows(row).Item("Invoice").ToString
+                            Grd_StockRepossessed.Rows(row).Cells(3).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
+                            Grd_StockRepossessed.Rows(row).Cells(4).Value = DataUMTC.Rows(row).Item("model").ToString
+                            Grd_StockRepossessed.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Color").ToString
+                            Grd_StockRepossessed.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("Price").ToString
+                            Grd_StockRepossessed.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
+                            Grd_StockRepossessed.Rows(row).Cells(8).Value = DataUMTC.Rows(row).Item("FrameNum").ToString
+                            Grd_StockRepossessed.Rows(row).Cells(9).Value = DataUMTC.Rows(row).Item("Stat").ToString
+
+                            row = row + 1
+                        End If
+                    End While
+
+                End If
+            End With
+            sqlUMTCAdapter.Dispose()
+            DataUMTC.Dispose()
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+
+    End Sub
+    Private Sub Btn_AllUnits_Click(sender As Object, e As EventArgs) Handles Btn_AllUnits.Click
         All_Unit.Show()
         Me.Close()
     End Sub
@@ -75,8 +122,6 @@ Public Class Repossess
         Me.Close()
     End Sub
 
-
-
     Private Sub Btn_Dashboard_Click(sender As Object, e As EventArgs) Handles Btn_Dashboard.Click
         DashBoard.Show()
         Me.Close()
@@ -92,7 +137,7 @@ Public Class Repossess
                 .CommandText = "prc_SearchStockByStatus"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
-                .Parameters.AddWithValue("@p_search", txtSearch.Text)
+                .Parameters.AddWithValue("@p_search", Txt_Search.Text)
                 .Parameters.AddWithValue("@p_Stat", "Repossessed")
                 .Parameters.AddWithValue("@p_SBranch", Cmb_Branch.Text)
                 sqlUMTCAdapter.SelectCommand = command
@@ -168,4 +213,13 @@ Public Class Repossess
             MessageBox.Show("" & ex.Message)
         End Try
     End Sub
+
+    Private Sub Txt_Search_TextChanged(sender As Object, e As EventArgs) Handles Txt_Search.TextChanged
+        If Chk_Auto.Checked = True Then
+            AutofillSearch()
+        Else
+
+        End If
+    End Sub
+
 End Class

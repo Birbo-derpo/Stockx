@@ -3,10 +3,10 @@
 Public Class Released
     Private Sub Released_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CheckDatabaseConnection()
-        PrcDisplayDepositedStock()
+        PrcDisplayReleasedStock()
     End Sub
-
-    Private Sub PrcDisplayDepositedStock()
+    'dataloader
+    Private Sub PrcDisplayReleasedStock()
         Try
             sqlUMTCAdapter = New MySqlDataAdapter
             DataUMTC = New DataTable
@@ -55,7 +55,57 @@ Public Class Released
         End Try
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub AutofillSearch()
+        sqlUMTCAdapter = New MySqlDataAdapter
+        DataUMTC = New DataTable
+        Try
+
+            With command
+                .Parameters.Clear()
+                .CommandText = "prc_SearchStockByStatusOrBranch"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
+                .Parameters.AddWithValue("@p_search", Txt_Search.Text)
+                .Parameters.AddWithValue("@p_Stat", "Released")
+                .Parameters.AddWithValue("@p_SBranch", Cmb_Branch.Text)
+                sqlUMTCAdapter.SelectCommand = command
+                DataUMTC.Clear()
+                sqlUMTCAdapter.Fill(DataUMTC)
+                If DataUMTC.Rows.Count > 0 Then
+                    Grd_StockReleased.RowCount = DataUMTC.Rows.Count
+                    row = 0
+                    While Not DataUMTC.Rows.Count - 1 < row
+                        If DataUMTC.Rows(row).Item("Brnch").ToString = "Main" Then
+                            'skip
+                            row = row + 1
+                        Else
+                            Grd_StockReleased.Rows(row).Cells(1).Value = DataUMTC.Rows(row).Item("Brnch").ToString
+                            Grd_StockReleased.Rows(row).Cells(2).Value = DataUMTC.Rows(row).Item("Invoice").ToString
+                            Grd_StockReleased.Rows(row).Cells(3).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
+                            Grd_StockReleased.Rows(row).Cells(4).Value = DataUMTC.Rows(row).Item("model").ToString
+                            Grd_StockReleased.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Color").ToString
+                            Grd_StockReleased.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("Price").ToString
+                            Grd_StockReleased.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
+                            Grd_StockReleased.Rows(row).Cells(8).Value = DataUMTC.Rows(row).Item("FrameNum").ToString
+                            Grd_StockReleased.Rows(row).Cells(9).Value = DataUMTC.Rows(row).Item("Stat").ToString
+
+                            row = row + 1
+                        End If
+                    End While
+
+                End If
+            End With
+            sqlUMTCAdapter.Dispose()
+            DataUMTC.Dispose()
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+
+    End Sub
+
+    'dataloader end
+
+    Private Sub Btn_AllUnits_Click(sender As Object, e As EventArgs) Handles Btn_AllUnits.Click
         All_Unit.Show()
         Me.Close()
     End Sub
@@ -91,7 +141,7 @@ Public Class Released
                 .CommandText = "prc_SearchStockByStatus"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
-                .Parameters.AddWithValue("@p_search", txtSearch.Text)
+                .Parameters.AddWithValue("@p_search", Txt_Search.Text)
                 .Parameters.AddWithValue("@p_Stat", "Released")
                 .Parameters.AddWithValue("@p_SBranch", Cmb_Branch.Text)
                 sqlUMTCAdapter.SelectCommand = command
@@ -196,10 +246,15 @@ Public Class Released
         Next
         MessageBox.Show("unit/s now in branch", "in branch", MessageBoxButtons.OK)
 
-        PrcDisplayDepositedStock()
+        PrcDisplayReleasedStock()
     End Sub
 
-    Private Sub Grd_StockReleased_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_StockReleased.CellContentClick
+    Private Sub Txt_Search_TextChanged(sender As Object, e As EventArgs) Handles Txt_Search.TextChanged
+        If Chk_Auto.Checked = True Then
+            AutofillSearch()
+        Else
 
+        End If
     End Sub
+
 End Class

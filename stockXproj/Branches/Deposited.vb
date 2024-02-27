@@ -5,6 +5,7 @@ Public Class Deposited
         CheckDatabaseConnection()
         PrcDisplayDepositedStock()
     End Sub
+    'dataloader
 
     Private Sub PrcDisplayDepositedStock()
         Try
@@ -54,13 +55,60 @@ Public Class Deposited
             MessageBox.Show("" & ex.Message)
         End Try
     End Sub
+    Private Sub AutofillSearch()
+        sqlUMTCAdapter = New MySqlDataAdapter
+        DataUMTC = New DataTable
+        Try
 
-    Private Sub Btn_Released_Click_1(sender As Object, e As EventArgs) Handles Btn_Released.Click
+            With command
+                .Parameters.Clear()
+                .CommandText = "prc_SearchStockByStatusOrBranch"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_filter", Cmb_SearchType.Text)
+                .Parameters.AddWithValue("@p_search", Txt_Search.Text)
+                .Parameters.AddWithValue("@p_Stat", "Deposited")
+                .Parameters.AddWithValue("@p_SBranch", Cmb_Branch.Text)
+                sqlUMTCAdapter.SelectCommand = command
+                DataUMTC.Clear()
+                sqlUMTCAdapter.Fill(DataUMTC)
+                If DataUMTC.Rows.Count > 0 Then
+                    Grd_StockDeposit.RowCount = DataUMTC.Rows.Count
+                    row = 0
+                    While Not DataUMTC.Rows.Count - 1 < row
+                        If DataUMTC.Rows(row).Item("Brnch").ToString = "Main" Then
+                            'skip
+                            row = row + 1
+                        Else
+                            Grd_StockDeposit.Rows(row).Cells(1).Value = DataUMTC.Rows(row).Item("Brnch").ToString
+                            Grd_StockDeposit.Rows(row).Cells(2).Value = DataUMTC.Rows(row).Item("MTN").ToString
+                            Grd_StockDeposit.Rows(row).Cells(3).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Datearrive").ToString), "MMM dd, yyyy")
+                            Grd_StockDeposit.Rows(row).Cells(4).Value = DataUMTC.Rows(row).Item("model").ToString
+                            Grd_StockDeposit.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Color").ToString
+                            Grd_StockDeposit.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("Price").ToString
+                            Grd_StockDeposit.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
+                            Grd_StockDeposit.Rows(row).Cells(8).Value = DataUMTC.Rows(row).Item("FrameNum").ToString
+                            Grd_StockDeposit.Rows(row).Cells(9).Value = DataUMTC.Rows(row).Item("Stat").ToString
+                            row = row + 1
+                        End If
+                    End While
+
+                End If
+            End With
+            sqlUMTCAdapter.Dispose()
+            DataUMTC.Dispose()
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+
+    End Sub
+
+    'dataloader end
+    Private Sub Btn_Released_Click(sender As Object, e As EventArgs) Handles Btn_Released.Click
         Released.Show()
         Me.Close()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Btn_AllUnits_Click(sender As Object, e As EventArgs) Handles Btn_AllUnits.Click
         All_Unit.Show()
         Me.Close()
     End Sub
@@ -70,7 +118,10 @@ Public Class Deposited
         Me.Close()
     End Sub
 
-
+    Private Sub Btn_Dashboard_Click(sender As Object, e As EventArgs) Handles Btn_Dashboard.Click
+        DashBoard.Show()
+        Me.Close()
+    End Sub
 
     Private Sub Btn_Repossess_Click(sender As Object, e As EventArgs) Handles Btn_Repossess.Click
         Repossess.Show()
@@ -86,8 +137,8 @@ Public Class Deposited
                 .Parameters.Clear()
                 .CommandText = "prc_SearchStockByStatus"
                 .CommandType = CommandType.StoredProcedure
-                .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
-                .Parameters.AddWithValue("@p_search", txtSearch.Text)
+                .Parameters.AddWithValue("@p_filter", Cmb_SearchType.Text)
+                .Parameters.AddWithValue("@p_search", Txt_Search.Text)
                 .Parameters.AddWithValue("@p_Stat", "Deposited")
                 .Parameters.AddWithValue("@p_SBranch", Cmb_Branch.Text)
                 sqlUMTCAdapter.SelectCommand = command
@@ -194,38 +245,6 @@ Public Class Deposited
         PrcDisplayDepositedStock()
     End Sub
 
-    Private Sub Grd_StockDeposit_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_StockDeposit.CellContentClick
-
-    End Sub
-
-    Private Sub cmbSearchType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSearchType.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
-
-    Private Sub Btn_Dashboard_Click(sender As Object, e As EventArgs) Handles Btn_Dashboard.Click
-        DashBoard.Show()
-        Me.Close()
 
 
-    End Sub
-
-    Private Sub chkAuto_CheckedChanged(sender As Object, e As EventArgs) Handles chkAuto.CheckedChanged
-
-    End Sub
-
-    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
-
-    End Sub
-
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
-
-    End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
-    End Sub
 End Class

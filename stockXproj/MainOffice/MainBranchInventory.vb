@@ -61,8 +61,8 @@ Public Class MainBranchInventory
     'dataloader end
 
     'filter
-    Private Sub TxtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
-        If chkAuto.Checked = True Then
+    Private Sub TxtSearch_TextChanged(sender As Object, e As EventArgs) Handles Txt_Search.TextChanged
+        If Chk_Auto.Checked = True Then
             PrcDisplayMotorcycleWithAutoCompleteInMainInventory()
         Else
 
@@ -79,7 +79,7 @@ Public Class MainBranchInventory
                 .CommandText = "prc_DisplayStock"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
-                .Parameters.AddWithValue("@p_search", txtSearch.Text)
+                .Parameters.AddWithValue("@p_search", Txt_Search.Text)
                 .Parameters.AddWithValue("@p_GBranch", "Main")
                 sqlUMTCAdapter.SelectCommand = command
                 datUMTC.Clear()
@@ -160,7 +160,7 @@ Public Class MainBranchInventory
         PrcDisplayUnits()
 
     End Sub
-    Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+    Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles Btn_Search.Click
         sqlUMTCAdapter = New MySqlDataAdapter
         datUMTC = New DataTable
         Try
@@ -170,7 +170,7 @@ Public Class MainBranchInventory
                 .CommandText = "prc_DisplayStock"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
-                .Parameters.AddWithValue("@p_search", txtSearch.Text)
+                .Parameters.AddWithValue("@p_search", Txt_Search.Text)
                 .Parameters.AddWithValue("@p_GBranch", "Main")
                 sqlUMTCAdapter.SelectCommand = command
                 datUMTC.Clear()
@@ -193,7 +193,7 @@ Public Class MainBranchInventory
                         row = row + 1
 
                     End While
-                    txtSearch.Clear()
+                    Txt_Search.Clear()
                     cmbSearchType.SelectedIndex = -1
 
                 Else
