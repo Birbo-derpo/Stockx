@@ -54,7 +54,7 @@ Public Class Reserve
 
     Private Sub Btn_AddReserve_Click(sender As Object, e As EventArgs) Handles Btn_AddReserve.Click
         ConfirmReserve.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     'button start
@@ -104,12 +104,12 @@ Public Class Reserve
 
     Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs) Handles Btn_AvStock.Click
         MainBranchInventory.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub Btn_Transit_Click(sender As Object, e As EventArgs) Handles Btn_Transit.Click
         TRANSIT.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
     'buttons end
     Private Sub Cmb_tobranch_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_branch.SelectedIndexChanged
@@ -152,5 +152,10 @@ Public Class Reserve
         Catch ex As Exception
             MessageBox.Show("" & ex.Message)
         End Try
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        DashBoard.Show()
+        Me.Close()
     End Sub
 End Class

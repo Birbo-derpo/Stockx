@@ -129,7 +129,7 @@ Public Class ConfirmReserve
                         MessageBox.Show("unit/s reserved", "reserved", MessageBoxButtons.OK)
                     End Try
                 End If
-
+                Checkcell.Cells("Column8").Value = False
             Next
         Else
             MessageBox.Show("branch destination not selected", "reservation error", MessageBoxButtons.OK)
@@ -182,7 +182,7 @@ Public Class ConfirmReserve
         End Try
     End Sub
     Private Sub Btn_back_Click(sender As Object, e As EventArgs) Handles Btn_back.Click
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub cmb_tobranch_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_tobranch.SelectedIndexChanged
@@ -190,6 +190,10 @@ Public Class ConfirmReserve
     End Sub
 
     Private Sub grdMotorcycle_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grdMotorcycle.CellContentClick
+
+    End Sub
+
+    Private Sub Btn_Search_Click(sender As Object, e As EventArgs)
 
     End Sub
 

@@ -29,19 +29,19 @@ Public Class DashBoard
 
             Select Case p_Branch
                 Case "Main"
-                    Lbl_Main.Text &= DataUMTC.Rows(row).Item("total")
+                    Lbl_Main.Text &= DataUMTC.Rows(0).Item("total")
                 Case "Bajada"
-                    Lbl_Bajada.Text &= DataUMTC.Rows(row).Item("total")
+                    Lbl_Bajada.Text &= DataUMTC.Rows(0).Item("total")
                 Case "Tagum"
-                    Lbl_Tagum.Text &= DataUMTC.Rows(row).Item("total")
+                    Lbl_Tagum.Text &= DataUMTC.Rows(0).Item("total")
                 Case "Davao"
-                    Lbl_Davao.Text &= DataUMTC.Rows(row).Item("total")
+                    Lbl_Davao.Text &= DataUMTC.Rows(0).Item("total")
                 Case "General Santos"
-                    Lbl_Gensan.Text &= DataUMTC.Rows(row).Item("total")
+                    Lbl_Gensan.Text &= DataUMTC.Rows(0).Item("total")
                 Case "Kidapawan"
-                    Lbl_Kidapawan.Text &= DataUMTC.Rows(row).Item("total")
+                    Lbl_Kidapawan.Text &= DataUMTC.Rows(0).Item("total")
                 Case "Digos"
-                    Lbl_Digos.Text &= DataUMTC.Rows(row).Item("total")
+                    Lbl_Digos.Text &= DataUMTC.Rows(0).Item("total")
             End Select
 
         End With
@@ -55,7 +55,7 @@ Public Class DashBoard
     End Sub
 
     Private Sub Btn_Branches_Click(sender As Object, e As EventArgs) Handles Btn_Branches.Click
-        AllStock.Show()
+        All_Unit.Show()
         Me.Hide()
 
     End Sub
@@ -65,4 +65,7 @@ Public Class DashBoard
         Me.Hide()
     End Sub
 
+    Private Sub Lbl_Tagum_Click(sender As Object, e As EventArgs) Handles Lbl_Tagum.Click
+
+    End Sub
 End Class

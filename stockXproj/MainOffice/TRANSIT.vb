@@ -77,12 +77,16 @@ Public Class TRANSIT
 
     Private Sub Btn_Reserved_Click(sender As Object, e As EventArgs) Handles Btn_Reserved.Click
         Reserve.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs) Handles Btn_AvStock.Click
         MainBranchInventory.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        DashBoard.Show()
+        Me.Close()
+    End Sub
 End Class

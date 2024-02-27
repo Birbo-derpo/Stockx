@@ -59,24 +59,24 @@ Public Class All_Unit
     'dataloader end
     Private Sub Btn_AllStock_Click(sender As Object, e As EventArgs) Handles Btn_AllStock.Click
         AllStock.Show()
-        Me.Hide()
+        Me.Close()
 
     End Sub
 
     Private Sub Btn_Released_Click(sender As Object, e As EventArgs) Handles Btn_Released.Click
         Released.Show()
-        Me.Hide()
+        Me.Close()
 
     End Sub
 
     Private Sub Btn_Deposited_Click(sender As Object, e As EventArgs) Handles Btn_Deposited.Click
         Deposited.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub Btn_Repossess_Click(sender As Object, e As EventArgs) Handles Btn_Repossess.Click
         Repossess.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub Btn_Search_Click(sender As Object, e As EventArgs) Handles Btn_Search.Click
@@ -163,5 +163,14 @@ Public Class All_Unit
         Catch ex As Exception
             MessageBox.Show("" & ex.Message)
         End Try
+    End Sub
+
+    Private Sub Btn_Reserved_Click(sender As Object, e As EventArgs)
+    End Sub
+
+    Private Sub Btn_Dashboard_Click(sender As Object, e As EventArgs) Handles Btn_Dashboard.Click
+        DashBoard.Show()
+        Me.Close()
+
     End Sub
 End Class

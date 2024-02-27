@@ -57,27 +57,24 @@ Public Class Deposited
 
     Private Sub Btn_Released_Click_1(sender As Object, e As EventArgs) Handles Btn_Released.Click
         Released.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         All_Unit.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub Btn_AllStock_Click(sender As Object, e As EventArgs) Handles Btn_AllStock.Click
         AllStock.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
-    Private Sub Btn_Deposited_Click(sender As Object, e As EventArgs) Handles Btn_Deposited.Click
-        Me.Show()
 
-    End Sub
 
     Private Sub Btn_Repossess_Click(sender As Object, e As EventArgs) Handles Btn_Repossess.Click
         Repossess.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub Btn_Search_Click(sender As Object, e As EventArgs) Handles Btn_Search.Click
@@ -198,6 +195,37 @@ Public Class Deposited
     End Sub
 
     Private Sub Grd_StockDeposit_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_StockDeposit.CellContentClick
+
+    End Sub
+
+    Private Sub cmbSearchType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSearchType.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub Btn_Dashboard_Click(sender As Object, e As EventArgs) Handles Btn_Dashboard.Click
+        DashBoard.Show()
+        Me.Close()
+
+
+    End Sub
+
+    Private Sub chkAuto_CheckedChanged(sender As Object, e As EventArgs) Handles chkAuto.CheckedChanged
+
+    End Sub
+
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
     End Sub
 End Class

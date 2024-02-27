@@ -37,7 +37,6 @@
 
 
 
-            Me.Dispose()
 
         Catch ex As Exception
             MessageBox.Show("" & ex.Message)
@@ -56,5 +55,9 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Me.Dispose()
+    End Sub
+
+    Private Sub txtFrameNumber_TextChanged(sender As Object, e As EventArgs) Handles txtFrameNumber.TextChanged
+
     End Sub
 End Class

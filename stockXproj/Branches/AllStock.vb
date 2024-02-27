@@ -64,22 +64,20 @@ Public Class AllStock
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         All_Unit.Show()
-        Me.Hide()
+        Me.Close()
 
     End Sub
 
-    Private Sub Btn_AllStock_Click(sender As Object, e As EventArgs) Handles Btn_AllStock.Click
-        Me.Show()
-    End Sub
+
 
     Private Sub Btn_Released_Click(sender As Object, e As EventArgs) Handles Btn_Released.Click
         Released.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub Btn_Dashboard_Click(sender As Object, e As EventArgs) Handles Btn_Dashboard.Click
         DashBoard.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub cmb_branch_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_branch.SelectedIndexChanged
@@ -178,13 +176,13 @@ Public Class AllStock
 
     Private Sub Btn_Deposited_Click(sender As Object, e As EventArgs) Handles Btn_Deposited.Click
         Deposited.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub Btn_Repossess_Click(sender As Object, e As EventArgs) Handles Btn_Repossess.Click
         Repossess.Show()
 
-        Me.Hide()
+        Me.Close()
     End Sub
 
     'end of left screen buttons

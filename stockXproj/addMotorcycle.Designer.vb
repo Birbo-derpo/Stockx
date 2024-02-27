@@ -22,6 +22,7 @@ Partial Class addMotorcycle
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(addMotorcycle))
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -39,152 +40,193 @@ Partial Class addMotorcycle
         Me.txtInvoiceNumber = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(374, 388)
+        Me.btnAdd.BackColor = System.Drawing.Color.Firebrick
+        Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnAdd.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnAdd.Location = New System.Drawing.Point(503, 356)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(75, 23)
+        Me.btnAdd.Size = New System.Drawing.Size(109, 42)
         Me.btnAdd.TabIndex = 50
-        Me.btnAdd.Text = "ADD"
-        Me.btnAdd.UseVisualStyleBackColor = True
+        Me.btnAdd.Text = "SAVE"
+        Me.btnAdd.UseVisualStyleBackColor = False
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(181, 309)
+        Me.Label7.Font = New System.Drawing.Font("Bell MT", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(329, 286)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(116, 16)
+        Me.Label7.Size = New System.Drawing.Size(152, 21)
         Me.Label7.TabIndex = 49
         Me.Label7.Text = "FRAME NUMBER"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(181, 268)
+        Me.Label6.Font = New System.Drawing.Font("Bell MT", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(322, 250)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(120, 16)
+        Me.Label6.Size = New System.Drawing.Size(159, 21)
         Me.Label6.TabIndex = 48
         Me.Label6.Text = "ENGINE NUMBER"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(158, 218)
+        Me.Label5.Font = New System.Drawing.Font("Bell MT", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(293, 214)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(143, 16)
+        Me.Label5.Size = New System.Drawing.Size(188, 21)
         Me.Label5.TabIndex = 47
         Me.Label5.Text = "MOTORCYCLE PRICE"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(158, 176)
+        Me.Label4.Font = New System.Drawing.Font("Bell MT", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(284, 178)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(149, 16)
+        Me.Label4.Size = New System.Drawing.Size(197, 21)
         Me.Label4.TabIndex = 46
         Me.Label4.Text = "MOTORCYCLE COLOR"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(231, 90)
+        Me.Label3.Font = New System.Drawing.Font("Bell MT", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(373, 88)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(76, 16)
+        Me.Label3.Size = New System.Drawing.Size(108, 21)
         Me.Label3.TabIndex = 45
-        Me.Label3.Text = "DATE&TIME"
+        Me.Label3.Text = "DATE TIME"
         '
         'dt
         '
-        Me.dt.Location = New System.Drawing.Point(325, 85)
+        Me.dt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dt.Location = New System.Drawing.Point(493, 82)
         Me.dt.Name = "dt"
-        Me.dt.Size = New System.Drawing.Size(200, 22)
+        Me.dt.Size = New System.Drawing.Size(358, 27)
         Me.dt.TabIndex = 44
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(157, 134)
+        Me.Label2.Font = New System.Drawing.Font("Bell MT", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(280, 142)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(150, 16)
+        Me.Label2.Size = New System.Drawing.Size(201, 21)
         Me.Label2.TabIndex = 43
         Me.Label2.Text = "MOTORCYCLE MODEL"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(185, 46)
+        Me.Label1.Font = New System.Drawing.Font("Bell MT", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(318, 55)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(122, 16)
+        Me.Label1.Size = New System.Drawing.Size(163, 21)
         Me.Label1.TabIndex = 42
         Me.Label1.Text = "INVOICE NUMBER"
         '
         'txtFrameNumber
         '
-        Me.txtFrameNumber.Location = New System.Drawing.Point(325, 303)
+        Me.txtFrameNumber.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFrameNumber.Location = New System.Drawing.Point(493, 279)
         Me.txtFrameNumber.Name = "txtFrameNumber"
-        Me.txtFrameNumber.Size = New System.Drawing.Size(318, 22)
+        Me.txtFrameNumber.Size = New System.Drawing.Size(358, 30)
         Me.txtFrameNumber.TabIndex = 41
         '
         'txtEngineNumber
         '
-        Me.txtEngineNumber.Location = New System.Drawing.Point(325, 262)
+        Me.txtEngineNumber.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEngineNumber.Location = New System.Drawing.Point(493, 243)
         Me.txtEngineNumber.Name = "txtEngineNumber"
-        Me.txtEngineNumber.Size = New System.Drawing.Size(318, 22)
+        Me.txtEngineNumber.Size = New System.Drawing.Size(358, 30)
         Me.txtEngineNumber.TabIndex = 40
         '
         'txtPrice
         '
-        Me.txtPrice.Location = New System.Drawing.Point(325, 215)
+        Me.txtPrice.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPrice.Location = New System.Drawing.Point(493, 207)
         Me.txtPrice.Name = "txtPrice"
-        Me.txtPrice.Size = New System.Drawing.Size(318, 22)
+        Me.txtPrice.Size = New System.Drawing.Size(358, 30)
         Me.txtPrice.TabIndex = 39
         '
         'txtColor
         '
-        Me.txtColor.Location = New System.Drawing.Point(325, 170)
+        Me.txtColor.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtColor.Location = New System.Drawing.Point(493, 171)
         Me.txtColor.Name = "txtColor"
-        Me.txtColor.Size = New System.Drawing.Size(318, 22)
+        Me.txtColor.Size = New System.Drawing.Size(358, 30)
         Me.txtColor.TabIndex = 38
         '
         'txtModel
         '
-        Me.txtModel.Location = New System.Drawing.Point(325, 128)
+        Me.txtModel.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtModel.Location = New System.Drawing.Point(493, 135)
         Me.txtModel.Name = "txtModel"
-        Me.txtModel.Size = New System.Drawing.Size(318, 22)
+        Me.txtModel.Size = New System.Drawing.Size(358, 30)
         Me.txtModel.TabIndex = 37
         '
         'txtInvoiceNumber
         '
-        Me.txtInvoiceNumber.Location = New System.Drawing.Point(325, 40)
+        Me.txtInvoiceNumber.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtInvoiceNumber.Location = New System.Drawing.Point(493, 46)
         Me.txtInvoiceNumber.Name = "txtInvoiceNumber"
-        Me.txtInvoiceNumber.Size = New System.Drawing.Size(318, 22)
+        Me.txtInvoiceNumber.Size = New System.Drawing.Size(358, 30)
         Me.txtInvoiceNumber.TabIndex = 36
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(465, 388)
+        Me.Button1.BackColor = System.Drawing.Color.Firebrick
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button1.Location = New System.Drawing.Point(618, 356)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(109, 42)
         Me.Button1.TabIndex = 51
         Me.Button1.Text = "CLEAR"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(568, 388)
+        Me.Button2.BackColor = System.Drawing.Color.Firebrick
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button2.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button2.Location = New System.Drawing.Point(733, 356)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(109, 42)
         Me.Button2.TabIndex = 52
         Me.Button2.Text = "CLOSE"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox1.ErrorImage = Nothing
+        Me.PictureBox1.Location = New System.Drawing.Point(-3, 1)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(247, 213)
+        Me.PictureBox1.TabIndex = 69
+        Me.PictureBox1.TabStop = False
         '
         'addMotorcycle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1009, 450)
+        Me.ClientSize = New System.Drawing.Size(1009, 449)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnAdd)
@@ -203,7 +245,9 @@ Partial Class addMotorcycle
         Me.Controls.Add(Me.txtModel)
         Me.Controls.Add(Me.txtInvoiceNumber)
         Me.Name = "addMotorcycle"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "addMotorcycle"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -226,4 +270,5 @@ Partial Class addMotorcycle
     Friend WithEvents txtInvoiceNumber As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
