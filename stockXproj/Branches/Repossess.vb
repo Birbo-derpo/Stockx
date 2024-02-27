@@ -62,7 +62,7 @@ Public Class Repossess
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_SearchStockByStatusOrBranch"
+                .CommandText = "prc_SearchByStatusOrBranch"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
                 .Parameters.AddWithValue("@p_search", Txt_Search.Text)
@@ -134,7 +134,7 @@ Public Class Repossess
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_SearchStockByStatus"
+                .CommandText = "prc_SearchByStatusOrBranch"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
                 .Parameters.AddWithValue("@p_search", Txt_Search.Text)

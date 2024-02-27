@@ -62,7 +62,7 @@ Public Class Deposited
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_SearchStockByStatusOrBranch"
+                .CommandText = "prc_SearchByStatusOrBranch"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", Cmb_SearchType.Text)
                 .Parameters.AddWithValue("@p_search", Txt_Search.Text)
@@ -135,7 +135,7 @@ Public Class Deposited
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_SearchStockByStatus"
+                .CommandText = "prc_SearchByStatusOrBranch"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", Cmb_SearchType.Text)
                 .Parameters.AddWithValue("@p_search", Txt_Search.Text)
@@ -178,7 +178,7 @@ Public Class Deposited
         End Try
     End Sub
 
-    Private Sub cmb_branch_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Cmb_Branch.SelectedIndexChanged
+    Private Sub Cmb_branch_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Cmb_Branch.SelectedIndexChanged
         sqlUMTCAdapter = New MySqlDataAdapter
         DataUMTC = New DataTable
         Try
@@ -238,6 +238,7 @@ Public Class Deposited
 
                 Catch ex As Exception
                 End Try
+                Checkcell.Cells("Column10").Value = False
             End If
 
         Next

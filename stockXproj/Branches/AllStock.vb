@@ -67,7 +67,7 @@ Public Class AllStock
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_SearchStockByStatusOrBranch"
+                .CommandText = "prc_SearchByStatusOrBranch"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
                 .Parameters.AddWithValue("@p_search", Txt_Search.Text)
@@ -115,7 +115,6 @@ Public Class AllStock
     Private Sub Btn_AllUnits_Click(sender As Object, e As EventArgs) Handles Btn_AllUnits.Click
         All_Unit.Show()
         Me.Close()
-
     End Sub
 
     Private Sub Btn_Released_Click(sender As Object, e As EventArgs) Handles Btn_Released.Click
@@ -134,7 +133,7 @@ Public Class AllStock
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_SearchStockByStatus"
+                .CommandText = "prc_SearchByStatusOrBranch"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
                 .Parameters.AddWithValue("@p_search", Txt_Search.Text)

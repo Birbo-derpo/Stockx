@@ -62,7 +62,7 @@ Public Class Released
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_SearchStockByStatusOrBranch"
+                .CommandText = "prc_SearchByStatusOrBranch"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
                 .Parameters.AddWithValue("@p_search", Txt_Search.Text)
@@ -138,7 +138,7 @@ Public Class Released
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_SearchStockByStatus"
+                .CommandText = "prc_SearchByStatusOrBranch"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
                 .Parameters.AddWithValue("@p_search", Txt_Search.Text)
@@ -241,6 +241,7 @@ Public Class Released
 
                 Catch ex As Exception
                 End Try
+                Checkcell.Cells("Column10").Value = False
             End If
 
         Next
