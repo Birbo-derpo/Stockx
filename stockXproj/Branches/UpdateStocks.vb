@@ -3,7 +3,7 @@
 Public Class UpdateStocks
     Private Sub UpdateStocks_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If fncCheckOwned(Txt_EngineNumber.Text) = True Then
-            MessageBox.Show("Unit Already owned.", "how did you?", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Unit Already owned.", "YO how did you?", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.Hide()
         End If
     End Sub
@@ -60,10 +60,6 @@ Public Class UpdateStocks
                     'for edit
                 End With
             End If
-        Catch ex As Exception
-        End Try
-
-        Try
             With command
                 .Parameters.Clear()
                 .CommandText = "prc_ChangeStat"
@@ -72,11 +68,11 @@ Public Class UpdateStocks
                 .Parameters.AddWithValue("@p_Stat", Cmb_Stat.Text)
                 .ExecuteNonQuery()
             End With
-            MessageBox.Show("Data updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Catch ex As Exception
-
+            MessageBox.Show("Data updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End Try
-        Me.Dispose()
+
+        Me.Close()
     End Sub
 
 
