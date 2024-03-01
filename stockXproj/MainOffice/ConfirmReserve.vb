@@ -185,17 +185,5 @@ Public Class ConfirmReserve
         Me.Close()
     End Sub
 
-    Private Sub cmb_tobranch_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_tobranch.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub grdMotorcycle_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grdMotorcycle.CellContentClick
-
-    End Sub
-
-    Private Sub Btn_Search_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
     'Buttons end
 End Class

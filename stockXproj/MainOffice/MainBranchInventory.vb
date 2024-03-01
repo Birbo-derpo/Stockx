@@ -112,16 +112,27 @@ Public Class MainBranchInventory
         End Try
 
     End Sub
-
     'filter end
 
     'button
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        With addMotorcycle
-
-            action = "Insert"
-            .ShowDialog()
-        End With
+        Try
+            With command
+                .Parameters.Clear()
+                .CommandText = "prc_AddMotorcycle"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_invoice", Txt_InvoiceNo.Text)
+                .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
+                .Parameters.AddWithValue("@p_model", Cmb_Model.Text)
+                .Parameters.AddWithValue("@p_color", Cmb_Color.Text)
+                .Parameters.AddWithValue("@p_price", Txt_Price.Text)
+                .Parameters.AddWithValue("@p_engine", Txt_EngineNo.Text)
+                .Parameters.AddWithValue("@p_frame", Txt_FrameNo.Text)
+                .ExecuteNonQuery()
+            End With
+        Catch ex As Exception
+            MessageBox.Show("Unit Successfully Added", "Saving Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
         PrcDisplayUnits()
     End Sub
 
@@ -142,21 +153,25 @@ Public Class MainBranchInventory
             MessageBox.Show("" & ex.Message)
         End Try
     End Sub
+
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
-        With addMotorcycle
-
-            action = "Update"
-
-            .txtInvoiceNumber.Text = Grd_Motorcycle.CurrentRow.Cells(0).Value
-            .dt.Value = Format(Convert.ToDateTime(Grd_Motorcycle.CurrentRow.Cells(1).Value), "yyyy,MMM,dd")
-
-            .txtModel.Text = Grd_Motorcycle.CurrentRow.Cells(2).Value
-            .txtColor.Text = Grd_Motorcycle.CurrentRow.Cells(3).Value
-            .txtPrice.Text = Grd_Motorcycle.CurrentRow.Cells(4).Value
-            .txtEngineNumber.Text = Grd_Motorcycle.CurrentRow.Cells(5).Value
-            .txtFrameNumber.Text = Grd_Motorcycle.CurrentRow.Cells(6).Value
-            .ShowDialog()
-        End With
+        Try
+            With command
+                .Parameters.Clear()
+                .CommandText = "prc_UpdateMotorcycleByEngineNumber"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_invoice", Txt_InvoiceNo.Text)
+                .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
+                .Parameters.AddWithValue("@p_model", Cmb_Model.Text)
+                .Parameters.AddWithValue("@p_color", Cmb_Color.Text)
+                .Parameters.AddWithValue("@p_price", Txt_Price.Text)
+                .Parameters.AddWithValue("@p_engine", Txt_EngineNo.Text)
+                .Parameters.AddWithValue("@p_frame", Txt_FrameNo.Text)
+                .ExecuteNonQuery()
+            End With
+        Catch ex As Exception
+            MessageBox.Show("Unit Successfully Edited", "Saving Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End Try
         PrcDisplayUnits()
 
     End Sub
@@ -212,10 +227,6 @@ Public Class MainBranchInventory
     End Sub
     'button end
 
-    Private Sub GrdMotorcycle_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_Motorcycle.CellClick
-
-    End Sub
-
     Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs) Handles Btn_AvStock.Click
         Me.Show()
     End Sub
@@ -239,4 +250,9 @@ Public Class MainBranchInventory
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
     End Sub
+
+    Private Sub Cmb_Color_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Cmb_Color.SelectedIndexChanged
+
+    End Sub
+
 End Class
