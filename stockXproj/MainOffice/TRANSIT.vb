@@ -63,6 +63,7 @@ Public Class TRANSIT
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(8).Value.ToString)
                         .Parameters.AddWithValue("@p_Stat", State)
+                        .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
                         .ExecuteNonQuery()
                     End With
 

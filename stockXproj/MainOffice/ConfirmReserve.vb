@@ -110,8 +110,6 @@ Public Class ConfirmReserve
     'Buttons
     Private Sub Btn_Confirm(sender As Object, e As EventArgs) Handles Btn_ConfirmReserve.Click
         If cmb_tobranch.Text <> "" Then
-
-
             For Each Checkcell As DataGridViewRow In grdMotorcycle.Rows
                 'needs to accept only when branches combobox is selected
                 If Checkcell.Cells("Column8").Value = True And cmb_tobranch.Text <> " " Then
@@ -122,6 +120,7 @@ Public Class ConfirmReserve
                             .CommandType = CommandType.StoredProcedure
                             .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(6).Value.ToString)
                             .Parameters.AddWithValue("@p_Branch", cmb_tobranch.Text)
+                            .Parameters.AddWithValue("@p_dt", Format(dt.Value, "yyyy-MM-dd"))
                             .ExecuteNonQuery()
                         End With
 
@@ -136,8 +135,8 @@ Public Class ConfirmReserve
         End If
         PrcDisplayAvailableUnits()
         'checked list must be changed state only when reserved
-
     End Sub
+
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
         sqlUMTCAdapter = New MySqlDataAdapter
         DataUMTC = New DataTable
@@ -184,6 +183,5 @@ Public Class ConfirmReserve
     Private Sub Btn_back_Click(sender As Object, e As EventArgs) Handles Btn_back.Click
         Me.Close()
     End Sub
-
     'Buttons end
 End Class

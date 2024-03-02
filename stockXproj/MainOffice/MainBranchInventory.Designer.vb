@@ -74,7 +74,7 @@ Partial Class MainBranchInventory
         Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnEdit.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnEdit.Location = New System.Drawing.Point(1321, 784)
+        Me.btnEdit.Location = New System.Drawing.Point(1190, 763)
         Me.btnEdit.Margin = New System.Windows.Forms.Padding(2)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Size = New System.Drawing.Size(133, 29)
@@ -88,7 +88,7 @@ Partial Class MainBranchInventory
         Me.btndelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btndelete.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btndelete.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btndelete.Location = New System.Drawing.Point(1321, 817)
+        Me.btndelete.Location = New System.Drawing.Point(1190, 796)
         Me.btndelete.Margin = New System.Windows.Forms.Padding(2)
         Me.btndelete.Name = "btndelete"
         Me.btndelete.Size = New System.Drawing.Size(133, 29)
@@ -102,7 +102,7 @@ Partial Class MainBranchInventory
         Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnAdd.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnAdd.Location = New System.Drawing.Point(1321, 751)
+        Me.btnAdd.Location = New System.Drawing.Point(1190, 730)
         Me.btnAdd.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(133, 29)
@@ -114,7 +114,7 @@ Partial Class MainBranchInventory
         '
         Me.lblTotal.AutoSize = True
         Me.lblTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotal.Location = New System.Drawing.Point(1198, 299)
+        Me.lblTotal.Location = New System.Drawing.Point(1227, 264)
         Me.lblTotal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblTotal.Name = "lblTotal"
         Me.lblTotal.Size = New System.Drawing.Size(195, 26)
@@ -125,9 +125,10 @@ Partial Class MainBranchInventory
         '
         Me.Grd_Motorcycle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grd_Motorcycle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9})
-        Me.Grd_Motorcycle.Location = New System.Drawing.Point(188, 334)
+        Me.Grd_Motorcycle.Location = New System.Drawing.Point(188, 290)
         Me.Grd_Motorcycle.Margin = New System.Windows.Forms.Padding(0)
         Me.Grd_Motorcycle.Name = "Grd_Motorcycle"
+        Me.Grd_Motorcycle.ReadOnly = True
         Me.Grd_Motorcycle.RowHeadersWidth = 51
         Me.Grd_Motorcycle.RowTemplate.Height = 24
         Me.Grd_Motorcycle.Size = New System.Drawing.Size(1266, 410)
@@ -139,6 +140,7 @@ Partial Class MainBranchInventory
         Me.Column1.HeaderText = "INVOICE NO."
         Me.Column1.MinimumWidth = 6
         Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
         '
         'Column2
         '
@@ -146,6 +148,7 @@ Partial Class MainBranchInventory
         Me.Column2.HeaderText = "DATE TIME"
         Me.Column2.MinimumWidth = 6
         Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
         '
         'Column3
         '
@@ -153,6 +156,7 @@ Partial Class MainBranchInventory
         Me.Column3.HeaderText = "MODEL"
         Me.Column3.MinimumWidth = 6
         Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
         '
         'Column4
         '
@@ -160,6 +164,7 @@ Partial Class MainBranchInventory
         Me.Column4.HeaderText = "COLOR"
         Me.Column4.MinimumWidth = 6
         Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
         '
         'Column5
         '
@@ -167,6 +172,7 @@ Partial Class MainBranchInventory
         Me.Column5.HeaderText = "PRICE UNITS"
         Me.Column5.MinimumWidth = 6
         Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
         '
         'Column6
         '
@@ -174,6 +180,7 @@ Partial Class MainBranchInventory
         Me.Column6.HeaderText = "ENGINE NO."
         Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
         '
         'Column7
         '
@@ -181,6 +188,7 @@ Partial Class MainBranchInventory
         Me.Column7.HeaderText = "FRAME NO"
         Me.Column7.MinimumWidth = 6
         Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
         '
         'Column8
         '
@@ -188,6 +196,7 @@ Partial Class MainBranchInventory
         Me.Column8.HeaderText = "STATUS"
         Me.Column8.MinimumWidth = 6
         Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
         '
         'Column9
         '
@@ -195,6 +204,7 @@ Partial Class MainBranchInventory
         Me.Column9.HeaderText = "BRANCH"
         Me.Column9.MinimumWidth = 6
         Me.Column9.Name = "Column9"
+        Me.Column9.ReadOnly = True
         '
         'cmbSearchType
         '
@@ -250,7 +260,7 @@ Partial Class MainBranchInventory
         Me.Btn_ReservationPage.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Btn_ReservationPage.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_ReservationPage.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_ReservationPage.Location = New System.Drawing.Point(1190, 770)
+        Me.Btn_ReservationPage.Location = New System.Drawing.Point(1332, 732)
         Me.Btn_ReservationPage.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_ReservationPage.Name = "Btn_ReservationPage"
         Me.Btn_ReservationPage.Size = New System.Drawing.Size(122, 56)
@@ -358,8 +368,8 @@ Partial Class MainBranchInventory
         Me.Cmb_Model.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
         Me.Cmb_Model.Font = New System.Drawing.Font("Arial", 12.0!)
         Me.Cmb_Model.FormattingEnabled = True
-        Me.Cmb_Model.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
-        Me.Cmb_Model.Location = New System.Drawing.Point(332, 776)
+        Me.Cmb_Model.Items.AddRange(New Object() {"ADV150", "ACB125BFP11", "ADV160AP", "XR150LEKP"})
+        Me.Cmb_Model.Location = New System.Drawing.Point(332, 732)
         Me.Cmb_Model.Margin = New System.Windows.Forms.Padding(2)
         Me.Cmb_Model.Name = "Cmb_Model"
         Me.Cmb_Model.Size = New System.Drawing.Size(140, 26)
@@ -370,7 +380,7 @@ Partial Class MainBranchInventory
         '
         Me.Txt_InvoiceNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Txt_InvoiceNo.Font = New System.Drawing.Font("Arial", 12.0!)
-        Me.Txt_InvoiceNo.Location = New System.Drawing.Point(188, 776)
+        Me.Txt_InvoiceNo.Location = New System.Drawing.Point(188, 732)
         Me.Txt_InvoiceNo.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_InvoiceNo.Name = "Txt_InvoiceNo"
         Me.Txt_InvoiceNo.Size = New System.Drawing.Size(140, 26)
@@ -381,8 +391,8 @@ Partial Class MainBranchInventory
         Me.Cmb_Color.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
         Me.Cmb_Color.Font = New System.Drawing.Font("Arial", 12.0!)
         Me.Cmb_Color.FormattingEnabled = True
-        Me.Cmb_Color.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
-        Me.Cmb_Color.Location = New System.Drawing.Point(476, 776)
+        Me.Cmb_Color.Items.AddRange(New Object() {"Black", "Red ", "Blue", "White", "Yellow", "Green"})
+        Me.Cmb_Color.Location = New System.Drawing.Point(476, 732)
         Me.Cmb_Color.Margin = New System.Windows.Forms.Padding(2)
         Me.Cmb_Color.Name = "Cmb_Color"
         Me.Cmb_Color.Size = New System.Drawing.Size(140, 26)
@@ -393,7 +403,7 @@ Partial Class MainBranchInventory
         '
         Me.Txt_Price.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Txt_Price.Font = New System.Drawing.Font("Arial", 12.0!)
-        Me.Txt_Price.Location = New System.Drawing.Point(620, 776)
+        Me.Txt_Price.Location = New System.Drawing.Point(620, 732)
         Me.Txt_Price.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_Price.Name = "Txt_Price"
         Me.Txt_Price.Size = New System.Drawing.Size(140, 26)
@@ -403,7 +413,7 @@ Partial Class MainBranchInventory
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(184, 754)
+        Me.Label2.Location = New System.Drawing.Point(184, 710)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(85, 20)
@@ -414,7 +424,7 @@ Partial Class MainBranchInventory
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(328, 754)
+        Me.Label3.Location = New System.Drawing.Point(328, 710)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(52, 20)
@@ -425,7 +435,7 @@ Partial Class MainBranchInventory
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(472, 754)
+        Me.Label4.Location = New System.Drawing.Point(472, 710)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(46, 20)
@@ -436,7 +446,7 @@ Partial Class MainBranchInventory
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(616, 755)
+        Me.Label5.Location = New System.Drawing.Point(616, 711)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(44, 20)
@@ -447,7 +457,7 @@ Partial Class MainBranchInventory
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(760, 755)
+        Me.Label6.Location = New System.Drawing.Point(760, 711)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(87, 20)
@@ -458,7 +468,7 @@ Partial Class MainBranchInventory
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(904, 753)
+        Me.Label7.Location = New System.Drawing.Point(904, 709)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(83, 20)
@@ -469,7 +479,7 @@ Partial Class MainBranchInventory
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(1048, 755)
+        Me.Label8.Location = New System.Drawing.Point(1048, 711)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(60, 20)
@@ -481,8 +491,8 @@ Partial Class MainBranchInventory
         Me.Cmb_Branch.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
         Me.Cmb_Branch.Font = New System.Drawing.Font("Arial", 12.0!)
         Me.Cmb_Branch.FormattingEnabled = True
-        Me.Cmb_Branch.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
-        Me.Cmb_Branch.Location = New System.Drawing.Point(1052, 776)
+        Me.Cmb_Branch.Items.AddRange(New Object() {"Bajada", "Davao", "Digos", "Kidapawan", "Tagum", "General Santos"})
+        Me.Cmb_Branch.Location = New System.Drawing.Point(1052, 732)
         Me.Cmb_Branch.Margin = New System.Windows.Forms.Padding(2)
         Me.Cmb_Branch.Name = "Cmb_Branch"
         Me.Cmb_Branch.Size = New System.Drawing.Size(134, 26)
@@ -493,7 +503,7 @@ Partial Class MainBranchInventory
         '
         Me.Txt_FrameNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Txt_FrameNo.Font = New System.Drawing.Font("Arial", 12.0!)
-        Me.Txt_FrameNo.Location = New System.Drawing.Point(908, 776)
+        Me.Txt_FrameNo.Location = New System.Drawing.Point(908, 732)
         Me.Txt_FrameNo.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_FrameNo.Name = "Txt_FrameNo"
         Me.Txt_FrameNo.Size = New System.Drawing.Size(140, 26)
@@ -503,7 +513,7 @@ Partial Class MainBranchInventory
         '
         Me.Txt_EngineNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Txt_EngineNo.Font = New System.Drawing.Font("Arial", 12.0!)
-        Me.Txt_EngineNo.Location = New System.Drawing.Point(764, 776)
+        Me.Txt_EngineNo.Location = New System.Drawing.Point(764, 732)
         Me.Txt_EngineNo.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_EngineNo.Name = "Txt_EngineNo"
         Me.Txt_EngineNo.Size = New System.Drawing.Size(140, 26)
@@ -522,7 +532,7 @@ Partial Class MainBranchInventory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1554, 897)
+        Me.ClientSize = New System.Drawing.Size(1370, 749)
         Me.Controls.Add(Me.dt)
         Me.Controls.Add(Me.Txt_EngineNo)
         Me.Controls.Add(Me.Txt_FrameNo)
@@ -554,7 +564,6 @@ Partial Class MainBranchInventory
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "MainBranchInventory"
         Me.Text = "MainBranchInventory"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.Grd_Motorcycle, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)

@@ -73,6 +73,7 @@ Public Class Reserve
                             .CommandType = CommandType.StoredProcedure
                             .Parameters.AddWithValue("@p_MTN", txt_MTN.Text)
                             .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
+                            .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
                             .ExecuteNonQuery()
                         End With
 
@@ -85,6 +86,7 @@ Public Class Reserve
                             .CommandType = CommandType.StoredProcedure
                             .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
                             .Parameters.AddWithValue("@p_Stat", State)
+                            .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
                             .ExecuteNonQuery()
                         End With
                     Catch ex As Exception
@@ -97,7 +99,6 @@ Public Class Reserve
         Else
             MessageBox.Show("MT number not inputted", "MT number", MessageBoxButtons.OK)
         End If
-
 
         PrcDisplayReservedUnits()
     End Sub
@@ -138,7 +139,6 @@ Public Class Reserve
                         Grd_MotorcycleReserved.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("Price").ToString
                         Grd_MotorcycleReserved.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
                         Grd_MotorcycleReserved.Rows(row).Cells(8).Value = DataUMTC.Rows(row).Item("Framenum").ToString
-
                         row = row + 1
 
                     End While
