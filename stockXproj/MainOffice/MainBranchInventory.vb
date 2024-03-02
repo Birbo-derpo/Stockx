@@ -117,7 +117,7 @@ Public Class MainBranchInventory
 
     'button
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        If fncCheckEngineNo("EngineNum", Txt_EngineNo.Text) = False Or fncCheckEngineNo("FrameNum", Txt_FrameNo.Text) = False Then
+        If fncCheckEngineNo("EngineNum", Txt_EngineNo.Text) = False And fncCheckEngineNo("FrameNum", Txt_FrameNo.Text) = False Then
             Try
                 With command
                     .Parameters.Clear()
@@ -143,7 +143,6 @@ Public Class MainBranchInventory
     End Sub
 
     Private Sub Btndelete_Click(sender As Object, e As EventArgs) Handles btndelete.Click
-
         Try
             With command
                 .Parameters.Clear()
@@ -251,6 +250,7 @@ Public Class MainBranchInventory
     End Sub
     'button end
 
+    'function methods
     Function fncCheckEngineNo(p_filter As String, p_search As String) As Boolean
         Dim result As String
 
@@ -282,7 +282,9 @@ Public Class MainBranchInventory
         End Try
         Return result
     End Function
+    'end function
 
+    'form click
     Private Sub Grd_Motorcycle_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_Motorcycle.CellDoubleClick
         Txt_InvoiceNo.Text = Grd_Motorcycle.CurrentRow.Cells(0).Value.ToString
         Cmb_Model.Text = Grd_Motorcycle.CurrentRow.Cells(2).Value.ToString
@@ -291,4 +293,5 @@ Public Class MainBranchInventory
         Txt_EngineNo.Text = Grd_Motorcycle.CurrentRow.Cells(4).Value.ToString
         Txt_FrameNo.Text = Grd_Motorcycle.CurrentRow.Cells(6).Value.ToString
     End Sub
+    'end form click
 End Class

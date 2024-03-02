@@ -128,6 +128,7 @@ Partial Class MainBranchInventory
         Me.Grd_Motorcycle.Location = New System.Drawing.Point(188, 290)
         Me.Grd_Motorcycle.Margin = New System.Windows.Forms.Padding(0)
         Me.Grd_Motorcycle.Name = "Grd_Motorcycle"
+        Me.Grd_Motorcycle.ReadOnly = True
         Me.Grd_Motorcycle.RowHeadersWidth = 51
         Me.Grd_Motorcycle.RowTemplate.Height = 24
         Me.Grd_Motorcycle.Size = New System.Drawing.Size(1266, 410)
@@ -139,6 +140,7 @@ Partial Class MainBranchInventory
         Me.Column1.HeaderText = "INVOICE NO."
         Me.Column1.MinimumWidth = 6
         Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
         '
         'Column2
         '
@@ -146,6 +148,7 @@ Partial Class MainBranchInventory
         Me.Column2.HeaderText = "DATE TIME"
         Me.Column2.MinimumWidth = 6
         Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
         '
         'Column3
         '
@@ -153,6 +156,7 @@ Partial Class MainBranchInventory
         Me.Column3.HeaderText = "MODEL"
         Me.Column3.MinimumWidth = 6
         Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
         '
         'Column4
         '
@@ -160,6 +164,7 @@ Partial Class MainBranchInventory
         Me.Column4.HeaderText = "COLOR"
         Me.Column4.MinimumWidth = 6
         Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
         '
         'Column5
         '
@@ -167,6 +172,7 @@ Partial Class MainBranchInventory
         Me.Column5.HeaderText = "PRICE UNITS"
         Me.Column5.MinimumWidth = 6
         Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
         '
         'Column6
         '
@@ -174,6 +180,7 @@ Partial Class MainBranchInventory
         Me.Column6.HeaderText = "ENGINE NO."
         Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
         '
         'Column7
         '
@@ -181,6 +188,7 @@ Partial Class MainBranchInventory
         Me.Column7.HeaderText = "FRAME NO"
         Me.Column7.MinimumWidth = 6
         Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
         '
         'Column8
         '
@@ -188,6 +196,7 @@ Partial Class MainBranchInventory
         Me.Column8.HeaderText = "STATUS"
         Me.Column8.MinimumWidth = 6
         Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
         '
         'Column9
         '
@@ -195,6 +204,7 @@ Partial Class MainBranchInventory
         Me.Column9.HeaderText = "BRANCH"
         Me.Column9.MinimumWidth = 6
         Me.Column9.Name = "Column9"
+        Me.Column9.ReadOnly = True
         '
         'cmbSearchType
         '
@@ -522,7 +532,7 @@ Partial Class MainBranchInventory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1554, 897)
+        Me.ClientSize = New System.Drawing.Size(1370, 749)
         Me.Controls.Add(Me.dt)
         Me.Controls.Add(Me.Txt_EngineNo)
         Me.Controls.Add(Me.Txt_FrameNo)
@@ -554,7 +564,6 @@ Partial Class MainBranchInventory
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "MainBranchInventory"
         Me.Text = "MainBranchInventory"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.Grd_Motorcycle, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)

@@ -42,6 +42,7 @@ Partial Class TRANSIT
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.dt = New System.Windows.Forms.DateTimePicker()
         CType(Me.Grd_Motorcycle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,7 +57,7 @@ Partial Class TRANSIT
         Me.Grd_Motorcycle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grd_Motorcycle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column10, Me.Column9, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
         Me.Grd_Motorcycle.Location = New System.Drawing.Point(188, 290)
-        Me.Grd_Motorcycle.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Grd_Motorcycle.Margin = New System.Windows.Forms.Padding(2)
         Me.Grd_Motorcycle.Name = "Grd_Motorcycle"
         Me.Grd_Motorcycle.RowHeadersWidth = 51
         Me.Grd_Motorcycle.RowTemplate.Height = 24
@@ -149,7 +150,7 @@ Partial Class TRANSIT
         Me.Btn_Transfer.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold)
         Me.Btn_Transfer.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_Transfer.Location = New System.Drawing.Point(325, 717)
-        Me.Btn_Transfer.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Transfer.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Transfer.Name = "Btn_Transfer"
         Me.Btn_Transfer.Size = New System.Drawing.Size(133, 56)
         Me.Btn_Transfer.TabIndex = 38
@@ -162,7 +163,7 @@ Partial Class TRANSIT
         Me.cmb_branch.FormattingEnabled = True
         Me.cmb_branch.Items.AddRange(New Object() {"Bajada", "Davao", "Digos", "Kidapawan", "Tagum", "General Santos"})
         Me.cmb_branch.Location = New System.Drawing.Point(362, 252)
-        Me.cmb_branch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmb_branch.Margin = New System.Windows.Forms.Padding(2)
         Me.cmb_branch.Name = "cmb_branch"
         Me.cmb_branch.Size = New System.Drawing.Size(272, 34)
         Me.cmb_branch.TabIndex = 40
@@ -175,9 +176,9 @@ Partial Class TRANSIT
         Me.GroupBox1.Controls.Add(Me.Btn_Transit)
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.GroupBox1.Location = New System.Drawing.Point(0, 290)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Size = New System.Drawing.Size(185, 410)
         Me.GroupBox1.TabIndex = 41
         Me.GroupBox1.TabStop = False
@@ -189,7 +190,7 @@ Partial Class TRANSIT
         Me.Btn_AvStock.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_AvStock.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_AvStock.Location = New System.Drawing.Point(0, 61)
-        Me.Btn_AvStock.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_AvStock.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_AvStock.Name = "Btn_AvStock"
         Me.Btn_AvStock.Size = New System.Drawing.Size(181, 51)
         Me.Btn_AvStock.TabIndex = 33
@@ -203,7 +204,7 @@ Partial Class TRANSIT
         Me.Btn_Reserved.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Reserved.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_Reserved.Location = New System.Drawing.Point(0, 115)
-        Me.Btn_Reserved.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Reserved.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Reserved.Name = "Btn_Reserved"
         Me.Btn_Reserved.Size = New System.Drawing.Size(181, 51)
         Me.Btn_Reserved.TabIndex = 32
@@ -217,7 +218,7 @@ Partial Class TRANSIT
         Me.Btn_Transit.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Transit.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_Transit.Location = New System.Drawing.Point(0, 170)
-        Me.Btn_Transit.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Transit.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Transit.Name = "Btn_Transit"
         Me.Btn_Transit.Size = New System.Drawing.Size(181, 51)
         Me.Btn_Transit.TabIndex = 34
@@ -230,7 +231,7 @@ Partial Class TRANSIT
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox1.Location = New System.Drawing.Point(9, -2)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(1424, 171)
         Me.PictureBox1.TabIndex = 42
@@ -243,7 +244,7 @@ Partial Class TRANSIT
         Me.Button1.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button1.Location = New System.Drawing.Point(188, 717)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(133, 56)
         Me.Button1.TabIndex = 47
@@ -261,11 +262,21 @@ Partial Class TRANSIT
         Me.Label1.TabIndex = 53
         Me.Label1.Text = "Sort by branch:"
         '
+        'dt
+        '
+        Me.dt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dt.Location = New System.Drawing.Point(1089, 173)
+        Me.dt.Margin = New System.Windows.Forms.Padding(2)
+        Me.dt.Name = "dt"
+        Me.dt.Size = New System.Drawing.Size(270, 23)
+        Me.dt.TabIndex = 58
+        '
         'TRANSIT
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1434, 802)
+        Me.ClientSize = New System.Drawing.Size(1370, 749)
+        Me.Controls.Add(Me.dt)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
@@ -273,7 +284,7 @@ Partial Class TRANSIT
         Me.Controls.Add(Me.cmb_branch)
         Me.Controls.Add(Me.Btn_Transfer)
         Me.Controls.Add(Me.Grd_Motorcycle)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "TRANSIT"
         Me.Text = "TRANSIT"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -304,4 +315,5 @@ Partial Class TRANSIT
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents dt As DateTimePicker
 End Class
