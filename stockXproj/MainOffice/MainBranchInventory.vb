@@ -1,4 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports Mysqlx.XDevAPI.Common
 
 Public Class MainBranchInventory
     Private datUMTC As DataTable
@@ -63,13 +64,13 @@ Public Class MainBranchInventory
     'filter
     Private Sub TxtSearch_TextChanged(sender As Object, e As EventArgs) Handles Txt_Search.TextChanged
         If Chk_Auto.Checked = True Then
-            PrcDisplayMotorcycleWithAutoCompleteInMainInventory()
+            prc_search()
         Else
 
         End If
     End Sub
 
-    Private Sub PrcDisplayMotorcycleWithAutoCompleteInMainInventory()
+    Private Sub prc_search()
         sqlUMTCAdapter = New MySqlDataAdapter
         datUMTC = New DataTable
         Try
@@ -116,23 +117,28 @@ Public Class MainBranchInventory
 
     'button
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        Try
-            With command
-                .Parameters.Clear()
-                .CommandText = "prc_AddMotorcycle"
-                .CommandType = CommandType.StoredProcedure
-                .Parameters.AddWithValue("@p_invoice", Txt_InvoiceNo.Text)
-                .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
-                .Parameters.AddWithValue("@p_model", Cmb_Model.Text)
-                .Parameters.AddWithValue("@p_color", Cmb_Color.Text)
-                .Parameters.AddWithValue("@p_price", Txt_Price.Text)
-                .Parameters.AddWithValue("@p_engine", Txt_EngineNo.Text)
-                .Parameters.AddWithValue("@p_frame", Txt_FrameNo.Text)
-                .ExecuteNonQuery()
-            End With
-        Catch ex As Exception
-            MessageBox.Show("Unit Successfully Added", "Saving Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        End Try
+        If fncCheckEngineNo("EngineNum", Txt_EngineNo.Text) = False Or fncCheckEngineNo("FrameNum", Txt_FrameNo.Text) = False Then
+            Try
+                With command
+                    .Parameters.Clear()
+                    .CommandText = "prc_AddMotorcycle"
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@p_invoice", Txt_InvoiceNo.Text)
+                    .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
+                    .Parameters.AddWithValue("@p_model", Cmb_Model.Text)
+                    .Parameters.AddWithValue("@p_color", Cmb_Color.Text)
+                    .Parameters.AddWithValue("@p_price", Txt_Price.Text)
+                    .Parameters.AddWithValue("@p_engine", Txt_EngineNo.Text)
+                    .Parameters.AddWithValue("@p_frame", Txt_FrameNo.Text)
+                    .ExecuteNonQuery()
+                End With
+            Catch ex As Exception
+                MessageBox.Show("Unit Successfully Added", "Saving Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End Try
+        Else
+            MessageBox.Show("engine number/frame duplicate found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+
         PrcDisplayUnits()
     End Sub
 
@@ -225,8 +231,6 @@ Public Class MainBranchInventory
     Private Sub Btn_Toreservation_Click(sender As Object, e As EventArgs) Handles Btn_ReservationPage.Click
         ConfirmReserve.ShowDialog()
     End Sub
-    'button end
-
     Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs) Handles Btn_AvStock.Click
         Me.Show()
     End Sub
@@ -244,15 +248,47 @@ Public Class MainBranchInventory
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         DashBoard.Show()
         Me.Close()
-
     End Sub
+    'button end
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+    Function fncCheckEngineNo(p_filter As String, p_search As String) As Boolean
+        Dim result As String
 
+        sqlUMTCAdapter = New MySqlDataAdapter
+        DataUMTC = New DataTable
+
+        With command
+            .Parameters.Clear()
+            .CommandText = "prc_FindStockDuplicate"
+            .CommandType = CommandType.StoredProcedure
+            .Parameters.AddWithValue("@p_filter", p_filter)
+            .Parameters.AddWithValue("@p_search", p_search)
+            sqlUMTCAdapter.SelectCommand = command
+            DataUMTC.Clear()
+            sqlUMTCAdapter.Fill(DataUMTC)
+
+            If DataUMTC.Rows.Count > 0 Then
+                result = True
+            Else
+                result = False
+            End If
+        End With
+        sqlUMTCAdapter.Dispose()
+        DataUMTC.Dispose()
+        Try
+
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+        Return result
+    End Function
+
+    Private Sub Grd_Motorcycle_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_Motorcycle.CellDoubleClick
+        Txt_InvoiceNo.Text = Grd_Motorcycle.CurrentRow.Cells(0).Value.ToString
+        Cmb_Model.Text = Grd_Motorcycle.CurrentRow.Cells(2).Value.ToString
+        Cmb_Color.Text = Grd_Motorcycle.CurrentRow.Cells(3).Value.ToString
+        Txt_Price.Text = Grd_Motorcycle.CurrentRow.Cells(4).Value.ToString
+        Txt_EngineNo.Text = Grd_Motorcycle.CurrentRow.Cells(4).Value.ToString
+        Txt_FrameNo.Text = Grd_Motorcycle.CurrentRow.Cells(6).Value.ToString
     End Sub
-
-    Private Sub Cmb_Color_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Cmb_Color.SelectedIndexChanged
-
-    End Sub
-
 End Class

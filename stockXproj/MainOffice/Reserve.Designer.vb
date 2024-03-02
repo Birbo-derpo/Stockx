@@ -82,7 +82,7 @@ Partial Class Reserve
         Me.Grd_MotorcycleReserved.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grd_MotorcycleReserved.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column10, Me.Column9, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
         Me.Grd_MotorcycleReserved.Location = New System.Drawing.Point(188, 290)
-        Me.Grd_MotorcycleReserved.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Grd_MotorcycleReserved.Margin = New System.Windows.Forms.Padding(2)
         Me.Grd_MotorcycleReserved.Name = "Grd_MotorcycleReserved"
         Me.Grd_MotorcycleReserved.RowHeadersWidth = 51
         Me.Grd_MotorcycleReserved.RowTemplate.Height = 24
@@ -96,7 +96,7 @@ Partial Class Reserve
         Me.Btn_Add_MT.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold)
         Me.Btn_Add_MT.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_Add_MT.Location = New System.Drawing.Point(325, 717)
-        Me.Btn_Add_MT.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Add_MT.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Add_MT.Name = "Btn_Add_MT"
         Me.Btn_Add_MT.Size = New System.Drawing.Size(133, 63)
         Me.Btn_Add_MT.TabIndex = 35
@@ -109,7 +109,7 @@ Partial Class Reserve
         Me.cmb_branch.FormattingEnabled = True
         Me.cmb_branch.Items.AddRange(New Object() {"Bajada", "Davao", "Digos", "Kidapawan", "Tagum", "General Santos"})
         Me.cmb_branch.Location = New System.Drawing.Point(1163, 254)
-        Me.cmb_branch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmb_branch.Margin = New System.Windows.Forms.Padding(2)
         Me.cmb_branch.Name = "cmb_branch"
         Me.cmb_branch.Size = New System.Drawing.Size(248, 29)
         Me.cmb_branch.TabIndex = 36
@@ -129,7 +129,7 @@ Partial Class Reserve
         '
         Me.txt_MTN.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_MTN.Location = New System.Drawing.Point(273, 252)
-        Me.txt_MTN.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txt_MTN.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_MTN.Name = "txt_MTN"
         Me.txt_MTN.Size = New System.Drawing.Size(307, 29)
         Me.txt_MTN.TabIndex = 42
@@ -139,7 +139,7 @@ Partial Class Reserve
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.Location = New System.Drawing.Point(1, -2)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(1424, 170)
         Me.PictureBox1.TabIndex = 44
@@ -153,9 +153,9 @@ Partial Class Reserve
         Me.GroupBox1.Controls.Add(Me.Btn_Transit)
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.GroupBox1.Location = New System.Drawing.Point(0, 290)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Size = New System.Drawing.Size(185, 410)
         Me.GroupBox1.TabIndex = 45
         Me.GroupBox1.TabStop = False
@@ -167,7 +167,7 @@ Partial Class Reserve
         Me.Btn_AvStock.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_AvStock.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_AvStock.Location = New System.Drawing.Point(0, 61)
-        Me.Btn_AvStock.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_AvStock.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_AvStock.Name = "Btn_AvStock"
         Me.Btn_AvStock.Size = New System.Drawing.Size(181, 51)
         Me.Btn_AvStock.TabIndex = 33
@@ -181,7 +181,7 @@ Partial Class Reserve
         Me.Btn_Reserved.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Reserved.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_Reserved.Location = New System.Drawing.Point(0, 115)
-        Me.Btn_Reserved.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Reserved.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Reserved.Name = "Btn_Reserved"
         Me.Btn_Reserved.Size = New System.Drawing.Size(181, 51)
         Me.Btn_Reserved.TabIndex = 32
@@ -195,7 +195,7 @@ Partial Class Reserve
         Me.Btn_Transit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Transit.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_Transit.Location = New System.Drawing.Point(0, 170)
-        Me.Btn_Transit.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Transit.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Transit.Name = "Btn_Transit"
         Me.Btn_Transit.Size = New System.Drawing.Size(181, 51)
         Me.Btn_Transit.TabIndex = 34
@@ -209,7 +209,7 @@ Partial Class Reserve
         Me.Button1.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button1.Location = New System.Drawing.Point(188, 717)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(133, 63)
         Me.Button1.TabIndex = 46
@@ -240,7 +240,7 @@ Partial Class Reserve
         'Column2
         '
         Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column2.HeaderText = "Date& Time"
+        Me.Column2.HeaderText = "Reserved since"
         Me.Column2.MinimumWidth = 6
         Me.Column2.Name = "Column2"
         '
@@ -300,7 +300,7 @@ Partial Class Reserve
         Me.Controls.Add(Me.Btn_Add_MT)
         Me.Controls.Add(Me.Grd_MotorcycleReserved)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Reserve"
         Me.Text = "Reserve"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
