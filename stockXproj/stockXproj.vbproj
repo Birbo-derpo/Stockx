@@ -260,6 +260,78 @@
     <Compile Include="Branches\UpdateStocks.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SrBookepeer\S_DisplayCustomer.Designer.vb">
+      <DependentUpon>S_DisplayCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SrBookepeer\S_DisplayCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SrBookepeer\S_dashboard.Designer.vb">
+      <DependentUpon>S_dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SrBookepeer\S_dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SrBookepeer\MainOffice\S_confirmReserve.Designer.vb">
+      <DependentUpon>S_confirmReserve.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SrBookepeer\MainOffice\S_confirmReserve.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SrBookepeer\MainOffice\S_Reserve.Designer.vb">
+      <DependentUpon>S_Reserve.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SrBookepeer\MainOffice\S_Reserve.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SrBookepeer\MainOffice\S_Transit.Designer.vb">
+      <DependentUpon>S_Transit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SrBookepeer\MainOffice\S_Transit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SrBookepeer\MainOffice\S_MainOffice.Designer.vb">
+      <DependentUpon>S_MainOffice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SrBookepeer\MainOffice\S_MainOffice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SrBookepeer\S_branch\S_repossess.Designer.vb">
+      <DependentUpon>S_repossess.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SrBookepeer\S_branch\S_repossess.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SrBookepeer\S_branch\S_Released.Designer.vb">
+      <DependentUpon>S_Released.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SrBookepeer\S_branch\S_Released.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SrBookepeer\S_branch\S_customer.Designer.vb">
+      <DependentUpon>S_customer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SrBookepeer\S_branch\S_customer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SrBookepeer\S_branch\S_Deposited.Designer.vb">
+      <DependentUpon>S_Deposited.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SrBookepeer\S_branch\S_Deposited.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SrBookepeer\S_branch\S_AllStock.Designer.vb">
+      <DependentUpon>S_AllStock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SrBookepeer\S_branch\S_AllStock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SrBookepeer\S_branch\S_AllUnit.Designer.vb">
+      <DependentUpon>S_AllUnit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SrBookepeer\S_branch\S_AllUnit.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="addMotorcycle.resx">
@@ -316,6 +388,42 @@
     <EmbeddedResource Include="Branches\UpdateStocks.resx">
       <DependentUpon>UpdateStocks.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SrBookepeer\MainOffice\S_confirmReserve.resx">
+      <DependentUpon>S_confirmReserve.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SrBookepeer\MainOffice\S_Reserve.resx">
+      <DependentUpon>S_Reserve.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SrBookepeer\MainOffice\S_Transit.resx">
+      <DependentUpon>S_Transit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SrBookepeer\MainOffice\S_MainOffice.resx">
+      <DependentUpon>S_MainOffice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SrBookepeer\S_branch\S_AllStock.resx">
+      <DependentUpon>S_AllStock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SrBookepeer\S_branch\S_AllUnit.resx">
+      <DependentUpon>S_AllUnit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SrBookepeer\S_branch\S_customer.resx">
+      <DependentUpon>S_customer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SrBookepeer\S_branch\S_Deposited.resx">
+      <DependentUpon>S_Deposited.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SrBookepeer\S_branch\S_Released.resx">
+      <DependentUpon>S_Released.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SrBookepeer\S_branch\S_repossess.resx">
+      <DependentUpon>S_repossess.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SrBookepeer\S_dashboard.resx">
+      <DependentUpon>S_dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SrBookepeer\S_DisplayCustomer.resx">
+      <DependentUpon>S_DisplayCustomer.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
@@ -348,5 +456,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
