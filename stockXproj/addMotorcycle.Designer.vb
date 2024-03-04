@@ -41,6 +41,7 @@ Partial Class addMotorcycle
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -50,7 +51,7 @@ Partial Class addMotorcycle
         Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnAdd.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnAdd.Location = New System.Drawing.Point(503, 356)
+        Me.btnAdd.Location = New System.Drawing.Point(420, 356)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(109, 42)
         Me.btnAdd.TabIndex = 50
@@ -189,7 +190,7 @@ Partial Class addMotorcycle
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(618, 356)
+        Me.Button1.Location = New System.Drawing.Point(562, 356)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(109, 42)
         Me.Button1.TabIndex = 51
@@ -202,7 +203,7 @@ Partial Class addMotorcycle
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button2.Location = New System.Drawing.Point(733, 356)
+        Me.Button2.Location = New System.Drawing.Point(677, 356)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(109, 42)
         Me.Button2.TabIndex = 52
@@ -221,11 +222,25 @@ Partial Class addMotorcycle
         Me.PictureBox1.TabIndex = 69
         Me.PictureBox1.TabStop = False
         '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.Firebrick
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button3.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button3.Location = New System.Drawing.Point(814, 356)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(149, 50)
+        Me.Button3.TabIndex = 70
+        Me.Button3.Text = "ADD NEW MODEL/COLOR"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
         'addMotorcycle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1009, 449)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -271,4 +286,5 @@ Partial Class addMotorcycle
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button3 As Button
 End Class

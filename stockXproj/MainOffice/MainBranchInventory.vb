@@ -117,29 +117,7 @@ Public Class MainBranchInventory
 
     'button
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        If fncCheckEngineNo("EngineNum", Txt_EngineNo.Text) = False And fncCheckEngineNo("FrameNum", Txt_FrameNo.Text) = False Then
-            Try
-                With command
-                    .Parameters.Clear()
-                    .CommandText = "prc_AddMotorcycle"
-                    .CommandType = CommandType.StoredProcedure
-                    .Parameters.AddWithValue("@p_invoice", Txt_InvoiceNo.Text)
-                    .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
-                    .Parameters.AddWithValue("@p_model", Cmb_Model.Text)
-                    .Parameters.AddWithValue("@p_color", Cmb_Color.Text)
-                    .Parameters.AddWithValue("@p_price", Txt_Price.Text)
-                    .Parameters.AddWithValue("@p_engine", Txt_EngineNo.Text)
-                    .Parameters.AddWithValue("@p_frame", Txt_FrameNo.Text)
-                    .ExecuteNonQuery()
-                End With
-            Catch ex As Exception
-                MessageBox.Show("Unit Successfully Added", "Saving Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            End Try
-        Else
-            MessageBox.Show("engine number/frame duplicate found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        End If
-
-        PrcDisplayUnits()
+        addMotorcycle.ShowDialog()
     End Sub
 
     Private Sub Btndelete_Click(sender As Object, e As EventArgs) Handles btndelete.Click
@@ -160,24 +138,7 @@ Public Class MainBranchInventory
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
-        Try
-            With command
-                .Parameters.Clear()
-                .CommandText = "prc_UpdateMotorcycleByEngineNumber"
-                .CommandType = CommandType.StoredProcedure
-                .Parameters.AddWithValue("@p_invoice", Txt_InvoiceNo.Text)
-                .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
-                .Parameters.AddWithValue("@p_model", Cmb_Model.Text)
-                .Parameters.AddWithValue("@p_color", Cmb_Color.Text)
-                .Parameters.AddWithValue("@p_price", Txt_Price.Text)
-                .Parameters.AddWithValue("@p_engine", Txt_EngineNo.Text)
-                .Parameters.AddWithValue("@p_frame", Txt_FrameNo.Text)
-                .ExecuteNonQuery()
-            End With
-        Catch ex As Exception
-            MessageBox.Show("Unit Successfully Edited", "Saving Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        End Try
-        PrcDisplayUnits()
+
 
     End Sub
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles Btn_Search.Click
@@ -286,12 +247,7 @@ Public Class MainBranchInventory
 
     'form click
     Private Sub Grd_Motorcycle_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_Motorcycle.CellDoubleClick
-        Txt_InvoiceNo.Text = Grd_Motorcycle.CurrentRow.Cells(0).Value.ToString
-        Cmb_Model.Text = Grd_Motorcycle.CurrentRow.Cells(2).Value.ToString
-        Cmb_Color.Text = Grd_Motorcycle.CurrentRow.Cells(3).Value.ToString
-        Txt_Price.Text = Grd_Motorcycle.CurrentRow.Cells(4).Value.ToString
-        Txt_EngineNo.Text = Grd_Motorcycle.CurrentRow.Cells(4).Value.ToString
-        Txt_FrameNo.Text = Grd_Motorcycle.CurrentRow.Cells(6).Value.ToString
+
     End Sub
     'end form click
 End Class
