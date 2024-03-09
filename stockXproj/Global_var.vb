@@ -8,6 +8,6 @@ Module Global_Var
     Public strconnection, servername, databasename, databaseuserid,
             databasepassword, action, State, port As String
     Public EngineNo, Email, Password As String
-    Public row As Integer
+    Public row, Cust_id As Integer
 
 End Module
