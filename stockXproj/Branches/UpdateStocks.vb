@@ -57,7 +57,17 @@ Public Class UpdateStocks
                 End With
             Else
                 With command
-                    'for edit
+                    .Parameters.Clear()
+                    .CommandText = "prc_editTransac"
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@p_id", Cust_id)
+                    .Parameters.AddWithValue("@F_name", Txt_Fname.Text)
+                    .Parameters.AddWithValue("@L_name", Txt_Lname.Text)
+                    .Parameters.AddWithValue("@p_Amount", CDbl(Txt_Amount.Text))
+                    .Parameters.AddWithValue("@p_TermOE", Cmb_Term.Text)
+                    .Parameters.AddWithValue("@p_TypeOP", Cmb_Type.Text)
+                    .Parameters.AddWithValue("@p_SIV", Txt_SIN.Text)
+                    .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
                 End With
             End If
             With command

@@ -40,6 +40,7 @@ Public Class Customer
                             grd_AllCustomer.Rows(row).Cells(10).Value = DataUMTC.Rows(row).Item("Amount_paid").ToString
                             grd_AllCustomer.Rows(row).Cells(11).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Date_owned").ToString), "MMM dd, yyyy")
                             grd_AllCustomer.Rows(row).Cells(12).Value = DataUMTC.Rows(row).Item("SIV").ToString
+                            grd_AllCustomer.Rows(row).Cells(13).Value = DataUMTC.Rows(row).Item("id").ToString
 
                             row = row + 1
                         End If
@@ -89,6 +90,8 @@ Public Class Customer
                         grd_AllCustomer.Rows(row).Cells(10).Value = DataUMTC.Rows(row).Item("Amount_paid").ToString
                         grd_AllCustomer.Rows(row).Cells(11).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Date_owned").ToString), "MMM dd, yyyy")
                         grd_AllCustomer.Rows(row).Cells(12).Value = DataUMTC.Rows(row).Item("SIV").ToString
+                        grd_AllCustomer.Rows(row).Cells(13).Value = DataUMTC.Rows(row).Item("id").ToString
+
 
                         row = row + 1
                     End While
@@ -136,6 +139,7 @@ Public Class Customer
                         grd_AllCustomer.Rows(row).Cells(10).Value = DataUMTC.Rows(row).Item("Amount_paid").ToString
                         grd_AllCustomer.Rows(row).Cells(11).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Date_owned").ToString), "MMM dd, yyyy")
                         grd_AllCustomer.Rows(row).Cells(12).Value = DataUMTC.Rows(row).Item("SIV").ToString
+                        grd_AllCustomer.Rows(row).Cells(13).Value = DataUMTC.Rows(row).Item("id").ToString
 
                         row = row + 1
                     End While
@@ -177,6 +181,10 @@ Public Class Customer
         Else
 
         End If
+    End Sub
+
+    Private Sub Get_id(sender As Object, e As DataGridViewCellEventArgs) Handles grd_AllCustomer.CellClick
+        Cust_id = CInt(grd_AllCustomer.CurrentRow.Cells(13).Value)
     End Sub
     'features end
 End Class
