@@ -266,6 +266,12 @@
     <Compile Include="Branches\UpdateStocks.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SrBookepeer\reports.Designer.vb">
+      <DependentUpon>reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SrBookepeer\reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SrBookepeer\S_DisplayCustomer.Designer.vb">
       <DependentUpon>S_DisplayCustomer.vb</DependentUpon>
     </Compile>
@@ -408,6 +414,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SrBookepeer\MainOffice\S_MainOffice.resx">
       <DependentUpon>S_MainOffice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SrBookepeer\reports.resx">
+      <DependentUpon>reports.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SrBookepeer\S_branch\S_AllStock.resx">
       <DependentUpon>S_AllStock.vb</DependentUpon>
