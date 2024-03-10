@@ -3,7 +3,7 @@
 Public Class addMotorcycle
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Btn_Add.Click
         Try
-            If action = "Insert" And fncCheckEngineNo("EngineNum", txtEngineNumber.Text) = False And fncCheckEngineNo("FrameNum", txtFrameNumber.Text) = False Then
+            If action = "Insert" And fncCheckEngineNo(txtEngineNumber.Text) = False Then
 
                 With command
                     .Parameters.Clear()
@@ -64,7 +64,7 @@ Public Class addMotorcycle
     End Sub
 
     'function methods
-    Function fncCheckEngineNo(p_filter As String, p_search As String) As Boolean
+    Function fncCheckEngineNo(p_search As String) As Boolean
         Dim result As String
 
         sqlUMTCAdapter = New MySqlDataAdapter
@@ -74,7 +74,6 @@ Public Class addMotorcycle
             .Parameters.Clear()
             .CommandText = "prc_FindStockDuplicate"
             .CommandType = CommandType.StoredProcedure
-            .Parameters.AddWithValue("@p_filter", p_filter)
             .Parameters.AddWithValue("@p_search", p_search)
             sqlUMTCAdapter.SelectCommand = command
             DataUMTC.Clear()
