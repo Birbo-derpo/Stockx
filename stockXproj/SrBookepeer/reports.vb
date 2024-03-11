@@ -4,44 +4,48 @@ Public Class reports
     Private Sub reports_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CheckDatabaseConnection()
         PrcDisplaySalesReport()
-        ReleaseUnits("Bajada", "Released", cmb_Month.Text)
-        ReleaseUnits("Tagum", "Released", cmb_Month.Text)
-        ReleaseUnits("Davao", "Released", cmb_Month.Text)
-        ReleaseUnits("General Santos", "Released", cmb_Month.Text)
-        ReleaseUnits("Kidapawan", "Released", cmb_Month.Text)
-        ReleaseUnits("Digos", "Released", cmb_Month.Text)
+        ReleaseUnits("Bajada", "Released")
+        ReleaseUnits("Tagum", "Released")
+        ReleaseUnits("Davao", "Released")
+        ReleaseUnits("General Santos", "Released")
+        ReleaseUnits("Kidapawan", "Released")
+        ReleaseUnits("Digos", "Released")
 
     End Sub
-    Private Sub ReleaseUnits(p_Branch As String, p_Status As String, p_Month As String)
+    Private Sub ReleaseUnits(p_Branch As String, p_Status As String)
         sqlUMTCAdapter = New MySqlDataAdapter
         DataUMTC = New DataTable
 
         With command
             .Parameters.Clear()
-            .CommandText = "prc_ReleasaeUnitPerBranch"
+            .CommandText = "prc_ReleaseUnitPerBranch"
             .CommandType = CommandType.StoredProcedure
             .Parameters.AddWithValue("@p_Branch", p_Branch)
             .Parameters.AddWithValue("@p_Status", p_Status)
-            .Parameters.AddWithValue("@p_month", p_Month)
+            .Parameters.AddWithValue("@p_month", cmb_Month.Text)
             sqlUMTCAdapter.SelectCommand = command
             DataUMTC.Clear()
             sqlUMTCAdapter.Fill(DataUMTC)
-
-            Select Case p_Branch
-                Case "Bajada"
-                    btnBajada.Text &= DataUMTC.Rows(0).Item("total").ToString
-                Case "Tagum"
-                    btnTagum.Text &= DataUMTC.Rows(0).Item("total").ToString
-                Case "Davao"
-                    btnDavao.Text &= DataUMTC.Rows(0).Item("total").ToString
-                Case "General Santos"
-                    btnGensan.Text &= DataUMTC.Rows(0).Item("total").ToString
-                Case "Kidapawan"
-                    btnKidapawan.Text &= DataUMTC.Rows(0).Item("total").ToString
-                Case "Digos"
-                    btnDigos.Text &= DataUMTC.Rows(0).Item("total").ToString
-            End Select
-
+            If DataUMTC.Rows.Count > 0 Then
+                Select Case p_Branch
+                    Case "Bajada", "Tagum", "Davao", "General Santos", "Kidapawan", "Digos"
+                        Dim totalUnits As String = DataUMTC.Rows(0).Item("total").ToString()
+                        Select Case p_Branch
+                            Case "Bajada"
+                                btnBajada.Text &= totalUnits
+                            Case "Tagum"
+                                btnTagum.Text &= totalUnits
+                            Case "Davao"
+                                btnDavao.Text &= totalUnits
+                            Case "General Santos"
+                                btnGensan.Text &= totalUnits
+                            Case "Kidapawan"
+                                btnKidapawan.Text &= totalUnits
+                            Case "Digos"
+                                btnDigos.Text &= totalUnits
+                        End Select
+                End Select
+            End If
         End With
         sqlUMTCAdapter.Dispose()
         DataUMTC.Dispose()
@@ -224,6 +228,22 @@ Public Class reports
     End Sub
 
     Private Sub cmb_Month_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_Month.SelectedIndexChanged
+        btnBajada.Text = "BAJADA:   "
+        btnTagum.Text = "TAGUM:   "
+        btnDavao.Text = "DAVAO:   "
+        btnGensan.Text = "GENERAL SANTOS:   "
+        btnKidapawan.Text = "KIDAPAWAN:   "
+        btnDigos.Text = "DIGOS:   "
+
+
+        ReleaseUnits("Bajada", "Released")
+        ReleaseUnits("Tagum", "Released")
+        ReleaseUnits("Davao", "Released")
+        ReleaseUnits("General Santos", "Released")
+        ReleaseUnits("Kidapawan", "Released")
+        ReleaseUnits("Digos", "Released")
+
+
         sqlUMTCAdapter = New MySqlDataAdapter
         DataUMTC = New DataTable
         Try
