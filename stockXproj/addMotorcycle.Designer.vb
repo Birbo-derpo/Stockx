@@ -35,13 +35,13 @@ Partial Class addMotorcycle
         Me.txtFrameNumber = New System.Windows.Forms.TextBox()
         Me.txtEngineNumber = New System.Windows.Forms.TextBox()
         Me.txtPrice = New System.Windows.Forms.TextBox()
-        Me.txtColor = New System.Windows.Forms.TextBox()
-        Me.txtModel = New System.Windows.Forms.TextBox()
         Me.txtInvoiceNumber = New System.Windows.Forms.TextBox()
         Me.Btn_Clear = New System.Windows.Forms.Button()
         Me.Btn_close = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Btn_AddCateg = New System.Windows.Forms.Button()
+        Me.Cmb_Color = New System.Windows.Forms.ComboBox()
+        Me.Cmb_Model = New System.Windows.Forms.ComboBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -52,7 +52,7 @@ Partial Class addMotorcycle
         Me.Btn_Add.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Add.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_Add.Location = New System.Drawing.Point(315, 289)
-        Me.Btn_Add.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Add.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Add.Name = "Btn_Add"
         Me.Btn_Add.Size = New System.Drawing.Size(82, 34)
         Me.Btn_Add.TabIndex = 50
@@ -118,7 +118,7 @@ Partial Class addMotorcycle
         '
         Me.dt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dt.Location = New System.Drawing.Point(370, 67)
-        Me.dt.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dt.Margin = New System.Windows.Forms.Padding(2)
         Me.dt.Name = "dt"
         Me.dt.Size = New System.Drawing.Size(270, 23)
         Me.dt.TabIndex = 44
@@ -149,7 +149,7 @@ Partial Class addMotorcycle
         '
         Me.txtFrameNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtFrameNumber.Location = New System.Drawing.Point(370, 227)
-        Me.txtFrameNumber.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtFrameNumber.Margin = New System.Windows.Forms.Padding(2)
         Me.txtFrameNumber.Name = "txtFrameNumber"
         Me.txtFrameNumber.Size = New System.Drawing.Size(270, 26)
         Me.txtFrameNumber.TabIndex = 41
@@ -158,7 +158,7 @@ Partial Class addMotorcycle
         '
         Me.txtEngineNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtEngineNumber.Location = New System.Drawing.Point(370, 197)
-        Me.txtEngineNumber.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtEngineNumber.Margin = New System.Windows.Forms.Padding(2)
         Me.txtEngineNumber.Name = "txtEngineNumber"
         Me.txtEngineNumber.Size = New System.Drawing.Size(270, 26)
         Me.txtEngineNumber.TabIndex = 40
@@ -167,34 +167,16 @@ Partial Class addMotorcycle
         '
         Me.txtPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPrice.Location = New System.Drawing.Point(370, 168)
-        Me.txtPrice.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtPrice.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPrice.Name = "txtPrice"
         Me.txtPrice.Size = New System.Drawing.Size(270, 26)
         Me.txtPrice.TabIndex = 39
-        '
-        'txtColor
-        '
-        Me.txtColor.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtColor.Location = New System.Drawing.Point(370, 139)
-        Me.txtColor.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.txtColor.Name = "txtColor"
-        Me.txtColor.Size = New System.Drawing.Size(270, 26)
-        Me.txtColor.TabIndex = 38
-        '
-        'txtModel
-        '
-        Me.txtModel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtModel.Location = New System.Drawing.Point(370, 110)
-        Me.txtModel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.txtModel.Name = "txtModel"
-        Me.txtModel.Size = New System.Drawing.Size(270, 26)
-        Me.txtModel.TabIndex = 37
         '
         'txtInvoiceNumber
         '
         Me.txtInvoiceNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtInvoiceNumber.Location = New System.Drawing.Point(370, 37)
-        Me.txtInvoiceNumber.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtInvoiceNumber.Margin = New System.Windows.Forms.Padding(2)
         Me.txtInvoiceNumber.Name = "txtInvoiceNumber"
         Me.txtInvoiceNumber.Size = New System.Drawing.Size(270, 26)
         Me.txtInvoiceNumber.TabIndex = 36
@@ -206,7 +188,7 @@ Partial Class addMotorcycle
         Me.Btn_Clear.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Clear.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_Clear.Location = New System.Drawing.Point(422, 289)
-        Me.Btn_Clear.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Clear.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Clear.Name = "Btn_Clear"
         Me.Btn_Clear.Size = New System.Drawing.Size(82, 34)
         Me.Btn_Clear.TabIndex = 51
@@ -220,7 +202,7 @@ Partial Class addMotorcycle
         Me.Btn_close.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_close.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_close.Location = New System.Drawing.Point(508, 289)
-        Me.Btn_close.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_close.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_close.Name = "Btn_close"
         Me.Btn_close.Size = New System.Drawing.Size(82, 34)
         Me.Btn_close.TabIndex = 52
@@ -234,7 +216,7 @@ Partial Class addMotorcycle
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox1.ErrorImage = Nothing
         Me.PictureBox1.Location = New System.Drawing.Point(-2, 1)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(186, 174)
         Me.PictureBox1.TabIndex = 69
@@ -247,18 +229,36 @@ Partial Class addMotorcycle
         Me.Btn_AddCateg.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_AddCateg.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_AddCateg.Location = New System.Drawing.Point(610, 289)
-        Me.Btn_AddCateg.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_AddCateg.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_AddCateg.Name = "Btn_AddCateg"
         Me.Btn_AddCateg.Size = New System.Drawing.Size(112, 41)
         Me.Btn_AddCateg.TabIndex = 70
         Me.Btn_AddCateg.Text = "ADD NEW MODEL/COLOR"
         Me.Btn_AddCateg.UseVisualStyleBackColor = False
         '
+        'Cmb_Color
+        '
+        Me.Cmb_Color.FormattingEnabled = True
+        Me.Cmb_Color.Location = New System.Drawing.Point(370, 140)
+        Me.Cmb_Color.Name = "Cmb_Color"
+        Me.Cmb_Color.Size = New System.Drawing.Size(270, 21)
+        Me.Cmb_Color.TabIndex = 71
+        '
+        'Cmb_Model
+        '
+        Me.Cmb_Model.FormattingEnabled = True
+        Me.Cmb_Model.Location = New System.Drawing.Point(370, 113)
+        Me.Cmb_Model.Name = "Cmb_Model"
+        Me.Cmb_Model.Size = New System.Drawing.Size(270, 21)
+        Me.Cmb_Model.TabIndex = 72
+        '
         'addMotorcycle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(757, 365)
+        Me.Controls.Add(Me.Cmb_Model)
+        Me.Controls.Add(Me.Cmb_Color)
         Me.Controls.Add(Me.Btn_AddCateg)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Btn_close)
@@ -275,10 +275,8 @@ Partial Class addMotorcycle
         Me.Controls.Add(Me.txtFrameNumber)
         Me.Controls.Add(Me.txtEngineNumber)
         Me.Controls.Add(Me.txtPrice)
-        Me.Controls.Add(Me.txtColor)
-        Me.Controls.Add(Me.txtModel)
         Me.Controls.Add(Me.txtInvoiceNumber)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "addMotorcycle"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "addMotorcycle"
@@ -300,11 +298,11 @@ Partial Class addMotorcycle
     Friend WithEvents txtFrameNumber As TextBox
     Friend WithEvents txtEngineNumber As TextBox
     Friend WithEvents txtPrice As TextBox
-    Friend WithEvents txtColor As TextBox
-    Friend WithEvents txtModel As TextBox
     Friend WithEvents txtInvoiceNumber As TextBox
     Friend WithEvents Btn_Clear As Button
     Friend WithEvents Btn_close As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Btn_AddCateg As Button
+    Friend WithEvents Cmb_Color As ComboBox
+    Friend WithEvents Cmb_Model As ComboBox
 End Class
