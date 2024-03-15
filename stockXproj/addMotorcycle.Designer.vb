@@ -35,13 +35,13 @@ Partial Class addMotorcycle
         Me.txtFrameNumber = New System.Windows.Forms.TextBox()
         Me.txtEngineNumber = New System.Windows.Forms.TextBox()
         Me.txtPrice = New System.Windows.Forms.TextBox()
-        Me.txtColor = New System.Windows.Forms.TextBox()
-        Me.txtModel = New System.Windows.Forms.TextBox()
         Me.txtInvoiceNumber = New System.Windows.Forms.TextBox()
         Me.Btn_Clear = New System.Windows.Forms.Button()
         Me.Btn_close = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Btn_AddCateg = New System.Windows.Forms.Button()
+        Me.Cmb_Color = New System.Windows.Forms.ComboBox()
+        Me.Cmb_Model = New System.Windows.Forms.ComboBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -53,6 +53,8 @@ Partial Class addMotorcycle
         Me.Btn_Add.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_Add.Location = New System.Drawing.Point(420, 356)
         Me.Btn_Add.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+
+
         Me.Btn_Add.Name = "Btn_Add"
         Me.Btn_Add.Size = New System.Drawing.Size(109, 42)
         Me.Btn_Add.TabIndex = 50
@@ -247,11 +249,29 @@ Partial Class addMotorcycle
         Me.Btn_AddCateg.Text = "ADD NEW MODEL/COLOR"
         Me.Btn_AddCateg.UseVisualStyleBackColor = False
         '
+        'Cmb_Color
+        '
+        Me.Cmb_Color.FormattingEnabled = True
+        Me.Cmb_Color.Location = New System.Drawing.Point(370, 140)
+        Me.Cmb_Color.Name = "Cmb_Color"
+        Me.Cmb_Color.Size = New System.Drawing.Size(270, 21)
+        Me.Cmb_Color.TabIndex = 71
+        '
+        'Cmb_Model
+        '
+        Me.Cmb_Model.FormattingEnabled = True
+        Me.Cmb_Model.Location = New System.Drawing.Point(370, 113)
+        Me.Cmb_Model.Name = "Cmb_Model"
+        Me.Cmb_Model.Size = New System.Drawing.Size(270, 21)
+        Me.Cmb_Model.TabIndex = 72
+        '
         'addMotorcycle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1009, 449)
+        Me.Controls.Add(Me.Cmb_Model)
+        Me.Controls.Add(Me.Cmb_Color)
         Me.Controls.Add(Me.Btn_AddCateg)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Btn_close)
@@ -268,8 +288,6 @@ Partial Class addMotorcycle
         Me.Controls.Add(Me.txtFrameNumber)
         Me.Controls.Add(Me.txtEngineNumber)
         Me.Controls.Add(Me.txtPrice)
-        Me.Controls.Add(Me.txtColor)
-        Me.Controls.Add(Me.txtModel)
         Me.Controls.Add(Me.txtInvoiceNumber)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "addMotorcycle"
@@ -293,11 +311,11 @@ Partial Class addMotorcycle
     Friend WithEvents txtFrameNumber As TextBox
     Friend WithEvents txtEngineNumber As TextBox
     Friend WithEvents txtPrice As TextBox
-    Friend WithEvents txtColor As TextBox
-    Friend WithEvents txtModel As TextBox
     Friend WithEvents txtInvoiceNumber As TextBox
     Friend WithEvents Btn_Clear As Button
     Friend WithEvents Btn_close As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Btn_AddCateg As Button
+    Friend WithEvents Cmb_Color As ComboBox
+    Friend WithEvents Cmb_Model As ComboBox
 End Class
