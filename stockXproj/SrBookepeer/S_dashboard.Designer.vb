@@ -33,7 +33,10 @@ Partial Class S_dashboard
         Me.Btn_Customers = New System.Windows.Forms.Button()
         Me.Btn_Branches = New System.Windows.Forms.Button()
         Me.Btn_MainOffice = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnLogout = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -111,7 +114,7 @@ Partial Class S_dashboard
         '
         Me.Lbl_Main.AutoSize = True
         Me.Lbl_Main.Font = New System.Drawing.Font("Arial Rounded MT Bold", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lbl_Main.Location = New System.Drawing.Point(924, 511)
+        Me.Lbl_Main.Location = New System.Drawing.Point(945, 521)
         Me.Lbl_Main.Name = "Lbl_Main"
         Me.Lbl_Main.Size = New System.Drawing.Size(257, 38)
         Me.Lbl_Main.TabIndex = 42
@@ -122,7 +125,7 @@ Partial Class S_dashboard
         Me.Btn_Customers.BackColor = System.Drawing.Color.Firebrick
         Me.Btn_Customers.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Customers.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_Customers.Location = New System.Drawing.Point(1270, 283)
+        Me.Btn_Customers.Location = New System.Drawing.Point(879, 319)
         Me.Btn_Customers.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Customers.Name = "Btn_Customers"
         Me.Btn_Customers.Size = New System.Drawing.Size(243, 80)
@@ -135,7 +138,7 @@ Partial Class S_dashboard
         Me.Btn_Branches.BackColor = System.Drawing.Color.Firebrick
         Me.Btn_Branches.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Branches.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_Branches.Location = New System.Drawing.Point(931, 283)
+        Me.Btn_Branches.Location = New System.Drawing.Point(578, 319)
         Me.Btn_Branches.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Branches.Name = "Btn_Branches"
         Me.Btn_Branches.Size = New System.Drawing.Size(243, 80)
@@ -148,13 +151,39 @@ Partial Class S_dashboard
         Me.Btn_MainOffice.BackColor = System.Drawing.Color.Firebrick
         Me.Btn_MainOffice.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_MainOffice.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_MainOffice.Location = New System.Drawing.Point(603, 283)
+        Me.Btn_MainOffice.Location = New System.Drawing.Point(276, 319)
         Me.Btn_MainOffice.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_MainOffice.Name = "Btn_MainOffice"
         Me.Btn_MainOffice.Size = New System.Drawing.Size(243, 80)
         Me.Btn_MainOffice.TabIndex = 39
         Me.Btn_MainOffice.Text = "MAIN OFFICE"
         Me.Btn_MainOffice.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Firebrick
+        Me.Button1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button1.Location = New System.Drawing.Point(1161, 319)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(243, 80)
+        Me.Button1.TabIndex = 51
+        Me.Button1.Text = "CREATE ACCOUNT"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Firebrick
+        Me.Button2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button2.Location = New System.Drawing.Point(1440, 319)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(243, 80)
+        Me.Button2.TabIndex = 52
+        Me.Button2.Text = "REPORT"
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
@@ -168,11 +197,27 @@ Partial Class S_dashboard
         Me.PictureBox1.TabIndex = 49
         Me.PictureBox1.TabStop = False
         '
+        'btnLogout
+        '
+        Me.btnLogout.BackColor = System.Drawing.Color.Firebrick
+        Me.btnLogout.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnLogout.Location = New System.Drawing.Point(1161, 403)
+        Me.btnLogout.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New System.Drawing.Size(243, 80)
+        Me.btnLogout.TabIndex = 53
+        Me.btnLogout.Text = "LOGOUT"
+        Me.btnLogout.UseVisualStyleBackColor = False
+        '
         'S_dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1924, 922)
+        Me.Controls.Add(Me.btnLogout)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Lbl_Digos)
@@ -206,4 +251,7 @@ Partial Class S_dashboard
     Friend WithEvents Btn_Customers As Button
     Friend WithEvents Btn_Branches As Button
     Friend WithEvents Btn_MainOffice As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents btnLogout As Button
 End Class
