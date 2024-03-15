@@ -199,9 +199,9 @@ Partial Class UpdateStocks
         Me.Label9.Location = New System.Drawing.Point(566, 320)
         Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(103, 16)
+        Me.Label9.Size = New System.Drawing.Size(97, 16)
         Me.Label9.TabIndex = 67
-        Me.Label9.Text = "UNIT AMOUNT"
+        Me.Label9.Text = "PAY AMOUNT"
         '
         'Txt_Amount
         '
