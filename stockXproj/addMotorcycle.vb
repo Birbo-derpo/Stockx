@@ -95,6 +95,10 @@ Public Class addMotorcycle
         End Try
         Return result
     End Function
+
+    Private Sub addMotorcycle_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
     'end function
 
 End Class

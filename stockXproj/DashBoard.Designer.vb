@@ -34,6 +34,7 @@ Partial Class DashBoard
         Me.Lbl_Digos = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnLogout = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -82,7 +83,7 @@ Partial Class DashBoard
         Me.Lbl_Main.Font = New System.Drawing.Font("Arial Rounded MT Bold", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl_Main.Location = New System.Drawing.Point(925, 505)
         Me.Lbl_Main.Name = "Lbl_Main"
-        Me.Lbl_Main.Size = New System.Drawing.Size(264, 39)
+        Me.Lbl_Main.Size = New System.Drawing.Size(257, 38)
         Me.Lbl_Main.TabIndex = 5
         Me.Lbl_Main.Text = "MAIN BRANCH"
         '
@@ -92,7 +93,7 @@ Partial Class DashBoard
         Me.Lbl_Bajada.Font = New System.Drawing.Font("Arial Rounded MT Bold", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl_Bajada.Location = New System.Drawing.Point(928, 617)
         Me.Lbl_Bajada.Name = "Lbl_Bajada"
-        Me.Lbl_Bajada.Size = New System.Drawing.Size(281, 39)
+        Me.Lbl_Bajada.Size = New System.Drawing.Size(275, 38)
         Me.Lbl_Bajada.TabIndex = 6
         Me.Lbl_Bajada.Text = "Bajada Branch: "
         '
@@ -102,7 +103,7 @@ Partial Class DashBoard
         Me.Lbl_Tagum.Font = New System.Drawing.Font("Arial Rounded MT Bold", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl_Tagum.Location = New System.Drawing.Point(592, 617)
         Me.Lbl_Tagum.Name = "Lbl_Tagum"
-        Me.Lbl_Tagum.Size = New System.Drawing.Size(280, 39)
+        Me.Lbl_Tagum.Size = New System.Drawing.Size(272, 38)
         Me.Lbl_Tagum.TabIndex = 8
         Me.Lbl_Tagum.Text = "Tagum Branch: "
         '
@@ -112,7 +113,7 @@ Partial Class DashBoard
         Me.Lbl_Gensan.Font = New System.Drawing.Font("Arial Rounded MT Bold", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl_Gensan.Location = New System.Drawing.Point(1274, 617)
         Me.Lbl_Gensan.Name = "Lbl_Gensan"
-        Me.Lbl_Gensan.Size = New System.Drawing.Size(423, 39)
+        Me.Lbl_Gensan.Size = New System.Drawing.Size(410, 38)
         Me.Lbl_Gensan.TabIndex = 9
         Me.Lbl_Gensan.Text = "General Santos Branch: "
         '
@@ -122,7 +123,7 @@ Partial Class DashBoard
         Me.Lbl_Davao.Font = New System.Drawing.Font("Arial Rounded MT Bold", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl_Davao.Location = New System.Drawing.Point(592, 747)
         Me.Lbl_Davao.Name = "Lbl_Davao"
-        Me.Lbl_Davao.Size = New System.Drawing.Size(271, 39)
+        Me.Lbl_Davao.Size = New System.Drawing.Size(263, 38)
         Me.Lbl_Davao.TabIndex = 10
         Me.Lbl_Davao.Text = "Davao Branch: "
         '
@@ -132,7 +133,7 @@ Partial Class DashBoard
         Me.Lbl_Kidapawan.Font = New System.Drawing.Font("Arial Rounded MT Bold", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl_Kidapawan.Location = New System.Drawing.Point(1274, 747)
         Me.Lbl_Kidapawan.Name = "Lbl_Kidapawan"
-        Me.Lbl_Kidapawan.Size = New System.Drawing.Size(361, 39)
+        Me.Lbl_Kidapawan.Size = New System.Drawing.Size(351, 38)
         Me.Lbl_Kidapawan.TabIndex = 11
         Me.Lbl_Kidapawan.Text = "Kidapawan  Branch: "
         '
@@ -142,7 +143,7 @@ Partial Class DashBoard
         Me.Lbl_Digos.Font = New System.Drawing.Font("Arial Rounded MT Bold", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl_Digos.Location = New System.Drawing.Point(930, 747)
         Me.Lbl_Digos.Name = "Lbl_Digos"
-        Me.Lbl_Digos.Size = New System.Drawing.Size(270, 39)
+        Me.Lbl_Digos.Size = New System.Drawing.Size(261, 38)
         Me.Lbl_Digos.TabIndex = 12
         Me.Lbl_Digos.Text = "Digos  Branch: "
         '
@@ -164,15 +165,29 @@ Partial Class DashBoard
         Me.Label1.Font = New System.Drawing.Font("Bell MT", 25.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(24, 243)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(305, 52)
+        Me.Label1.Size = New System.Drawing.Size(296, 49)
         Me.Label1.TabIndex = 38
         Me.Label1.Text = "DASHBOARD"
+        '
+        'btnLogout
+        '
+        Me.btnLogout.BackColor = System.Drawing.Color.Firebrick
+        Me.btnLogout.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnLogout.Location = New System.Drawing.Point(985, 385)
+        Me.btnLogout.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New System.Drawing.Size(243, 80)
+        Me.btnLogout.TabIndex = 54
+        Me.btnLogout.Text = "LOGOUT"
+        Me.btnLogout.UseVisualStyleBackColor = False
         '
         'DashBoard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1924, 922)
+        Me.Controls.Add(Me.btnLogout)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Lbl_Digos)
@@ -207,4 +222,5 @@ Partial Class DashBoard
     Friend WithEvents Lbl_Digos As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents btnLogout As Button
 End Class

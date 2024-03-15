@@ -1,11 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
-Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
-Public Class Login
-    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CheckDatabaseConnection()
-    End Sub
-
+Public Class LoginSrBookeeper
     Private Sub Btn_Login_Click(sender As Object, e As EventArgs) Handles Btn_Login.Click
         Email = Email_Field.Text
         Password = Pass_Field.Text
@@ -15,7 +10,7 @@ Public Class Login
             DataUMTC = New DataTable
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_Login"
+                .CommandText = "prc_loginBookeeper"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_gmail", Email)
                 .Parameters.AddWithValue("@p_password", Password)
@@ -30,7 +25,7 @@ Public Class Login
 
                 With HondaHomePage
                     Employee_Loginstat = True
-                    DashBoard.Show()
+                    S_dashboard.Show()
                     .Hide()
                     Me.Hide()
                 End With
@@ -49,7 +44,7 @@ Public Class Login
         End Try
     End Sub
 
-    Private Sub lblForgotPassword_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblForgotPassword.LinkClicked
-
+    Private Sub LoginSrBookeeper_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CheckDatabaseConnection()
     End Sub
 End Class

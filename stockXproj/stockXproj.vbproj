@@ -152,6 +152,12 @@
     <Compile Include="addnewunits.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Addsrbookeeper.Designer.vb">
+      <DependentUpon>Addsrbookeeper.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Addsrbookeeper.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Branches\All Unit.Designer.vb">
       <DependentUpon>All Unit.vb</DependentUpon>
     </Compile>
@@ -170,7 +176,25 @@
     <Compile Include="DisplayAllCustomers.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Employee_Or_SrBookeeper.Designer.vb">
+      <DependentUpon>Employee_Or_SrBookeeper.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_Or_SrBookeeper.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Global_Procedure.vb" />
+    <Compile Include="HondaHomePage.Designer.vb">
+      <DependentUpon>HondaHomePage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HondaHomePage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginSrBookeeper.Designer.vb">
+      <DependentUpon>LoginSrBookeeper.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginSrBookeeper.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Main.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -266,6 +290,12 @@
     <Compile Include="Branches\UpdateStocks.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SrBookepeer\CreateEmployee.Designer.vb">
+      <DependentUpon>CreateEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SrBookepeer\CreateEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SrBookepeer\reports.Designer.vb">
       <DependentUpon>reports.vb</DependentUpon>
     </Compile>
@@ -352,6 +382,9 @@
     <EmbeddedResource Include="addnewunits.resx">
       <DependentUpon>addnewunits.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Addsrbookeeper.resx">
+      <DependentUpon>Addsrbookeeper.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Branches\All Unit.resx">
       <DependentUpon>All Unit.vb</DependentUpon>
     </EmbeddedResource>
@@ -361,8 +394,17 @@
     <EmbeddedResource Include="DisplayAllCustomers.resx">
       <DependentUpon>DisplayAllCustomers.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Employee_Or_SrBookeeper.resx">
+      <DependentUpon>Employee_Or_SrBookeeper.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HondaHomePage.resx">
+      <DependentUpon>HondaHomePage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginSrBookeeper.resx">
+      <DependentUpon>LoginSrBookeeper.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
@@ -402,6 +444,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Branches\UpdateStocks.resx">
       <DependentUpon>UpdateStocks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SrBookepeer\CreateEmployee.resx">
+      <DependentUpon>CreateEmployee.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SrBookepeer\MainOffice\S_confirmReserve.resx">
       <DependentUpon>S_confirmReserve.vb</DependentUpon>
