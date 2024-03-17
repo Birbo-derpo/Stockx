@@ -103,7 +103,6 @@ Public Class addMotorcycle
         Return result
     End Function
 
-
     'end function
     Private Sub Predef_model_list()
         Try

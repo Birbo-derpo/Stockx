@@ -74,4 +74,10 @@ Public Class DashBoard
     Private Sub Lbl_Tagum_Click(sender As Object, e As EventArgs) Handles Lbl_Tagum.Click
 
     End Sub
+
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+        Employee_Loginstat = False
+        HondaHomePage.Show()
+        Me.Hide()
+    End Sub
 End Class

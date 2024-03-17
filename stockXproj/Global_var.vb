@@ -11,4 +11,5 @@ Module Global_Var
     Public row, Cust_id As Integer
     Public Login_stat As Boolean
 
+
 End Module
