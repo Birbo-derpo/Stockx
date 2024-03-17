@@ -5,14 +5,20 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
 Public Class DashBoard
     Private Sub DashBoard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CheckDatabaseConnection()
-        TotalUnits("Main")
-        TotalUnits("Bajada")
-        TotalUnits("Tagum")
-        TotalUnits("Davao")
-        TotalUnits("General Santos")
-        TotalUnits("Kidapawan")
-        TotalUnits("Digos")
+        If Login_stat <> True Then
+            Login.Show()
+            Me.Close()
+        Else
+            CheckDatabaseConnection()
+            TotalUnits("Main")
+            TotalUnits("Bajada")
+            TotalUnits("Tagum")
+            TotalUnits("Davao")
+            TotalUnits("General Santos")
+            TotalUnits("Kidapawan")
+            TotalUnits("Digos")
+        End If
+
     End Sub
     Private Sub TotalUnits(p_Branch As String)
         sqlUMTCAdapter = New MySqlDataAdapter

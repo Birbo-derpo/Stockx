@@ -30,6 +30,8 @@ Partial Class ConfirmReserve
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.cmbSearchType = New System.Windows.Forms.ComboBox()
         Me.grdMotorcycle = New System.Windows.Forms.DataGridView()
+        Me.Btn_back = New System.Windows.Forms.Button()
+        Me.dt = New System.Windows.Forms.DateTimePicker()
         Me.Column8 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -38,8 +40,6 @@ Partial Class ConfirmReserve
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Btn_back = New System.Windows.Forms.Button()
-        Me.dt = New System.Windows.Forms.DateTimePicker()
         CType(Me.grdMotorcycle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -139,6 +139,29 @@ Partial Class ConfirmReserve
         Me.grdMotorcycle.Size = New System.Drawing.Size(791, 217)
         Me.grdMotorcycle.TabIndex = 21
         '
+        'Btn_back
+        '
+        Me.Btn_back.BackColor = System.Drawing.Color.Firebrick
+        Me.Btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Btn_back.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_back.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Btn_back.Location = New System.Drawing.Point(127, 356)
+        Me.Btn_back.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_back.Name = "Btn_back"
+        Me.Btn_back.Size = New System.Drawing.Size(93, 27)
+        Me.Btn_back.TabIndex = 29
+        Me.Btn_back.Text = "BACK"
+        Me.Btn_back.UseVisualStyleBackColor = False
+        '
+        'dt
+        '
+        Me.dt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dt.Location = New System.Drawing.Point(648, 33)
+        Me.dt.Margin = New System.Windows.Forms.Padding(2)
+        Me.dt.Name = "dt"
+        Me.dt.Size = New System.Drawing.Size(270, 23)
+        Me.dt.TabIndex = 56
+        '
         'Column8
         '
         Me.Column8.DataPropertyName = "Check_state"
@@ -204,29 +227,6 @@ Partial Class ConfirmReserve
         Me.Column7.ReadOnly = True
         Me.Column7.Width = 125
         '
-        'Btn_back
-        '
-        Me.Btn_back.BackColor = System.Drawing.Color.Firebrick
-        Me.Btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Btn_back.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_back.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_back.Location = New System.Drawing.Point(127, 356)
-        Me.Btn_back.Margin = New System.Windows.Forms.Padding(2)
-        Me.Btn_back.Name = "Btn_back"
-        Me.Btn_back.Size = New System.Drawing.Size(93, 27)
-        Me.Btn_back.TabIndex = 29
-        Me.Btn_back.Text = "BACK"
-        Me.Btn_back.UseVisualStyleBackColor = False
-        '
-        'dt
-        '
-        Me.dt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dt.Location = New System.Drawing.Point(648, 33)
-        Me.dt.Margin = New System.Windows.Forms.Padding(2)
-        Me.dt.Name = "dt"
-        Me.dt.Size = New System.Drawing.Size(270, 23)
-        Me.dt.TabIndex = 56
-        '
         'ConfirmReserve
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -261,6 +261,7 @@ Partial Class ConfirmReserve
     Friend WithEvents cmbSearchType As ComboBox
     Friend WithEvents grdMotorcycle As DataGridView
     Friend WithEvents Btn_back As Button
+    Friend WithEvents dt As DateTimePicker
     Friend WithEvents Column8 As DataGridViewCheckBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
@@ -269,5 +270,4 @@ Partial Class ConfirmReserve
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
-    Friend WithEvents dt As DateTimePicker
 End Class

@@ -2,10 +2,16 @@
 
 Public Class UpdateStocks
     Private Sub UpdateStocks_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If fncCheckOwned(Txt_EngineNumber.Text) = True Then
-            MessageBox.Show("Unit Already owned.", "YO how did you?", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Me.Hide()
+        If Login_stat <> True Then
+            Login.Show()
+            Me.Close()
+        Else
+            If fncCheckOwned(Txt_EngineNumber.Text) = True Then
+                MessageBox.Show("Unit Already owned.", "YO how did you?", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Me.Hide()
+            End If
         End If
+
     End Sub
 
     Function fncCheckOwned(p_EngineNum As String) As Boolean

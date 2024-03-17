@@ -2,8 +2,14 @@
 
 Public Class Released
     Private Sub Released_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CheckDatabaseConnection()
-        PrcDisplayReleasedStock()
+        If Login_stat <> True Then
+            Login.Show()
+            Me.Close()
+        Else
+            CheckDatabaseConnection()
+            PrcDisplayReleasedStock()
+        End If
+
     End Sub
     'dataloader
     Private Sub PrcDisplayReleasedStock()

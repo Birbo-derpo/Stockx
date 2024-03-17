@@ -3,8 +3,13 @@ Imports MySql.Data.MySqlClient
 
 Public Class ConfirmReserve
     Private Sub ConfirmReserve_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CheckDatabaseConnection()
-        PrcDisplayAvailableUnits()
+        If Login_stat <> True Then
+            Login.Show()
+            Me.Close()
+        Else
+            CheckDatabaseConnection()
+            PrcDisplayAvailableUnits()
+        End If
     End Sub
 
     'dataloader
