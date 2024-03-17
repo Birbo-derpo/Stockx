@@ -2,8 +2,14 @@
 
 Public Class Customer
     Private Sub Customer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CheckDatabaseConnection()
-        PrcDisplayAllCustomers()
+        If Login_stat <> True Then
+            Login.Show()
+            Me.Close()
+        Else
+            CheckDatabaseConnection()
+            PrcDisplayAllCustomers()
+        End If
+
     End Sub
 
     'dataloader

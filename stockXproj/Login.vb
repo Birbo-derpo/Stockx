@@ -28,6 +28,7 @@ Public Class Login
                 MessageBox.Show("Invalid Username or Password", "Login Details", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
                 MessageBox.Show("Login Success", "Login Details", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Login_stat = True
             End If
 
             Email_Field.Clear()
