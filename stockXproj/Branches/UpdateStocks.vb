@@ -44,6 +44,7 @@ Public Class UpdateStocks
         End Try
         Return result
     End Function
+
     Private Sub Btn_Update_Click(sender As Object, e As EventArgs) Handles Btn_Update.Click
         Try
             If action = "Update" Then
