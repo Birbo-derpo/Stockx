@@ -2,8 +2,14 @@
 
 Public Class TRANSIT
     Private Sub TRANSIT_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CheckDatabaseConnection()
-        PrcDisplayTransitUnits()
+        If Login_stat <> True Then
+            Login.Show()
+            Me.Close()
+        Else
+            CheckDatabaseConnection()
+            PrcDisplayTransitUnits()
+        End If
+
     End Sub
     Private Sub PrcDisplayTransitUnits()
         Try

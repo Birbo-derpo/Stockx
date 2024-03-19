@@ -7,8 +7,14 @@ Public Class MainBranchInventory
 
     'dataloader
     Private Sub MainBranchInventory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CheckDatabaseConnection()
-        PrcDisplayUnits()
+        If Login_stat <> True Then
+            Login.Show()
+            Me.Close()
+        Else
+            CheckDatabaseConnection()
+            PrcDisplayUnits()
+        End If
+
     End Sub
 
     Private Sub PrcDisplayUnits()
@@ -137,10 +143,6 @@ Public Class MainBranchInventory
         End Try
     End Sub
 
-    Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
-
-
-    End Sub
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles Btn_Search.Click
         sqlUMTCAdapter = New MySqlDataAdapter
         datUMTC = New DataTable

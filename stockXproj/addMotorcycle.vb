@@ -2,8 +2,14 @@
 
 Public Class addMotorcycle
     Private Sub addMotorcycle_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Predef_model_list()
-        Predef_color_list()
+        If Login_stat <> True Then
+            Login.Show()
+            Me.Close()
+        Else
+            Predef_model_list()
+            Predef_color_list()
+        End If
+
     End Sub
     Private Sub Btn_Add_Click(sender As Object, e As EventArgs) Handles Btn_Add.Click
         Try
@@ -49,7 +55,7 @@ Public Class addMotorcycle
         End Try
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Btn_Clear.Click
+    Private Sub Button_Clear_Click(sender As Object, e As EventArgs) Handles Btn_Clear.Click
 
         txtEngineNumber.Clear()
         txtFrameNumber.Clear()

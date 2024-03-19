@@ -41,6 +41,7 @@ Partial Class Customer
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -51,7 +52,7 @@ Partial Class Customer
         'grd_AllCustomer
         '
         Me.grd_AllCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.grd_AllCustomer.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column12, Me.Column10, Me.Column13, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column11, Me.Column14})
+        Me.grd_AllCustomer.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column12, Me.Column10, Me.Column13, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column15, Me.Column9, Me.Column11, Me.Column14})
         Me.grd_AllCustomer.Location = New System.Drawing.Point(38, 290)
         Me.grd_AllCustomer.Margin = New System.Windows.Forms.Padding(2)
         Me.grd_AllCustomer.Name = "grd_AllCustomer"
@@ -152,6 +153,7 @@ Partial Class Customer
         Me.Column1.HeaderText = "LAST NAME"
         Me.Column1.MinimumWidth = 6
         Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
         '
         'Column2
         '
@@ -159,6 +161,7 @@ Partial Class Customer
         Me.Column2.HeaderText = "FIRST NAME"
         Me.Column2.MinimumWidth = 6
         Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
         '
         'Column3
         '
@@ -166,6 +169,7 @@ Partial Class Customer
         Me.Column3.HeaderText = "STATUS"
         Me.Column3.MinimumWidth = 6
         Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
         '
         'Column12
         '
@@ -173,6 +177,7 @@ Partial Class Customer
         Me.Column12.HeaderText = "MODEL"
         Me.Column12.MinimumWidth = 6
         Me.Column12.Name = "Column12"
+        Me.Column12.ReadOnly = True
         '
         'Column10
         '
@@ -180,6 +185,7 @@ Partial Class Customer
         Me.Column10.HeaderText = "COLOR"
         Me.Column10.MinimumWidth = 6
         Me.Column10.Name = "Column10"
+        Me.Column10.ReadOnly = True
         '
         'Column13
         '
@@ -187,6 +193,7 @@ Partial Class Customer
         Me.Column13.HeaderText = "BRANCH"
         Me.Column13.MinimumWidth = 6
         Me.Column13.Name = "Column13"
+        Me.Column13.ReadOnly = True
         '
         'Column4
         '
@@ -194,6 +201,7 @@ Partial Class Customer
         Me.Column4.HeaderText = "ENGINE NO."
         Me.Column4.MinimumWidth = 6
         Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
         '
         'Column5
         '
@@ -201,6 +209,7 @@ Partial Class Customer
         Me.Column5.HeaderText = "FRAME NO."
         Me.Column5.MinimumWidth = 6
         Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
         '
         'Column6
         '
@@ -208,6 +217,7 @@ Partial Class Customer
         Me.Column6.HeaderText = "TYPE OF PAYMENT"
         Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
         '
         'Column7
         '
@@ -215,6 +225,7 @@ Partial Class Customer
         Me.Column7.HeaderText = "TERM OF PAYMENT"
         Me.Column7.MinimumWidth = 6
         Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
         '
         'Column8
         '
@@ -222,13 +233,20 @@ Partial Class Customer
         Me.Column8.HeaderText = "AMOUNT"
         Me.Column8.MinimumWidth = 6
         Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        '
+        'Column15
+        '
+        Me.Column15.HeaderText = "UNIT PRICE"
+        Me.Column15.Name = "Column15"
         '
         'Column9
         '
         Me.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column9.HeaderText = "DATE"
+        Me.Column9.HeaderText = "DATE RECENTLY PROCESSED"
         Me.Column9.MinimumWidth = 6
         Me.Column9.Name = "Column9"
+        Me.Column9.ReadOnly = True
         '
         'Column11
         '
@@ -236,11 +254,13 @@ Partial Class Customer
         Me.Column11.HeaderText = "SIV"
         Me.Column11.MinimumWidth = 6
         Me.Column11.Name = "Column11"
+        Me.Column11.ReadOnly = True
         '
         'Column14
         '
         Me.Column14.HeaderText = "id"
         Me.Column14.Name = "Column14"
+        Me.Column14.ReadOnly = True
         Me.Column14.Visible = False
         '
         'Customer
@@ -285,6 +305,7 @@ Partial Class Customer
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Column15 As DataGridViewTextBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents Column11 As DataGridViewTextBoxColumn
     Friend WithEvents Column14 As DataGridViewTextBoxColumn
