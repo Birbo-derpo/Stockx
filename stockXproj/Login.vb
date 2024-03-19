@@ -29,11 +29,10 @@ Public Class Login
             Else
                 MessageBox.Show("Login Success", "Login Details", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Login_stat = True
+                Prc_GetEmpName()
                 DashBoard.Show()
                 Me.Close()
             End If
-
-
 
             Email_Field.Clear()
             Pass_Field.Clear()
@@ -45,6 +44,28 @@ Public Class Login
         End Try
     End Sub
 
+    Private Sub Prc_GetEmpName()
+        Try
+            sqlUMTCAdapter = New MySqlDataAdapter
+            DataUMTC = New DataTable
+
+            With command
+                .Parameters.Clear()
+                .CommandText = "prc_getEmployeeName"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_gmail", Email_Field.Text)
+                sqlUMTCAdapter.SelectCommand = command
+                DataUMTC.Clear()
+                sqlUMTCAdapter.Fill(DataUMTC)
+
+            End With
+            sqlUMTCAdapter.Dispose()
+            DataUMTC.Dispose()
+
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+    End Sub
     Private Sub lblForgotPassword_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblForgotPassword.LinkClicked
 
     End Sub

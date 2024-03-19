@@ -2,6 +2,7 @@
 Imports MySql.Data.MySqlClient
 Imports Mysqlx.XDevAPI.Common
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView
 
 Public Class DashBoard
     Private Sub DashBoard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -20,6 +21,7 @@ Public Class DashBoard
         End If
 
     End Sub
+
     Private Sub TotalUnits(p_Branch As String)
         sqlUMTCAdapter = New MySqlDataAdapter
         DataUMTC = New DataTable
@@ -63,7 +65,6 @@ Public Class DashBoard
     Private Sub Btn_Branches_Click(sender As Object, e As EventArgs) Handles Btn_Branches.Click
         All_Unit.Show()
         Me.Hide()
-
     End Sub
 
     Private Sub Btn_Customers_Click(sender As Object, e As EventArgs) Handles Btn_Customers.Click
@@ -71,12 +72,8 @@ Public Class DashBoard
         Me.Hide()
     End Sub
 
-    Private Sub Lbl_Tagum_Click(sender As Object, e As EventArgs) Handles Lbl_Tagum.Click
-
-    End Sub
-
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        Employee_Loginstat = False
+        Login_stat = False
         HondaHomePage.Show()
         Me.Hide()
     End Sub
