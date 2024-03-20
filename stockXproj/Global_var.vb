@@ -15,5 +15,5 @@ Module Global_Var
     Public userGmail As String
 
     Public Login_stat As Boolean
-
+    Public UserId As Integer
 End Module

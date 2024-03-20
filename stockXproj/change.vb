@@ -26,6 +26,7 @@ Public Class change
                 End If
             End With
 
+
         Catch ex As Exception
             MessageBox.Show("An error occurred: " & ex.Message)
         End Try
@@ -33,6 +34,7 @@ Public Class change
 
     Private Sub change_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CheckDatabaseConnection()
+
     End Sub
 
 

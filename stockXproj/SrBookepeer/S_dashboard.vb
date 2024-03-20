@@ -1,6 +1,7 @@
 ﻿Imports Microsoft.VisualBasic.ApplicationServices
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 Imports MySql.Data.MySqlClient
+Imports Org.BouncyCastle.Asn1.X509
 
 Public Class S_dashboard
 
@@ -66,12 +67,19 @@ Public Class S_dashboard
 
     End Sub
 
+    Private Sub btnchange_Click(sender As Object, e As EventArgs) Handles btnchange.Click
+        ChangePasswordEmployee.ShowDialog()
+        Me.Hide()
+
+    End Sub
+
+
     Private Sub Lbl_Main_Click(sender As Object, e As EventArgs) Handles Lbl_Main.Click
 
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        Employee_Loginstat = False
+        Login_stat = False
         HondaHomePage.Show()
         Me.Hide()
     End Sub
@@ -91,7 +99,7 @@ Public Class S_dashboard
                 .Parameters.Clear()
                 .CommandText = "prc_DisplayCurrentUser"
                 .CommandType = CommandType.StoredProcedure
-                .Parameters.AddWithValue("@p_User", lblgmail.Text)
+                .Parameters.AddWithValue("@p_User", UserId)
                 sqlUMTCAdapter.SelectCommand = command
                 DataUMTC.Clear()
                 sqlUMTCAdapter.Fill(DataUMTC)
@@ -103,7 +111,7 @@ Public Class S_dashboard
                     Position = DataUMTC.Rows(0).Item("Positions").ToString
                     full = Firstname & " " & Lastname
 
-                    lblgmail.Text = "Gmail:" + Gmail
+                    lblgmail.Text = "Gmail: " + Gmail
                     lblUser.Text = "User: " + full
                     lblPositionn.Text = "Position: " + Position
 

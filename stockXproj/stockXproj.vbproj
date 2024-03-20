@@ -188,6 +188,12 @@
     <Compile Include="change.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ChangePasswordEmployee.Designer.vb">
+      <DependentUpon>ChangePasswordEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePasswordEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DashBoard.Designer.vb">
       <DependentUpon>DashBoard.vb</DependentUpon>
     </Compile>
@@ -438,6 +444,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="change.resx">
       <DependentUpon>change.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswordEmployee.resx">
+      <DependentUpon>ChangePasswordEmployee.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.vb</DependentUpon>
