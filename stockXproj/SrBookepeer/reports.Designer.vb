@@ -208,7 +208,7 @@ Partial Class reports
         Me.Controls.Add(Me.cmb_Month)
         Me.Controls.Add(Me.grd_report)
         Me.Name = "reports"
-        Me.Text = "reports"
+        Me.Text = "aa"
         CType(Me.grd_report, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

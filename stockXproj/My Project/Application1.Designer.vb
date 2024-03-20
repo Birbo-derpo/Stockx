@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.stockXproj.Forgot_Password
+            Me.MainForm = Global.stockXproj.HondaHomePage
         End Sub
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
