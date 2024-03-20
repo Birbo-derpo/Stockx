@@ -222,4 +222,7 @@ Public Class Repossess
         End If
     End Sub
 
+    Private Sub Chk_Auto_CheckedChanged(sender As Object, e As EventArgs) Handles Chk_Auto.CheckedChanged
+
+    End Sub
 End Class

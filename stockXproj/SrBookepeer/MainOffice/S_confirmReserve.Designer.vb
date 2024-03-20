@@ -22,6 +22,7 @@ Partial Class S_confirmReserve
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(S_confirmReserve))
         Me.Btn_back = New System.Windows.Forms.Button()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -39,19 +40,21 @@ Partial Class S_confirmReserve
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.cmbSearchType = New System.Windows.Forms.ComboBox()
         Me.grdMotorcycle = New System.Windows.Forms.DataGridView()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.grdMotorcycle, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Btn_back
         '
         Me.Btn_back.BackColor = System.Drawing.Color.Firebrick
-        Me.Btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Btn_back.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_back.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_back.Location = New System.Drawing.Point(159, 448)
+        Me.Btn_back.Location = New System.Drawing.Point(194, 474)
         Me.Btn_back.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_back.Name = "Btn_back"
-        Me.Btn_back.Size = New System.Drawing.Size(124, 33)
+        Me.Btn_back.Size = New System.Drawing.Size(124, 42)
         Me.Btn_back.TabIndex = 38
         Me.Btn_back.Text = "BACK"
         Me.Btn_back.UseVisualStyleBackColor = False
@@ -123,34 +126,33 @@ Partial Class S_confirmReserve
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(890, 133)
+        Me.Label1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(916, 134)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(103, 23)
+        Me.Label1.Size = New System.Drawing.Size(100, 24)
         Me.Label1.TabIndex = 37
         Me.Label1.Text = "BRANCH:"
         '
         'cmb_tobranch
         '
-        Me.cmb_tobranch.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmb_tobranch.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmb_tobranch.FormattingEnabled = True
         Me.cmb_tobranch.Items.AddRange(New Object() {"Bajada", "Davao", "Digos", "Kidapawan", "Tagum", "General Santos"})
-        Me.cmb_tobranch.Location = New System.Drawing.Point(996, 131)
+        Me.cmb_tobranch.Location = New System.Drawing.Point(1031, 127)
         Me.cmb_tobranch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cmb_tobranch.Name = "cmb_tobranch"
-        Me.cmb_tobranch.Size = New System.Drawing.Size(218, 27)
+        Me.cmb_tobranch.Size = New System.Drawing.Size(218, 31)
         Me.cmb_tobranch.TabIndex = 36
         '
         'Btn_ConfirmReserve
         '
         Me.Btn_ConfirmReserve.BackColor = System.Drawing.Color.Firebrick
-        Me.Btn_ConfirmReserve.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Btn_ConfirmReserve.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_ConfirmReserve.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_ConfirmReserve.Location = New System.Drawing.Point(1090, 448)
+        Me.Btn_ConfirmReserve.Location = New System.Drawing.Point(1125, 474)
         Me.Btn_ConfirmReserve.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_ConfirmReserve.Name = "Btn_ConfirmReserve"
-        Me.Btn_ConfirmReserve.Size = New System.Drawing.Size(124, 33)
+        Me.Btn_ConfirmReserve.Size = New System.Drawing.Size(124, 42)
         Me.Btn_ConfirmReserve.TabIndex = 35
         Me.Btn_ConfirmReserve.Text = "RESERVE"
         Me.Btn_ConfirmReserve.UseVisualStyleBackColor = False
@@ -159,7 +161,7 @@ Partial Class S_confirmReserve
         '
         Me.chkAuto.AutoSize = True
         Me.chkAuto.Font = New System.Drawing.Font("Bell MT", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkAuto.Location = New System.Drawing.Point(159, 113)
+        Me.chkAuto.Location = New System.Drawing.Point(194, 158)
         Me.chkAuto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.chkAuto.Name = "chkAuto"
         Me.chkAuto.Size = New System.Drawing.Size(145, 25)
@@ -170,24 +172,23 @@ Partial Class S_confirmReserve
         'btnSearch
         '
         Me.btnSearch.BackColor = System.Drawing.Color.Firebrick
-        Me.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnSearch.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnSearch.Location = New System.Drawing.Point(527, 47)
+        Me.btnSearch.Location = New System.Drawing.Point(565, 88)
         Me.btnSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(124, 33)
+        Me.btnSearch.Size = New System.Drawing.Size(110, 38)
         Me.btnSearch.TabIndex = 33
         Me.btnSearch.Text = "SEARCH"
         Me.btnSearch.UseVisualStyleBackColor = False
         '
         'txtSearch
         '
-        Me.txtSearch.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearch.Location = New System.Drawing.Point(156, 51)
+        Me.txtSearch.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearch.Location = New System.Drawing.Point(194, 91)
         Me.txtSearch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(365, 27)
+        Me.txtSearch.Size = New System.Drawing.Size(365, 30)
         Me.txtSearch.TabIndex = 32
         '
         'cmbSearchType
@@ -196,7 +197,7 @@ Partial Class S_confirmReserve
         Me.cmbSearchType.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbSearchType.FormattingEnabled = True
         Me.cmbSearchType.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
-        Me.cmbSearchType.Location = New System.Drawing.Point(156, 82)
+        Me.cmbSearchType.Location = New System.Drawing.Point(194, 127)
         Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cmbSearchType.Name = "cmbSearchType"
         Me.cmbSearchType.Size = New System.Drawing.Size(365, 27)
@@ -206,7 +207,7 @@ Partial Class S_confirmReserve
         '
         Me.grdMotorcycle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdMotorcycle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
-        Me.grdMotorcycle.Location = New System.Drawing.Point(159, 168)
+        Me.grdMotorcycle.Location = New System.Drawing.Point(194, 194)
         Me.grdMotorcycle.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.grdMotorcycle.Name = "grdMotorcycle"
         Me.grdMotorcycle.RowHeadersWidth = 51
@@ -214,11 +215,37 @@ Partial Class S_confirmReserve
         Me.grdMotorcycle.Size = New System.Drawing.Size(1055, 267)
         Me.grdMotorcycle.TabIndex = 30
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Book Antiqua", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label2.Location = New System.Drawing.Point(185, 28)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(266, 40)
+        Me.Label2.TabIndex = 90
+        Me.Label2.Text = "RESERVATION" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox1.ErrorImage = Nothing
+        Me.PictureBox1.Location = New System.Drawing.Point(-2, -1)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(190, 184)
+        Me.PictureBox1.TabIndex = 91
+        Me.PictureBox1.TabStop = False
+        '
         'S_confirmReserve
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1371, 528)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Btn_back)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cmb_tobranch)
@@ -231,6 +258,7 @@ Partial Class S_confirmReserve
         Me.Name = "S_confirmReserve"
         Me.Text = "S_confirmReserve"
         CType(Me.grdMotorcycle, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -253,4 +281,6 @@ Partial Class S_confirmReserve
     Friend WithEvents txtSearch As TextBox
     Friend WithEvents cmbSearchType As ComboBox
     Friend WithEvents grdMotorcycle As DataGridView
+    Friend WithEvents Label2 As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

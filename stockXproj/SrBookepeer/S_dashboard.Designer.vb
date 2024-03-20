@@ -35,8 +35,12 @@ Partial Class S_dashboard
         Me.Btn_MainOffice = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnLogout = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblUser = New System.Windows.Forms.Label()
+        Me.lblgmail = New System.Windows.Forms.Label()
+        Me.lblPositionn = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -125,7 +129,7 @@ Partial Class S_dashboard
         Me.Btn_Customers.BackColor = System.Drawing.Color.Firebrick
         Me.Btn_Customers.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Customers.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_Customers.Location = New System.Drawing.Point(879, 319)
+        Me.Btn_Customers.Location = New System.Drawing.Point(674, 319)
         Me.Btn_Customers.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Customers.Name = "Btn_Customers"
         Me.Btn_Customers.Size = New System.Drawing.Size(243, 80)
@@ -138,7 +142,7 @@ Partial Class S_dashboard
         Me.Btn_Branches.BackColor = System.Drawing.Color.Firebrick
         Me.Btn_Branches.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Branches.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_Branches.Location = New System.Drawing.Point(578, 319)
+        Me.Btn_Branches.Location = New System.Drawing.Point(377, 319)
         Me.Btn_Branches.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Branches.Name = "Btn_Branches"
         Me.Btn_Branches.Size = New System.Drawing.Size(243, 80)
@@ -151,7 +155,7 @@ Partial Class S_dashboard
         Me.Btn_MainOffice.BackColor = System.Drawing.Color.Firebrick
         Me.Btn_MainOffice.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_MainOffice.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_MainOffice.Location = New System.Drawing.Point(276, 319)
+        Me.Btn_MainOffice.Location = New System.Drawing.Point(87, 319)
         Me.Btn_MainOffice.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_MainOffice.Name = "Btn_MainOffice"
         Me.Btn_MainOffice.Size = New System.Drawing.Size(243, 80)
@@ -164,7 +168,7 @@ Partial Class S_dashboard
         Me.Button1.BackColor = System.Drawing.Color.Firebrick
         Me.Button1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(1161, 319)
+        Me.Button1.Location = New System.Drawing.Point(947, 319)
         Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(243, 80)
@@ -185,6 +189,32 @@ Partial Class S_dashboard
         Me.Button2.Text = "REPORT"
         Me.Button2.UseVisualStyleBackColor = False
         '
+        'btnLogout
+        '
+        Me.btnLogout.BackColor = System.Drawing.Color.Firebrick
+        Me.btnLogout.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnLogout.Location = New System.Drawing.Point(1191, 319)
+        Me.btnLogout.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New System.Drawing.Size(243, 80)
+        Me.btnLogout.TabIndex = 53
+        Me.btnLogout.Text = "LOGOUT"
+        Me.btnLogout.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.Firebrick
+        Me.Button3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button3.Location = New System.Drawing.Point(947, 403)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(243, 80)
+        Me.Button3.TabIndex = 54
+        Me.Button3.Text = "Accounts"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = Global.stockXproj.My.Resources.Resources.Add_a_subheading__1_
@@ -197,24 +227,42 @@ Partial Class S_dashboard
         Me.PictureBox1.TabIndex = 49
         Me.PictureBox1.TabStop = False
         '
-        'btnLogout
+        'lblUser
         '
-        Me.btnLogout.BackColor = System.Drawing.Color.Firebrick
-        Me.btnLogout.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnLogout.Location = New System.Drawing.Point(1161, 403)
-        Me.btnLogout.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(243, 80)
-        Me.btnLogout.TabIndex = 53
-        Me.btnLogout.Text = "LOGOUT"
-        Me.btnLogout.UseVisualStyleBackColor = False
+        Me.lblUser.AutoSize = True
+        Me.lblUser.Location = New System.Drawing.Point(84, 510)
+        Me.lblUser.Name = "lblUser"
+        Me.lblUser.Size = New System.Drawing.Size(36, 16)
+        Me.lblUser.TabIndex = 55
+        Me.lblUser.Text = "User"
+        '
+        'lblgmail
+        '
+        Me.lblgmail.AutoSize = True
+        Me.lblgmail.Location = New System.Drawing.Point(84, 483)
+        Me.lblgmail.Name = "lblgmail"
+        Me.lblgmail.Size = New System.Drawing.Size(42, 16)
+        Me.lblgmail.TabIndex = 56
+        Me.lblgmail.Text = "Gmail"
+        '
+        'lblPositionn
+        '
+        Me.lblPositionn.AutoSize = True
+        Me.lblPositionn.Location = New System.Drawing.Point(84, 543)
+        Me.lblPositionn.Name = "lblPositionn"
+        Me.lblPositionn.Size = New System.Drawing.Size(62, 16)
+        Me.lblPositionn.TabIndex = 57
+        Me.lblPositionn.Text = "Positionn"
         '
         'S_dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1924, 922)
+        Me.Controls.Add(Me.lblPositionn)
+        Me.Controls.Add(Me.lblgmail)
+        Me.Controls.Add(Me.lblUser)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.btnLogout)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -254,4 +302,8 @@ Partial Class S_dashboard
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents btnLogout As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents lblUser As Label
+    Friend WithEvents lblgmail As Label
+    Friend WithEvents lblPositionn As Label
 End Class

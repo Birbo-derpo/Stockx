@@ -10,4 +10,7 @@ Module Global_Var
     Public EngineNo, Email, Password As String
     Public row, Cust_id As Integer
     Public Employee_Loginstat As Boolean
+    Public toUser As String
+
+    Public userGmail As String
 End Module
