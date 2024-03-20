@@ -1,4 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports System.Data.SqlClient
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 
 Public Class Login
@@ -46,6 +47,11 @@ Public Class Login
     End Sub
 
     Private Sub lblForgotPassword_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblForgotPassword.LinkClicked
+        Forgot_Password.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Pass_Field_TextChanged(sender As Object, e As EventArgs) Handles Pass_Field.TextChanged
 
     End Sub
 End Class

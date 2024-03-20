@@ -1,10 +1,8 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class CreateEmployee
+Public Class EditEmployee
     Private datUMTC As DataTable
     Private Sub Create_Click(sender As Object, e As EventArgs) Handles Create.Click
-
-
         Try
 
             If Not txtGmail.Text.Contains("@") Then
@@ -18,10 +16,9 @@ Public Class CreateEmployee
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_AddEmployee"
+                .CommandText = "prc_EditEmployee"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_Gmail", txtGmail.Text)
-                .Parameters.AddWithValue("@p_password", txtPassword.Text)
                 .Parameters.AddWithValue("@p_First", txtFirst.Text)
                 .Parameters.AddWithValue("@p_Last", txtLast.Text)
                 .Parameters.AddWithValue("@p_Position", cmbPosition.Text)
@@ -35,13 +32,13 @@ Public Class CreateEmployee
 
 
             txtGmail.Clear()
-            txtPassword.Clear()
             txtFirst.Clear()
             txtLast.Clear()
             cmbPosition.SelectedIndex = -1
             cmbGender.SelectedIndex = -1
 
             Me.Dispose()
+            Display_Employee.Show()
 
         Catch ex As MySqlException
 
@@ -57,64 +54,6 @@ Public Class CreateEmployee
         End Try
     End Sub
 
-    Private Sub CreateEmployee_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CheckDatabaseConnection()
-
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-
-    End Sub
-
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-
-    End Sub
-
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
-
-    End Sub
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-
-    End Sub
-
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
-
-    End Sub
-
-    Private Sub txtGmail_TextChanged(sender As Object, e As EventArgs) Handles txtGmail.TextChanged
-
-    End Sub
-
-    Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
-
-    End Sub
-
-    Private Sub txtFirst_TextChanged(sender As Object, e As EventArgs) Handles txtFirst.TextChanged
-
-    End Sub
-
-    Private Sub txtLast_TextChanged(sender As Object, e As EventArgs) Handles txtLast.TextChanged
-
-    End Sub
-
-    Private Sub cmbPosition_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbPosition.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub cmbGender_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbGender.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
-
-    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
-
-    End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
+    Private Sub EditEmployee_Load(sender As Object, e As EventArgs) Handles MyBase.Load
     End Sub
 End Class

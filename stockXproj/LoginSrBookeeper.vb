@@ -10,7 +10,7 @@ Public Class LoginSrBookeeper
             DataUMTC = New DataTable
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_loginBookeeper"
+                .CommandText = "prc_Login"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_gmail", Email)
                 .Parameters.AddWithValue("@p_password", Password)
@@ -23,11 +23,20 @@ Public Class LoginSrBookeeper
                 MessageBox.Show("Invalid Username or Password", "Login Details", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
 
+                Dim userEmail As String = DataUMTC.Rows(0).Item("Gmail").ToString()
+
+
+                Dim dashboardForm As New S_dashboard()
+                dashboardForm.lblgmail.Text = userEmail
+
+
+
                 With HondaHomePage
                     Employee_Loginstat = True
-                    S_dashboard.Show()
-                    .Hide()
-                    Me.Hide()
+                     dashboardForm.Show()
+                    .Dispose()
+
+                    Me.Dispose()
                 End With
 
             End If

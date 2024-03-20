@@ -17,7 +17,7 @@ Public Class Addsrbookeeper
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_AdSrBookeeper"
+                .CommandText = "prc_AddEmployee"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_Gmail", txtGmail.Text)
                 .Parameters.AddWithValue("@p_password", txtPassword.Text)

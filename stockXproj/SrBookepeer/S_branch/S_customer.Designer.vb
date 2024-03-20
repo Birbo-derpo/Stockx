@@ -43,6 +43,7 @@ Partial Class S_customer
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.grd_AllCustomer = New System.Windows.Forms.DataGridView()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.grd_AllCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -50,13 +51,12 @@ Partial Class S_customer
         'Btn_Dashboard
         '
         Me.Btn_Dashboard.BackColor = System.Drawing.Color.Firebrick
-        Me.Btn_Dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Btn_Dashboard.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Dashboard.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_Dashboard.Location = New System.Drawing.Point(-10, 860)
+        Me.Btn_Dashboard.Location = New System.Drawing.Point(12, 882)
         Me.Btn_Dashboard.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Dashboard.Name = "Btn_Dashboard"
-        Me.Btn_Dashboard.Size = New System.Drawing.Size(177, 69)
+        Me.Btn_Dashboard.Size = New System.Drawing.Size(169, 57)
         Me.Btn_Dashboard.TabIndex = 69
         Me.Btn_Dashboard.Text = "DASHBOARD"
         Me.Btn_Dashboard.UseVisualStyleBackColor = False
@@ -64,10 +64,9 @@ Partial Class S_customer
         'Btn_Search
         '
         Me.Btn_Search.BackColor = System.Drawing.Color.Firebrick
-        Me.Btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Btn_Search.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Search.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_Search.Location = New System.Drawing.Point(522, 264)
+        Me.Btn_Search.Location = New System.Drawing.Point(545, 306)
         Me.Btn_Search.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Search.Name = "Btn_Search"
         Me.Btn_Search.Size = New System.Drawing.Size(124, 42)
@@ -78,35 +77,34 @@ Partial Class S_customer
         'Btn_Edit
         '
         Me.Btn_Edit.BackColor = System.Drawing.Color.Firebrick
-        Me.Btn_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Btn_Edit.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold)
         Me.Btn_Edit.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_Edit.Location = New System.Drawing.Point(174, 860)
+        Me.Btn_Edit.Location = New System.Drawing.Point(187, 882)
         Me.Btn_Edit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Edit.Name = "Btn_Edit"
-        Me.Btn_Edit.Size = New System.Drawing.Size(177, 69)
+        Me.Btn_Edit.Size = New System.Drawing.Size(159, 57)
         Me.Btn_Edit.TabIndex = 67
         Me.Btn_Edit.Text = "EDIT"
         Me.Btn_Edit.UseVisualStyleBackColor = False
         '
         'Cmb_Filter
         '
-        Me.Cmb_Filter.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.Cmb_Filter.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Cmb_Filter.FormattingEnabled = True
         Me.Cmb_Filter.Items.AddRange(New Object() {"Last Name", "First Name", "Status", "Model", "Color", "Branch", "Engine no.", "Frame no.", "Type of pay", "Term of pay", "SIV"})
-        Me.Cmb_Filter.Location = New System.Drawing.Point(-10, 309)
+        Me.Cmb_Filter.Location = New System.Drawing.Point(12, 352)
         Me.Cmb_Filter.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Cmb_Filter.Name = "Cmb_Filter"
-        Me.Cmb_Filter.Size = New System.Drawing.Size(376, 25)
+        Me.Cmb_Filter.Size = New System.Drawing.Size(376, 33)
         Me.Cmb_Filter.TabIndex = 66
         '
         'Txt_Search
         '
-        Me.Txt_Search.Font = New System.Drawing.Font("Arial", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txt_Search.Location = New System.Drawing.Point(-10, 266)
+        Me.Txt_Search.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txt_Search.Location = New System.Drawing.Point(12, 309)
         Me.Txt_Search.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Txt_Search.Name = "Txt_Search"
-        Me.Txt_Search.Size = New System.Drawing.Size(527, 39)
+        Me.Txt_Search.Size = New System.Drawing.Size(527, 34)
         Me.Txt_Search.TabIndex = 65
         '
         'Column11
@@ -133,13 +131,13 @@ Partial Class S_customer
         'Chk_Auto
         '
         Me.Chk_Auto.AutoSize = True
-        Me.Chk_Auto.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold)
-        Me.Chk_Auto.Location = New System.Drawing.Point(372, 309)
+        Me.Chk_Auto.Font = New System.Drawing.Font("Bodoni MT", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Chk_Auto.Location = New System.Drawing.Point(404, 358)
         Me.Chk_Auto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Chk_Auto.Name = "Chk_Auto"
-        Me.Chk_Auto.Size = New System.Drawing.Size(142, 23)
+        Me.Chk_Auto.Size = New System.Drawing.Size(135, 25)
         Me.Chk_Auto.TabIndex = 71
-        Me.Chk_Auto.Text = "AutoComplete"
+        Me.Chk_Auto.Text = "Auto Complete"
         Me.Chk_Auto.UseVisualStyleBackColor = True
         '
         'Column7
@@ -216,12 +214,12 @@ Partial Class S_customer
         '
         Me.grd_AllCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grd_AllCustomer.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column12, Me.Column10, Me.Column13, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column11})
-        Me.grd_AllCustomer.Location = New System.Drawing.Point(-10, 351)
+        Me.grd_AllCustomer.Location = New System.Drawing.Point(12, 413)
         Me.grd_AllCustomer.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.grd_AllCustomer.Name = "grd_AllCustomer"
         Me.grd_AllCustomer.RowHeadersWidth = 51
         Me.grd_AllCustomer.RowTemplate.Height = 24
-        Me.grd_AllCustomer.Size = New System.Drawing.Size(1983, 505)
+        Me.grd_AllCustomer.Size = New System.Drawing.Size(1983, 450)
         Me.grd_AllCustomer.TabIndex = 64
         '
         'PictureBox1
@@ -229,18 +227,29 @@ Partial Class S_customer
         Me.PictureBox1.BackgroundImage = Global.stockXproj.My.Resources.Resources.Add_a_subheading__1_
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox1.Location = New System.Drawing.Point(-49, -7)
+        Me.PictureBox1.Location = New System.Drawing.Point(-1, 0)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(2009, 221)
+        Me.PictureBox1.Size = New System.Drawing.Size(2047, 221)
         Me.PictureBox1.TabIndex = 70
         Me.PictureBox1.TabStop = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Arial", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(12, 235)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(347, 44)
+        Me.Label3.TabIndex = 72
+        Me.Label3.Text = "CUSTOMER LISTS"
         '
         'S_customer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1924, 922)
+        Me.ClientSize = New System.Drawing.Size(1924, 970)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Btn_Dashboard)
         Me.Controls.Add(Me.Btn_Search)
@@ -280,4 +289,5 @@ Partial Class S_customer
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents grd_AllCustomer As DataGridView
+    Friend WithEvents Label3 As Label
 End Class
