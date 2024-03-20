@@ -37,6 +37,8 @@ Partial Class Released
         Me.Btn_Repossess = New System.Windows.Forms.Button()
         Me.Btn_Released = New System.Windows.Forms.Button()
         Me.Grd_StockReleased = New System.Windows.Forms.DataGridView()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Column10 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -47,11 +49,13 @@ Partial Class Released
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+
         CType(Me.Grd_StockReleased, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -239,6 +243,37 @@ Partial Class Released
         Me.Grd_StockReleased.Size = New System.Drawing.Size(1688, 505)
         Me.Grd_StockReleased.TabIndex = 53
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.Color.MistyRose
+        Me.GroupBox1.Controls.Add(Me.Btn_AllUnits)
+        Me.GroupBox1.Controls.Add(Me.Btn_AllStock)
+        Me.GroupBox1.Controls.Add(Me.Btn_Released)
+        Me.GroupBox1.Controls.Add(Me.Btn_Deposited)
+        Me.GroupBox1.Controls.Add(Me.Btn_Repossess)
+        Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.GroupBox1.Location = New System.Drawing.Point(0, 233)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox1.Size = New System.Drawing.Size(185, 410)
+        Me.GroupBox1.TabIndex = 69
+        Me.GroupBox1.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox1.ErrorImage = Nothing
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(186, 174)
+        Me.PictureBox1.TabIndex = 70
+        Me.PictureBox1.TabStop = False
+        '
         'Column10
         '
         Me.Column10.HeaderText = "CHECK"
@@ -251,6 +286,7 @@ Partial Class Released
         Me.Column7.HeaderText = "BRANCH"
         Me.Column7.MinimumWidth = 6
         Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
         Me.Column7.Width = 125
         '
         'Column1
@@ -259,6 +295,7 @@ Partial Class Released
         Me.Column1.HeaderText = "MERCHANDISE TRANSFER NUMBER"
         Me.Column1.MinimumWidth = 6
         Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
         '
         'Column2
         '
@@ -266,6 +303,7 @@ Partial Class Released
         Me.Column2.HeaderText = "DATE RELEASED"
         Me.Column2.MinimumWidth = 6
         Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
         '
         'Column3
         '
@@ -273,6 +311,7 @@ Partial Class Released
         Me.Column3.HeaderText = "MODEL"
         Me.Column3.MinimumWidth = 6
         Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
         '
         'Column6
         '
@@ -280,6 +319,7 @@ Partial Class Released
         Me.Column6.HeaderText = "PRICE"
         Me.Column6.MinimumWidth = 6
         Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
         '
         'Column9
         '
@@ -287,6 +327,7 @@ Partial Class Released
         Me.Column9.HeaderText = "COLOR"
         Me.Column9.MinimumWidth = 6
         Me.Column9.Name = "Column9"
+        Me.Column9.ReadOnly = True
         '
         'Column4
         '
@@ -294,6 +335,7 @@ Partial Class Released
         Me.Column4.HeaderText = "ENGINE NO."
         Me.Column4.MinimumWidth = 6
         Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
         '
         'Column5
         '
@@ -301,12 +343,14 @@ Partial Class Released
         Me.Column5.HeaderText = "FRAME NO."
         Me.Column5.MinimumWidth = 6
         Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
         '
         'Column8
         '
         Me.Column8.HeaderText = "STATUS"
         Me.Column8.MinimumWidth = 6
         Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
         Me.Column8.Width = 125
         '
         'GroupBox1
@@ -372,14 +416,17 @@ Partial Class Released
         Me.Label3.TabIndex = 73
         Me.Label3.Text = "INVENTORY LISTS"
         '
+
         'Released
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+
         Me.BackColor = System.Drawing.Color.Snow
         Me.ClientSize = New System.Drawing.Size(1924, 922)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
+
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
@@ -420,9 +467,11 @@ Partial Class Released
     Friend WithEvents Grd_StockReleased As DataGridView
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents PictureBox1 As PictureBox
+
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
+
     Friend WithEvents Column10 As DataGridViewCheckBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn

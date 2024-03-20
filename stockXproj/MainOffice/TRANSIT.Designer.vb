@@ -23,16 +23,6 @@ Partial Class TRANSIT
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Grd_Motorcycle = New System.Windows.Forms.DataGridView()
-        Me.Column8 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Btn_Transfer = New System.Windows.Forms.Button()
         Me.cmb_branch = New System.Windows.Forms.ComboBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -43,6 +33,16 @@ Partial Class TRANSIT
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dt = New System.Windows.Forms.DateTimePicker()
+        Me.Column8 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.Grd_Motorcycle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,85 +63,6 @@ Partial Class TRANSIT
         Me.Grd_Motorcycle.RowTemplate.Height = 24
         Me.Grd_Motorcycle.Size = New System.Drawing.Size(1266, 410)
         Me.Grd_Motorcycle.TabIndex = 37
-        '
-        'Column8
-        '
-        Me.Column8.DataPropertyName = "Check_state"
-        Me.Column8.HeaderText = "SELECT"
-        Me.Column8.MinimumWidth = 6
-        Me.Column8.Name = "Column8"
-        Me.Column8.Width = 125
-        '
-        'Column10
-        '
-        Me.Column10.HeaderText = "FOR BRANCH"
-        Me.Column10.MinimumWidth = 6
-        Me.Column10.Name = "Column10"
-        Me.Column10.Width = 125
-        '
-        'Column9
-        '
-        Me.Column9.HeaderText = "MT NO."
-        Me.Column9.MinimumWidth = 6
-        Me.Column9.Name = "Column9"
-        Me.Column9.ReadOnly = True
-        Me.Column9.Width = 125
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "INVOICE NO."
-        Me.Column1.MinimumWidth = 6
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Width = 125
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "DATE TIME"
-        Me.Column2.MinimumWidth = 6
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Width = 125
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "MODEL"
-        Me.Column3.MinimumWidth = 6
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        Me.Column3.Width = 125
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "COLOR"
-        Me.Column4.MinimumWidth = 6
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        Me.Column4.Width = 125
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "PRICE"
-        Me.Column5.MinimumWidth = 6
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        Me.Column5.Width = 125
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "ENGINE NO."
-        Me.Column6.MinimumWidth = 6
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        Me.Column6.Width = 125
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "FRAME NO."
-        Me.Column7.MinimumWidth = 6
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        Me.Column7.Width = 125
         '
         'Btn_Transfer
         '
@@ -271,6 +192,86 @@ Partial Class TRANSIT
         Me.dt.Size = New System.Drawing.Size(270, 23)
         Me.dt.TabIndex = 58
         '
+        'Column8
+        '
+        Me.Column8.DataPropertyName = "Check_state"
+        Me.Column8.HeaderText = "SELECT"
+        Me.Column8.MinimumWidth = 6
+        Me.Column8.Name = "Column8"
+        Me.Column8.Width = 125
+        '
+        'Column10
+        '
+        Me.Column10.HeaderText = "FOR BRANCH"
+        Me.Column10.MinimumWidth = 6
+        Me.Column10.Name = "Column10"
+        Me.Column10.ReadOnly = True
+        Me.Column10.Width = 125
+        '
+        'Column9
+        '
+        Me.Column9.HeaderText = "MT NO."
+        Me.Column9.MinimumWidth = 6
+        Me.Column9.Name = "Column9"
+        Me.Column9.ReadOnly = True
+        Me.Column9.Width = 125
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "INVOICE NO."
+        Me.Column1.MinimumWidth = 6
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Width = 125
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "DATE TIME"
+        Me.Column2.MinimumWidth = 6
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 125
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "MODEL"
+        Me.Column3.MinimumWidth = 6
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 125
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "COLOR"
+        Me.Column4.MinimumWidth = 6
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 125
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "PRICE"
+        Me.Column5.MinimumWidth = 6
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Width = 125
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "ENGINE NO."
+        Me.Column6.MinimumWidth = 6
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        Me.Column6.Width = 125
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "FRAME NO."
+        Me.Column7.MinimumWidth = 6
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        Me.Column7.Width = 125
+        '
         'TRANSIT
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -305,6 +306,7 @@ Partial Class TRANSIT
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents dt As DateTimePicker
     Friend WithEvents Column8 As DataGridViewCheckBoxColumn
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
@@ -315,5 +317,4 @@ Partial Class TRANSIT
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
-    Friend WithEvents dt As DateTimePicker
 End Class

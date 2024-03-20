@@ -2,8 +2,14 @@
 
 Public Class Deposited
     Private Sub Deposited_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CheckDatabaseConnection()
-        PrcDisplayDepositedStock()
+        If Login_stat <> True Then
+            Login.Show()
+            Me.Close()
+        Else
+            CheckDatabaseConnection()
+            PrcDisplayDepositedStock()
+        End If
+
     End Sub
     'dataloader
 

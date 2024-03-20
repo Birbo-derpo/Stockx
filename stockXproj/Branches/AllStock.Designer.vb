@@ -34,6 +34,12 @@ Partial Class Allstock
         Me.Btn_Repossess = New System.Windows.Forms.Button()
         Me.Btn_Released = New System.Windows.Forms.Button()
         Me.Grd_Stock = New System.Windows.Forms.DataGridView()
+        Me.Btn_AddCust = New System.Windows.Forms.Button()
+        Me.Btn_Dashboard = New System.Windows.Forms.Button()
+        Me.cmb_branch = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -43,6 +49,7 @@ Partial Class Allstock
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+
         Me.Btn_AddCust = New System.Windows.Forms.Button()
         Me.Btn_Dashboard = New System.Windows.Forms.Button()
         Me.cmb_branch = New System.Windows.Forms.ComboBox()
@@ -52,6 +59,7 @@ Partial Class Allstock
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+    
         CType(Me.Grd_Stock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -200,69 +208,6 @@ Partial Class Allstock
         Me.Grd_Stock.Size = New System.Drawing.Size(1688, 505)
         Me.Grd_Stock.TabIndex = 22
         '
-        'Column7
-        '
-        Me.Column7.HeaderText = "BRANCH"
-        Me.Column7.MinimumWidth = 6
-        Me.Column7.Name = "Column7"
-        Me.Column7.Width = 125
-        '
-        'Column1
-        '
-        Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column1.HeaderText = "MT NUMBER"
-        Me.Column1.MinimumWidth = 6
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column2.HeaderText = "DATE ARRIVED"
-        Me.Column2.MinimumWidth = 6
-        Me.Column2.Name = "Column2"
-        '
-        'Column3
-        '
-        Me.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column3.HeaderText = "MODEL"
-        Me.Column3.MinimumWidth = 6
-        Me.Column3.Name = "Column3"
-        '
-        'Column6
-        '
-        Me.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column6.HeaderText = "PRICE"
-        Me.Column6.MinimumWidth = 6
-        Me.Column6.Name = "Column6"
-        '
-        'Column9
-        '
-        Me.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column9.HeaderText = "COLOR"
-        Me.Column9.MinimumWidth = 6
-        Me.Column9.Name = "Column9"
-        '
-        'Column4
-        '
-        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column4.HeaderText = "ENGINE NO."
-        Me.Column4.MinimumWidth = 6
-        Me.Column4.Name = "Column4"
-        '
-        'Column5
-        '
-        Me.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column5.HeaderText = "FRAME NO."
-        Me.Column5.MinimumWidth = 6
-        Me.Column5.Name = "Column5"
-        '
-        'Column8
-        '
-        Me.Column8.HeaderText = "STATUS"
-        Me.Column8.MinimumWidth = 6
-        Me.Column8.Name = "Column8"
-        Me.Column8.Width = 125
-        '
         'Btn_AddCust
         '
         Me.Btn_AddCust.BackColor = System.Drawing.Color.Firebrick
@@ -352,6 +297,7 @@ Partial Class Allstock
         Me.PictureBox1.TabIndex = 69
         Me.PictureBox1.TabStop = False
         '
+
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -371,15 +317,90 @@ Partial Class Allstock
         Me.Label2.Size = New System.Drawing.Size(332, 40)
         Me.Label2.TabIndex = 71
         Me.Label2.Text = "AVAILABLE UNITS"
+
+        'Column7
+        '
+        Me.Column7.HeaderText = "BRANCH"
+        Me.Column7.MinimumWidth = 6
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        Me.Column7.Width = 125
+        '
+        'Column1
+        '
+        Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column1.HeaderText = "MT NUMBER"
+        Me.Column1.MinimumWidth = 6
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column2
+        '
+        Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column2.HeaderText = "DATE ARRIVED"
+        Me.Column2.MinimumWidth = 6
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'Column3
+        '
+        Me.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column3.HeaderText = "MODEL"
+        Me.Column3.MinimumWidth = 6
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column6
+        '
+        Me.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column6.HeaderText = "PRICE"
+        Me.Column6.MinimumWidth = 6
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        '
+        'Column9
+        '
+        Me.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column9.HeaderText = "COLOR"
+        Me.Column9.MinimumWidth = 6
+        Me.Column9.Name = "Column9"
+        Me.Column9.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column4.HeaderText = "ENGINE NO."
+        Me.Column4.MinimumWidth = 6
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Column5
+        '
+        Me.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column5.HeaderText = "FRAME NO."
+        Me.Column5.MinimumWidth = 6
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "STATUS"
+        Me.Column8.MinimumWidth = 6
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        Me.Column8.Width = 125
+
         '
         'Allstock
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+
         Me.BackColor = System.Drawing.Color.Snow
         Me.ClientSize = New System.Drawing.Size(1924, 922)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
+
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
@@ -393,7 +414,9 @@ Partial Class Allstock
         Me.Controls.Add(Me.Grd_Stock)
         Me.Controls.Add(Me.Lbl_Branch)
         Me.Cursor = System.Windows.Forms.Cursors.IBeam
+
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+
         Me.Name = "Allstock"
         Me.Text = "AllStock"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

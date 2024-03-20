@@ -28,14 +28,10 @@ Public Class Login
             If DataUMTC.Rows.Count = 0 Then
                 MessageBox.Show("Invalid Username or Password", "Login Details", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
-
-                With HondaHomePage
-                    Employee_Loginstat = True
-                    DashBoard.Show()
-                    .Hide()
-                    Me.Hide()
-                End With
-
+                MessageBox.Show("Login Success", "Login Details", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Login_stat = True
+                DashBoard.Show()
+                Me.Close()
             End If
 
 

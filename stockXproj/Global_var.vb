@@ -9,8 +9,11 @@ Module Global_Var
             databasepassword, action, State, port As String
     Public EngineNo, Email, Password As String
     Public row, Cust_id As Integer
-    Public Employee_Loginstat As Boolean
+
     Public toUser As String
 
     Public userGmail As String
+
+    Public Login_stat As Boolean
+
 End Module
