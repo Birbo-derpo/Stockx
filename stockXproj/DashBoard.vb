@@ -74,6 +74,7 @@ Public Class DashBoard
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         Login_stat = False
+        Username = ""
         HondaHomePage.Show()
         Me.Hide()
     End Sub
