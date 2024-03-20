@@ -112,6 +112,8 @@ Public Class ConfirmReserve
     End Sub
     'filter end
 
+    'work sample
+
     'Buttons
     Private Sub Btn_Confirm(sender As Object, e As EventArgs) Handles Btn_ConfirmReserve.Click
         If cmb_tobranch.Text <> "" Then
