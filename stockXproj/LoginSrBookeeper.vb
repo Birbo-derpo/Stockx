@@ -59,13 +59,13 @@ Public Class LoginSrBookeeper
 
                     With HondaHomePage
                         Login_stat = True
-                        dashboardForm.Show()
+                        S_dashboard.Show()
                         .Dispose()
 
                         Me.Dispose()
                     End With
                 Else
-                    MessageBox.Show("You do not have permission to access the dashboard.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("Only Sr.Bookeeper.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
             End If
 

@@ -1,4 +1,5 @@
-﻿Imports Microsoft.VisualBasic.ApplicationServices
+﻿Imports Google.Apis
+Imports Microsoft.VisualBasic.ApplicationServices
 Imports MySql.Data.MySqlClient
 Imports Mysqlx.XDevAPI.Common
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
@@ -11,6 +12,7 @@ Public Class DashBoard
             Me.Close()
         Else
             CheckDatabaseConnection()
+            prcDisplayCurrentUser()
             TotalUnits("Main")
             TotalUnits("Bajada")
             TotalUnits("Tagum")
@@ -77,5 +79,50 @@ Public Class DashBoard
         Username = ""
         HondaHomePage.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub btnchange_Click(sender As Object, e As EventArgs) Handles btnchange.Click
+        ChangePasswordEmployee.ShowDialog()
+        Me.Hide()
+    End Sub
+    Private Sub prcDisplayCurrentUser()
+        Try
+            sqlUMTCAdapter = New MySqlDataAdapter
+            DataUMTC = New DataTable
+
+            With command
+                .Parameters.Clear()
+                .CommandText = "prc_DisplayCurrentUser"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_User", EmployeeId)
+                sqlUMTCAdapter.SelectCommand = command
+                DataUMTC.Clear()
+                sqlUMTCAdapter.Fill(DataUMTC)
+
+                If DataUMTC.Rows.Count > 0 Then
+                    Gmail = DataUMTC.Rows(0).Item("Gmail").ToString
+                    Firstname = DataUMTC.Rows(0).Item("FirstName").ToString
+                    Lastname = DataUMTC.Rows(0).Item("LastName").ToString
+                    Position = DataUMTC.Rows(0).Item("Positions").ToString
+                    full = Firstname & " " & Lastname
+
+                    lblgmail.Text = "Gmail: " + Gmail
+                    lblUser.Text = "User: " + full
+                    lblPositionn.Text = "Position: " + Position
+
+                Else
+                    MessageBox.Show("User data not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
+            End With
+
+
+
+
+            sqlUMTCAdapter.Dispose()
+            DataUMTC.Dispose()
+
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
     End Sub
 End Class

@@ -11,9 +11,10 @@ Module Global_Var
     Public row, Cust_id As Integer
 
     Public toUser As String
-
+    Public Gmail, Firstname, Lastname, Position, full As String
     Public userGmail As String
 
     Public Login_stat As Boolean
     Public UserId As Integer
+    Public EmployeeId As Integer
 End Module
