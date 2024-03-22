@@ -2,7 +2,7 @@
 
 Public Class Allstock
 
-    Dim Model, Color, Price, Engine_Num, Frame_Num, MTN As String
+    Dim Branch, Model, Color, Price, Engine_Num, Frame_Num, MTN As String
     'dataloader
 
     Private Sub AllStock_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -113,7 +113,6 @@ Public Class Allstock
         End Try
 
     End Sub
-
     'dataloader end
 
     'buttons
@@ -196,6 +195,7 @@ Public Class Allstock
     Private Sub Btn_AddCust_Click(sender As Object, e As EventArgs) Handles Btn_AddCust.Click
         action = "update"
         With UpdateStocks
+            .lbl_branch = Grd_Stock.CurrentRow.Cells(0).Value
             .Txt_SIN.Text = MTN
             .Txt_Model.Text = Model
             .Txt_Color.Text = Color
@@ -259,6 +259,7 @@ Public Class Allstock
     End Sub
 
     Private Sub Grd_Stock_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_Stock.CellClick
+        Branch = Grd_Stock.CurrentRow.Cells(0).Value.ToString
         Model = Grd_Stock.CurrentRow.Cells(3).Value.ToString
         Color = Grd_Stock.CurrentRow.Cells(5).Value.ToString
         Price = Grd_Stock.CurrentRow.Cells(4).Value.ToString

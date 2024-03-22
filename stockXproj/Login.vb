@@ -58,7 +58,7 @@ Public Class Login
                 sqlUMTCAdapter.SelectCommand = command
                 DataUMTC.Clear()
                 sqlUMTCAdapter.Fill(DataUMTC)
-
+                Username = DataUMTC.Rows(row).Item("User_name").ToString
             End With
             sqlUMTCAdapter.Dispose()
             DataUMTC.Dispose()
@@ -72,7 +72,4 @@ Public Class Login
         Me.Hide()
     End Sub
 
-    Private Sub Pass_Field_TextChanged(sender As Object, e As EventArgs) Handles Pass_Field.TextChanged
-
-    End Sub
 End Class

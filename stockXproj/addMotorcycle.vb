@@ -28,6 +28,20 @@ Public Class addMotorcycle
                     .Parameters.AddWithValue("@p_frame", txtFrameNumber.Text)
                     .ExecuteNonQuery()
                 End With
+                With command
+                    .Parameters.Clear()
+                    .CommandText = "prc_Record"
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@p_Action", "Add Unit")
+                    .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd H:mm:ss"))
+                    .Parameters.AddWithValue("@p_Unit", txtEngineNumber.Text)
+                    .Parameters.AddWithValue("@p_branch", "Main")
+                    .Parameters.AddWithValue("@p_FromState", "none")
+                    .Parameters.AddWithValue("@p_ToState", "Available")
+                    .Parameters.AddWithValue("@p_Customer", "none")
+                    .Parameters.AddWithValue("@p_Employee", Username)
+                    .ExecuteNonQuery()
+                End With
                 MessageBox.Show("Record Successfully Save", "Saving Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
             ElseIf action = "Edit" Then
 
@@ -42,6 +56,20 @@ Public Class addMotorcycle
                     .Parameters.AddWithValue("@p_price", txtPrice.Text)
                     .Parameters.AddWithValue("@p_engine", txtEngineNumber.Text)
                     .Parameters.AddWithValue("@p_frame", txtFrameNumber.Text)
+                    .ExecuteNonQuery()
+                End With
+                With command
+                    .Parameters.Clear()
+                    .CommandText = "prc_Record"
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@p_Action", "Edit Unit")
+                    .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd H:mm:ss"))
+                    .Parameters.AddWithValue("@p_Unit", txtEngineNumber.Text)
+                    .Parameters.AddWithValue("@p_branch", "Main")
+                    .Parameters.AddWithValue("@p_FromState", "none")
+                    .Parameters.AddWithValue("@p_ToState", "Available")
+                    .Parameters.AddWithValue("@p_Customer", "none")
+                    .Parameters.AddWithValue("@p_Employee", Username)
                     .ExecuteNonQuery()
                 End With
                 MessageBox.Show("Record Successfully Save", "Saving Record", MessageBoxButtons.OK, MessageBoxIcon.Information)

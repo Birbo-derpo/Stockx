@@ -95,6 +95,20 @@ Public Class Reserve
                             .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
                             .ExecuteNonQuery()
                         End With
+                        With command
+                            .Parameters.Clear()
+                            .CommandText = "prc_Record"
+                            .CommandType = CommandType.StoredProcedure
+                            .Parameters.AddWithValue("@p_Action", "Add MTN")
+                            .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd H:mm:ss"))
+                            .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(7).Value.ToString)
+                            .Parameters.AddWithValue("@p_branch", Checkcell.Cells(1).Value.ToString)
+                            .Parameters.AddWithValue("@p_FromState", "Available")
+                            .Parameters.AddWithValue("@p_ToState", State)
+                            .Parameters.AddWithValue("@p_Customer", "none")
+                            .Parameters.AddWithValue("@p_Employee", Username)
+                            .ExecuteNonQuery()
+                        End With
                     Catch ex As Exception
                     End Try
                     Checkcell.Cells("Column10").Value = False
