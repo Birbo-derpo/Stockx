@@ -40,7 +40,6 @@ Public Class ConfirmReserve
                         grdMotorcycle.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Price").ToString
                         grdMotorcycle.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
                         grdMotorcycle.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("FrameNum").ToString
-                        grdMotorcycle.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("Stat").ToString
 
                         row = row + 1
 
@@ -128,7 +127,20 @@ Public Class ConfirmReserve
                             .Parameters.AddWithValue("@p_dt", Format(dt.Value, "yyyy-MM-dd"))
                             .ExecuteNonQuery()
                         End With
-
+                        With command
+                            .Parameters.Clear()
+                            .CommandText = "prc_Record"
+                            .CommandType = CommandType.StoredProcedure
+                            .Parameters.AddWithValue("@p_Action", "Reserve unit")
+                            .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd H:mm:ss"))
+                            .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(6).Value.ToString)
+                            .Parameters.AddWithValue("@p_branch", cmb_tobranch.Text)
+                            .Parameters.AddWithValue("@p_FromState", "Available")
+                            .Parameters.AddWithValue("@p_ToState", "Reserved")
+                            .Parameters.AddWithValue("@p_Customer", "none")
+                            .Parameters.AddWithValue("@p_Employee", Username)
+                            .ExecuteNonQuery()
+                        End With
                     Catch ex As Exception
                         MessageBox.Show("unit/s reserved", "reserved", MessageBoxButtons.OK)
                     End Try

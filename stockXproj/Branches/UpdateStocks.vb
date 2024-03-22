@@ -1,6 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class UpdateStocks
+
     Private Sub UpdateStocks_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Login_stat <> True Then
             Login.Show()
@@ -62,6 +63,20 @@ Public Class UpdateStocks
                     .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
                     .ExecuteNonQuery()
                 End With
+                With command
+                    .Parameters.Clear()
+                    .CommandText = "prc_Record"
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@p_Action", "Transfer unit")
+                    .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd H:mm:ss"))
+                    .Parameters.AddWithValue("@p_Unit", Txt_EngineNumber.Text)
+                    .Parameters.AddWithValue("@p_branch", lbl_branch.Text)
+                    .Parameters.AddWithValue("@p_FromState", "In branch")
+                    .Parameters.AddWithValue("@p_ToState", Cmb_Stat.Text)
+                    .Parameters.AddWithValue("@p_Customer", Txt_Fname.Text + " " + Txt_Lname.Text)
+                    .Parameters.AddWithValue("@p_Employee", Username)
+                    .ExecuteNonQuery()
+                End With
             Else
                 With command
                     .Parameters.Clear()
@@ -75,6 +90,20 @@ Public Class UpdateStocks
                     .Parameters.AddWithValue("@p_TypeOP", Cmb_Type.Text)
                     .Parameters.AddWithValue("@p_SIV", Txt_SIN.Text)
                     .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
+                End With
+                With command
+                    .Parameters.Clear()
+                    .CommandText = "prc_Record"
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@p_Action", "Edit Transferred unit")
+                    .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd H:mm:ss"))
+                    .Parameters.AddWithValue("@p_Unit", Txt_EngineNumber.Text)
+                    .Parameters.AddWithValue("@p_branch", lbl_branch.Text)
+                    .Parameters.AddWithValue("@p_FromState", Lbl_Stat.Text)
+                    .Parameters.AddWithValue("@p_ToState", Cmb_Stat.Text)
+                    .Parameters.AddWithValue("@p_Customer", Txt_Fname.Text + " " + Txt_Lname.Text)
+                    .Parameters.AddWithValue("@p_Employee", Username)
+                    .ExecuteNonQuery()
                 End With
             End If
             With command

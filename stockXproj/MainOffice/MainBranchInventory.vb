@@ -3,7 +3,7 @@ Imports Mysqlx.XDevAPI.Common
 
 Public Class MainBranchInventory
     Private datUMTC As DataTable
-    Dim invoice As String
+    Private Engyno As String
 
     'dataloader
     Private Sub MainBranchInventory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -123,16 +123,20 @@ Public Class MainBranchInventory
 
     'button
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        action = "Insert"
         addMotorcycle.ShowDialog()
     End Sub
-
+    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
+        action = "Edit"
+        addMotorcycle.ShowDialog()
+    End Sub
     Private Sub Btndelete_Click(sender As Object, e As EventArgs) Handles btndelete.Click
         Try
             With command
                 .Parameters.Clear()
                 .CommandText = "prc_DeleteUnitbyEngineNumber"
                 .CommandType = CommandType.StoredProcedure
-                .Parameters.AddWithValue("@p_invoice", invoice)
+                .Parameters.AddWithValue("@p_EngineNo", Engyno)
                 .ExecuteNonQuery()
             End With
             MessageBox.Show("unit Successfully Deleted", "Delete Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -193,9 +197,6 @@ Public Class MainBranchInventory
     Private Sub Btn_Toreservation_Click(sender As Object, e As EventArgs) Handles Btn_ReservationPage.Click
         ConfirmReserve.ShowDialog()
     End Sub
-    Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs) Handles Btn_AvStock.Click
-        Me.Show()
-    End Sub
 
     Private Sub Btn_Reserved_Click(sender As Object, e As EventArgs) Handles Btn_Reserved.Click
         Reserve.Show()
@@ -211,45 +212,13 @@ Public Class MainBranchInventory
         DashBoard.Show()
         Me.Close()
     End Sub
+
+
     'button end
 
-    'function methods
-    Function fncCheckEngineNo(p_filter As String, p_search As String) As Boolean
-        Dim result As String
-
-        sqlUMTCAdapter = New MySqlDataAdapter
-        DataUMTC = New DataTable
-
-        With command
-            .Parameters.Clear()
-            .CommandText = "prc_FindStockDuplicate"
-            .CommandType = CommandType.StoredProcedure
-            .Parameters.AddWithValue("@p_filter", p_filter)
-            .Parameters.AddWithValue("@p_search", p_search)
-            sqlUMTCAdapter.SelectCommand = command
-            DataUMTC.Clear()
-            sqlUMTCAdapter.Fill(DataUMTC)
-
-            If DataUMTC.Rows.Count > 0 Then
-                result = True
-            Else
-                result = False
-            End If
-        End With
-        sqlUMTCAdapter.Dispose()
-        DataUMTC.Dispose()
-        Try
-
-        Catch ex As Exception
-            MessageBox.Show("" & ex.Message)
-        End Try
-        Return result
-    End Function
-    'end function
-
     'form click
-    Private Sub Grd_Motorcycle_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_Motorcycle.CellDoubleClick
-
+    Private Sub Grd_Motorcycle_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_Motorcycle.CellClick
+        Engyno = Grd_Motorcycle.CurrentRow.Cells(5).Value
     End Sub
     'end form click
 End Class

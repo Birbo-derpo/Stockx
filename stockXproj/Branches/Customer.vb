@@ -170,14 +170,17 @@ Public Class Customer
 
         With UpdateStocks
             action = "edit"
-            .Txt_SIN = grd_AllCustomer.CurrentRow.Cells(12).Value
-            .Txt_Fname = grd_AllCustomer.CurrentRow.Cells(1).Value
-            .Txt_Lname = grd_AllCustomer.CurrentRow.Cells(0).Value
+            .lbl_branch.Text = grd_AllCustomer.CurrentRow.Cells(5).Value
+            .Lbl_Stat.Text = grd_AllCustomer.CurrentRow.Cells(2).Value
+
+            .Txt_SIN.Text = grd_AllCustomer.CurrentRow.Cells(12).Value
+            .Txt_Fname.Text = grd_AllCustomer.CurrentRow.Cells(1).Value
+            .Txt_Lname.Text = grd_AllCustomer.CurrentRow.Cells(0).Value
             .dt = grd_AllCustomer.CurrentRow.Cells(12).Value
-            .Txt_Amount = grd_AllCustomer.CurrentRow.Cells(10).Value
-            .Cmb_Type = grd_AllCustomer.CurrentRow.Cells(8).Value
-            .Cmb_Term = grd_AllCustomer.CurrentRow.Cells(9).Value
-            .Cmb_Stat = grd_AllCustomer.CurrentRow.Cells(2).Value
+            .Txt_Amount.Text = grd_AllCustomer.CurrentRow.Cells(10).Value
+            .Cmb_Type.Text = grd_AllCustomer.CurrentRow.Cells(8).Value
+            .Cmb_Term.Text = grd_AllCustomer.CurrentRow.Cells(9).Value
+            .Cmb_Stat.Text = grd_AllCustomer.CurrentRow.Cells(2).Value
 
             .Txt_SIN.Text = grd_AllCustomer.CurrentRow.Cells(13).Value
             .Txt_Model.Text = grd_AllCustomer.CurrentRow.Cells(3).Value
