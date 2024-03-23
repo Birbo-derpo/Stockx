@@ -125,4 +125,25 @@ Public Class DashBoard
             MessageBox.Show("" & ex.Message)
         End Try
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        prcDisplayCurrentUser()
+
+        ' Check if the user data is successfully retrieved
+        If Not String.IsNullOrEmpty(Gmail) AndAlso Not String.IsNullOrEmpty(Firstname) AndAlso Not String.IsNullOrEmpty(Lastname) AndAlso Not String.IsNullOrEmpty(Position) Then
+            ' Open the EditEmployee form and pass the user information
+            Dim changeinto As New EditEmployee()
+            changeinto.txtGmail.Text = Gmail
+            changeinto.txtFirst.Text = Firstname
+            changeinto.txtLast.Text = Lastname
+            changeinto.cmbPosition.Text = Position
+            changeinto.cmbGender.Text = gender ' Assuming Gender is a global variable or defined elsewhere
+
+            changeinto.ShowDialog()
+            Me.Hide()
+        Else
+            MessageBox.Show("User data not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+    End Sub
 End Class

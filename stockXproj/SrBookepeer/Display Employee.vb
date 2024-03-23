@@ -140,6 +140,8 @@ Public Class Display_Employee
         Dim EditEmployee As New EditEmployee()
 
         With EditEmployee
+
+
             .Show()
 
 

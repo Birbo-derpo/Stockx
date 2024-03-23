@@ -60,7 +60,7 @@ Public Class LoginSrBookeeper
                     With HondaHomePage
                         Login_stat = True
                         S_dashboard.Show()
-                        Prc_GetEmpName()
+
                         .Dispose()
 
                         Me.Dispose()
