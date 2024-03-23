@@ -6,8 +6,6 @@ Public Class EditEmployee
     Private Sub editEmployeeby()
         Try
 
-
-
             If Not txtGmail.Text.Contains("@") Then
                 MessageBox.Show("Invalid email address format. Please include '@' sign.", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
@@ -49,15 +47,7 @@ Public Class EditEmployee
                 cmbGender.SelectedIndex = -1
 
                 Me.Dispose()
-                DashBoard.Show()
-
-
-
-
-
-
-
-
+            DashBoard.Show()
 
 
             txtGmail.Clear()
@@ -126,7 +116,7 @@ Public Class EditEmployee
                 cmbGender.SelectedIndex = -1
 
                 Me.Dispose()
-                DashBoard.Show()
+                Display_Employee.Show()
 
 
             Else
@@ -143,16 +133,8 @@ Public Class EditEmployee
                     .Parameters.AddWithValue("@p_Gender", cmbGender.Text)
                     .ExecuteNonQuery()
 
-
-
-
                     MessageBox.Show("Change successful.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 End With
-
-
-
-
-
 
                 txtGmail.Clear()
                 txtFirst.Clear()
@@ -167,7 +149,6 @@ Public Class EditEmployee
             End If
 
         Catch ex As Exception
-
             MessageBox.Show("An error occurred while saving the record: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
