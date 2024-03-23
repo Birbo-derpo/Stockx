@@ -63,7 +63,7 @@ Public Class Login
                         With HondaHomePage
                             Login_stat = True
                         dashboardForm.Show()
-                        Prc_GetEmpName()
+
                         .Dispose()
 
                             Me.Dispose()

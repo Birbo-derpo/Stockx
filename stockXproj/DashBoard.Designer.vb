@@ -39,6 +39,7 @@ Partial Class DashBoard
         Me.lblgmail = New System.Windows.Forms.Label()
         Me.lblUser = New System.Windows.Forms.Label()
         Me.btnchange = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -226,11 +227,25 @@ Partial Class DashBoard
         Me.btnchange.Text = "Change Password"
         Me.btnchange.UseVisualStyleBackColor = False
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Firebrick
+        Me.Button1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button1.Location = New System.Drawing.Point(604, 384)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(243, 80)
+        Me.Button1.TabIndex = 62
+        Me.Button1.Text = "Edit Info"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'DashBoard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1924, 922)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnchange)
         Me.Controls.Add(Me.lblPositionn)
         Me.Controls.Add(Me.lblgmail)
@@ -275,4 +290,5 @@ Partial Class DashBoard
     Friend WithEvents lblgmail As Label
     Friend WithEvents lblUser As Label
     Friend WithEvents btnchange As Button
+    Friend WithEvents Button1 As Button
 End Class
