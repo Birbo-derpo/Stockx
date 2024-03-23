@@ -23,10 +23,6 @@ Partial Class reports
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.grd_report = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cmb_Month = New System.Windows.Forms.ComboBox()
         Me.btnTagum = New System.Windows.Forms.Button()
         Me.btnDavao = New System.Windows.Forms.Button()
@@ -38,6 +34,10 @@ Partial Class reports
         Me.Btn_Search = New System.Windows.Forms.Button()
         Me.Txt_Search = New System.Windows.Forms.TextBox()
         Me.cmbSearchType = New System.Windows.Forms.ComboBox()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.grd_report, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -46,47 +46,19 @@ Partial Class reports
         Me.grd_report.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grd_report.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4})
         Me.grd_report.Location = New System.Drawing.Point(233, 96)
-        Me.grd_report.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.grd_report.Margin = New System.Windows.Forms.Padding(2)
         Me.grd_report.Name = "grd_report"
         Me.grd_report.RowHeadersWidth = 51
         Me.grd_report.RowTemplate.Height = 24
         Me.grd_report.Size = New System.Drawing.Size(532, 166)
         Me.grd_report.TabIndex = 0
         '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Branc"
-        Me.Column1.MinimumWidth = 6
-        Me.Column1.Name = "Column1"
-        Me.Column1.Width = 125
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Model"
-        Me.Column2.MinimumWidth = 6
-        Me.Column2.Name = "Column2"
-        Me.Column2.Width = 125
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Engine Number"
-        Me.Column3.MinimumWidth = 6
-        Me.Column3.Name = "Column3"
-        Me.Column3.Width = 125
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Date"
-        Me.Column4.MinimumWidth = 6
-        Me.Column4.Name = "Column4"
-        Me.Column4.Width = 125
-        '
         'cmb_Month
         '
         Me.cmb_Month.FormattingEnabled = True
         Me.cmb_Month.Items.AddRange(New Object() {"JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER ", "DECEMEBR"})
         Me.cmb_Month.Location = New System.Drawing.Point(88, 103)
-        Me.cmb_Month.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmb_Month.Margin = New System.Windows.Forms.Padding(2)
         Me.cmb_Month.Name = "cmb_Month"
         Me.cmb_Month.Size = New System.Drawing.Size(92, 21)
         Me.cmb_Month.TabIndex = 1
@@ -94,7 +66,7 @@ Partial Class reports
         'btnTagum
         '
         Me.btnTagum.Location = New System.Drawing.Point(247, 293)
-        Me.btnTagum.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnTagum.Margin = New System.Windows.Forms.Padding(2)
         Me.btnTagum.Name = "btnTagum"
         Me.btnTagum.Size = New System.Drawing.Size(118, 44)
         Me.btnTagum.TabIndex = 2
@@ -104,7 +76,7 @@ Partial Class reports
         'btnDavao
         '
         Me.btnDavao.Location = New System.Drawing.Point(410, 293)
-        Me.btnDavao.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnDavao.Margin = New System.Windows.Forms.Padding(2)
         Me.btnDavao.Name = "btnDavao"
         Me.btnDavao.Size = New System.Drawing.Size(118, 44)
         Me.btnDavao.TabIndex = 3
@@ -114,7 +86,7 @@ Partial Class reports
         'btnGensan
         '
         Me.btnGensan.Location = New System.Drawing.Point(622, 293)
-        Me.btnGensan.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnGensan.Margin = New System.Windows.Forms.Padding(2)
         Me.btnGensan.Name = "btnGensan"
         Me.btnGensan.Size = New System.Drawing.Size(118, 44)
         Me.btnGensan.TabIndex = 4
@@ -124,7 +96,7 @@ Partial Class reports
         'btnDigos
         '
         Me.btnDigos.Location = New System.Drawing.Point(410, 396)
-        Me.btnDigos.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnDigos.Margin = New System.Windows.Forms.Padding(2)
         Me.btnDigos.Name = "btnDigos"
         Me.btnDigos.Size = New System.Drawing.Size(118, 44)
         Me.btnDigos.TabIndex = 5
@@ -134,7 +106,7 @@ Partial Class reports
         'btnBajada
         '
         Me.btnBajada.Location = New System.Drawing.Point(247, 396)
-        Me.btnBajada.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnBajada.Margin = New System.Windows.Forms.Padding(2)
         Me.btnBajada.Name = "btnBajada"
         Me.btnBajada.Size = New System.Drawing.Size(118, 44)
         Me.btnBajada.TabIndex = 6
@@ -144,7 +116,7 @@ Partial Class reports
         'btnKidapawan
         '
         Me.btnKidapawan.Location = New System.Drawing.Point(622, 409)
-        Me.btnKidapawan.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnKidapawan.Margin = New System.Windows.Forms.Padding(2)
         Me.btnKidapawan.Name = "btnKidapawan"
         Me.btnKidapawan.Size = New System.Drawing.Size(118, 44)
         Me.btnKidapawan.TabIndex = 7
@@ -156,7 +128,7 @@ Partial Class reports
         Me.Chk_Auto.AutoSize = True
         Me.Chk_Auto.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Chk_Auto.Location = New System.Drawing.Point(520, 59)
-        Me.Chk_Auto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Chk_Auto.Margin = New System.Windows.Forms.Padding(2)
         Me.Chk_Auto.Name = "Chk_Auto"
         Me.Chk_Auto.Size = New System.Drawing.Size(127, 21)
         Me.Chk_Auto.TabIndex = 80
@@ -170,7 +142,7 @@ Partial Class reports
         Me.Btn_Search.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Search.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_Search.Location = New System.Drawing.Point(634, 16)
-        Me.Btn_Search.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Search.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Search.Name = "Btn_Search"
         Me.Btn_Search.Size = New System.Drawing.Size(93, 34)
         Me.Btn_Search.TabIndex = 79
@@ -181,7 +153,7 @@ Partial Class reports
         '
         Me.Txt_Search.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_Search.Location = New System.Drawing.Point(233, 16)
-        Me.Txt_Search.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_Search.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_Search.Name = "Txt_Search"
         Me.Txt_Search.Size = New System.Drawing.Size(396, 35)
         Me.Txt_Search.TabIndex = 78
@@ -193,10 +165,42 @@ Partial Class reports
         Me.cmbSearchType.FormattingEnabled = True
         Me.cmbSearchType.Items.AddRange(New Object() {"Model", "Engine Number", "Date"})
         Me.cmbSearchType.Location = New System.Drawing.Point(233, 52)
-        Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbSearchType.Name = "cmbSearchType"
         Me.cmbSearchType.Size = New System.Drawing.Size(283, 34)
         Me.cmbSearchType.TabIndex = 77
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Branc"
+        Me.Column1.MinimumWidth = 6
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Width = 125
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Model"
+        Me.Column2.MinimumWidth = 6
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 125
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Engine Number"
+        Me.Column3.MinimumWidth = 6
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 125
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Date"
+        Me.Column4.MinimumWidth = 6
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 125
         '
         'reports
         '
@@ -215,7 +219,7 @@ Partial Class reports
         Me.Controls.Add(Me.btnTagum)
         Me.Controls.Add(Me.cmb_Month)
         Me.Controls.Add(Me.grd_report)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "reports"
         Me.Text = "aa"
         CType(Me.grd_report, System.ComponentModel.ISupportInitialize).EndInit()
@@ -225,10 +229,6 @@ Partial Class reports
     End Sub
 
     Friend WithEvents grd_report As DataGridView
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents cmb_Month As ComboBox
     Friend WithEvents btnTagum As Button
     Friend WithEvents btnDavao As Button
@@ -240,4 +240,8 @@ Partial Class reports
     Friend WithEvents Btn_Search As Button
     Friend WithEvents Txt_Search As TextBox
     Friend WithEvents cmbSearchType As ComboBox
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
 End Class
