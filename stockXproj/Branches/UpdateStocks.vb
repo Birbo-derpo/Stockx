@@ -7,44 +7,10 @@ Public Class UpdateStocks
             Login.Show()
             Me.Close()
         Else
-            If fncCheckOwned(Txt_EngineNumber.Text) = True Then
-                MessageBox.Show("Unit Already owned.", "YO how did you?", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Me.Hide()
-            End If
+
         End If
 
     End Sub
-
-    Function fncCheckOwned(p_EngineNum As String) As Boolean
-        Dim result As String
-
-        sqlUMTCAdapter = New MySqlDataAdapter
-        DataUMTC = New DataTable
-
-        With command
-            .Parameters.Clear()
-            .CommandText = "prc_FindUnitOwned"
-            .CommandType = CommandType.StoredProcedure
-            .Parameters.AddWithValue("@p_EngineNum", p_EngineNum)
-            sqlUMTCAdapter.SelectCommand = command
-            DataUMTC.Clear()
-            sqlUMTCAdapter.Fill(DataUMTC)
-
-            If DataUMTC.Rows.Count > 0 Then
-                result = True
-            Else
-                result = False
-            End If
-        End With
-        sqlUMTCAdapter.Dispose()
-        DataUMTC.Dispose()
-        Try
-
-        Catch ex As Exception
-            MessageBox.Show("" & ex.Message)
-        End Try
-        Return result
-    End Function
 
     Private Sub Btn_Update_Click(sender As Object, e As EventArgs) Handles Btn_Update.Click
         Try
