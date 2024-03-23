@@ -47,34 +47,45 @@ Public Class Login
                 DataUMTC.Clear()
                 sqlUMTCAdapter.Fill(DataUMTC)
             End With
-            If DataUMTC.Rows.Count = 0 Then
-                    MessageBox.Show("Invalid Username or Password", "Login Details", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Else
-                    Dim position As String = DataUMTC.Rows(0).Item("Positions").ToString()
+            If DataUMTC.Rows.Count > 0 Then
+                MessageBox.Show("Invalid Username or Password", "Login Details", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Else
+                Dim position As String = DataUMTC.Rows(0).Item("Positions").ToString()
 
 
-                    If position = "Inventory Manager" Then ' Check if the position is srbookkeeper
-                        Dim userEmail As String = DataUMTC.Rows(0).Item("Gmail").ToString()
+                If position = "Inventory Manager" Then ' Check if the position is srbookkeeper
+                    Dim userEmail As String = DataUMTC.Rows(0).Item("Gmail").ToString()
                     Dim dashboardForm As New DashBoard()
                     dashboardForm.lblgmail.Text = userEmail
 
-
-
-                        With HondaHomePage
-                            Login_stat = True
+                    With HondaHomePage
+                        Login_stat = True
                         dashboardForm.Show()
-
+                        Prc_GetEmpName()
                         .Dispose()
 
-                            Me.Dispose()
-                        End With
-                    Else
-                        MessageBox.Show("Only Inventory Manager.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    End If
+                        Me.Dispose()
+                    End With
+
+                ElseIf position = "Sr.Bookeeper" Then ' Check if the position is srbookkeeper
+                    Dim userEmail As String = DataUMTC.Rows(0).Item("Gmail").ToString()
+                    Dim dashboardForm As New S_dashboard()
+                    dashboardForm.lblgmail.Text = userEmail
+
+                    With HondaHomePage
+                        Login_stat = True
+                        S_dashboard.Show()
+                        Prc_GetEmpName()
+                        .Dispose()
+
+                        Me.Dispose()
+                    End With
+                Else
+                    MessageBox.Show("Only Sr.Bookeeper.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
+            End If
 
-
-                Email_Field.Clear()
+            Email_Field.Clear()
             Pass_Field.Clear()
 
             sqlUMTCAdapter.Dispose()
