@@ -60,6 +60,7 @@ Public Class LoginSrBookeeper
                     With HondaHomePage
                         Login_stat = True
                         S_dashboard.Show()
+                        Prc_GetEmpName()
                         .Dispose()
 
                         Me.Dispose()
@@ -80,7 +81,28 @@ Public Class LoginSrBookeeper
             MessageBox.Show("" & ex.Message)
         End Try
     End Sub
+    Private Sub Prc_GetEmpName()
+        Try
+            sqlUMTCAdapter = New MySqlDataAdapter
+            DataUMTC = New DataTable
 
+            With command
+                .Parameters.Clear()
+                .CommandText = "prc_getEmployeeName"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_gmail", Email_Field.Text)
+                sqlUMTCAdapter.SelectCommand = command
+                DataUMTC.Clear()
+                sqlUMTCAdapter.Fill(DataUMTC)
+                Username = DataUMTC.Rows(row).Item("User_name").ToString
+            End With
+            sqlUMTCAdapter.Dispose()
+            DataUMTC.Dispose()
+
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+    End Sub
     Private Sub LoginSrBookeeper_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CheckDatabaseConnection()
     End Sub

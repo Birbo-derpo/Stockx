@@ -394,7 +394,7 @@ Partial Class Deposited
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Snow
-        Me.ClientSize = New System.Drawing.Size(1924, 922)
+        Me.ClientSize = New System.Drawing.Size(1924, 769)
         Me.Controls.Add(Me.dt)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
