@@ -2,8 +2,13 @@
 
 Public Class S_repossess
     Private Sub S_repossess_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CheckDatabaseConnection()
-        PrcDisplayRepossessedStock()
+        If Login_stat <> True Then
+            Login.Show()
+            Me.Close()
+        Else
+            CheckDatabaseConnection()
+            PrcDisplayRepossessedStock()
+        End If
     End Sub
     Private Sub PrcDisplayRepossessedStock()
         Try

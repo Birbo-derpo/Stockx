@@ -1,9 +1,16 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class S_Deposited
+    Private Cust_Name As String
     Private Sub S_Deposited_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CheckDatabaseConnection()
-        PrcDisplayDepositedStock()
+        If Login_stat <> True Then
+            Login.Show()
+            Me.Close()
+        Else
+            CheckDatabaseConnection()
+            PrcDisplayDepositedStock()
+        End If
+
     End Sub
     Private Sub PrcDisplayDepositedStock()
         Try
@@ -232,7 +239,21 @@ Public Class S_Deposited
                         .Parameters.AddWithValue("@p_Stat", State)
                         .ExecuteNonQuery()
                     End With
-
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_Record"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_Action", "Release unit")
+                        .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd H:mm:ss"))
+                        .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_branch", Checkcell.Cells(1).Value.ToString)
+                        .Parameters.AddWithValue("@p_FromState", Checkcell.Cells(9).Value.ToString)
+                        .Parameters.AddWithValue("@p_ToState", "Released")
+                        Prc_GetCustName(Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_Customer", Cust_Name)
+                        .Parameters.AddWithValue("@p_Employee", Username)
+                        .ExecuteNonQuery()
+                    End With
                 Catch ex As Exception
                 End Try
                 Checkcell.Cells("Column10").Value = False
@@ -242,8 +263,26 @@ Public Class S_Deposited
         MessageBox.Show("unit/s now in branch", "in branch", MessageBoxButtons.OK)
         PrcDisplayDepositedStock()
     End Sub
+    Private Sub Prc_GetCustName(p_unit As String)
+        Try
+            sqlUMTCAdapter = New MySqlDataAdapter
+            DataUMTC = New DataTable
 
-    Private Sub Txt_Search_TextChanged(sender As Object, e As EventArgs) Handles Txt_Search.TextChanged
+            With command
+                .Parameters.Clear()
+                .CommandText = "prc_getCustomerName"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_Unit", p_unit)
+                sqlUMTCAdapter.SelectCommand = command
+                DataUMTC.Clear()
+                sqlUMTCAdapter.Fill(DataUMTC)
+                Cust_Name = DataUMTC.Rows(row).Item("Customer").ToString
+            End With
+            sqlUMTCAdapter.Dispose()
+            DataUMTC.Dispose()
 
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
     End Sub
 End Class

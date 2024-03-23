@@ -32,6 +32,8 @@ Partial Class S_Transit
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Grd_Motorcycle = New System.Windows.Forms.DataGridView()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.dt = New System.Windows.Forms.DateTimePicker()
         Me.Column8 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -42,7 +44,6 @@ Partial Class S_Transit
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.Grd_Motorcycle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -52,9 +53,10 @@ Partial Class S_Transit
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(257, 325)
+        Me.Label1.Location = New System.Drawing.Point(193, 264)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(181, 27)
+        Me.Label1.Size = New System.Drawing.Size(155, 22)
         Me.Label1.TabIndex = 60
         Me.Label1.Text = "Sort by branch:"
         '
@@ -64,12 +66,12 @@ Partial Class S_Transit
         Me.Btn_AvStock.FlatAppearance.BorderColor = System.Drawing.Color.Red
         Me.Btn_AvStock.FlatAppearance.BorderSize = 2
         Me.Btn_AvStock.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Btn_AvStock.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_AvStock.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_AvStock.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Btn_AvStock.Location = New System.Drawing.Point(25, 132)
-        Me.Btn_AvStock.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_AvStock.Location = New System.Drawing.Point(19, 107)
+        Me.Btn_AvStock.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_AvStock.Name = "Btn_AvStock"
-        Me.Btn_AvStock.Size = New System.Drawing.Size(222, 61)
+        Me.Btn_AvStock.Size = New System.Drawing.Size(166, 50)
         Me.Btn_AvStock.TabIndex = 33
         Me.Btn_AvStock.Text = "AVAILABLE STOCKS"
         Me.Btn_AvStock.UseVisualStyleBackColor = False
@@ -80,12 +82,12 @@ Partial Class S_Transit
         Me.Btn_Reserved.FlatAppearance.BorderColor = System.Drawing.Color.Red
         Me.Btn_Reserved.FlatAppearance.BorderSize = 2
         Me.Btn_Reserved.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Btn_Reserved.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Reserved.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Reserved.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Btn_Reserved.Location = New System.Drawing.Point(25, 199)
-        Me.Btn_Reserved.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_Reserved.Location = New System.Drawing.Point(19, 162)
+        Me.Btn_Reserved.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Reserved.Name = "Btn_Reserved"
-        Me.Btn_Reserved.Size = New System.Drawing.Size(222, 61)
+        Me.Btn_Reserved.Size = New System.Drawing.Size(166, 50)
         Me.Btn_Reserved.TabIndex = 32
         Me.Btn_Reserved.Text = "RESERVED STOCKS"
         Me.Btn_Reserved.UseVisualStyleBackColor = False
@@ -96,12 +98,12 @@ Partial Class S_Transit
         Me.Btn_Transit.FlatAppearance.BorderColor = System.Drawing.Color.Red
         Me.Btn_Transit.FlatAppearance.BorderSize = 2
         Me.Btn_Transit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Btn_Transit.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Transit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Transit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Btn_Transit.Location = New System.Drawing.Point(25, 266)
-        Me.Btn_Transit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_Transit.Location = New System.Drawing.Point(19, 216)
+        Me.Btn_Transit.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Transit.Name = "Btn_Transit"
-        Me.Btn_Transit.Size = New System.Drawing.Size(222, 61)
+        Me.Btn_Transit.Size = New System.Drawing.Size(166, 50)
         Me.Btn_Transit.TabIndex = 34
         Me.Btn_Transit.Text = "TRANSIT STOCKS"
         Me.Btn_Transit.UseVisualStyleBackColor = False
@@ -113,11 +115,11 @@ Partial Class S_Transit
         Me.GroupBox1.Controls.Add(Me.Btn_Reserved)
         Me.GroupBox1.Controls.Add(Me.Btn_Transit)
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GroupBox1.Location = New System.Drawing.Point(-13, 371)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox1.Location = New System.Drawing.Point(-10, 301)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GroupBox1.Size = New System.Drawing.Size(257, 505)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox1.Size = New System.Drawing.Size(193, 410)
         Me.GroupBox1.TabIndex = 57
         Me.GroupBox1.TabStop = False
         '
@@ -126,10 +128,10 @@ Partial Class S_Transit
         Me.cmb_branch.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmb_branch.FormattingEnabled = True
         Me.cmb_branch.Items.AddRange(New Object() {"Bajada", "Davao", "Digos", "Kidapawan", "Tagum", "General Santos"})
-        Me.cmb_branch.Location = New System.Drawing.Point(468, 325)
-        Me.cmb_branch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.cmb_branch.Location = New System.Drawing.Point(351, 264)
+        Me.cmb_branch.Margin = New System.Windows.Forms.Padding(2)
         Me.cmb_branch.Name = "cmb_branch"
-        Me.cmb_branch.Size = New System.Drawing.Size(361, 31)
+        Me.cmb_branch.Size = New System.Drawing.Size(272, 26)
         Me.cmb_branch.TabIndex = 56
         '
         'Btn_Transfer
@@ -138,10 +140,10 @@ Partial Class S_Transit
         Me.Btn_Transfer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn_Transfer.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold)
         Me.Btn_Transfer.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_Transfer.Location = New System.Drawing.Point(448, 895)
-        Me.Btn_Transfer.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_Transfer.Location = New System.Drawing.Point(336, 727)
+        Me.Btn_Transfer.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Transfer.Name = "Btn_Transfer"
-        Me.Btn_Transfer.Size = New System.Drawing.Size(184, 57)
+        Me.Btn_Transfer.Size = New System.Drawing.Size(138, 46)
         Me.Btn_Transfer.TabIndex = 55
         Me.Btn_Transfer.Text = "CONFRIM DELIVERY"
         Me.Btn_Transfer.UseVisualStyleBackColor = False
@@ -152,10 +154,10 @@ Partial Class S_Transit
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button1.Location = New System.Drawing.Point(252, 895)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button1.Location = New System.Drawing.Point(189, 727)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(184, 57)
+        Me.Button1.Size = New System.Drawing.Size(138, 46)
         Me.Button1.TabIndex = 59
         Me.Button1.Text = "DASHBOARD"
         Me.Button1.UseVisualStyleBackColor = False
@@ -168,12 +170,12 @@ Partial Class S_Transit
         Me.Grd_Motorcycle.AllowUserToResizeRows = False
         Me.Grd_Motorcycle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grd_Motorcycle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column10, Me.Column9, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
-        Me.Grd_Motorcycle.Location = New System.Drawing.Point(252, 371)
-        Me.Grd_Motorcycle.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Grd_Motorcycle.Location = New System.Drawing.Point(189, 301)
+        Me.Grd_Motorcycle.Margin = New System.Windows.Forms.Padding(2)
         Me.Grd_Motorcycle.Name = "Grd_Motorcycle"
         Me.Grd_Motorcycle.RowHeadersWidth = 51
         Me.Grd_Motorcycle.RowTemplate.Height = 24
-        Me.Grd_Motorcycle.Size = New System.Drawing.Size(1717, 505)
+        Me.Grd_Motorcycle.Size = New System.Drawing.Size(1288, 410)
         Me.Grd_Motorcycle.TabIndex = 54
         '
         'PictureBox1
@@ -182,11 +184,33 @@ Partial Class S_Transit
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox1.Location = New System.Drawing.Point(-1, 0)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(2043, 234)
+        Me.PictureBox1.Size = New System.Drawing.Size(1533, 191)
         Me.PictureBox1.TabIndex = 58
         Me.PictureBox1.TabStop = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label3.Location = New System.Drawing.Point(9, 199)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(139, 62)
+        Me.Label3.TabIndex = 92
+        Me.Label3.Text = "TRANSIT" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "LISTS"
+        '
+        'dt
+        '
+        Me.dt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dt.Location = New System.Drawing.Point(1162, 238)
+        Me.dt.Margin = New System.Windows.Forms.Padding(2)
+        Me.dt.Name = "dt"
+        Me.dt.Size = New System.Drawing.Size(270, 23)
+        Me.dt.TabIndex = 93
         '
         'Column8
         '
@@ -200,6 +224,7 @@ Partial Class S_Transit
         Me.Column10.HeaderText = "FOR BRANCH"
         Me.Column10.MinimumWidth = 6
         Me.Column10.Name = "Column10"
+        Me.Column10.ReadOnly = True
         Me.Column10.Width = 125
         '
         'Column9
@@ -266,23 +291,12 @@ Partial Class S_Transit
         Me.Column7.ReadOnly = True
         Me.Column7.Width = 130
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Book Antiqua", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label3.Location = New System.Drawing.Point(12, 245)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(177, 82)
-        Me.Label3.TabIndex = 92
-        Me.Label3.Text = "TRANSIT" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "LISTS"
-        '
         'S_Transit
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1924, 922)
+        Me.ClientSize = New System.Drawing.Size(1443, 749)
+        Me.Controls.Add(Me.dt)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
@@ -291,6 +305,7 @@ Partial Class S_Transit
         Me.Controls.Add(Me.Btn_Transfer)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Grd_Motorcycle)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "S_Transit"
         Me.Text = "Form1"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -312,6 +327,8 @@ Partial Class S_Transit
     Friend WithEvents Btn_Transfer As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Grd_Motorcycle As DataGridView
+    Friend WithEvents Label3 As Label
+    Friend WithEvents dt As DateTimePicker
     Friend WithEvents Column8 As DataGridViewCheckBoxColumn
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
@@ -322,5 +339,4 @@ Partial Class S_Transit
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
-    Friend WithEvents Label3 As Label
 End Class

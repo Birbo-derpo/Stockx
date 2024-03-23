@@ -2,6 +2,15 @@
 Public Class S_AllStock
     Dim Model, Color, Price, Engine_Num, Frame_Num, MTN As String
 
+    Private Sub S_AllStock_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If Login_stat <> True Then
+            Login.Show()
+            Me.Close()
+        Else
+            CheckDatabaseConnection()
+            PrcDisplayAllStock()
+        End If
+    End Sub
     Private Sub Btn_Deposited_Click(sender As Object, e As EventArgs) Handles Btn_Deposited.Click
         S_Deposited.Show()
         Me.Close()
@@ -66,6 +75,7 @@ Public Class S_AllStock
     Private Sub Btn_AddCust_Click(sender As Object, e As EventArgs) Handles Btn_AddCust.Click
         action = "update"
         With UpdateStocks
+            .lbl_branch = Grd_Stock.CurrentRow.Cells(0).Value
             .Txt_SIN.Text = MTN
             .Txt_Model.Text = Model
             .Txt_Color.Text = Color
@@ -145,10 +155,6 @@ Public Class S_AllStock
         Me.Close()
     End Sub
 
-    Private Sub S_AllStock_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CheckDatabaseConnection()
-        PrcDisplayAllStock()
-    End Sub
     Private Sub PrcDisplayAllStock()
         Try
             sqlUMTCAdapter = New MySqlDataAdapter

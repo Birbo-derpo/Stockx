@@ -1,9 +1,16 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class S_Released
+    Private Cust_Name As String
     Private Sub S_Released_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CheckDatabaseConnection()
-        PrcDisplayReleasedStock()
+        If Login_stat <> True Then
+            Login.Show()
+            Me.Close()
+        Else
+            CheckDatabaseConnection()
+            PrcDisplayReleasedStock()
+        End If
+
     End Sub
     Private Sub PrcDisplayReleasedStock()
         Try
