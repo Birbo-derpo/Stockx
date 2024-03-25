@@ -3,7 +3,7 @@
 Public Class EditEmployee
     Private datUMTC As DataTable
 
-    Private Sub editEmployeeby()
+    Private Sub EditEmployeeby()
         Try
 
             If Not txtGmail.Text.Contains("@") Then
@@ -23,41 +23,41 @@ Public Class EditEmployee
 
 
             With command
-                    .Parameters.Clear()
-                    .CommandText = "prc_EditEmployeeById"
-                    .CommandType = CommandType.StoredProcedure
-                    .Parameters.AddWithValue("@p_ID", EmployeeId)
-                    .Parameters.AddWithValue("@p_Gmail", txtGmail.Text)
-                    .Parameters.AddWithValue("@p_First", txtFirst.Text)
-                    .Parameters.AddWithValue("@p_Last", txtLast.Text)
-                    .Parameters.AddWithValue("@p_Position", cmbPosition.Text)
-                    .Parameters.AddWithValue("@p_Gender", cmbGender.Text)
-                    .ExecuteNonQuery()
+                .Parameters.Clear()
+                .CommandText = "prc_EditEmployeeById"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_ID", EmployeeId)
+                .Parameters.AddWithValue("@p_Gmail", txtGmail.Text)
+                .Parameters.AddWithValue("@p_First", txtFirst.Text)
+                .Parameters.AddWithValue("@p_Last", txtLast.Text)
+                .Parameters.AddWithValue("@p_Position", cmbPosition.Text)
+                .Parameters.AddWithValue("@p_Gender", cmbGender.Text)
+                .ExecuteNonQuery()
 
 
 
 
-                    MessageBox.Show("Change successful.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                End With
+                MessageBox.Show("Change successful.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End With
 
-                txtGmail.Clear()
-                txtFirst.Clear()
-                txtLast.Clear()
-                cmbPosition.SelectedIndex = -1
-                cmbGender.SelectedIndex = -1
+            txtGmail.Clear()
+            txtFirst.Clear()
+            txtLast.Clear()
+            cmbPosition.SelectedIndex = -1
+            cmbGender.SelectedIndex = -1
 
-                Me.Dispose()
+            Me.Dispose()
             DashBoard.Show()
 
 
             txtGmail.Clear()
-                txtFirst.Clear()
-                txtLast.Clear()
-                cmbPosition.SelectedIndex = -1
-                cmbGender.SelectedIndex = -1
+            txtFirst.Clear()
+            txtLast.Clear()
+            cmbPosition.SelectedIndex = -1
+            cmbGender.SelectedIndex = -1
 
-                Me.Dispose()
-                Display_Employee.Show()
+            Me.Dispose()
+            Display_Employee.Show()
 
 
 
@@ -69,9 +69,9 @@ Public Class EditEmployee
 
 
     End Sub
-    Private Sub editEmployee()
+    Private Sub EditEmployee()
         Try
-            Dim isEmployee As Boolean = IsUserEmployee(EmployeeId)
+            'Dim isEmployee As Boolean = IsUserEmployee(EmployeeId)
 
 
             If Not txtGmail.Text.Contains("@") Then
@@ -161,10 +161,10 @@ Public Class EditEmployee
         If result = DialogResult.Yes Then
 
             action = "change"
-            editEmployee()
+            EditEmployee()
         Else
 
-            editEmployee()
+            EditEmployee()
         End If
     End Sub
 

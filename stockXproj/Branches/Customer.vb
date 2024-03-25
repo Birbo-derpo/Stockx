@@ -115,7 +115,7 @@ Public Class Customer
     'dataloader end
 
     'buttons
-    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles Btn_Search.Click
+    Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles Btn_Search.Click
         sqlUMTCAdapter = New MySqlDataAdapter
         DataUMTC = New DataTable
         Try
@@ -204,6 +204,42 @@ Public Class Customer
 
     Private Sub Get_id(sender As Object, e As DataGridViewCellEventArgs) Handles grd_AllCustomer.CellClick
         Cust_id = CInt(grd_AllCustomer.CurrentRow.Cells(14).Value)
+    End Sub
+
+    Private Sub Btn_FullPaid_Click(sender As Object, e As EventArgs) Handles Btn_FullPaid.Click
+        With command
+            .Parameters.Clear()
+            .CommandText = "prc_editTransac"
+            .CommandType = CommandType.StoredProcedure
+            .Parameters.AddWithValue("@p_id", Cust_id)
+            .Parameters.AddWithValue("@F_name", grd_AllCustomer.CurrentRow.Cells(1).Value)
+            .Parameters.AddWithValue("@L_name", grd_AllCustomer.CurrentRow.Cells(0).Value)
+            .Parameters.AddWithValue("@p_Amount", CDbl(grd_AllCustomer.CurrentRow.Cells(11).Value))
+            .Parameters.AddWithValue("@p_TermOE", grd_AllCustomer.CurrentRow.Cells(9).Value)
+            .Parameters.AddWithValue("@p_TypeOP", grd_AllCustomer.CurrentRow.Cells(8).Value)
+            .Parameters.AddWithValue("@p_SIV", grd_AllCustomer.CurrentRow.Cells(13).Value)
+            .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
+        End With
+        With command
+            .Parameters.Clear()
+            .CommandText = "prc_Record"
+            .CommandType = CommandType.StoredProcedure
+            .Parameters.AddWithValue("@p_Action", "Edit Transferred unit")
+            .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd H:mm:ss"))
+            .Parameters.AddWithValue("@p_Unit", grd_AllCustomer.CurrentRow.Cells(6).Value)
+            .Parameters.AddWithValue("@p_branch", grd_AllCustomer.CurrentRow.Cells(5).Value)
+            .Parameters.AddWithValue("@p_FromState", grd_AllCustomer.CurrentRow.Cells(2).Value)
+            .Parameters.AddWithValue("@p_ToState", "Released")
+            .Parameters.AddWithValue("@p_Customer", grd_AllCustomer.CurrentRow.Cells(1).Value + " " + grd_AllCustomer.CurrentRow.Cells(0).Value)
+            .Parameters.AddWithValue("@p_Employee", Username)
+            .ExecuteNonQuery()
+        End With
+
+        If Txt_Search.Text <> "" Then
+            AutofillSearch()
+        Else
+            PrcDisplayAllCustomers()
+        End If
     End Sub
     'features end
 End Class

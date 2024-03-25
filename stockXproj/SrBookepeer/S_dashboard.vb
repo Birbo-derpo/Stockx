@@ -5,8 +5,6 @@ Imports Org.BouncyCastle.Asn1.X509
 
 Public Class S_dashboard
 
-
-
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         reports.Show()
         Me.Close()
@@ -14,17 +12,22 @@ Public Class S_dashboard
     End Sub
 
     Private Sub S_dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CheckDatabaseConnection()
-        prcDisplayCurrentUser()
-        AllAvialableUnit("Main", "Available")
-        AllAvialableUnit("Bajada", "In branch")
-        AllAvialableUnit("Tagum", "In branch")
-        AllAvialableUnit("Davao", "In branch")
-        AllAvialableUnit("General Santos", "In branch")
-        AllAvialableUnit("Kidapawan", "In branch")
-        AllAvialableUnit("Digos", "In branch")
-
+        If Login_stat <> True Then
+            Login.Show()
+            Me.Close()
+        Else
+            CheckDatabaseConnection()
+            prcDisplayCurrentUser()
+            AllAvialableUnit("Main", "Available")
+            AllAvialableUnit("Bajada", "In branch")
+            AllAvialableUnit("Tagum", "In branch")
+            AllAvialableUnit("Davao", "In branch")
+            AllAvialableUnit("General Santos", "In branch")
+            AllAvialableUnit("Kidapawan", "In branch")
+            AllAvialableUnit("Digos", "In branch")
+        End If
     End Sub
+
     Private Sub AllAvialableUnit(p_Branch As String, p_Status As String)
         sqlUMTCAdapter = New MySqlDataAdapter
         DataUMTC = New DataTable
@@ -67,7 +70,7 @@ Public Class S_dashboard
 
     End Sub
 
-    Private Sub btnchange_Click(sender As Object, e As EventArgs) Handles btnchange.Click
+    Private Sub Btnchange_Click(sender As Object, e As EventArgs) Handles btnchange.Click
         ChangePasswordEmployee.ShowDialog()
         Me.Hide()
 
@@ -99,7 +102,7 @@ Public Class S_dashboard
                 .Parameters.Clear()
                 .CommandText = "prc_DisplayCurrentUser"
                 .CommandType = CommandType.StoredProcedure
-                .Parameters.AddWithValue("@p_User", UserId)
+                .Parameters.AddWithValue("@p_User", EmployeeId)
                 sqlUMTCAdapter.SelectCommand = command
                 DataUMTC.Clear()
                 sqlUMTCAdapter.Fill(DataUMTC)
