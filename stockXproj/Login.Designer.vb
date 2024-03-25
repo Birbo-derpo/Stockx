@@ -53,6 +53,7 @@ Partial Class Login
         Me.Pass_Field.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Pass_Field.Location = New System.Drawing.Point(170, 355)
         Me.Pass_Field.Name = "Pass_Field"
+        Me.Pass_Field.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.Pass_Field.Size = New System.Drawing.Size(215, 26)
         Me.Pass_Field.TabIndex = 1
         '

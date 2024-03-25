@@ -43,7 +43,7 @@ Public Class UpdateStocks
                     .Parameters.AddWithValue("@p_Employee", Username)
                     .ExecuteNonQuery()
                 End With
-            Else
+            Else 'if action = edit
                 With command
                     .Parameters.Clear()
                     .CommandText = "prc_editTransac"

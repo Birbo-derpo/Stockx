@@ -47,13 +47,13 @@ Public Class Login
                 DataUMTC.Clear()
                 sqlUMTCAdapter.Fill(DataUMTC)
             End With
-            If DataUMTC.Rows.Count > 0 Then
+            If DataUMTC.Rows.Count = 0 Then
                 MessageBox.Show("Invalid Username or Password", "Login Details", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
                 Dim position As String = DataUMTC.Rows(0).Item("Positions").ToString()
 
 
-                If position = "Inventory Manager" Then ' Check if the position is srbookkeeper
+                If position = "Inventory Manager" Then ' Check if the position is Inventory Manager
                     Dim userEmail As String = DataUMTC.Rows(0).Item("Gmail").ToString()
                     Dim dashboardForm As New DashBoard()
                     dashboardForm.lblgmail.Text = userEmail
@@ -117,7 +117,7 @@ Public Class Login
             MessageBox.Show("" & ex.Message)
         End Try
     End Sub
-    Private Sub lblForgotPassword_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblForgotPassword.LinkClicked
+    Private Sub LblForgotPassword_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblForgotPassword.LinkClicked
         Forgot_Password.Show()
         Me.Hide()
     End Sub
