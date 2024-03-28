@@ -142,7 +142,7 @@ Public Class Display_Employee
         With EditEmployee
 
 
-            .Show()
+            .ShowDialog()
 
 
 
@@ -164,7 +164,7 @@ Public Class Display_Employee
                 .cmbGender.Text = "Female"
             End If
         End With
-        Me.Close()
+
 
     End Sub
 End Class
