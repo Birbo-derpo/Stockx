@@ -141,7 +141,7 @@ Public Class DashBoard
             changeinto.cmbGender.Text = gender ' Assuming Gender is a global variable or defined elsewhere
 
             changeinto.ShowDialog()
-            Me.Hide()
+
         Else
             MessageBox.Show("User data not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
