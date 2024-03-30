@@ -178,4 +178,9 @@ Public Class Reserve
         DashBoard.Show()
         Me.Close()
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        AvailableStocks.Show()
+        Me.Close()
+    End Sub
 End Class

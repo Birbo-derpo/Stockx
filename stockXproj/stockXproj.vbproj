@@ -245,6 +245,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Global_var.vb" />
+    <Compile Include="MainOffice\AvailableStocks.Designer.vb">
+      <DependentUpon>AvailableStocks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainOffice\AvailableStocks.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainOffice\MainBranchInventory.Designer.vb">
       <DependentUpon>MainBranchInventory.vb</DependentUpon>
     </Compile>
@@ -477,6 +483,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainOffice\AvailableStocks.resx">
+      <DependentUpon>AvailableStocks.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainOffice\MainBranchInventory.resx">
       <DependentUpon>MainBranchInventory.vb</DependentUpon>

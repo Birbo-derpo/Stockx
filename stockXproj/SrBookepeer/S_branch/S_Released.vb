@@ -229,7 +229,6 @@ Public Class S_Released
     Private Sub Btn_Update_Click(sender As Object, e As EventArgs) Handles Btn_Update.Click
         State = "Repossess"
         For Each Checkcell As DataGridViewRow In Grd_StockReleased.Rows
-            'needs to accept only when branches combobox is selected
             If Checkcell.Cells("Column10").Value = True Then
                 Try
                     With command
@@ -258,6 +257,10 @@ Public Class S_Released
         Else
 
         End If
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
     End Sub
 
     'dataloader end
