@@ -115,9 +115,6 @@ Public Class DashBoard
                 End If
             End With
 
-
-
-
             sqlUMTCAdapter.Dispose()
             DataUMTC.Dispose()
 
