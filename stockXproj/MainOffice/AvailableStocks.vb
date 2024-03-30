@@ -1,23 +1,24 @@
 ﻿Imports MySql.Data.MySqlClient
-Imports Mysqlx.XDevAPI.Common
 
-Public Class MainBranchInventory
+Public Class AvailableStocks
     Private datUMTC As DataTable
-    Private Engyno As String
 
-    'dataloader
-    Private Sub MainBranchInventory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs) Handles Btn_AvStock.Click
+        MainBranchInventory.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub AvailableStocks_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Login_stat <> True Then
             Login.Show()
             Me.Close()
         Else
             CheckDatabaseConnection()
-            PrcDisplayUnits()
+            PrcAvailableUnits()
         End If
-
     End Sub
 
-    Private Sub PrcDisplayUnits()
+    Private Sub PrcAvailableUnits()
         Try
             sqlUMTCAdapter = New MySqlDataAdapter
             datUMTC = New DataTable
@@ -26,8 +27,8 @@ Public Class MainBranchInventory
                 .Parameters.Clear()
                 .CommandText = "prc_DisplayStock"
                 .CommandType = CommandType.StoredProcedure
-                .Parameters.AddWithValue("@p_filter", "")
-                .Parameters.AddWithValue("@p_search", "")
+                .Parameters.AddWithValue("@p_filter", "Status")
+                .Parameters.AddWithValue("@p_search", "Available")
                 .Parameters.AddWithValue("@p_GBranch", "Main")
                 sqlUMTCAdapter.SelectCommand = command
                 datUMTC.Clear()
@@ -63,17 +64,6 @@ Public Class MainBranchInventory
         Catch ex As Exception
             MessageBox.Show("" & ex.Message)
         End Try
-    End Sub
-
-    'dataloader end
-
-    'filter
-    Private Sub TxtSearch_TextChanged(sender As Object, e As EventArgs) Handles Txt_Search.TextChanged
-        If Chk_Auto.Checked = True Then
-            prc_search()
-        Else
-
-        End If
     End Sub
 
     Private Sub prc_search()
@@ -122,32 +112,26 @@ Public Class MainBranchInventory
     'filter end
 
     'button
-    Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        action = "Insert"
-        addMotorcycle.ShowDialog()
-    End Sub
-    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
-        action = "Edit"
-        addMotorcycle.ShowDialog()
-    End Sub
-    Private Sub Btndelete_Click(sender As Object, e As EventArgs) Handles btndelete.Click
-        Try
-            With command
-                .Parameters.Clear()
-                .CommandText = "prc_DeleteUnitbyEngineNumber"
-                .CommandType = CommandType.StoredProcedure
-                .Parameters.AddWithValue("@p_EngineNo", Engyno)
-                .ExecuteNonQuery()
-            End With
-            MessageBox.Show("unit Successfully Deleted", "Delete Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            PrcDisplayUnits()
 
-        Catch ex As Exception
-            MessageBox.Show("" & ex.Message)
-        End Try
+    Private Sub Btn_Reserved_Click(sender As Object, e As EventArgs) Handles Btn_Reserved.Click
+        Reserve.Show()
+        Me.Close()
     End Sub
 
-    Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles Btn_Search.Click
+    Private Sub Btn_Transit_Click(sender As Object, e As EventArgs) Handles Btn_Transit.Click
+        TRANSIT.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub Txt_Search_TextChanged(sender As Object, e As EventArgs) Handles Txt_Search.TextChanged
+        If Chk_Auto.Checked = True Then
+            prc_search()
+        Else
+
+        End If
+    End Sub
+
+    Private Sub Btn_Search_Click(sender As Object, e As EventArgs) Handles Btn_Search.Click
         sqlUMTCAdapter = New MySqlDataAdapter
         datUMTC = New DataTable
         Try
@@ -194,40 +178,25 @@ Public Class MainBranchInventory
         End Try
 
     End Sub
-    Private Sub Btn_Toreservation_Click(sender As Object, e As EventArgs) Handles Btn_ReservationPage.Click
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+    End Sub
+
+    Private Sub Grd_Motorcycle_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_Motorcycle.CellContentClick
+
+    End Sub
+
+    Private Sub Btn_Dashboard_Click(sender As Object, e As EventArgs) Handles Btn_Dashboard.Click
+        DashBoard.ShowDialog()
+        Me.Close()
+    End Sub
+
+    Private Sub Btn_ReservationPage_Click(sender As Object, e As EventArgs) Handles Btn_ReservationPage.Click
         ConfirmReserve.ShowDialog()
     End Sub
 
-    Private Sub Btn_Reserved_Click(sender As Object, e As EventArgs) Handles Btn_Reserved.Click
-        Reserve.Show()
-        Me.Close()
-    End Sub
+    'dataloader end
 
-    Private Sub Btn_Transit_Click(sender As Object, e As EventArgs) Handles Btn_Transit.Click
-        TRANSIT.Show()
-        Me.Close()
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Btn_Dashboard.Click
-        DashBoard.Show()
-        Me.Close()
-    End Sub
-
-
-    'button end
-
-    'form click
-    Private Sub Grd_Motorcycle_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_Motorcycle.CellClick
-        Engyno = Grd_Motorcycle.CurrentRow.Cells(5).Value
-    End Sub
-
-    Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs) Handles Btn_AvStock.Click
-
-    End Sub
-
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        AvailableStocks.Show()
-        Me.Close()
-    End Sub
-    'end form click
+    'filter
 End Class

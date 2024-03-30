@@ -111,5 +111,33 @@ Public Class TRANSIT
         Me.Close()
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        AvailableStocks.Show()
+        Me.Close()
+    End Sub
 
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        State = "Repossess"
+        For Each Checkcell As DataGridViewRow In Grd_Motorcycle.Rows
+            If Checkcell.Cells("Column8").Value = True Then
+                Try
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_ChangeStat"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(8).Value.ToString)
+                        .Parameters.AddWithValue("@p_Stat", State)
+                        .ExecuteNonQuery()
+                    End With
+
+                Catch ex As Exception
+                End Try
+                Checkcell.Cells("Column8").Value = False
+            End If
+
+        Next
+        MessageBox.Show("unit/s now in branch", "in branch", MessageBoxButtons.OK)
+
+        PrcDisplayTransitUnits()
+    End Sub
 End Class
