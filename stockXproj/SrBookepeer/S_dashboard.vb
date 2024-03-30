@@ -8,7 +8,6 @@ Public Class S_dashboard
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         reports.Show()
         Me.Close()
-
     End Sub
 
     Private Sub S_dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -138,5 +137,10 @@ Public Class S_dashboard
         Display_Employee.Show()
         Me.Hide()
 
+    End Sub
+
+    Private Sub Btn_inv_logs_Click(sender As Object, e As EventArgs) Handles Btn_inv_logs.Click
+        Sr_Inventory_Records.Show()
+        Me.Close()
     End Sub
 End Class
