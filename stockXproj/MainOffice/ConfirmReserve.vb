@@ -116,7 +116,7 @@ Public Class ConfirmReserve
         If cmb_tobranch.Text <> "" Then
             For Each Checkcell As DataGridViewRow In grdMotorcycle.Rows
                 'needs to accept only when branches combobox is selected
-                If Checkcell.Cells("Column8").Value = True AndAlso cmb_tobranch.Text <> " " Then
+                If Checkcell.Cells("Column1").Value = True AndAlso cmb_tobranch.Text <> " " Then
                     Try
                         With command
                             .Parameters.Clear()
@@ -201,8 +201,5 @@ Public Class ConfirmReserve
         Me.Close()
     End Sub
 
-    Private Sub grdMotorcycle_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grdMotorcycle.CellContentClick
-
-    End Sub
     'Buttons end
 End Class
