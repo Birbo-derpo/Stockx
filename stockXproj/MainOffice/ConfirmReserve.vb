@@ -113,10 +113,12 @@ Public Class ConfirmReserve
 
     'Buttons
     Private Sub Btn_Confirm(sender As Object, e As EventArgs) Handles Btn_ConfirmReserve.Click
+
+        Dim reserveCount As Integer = 0
         If cmb_tobranch.Text <> "" Then
             For Each Checkcell As DataGridViewRow In grdMotorcycle.Rows
                 'needs to accept only when branches combobox is selected
-                If Checkcell.Cells("Column1").Value = True AndAlso cmb_tobranch.Text <> " " Then
+                If Checkcell.Cells("Column1").Value = True And cmb_tobranch.Text <> " " Then
                     Try
                         With command
                             .Parameters.Clear()
@@ -142,15 +144,16 @@ Public Class ConfirmReserve
                             .ExecuteNonQuery()
                         End With
                     Catch ex As Exception
+
                         MessageBox.Show("unit/s reserved", "reserved", MessageBoxButtons.OK)
                     End Try
                 End If
-                Checkcell.Cells("Column8").Value = False
+                Checkcell.Cells("Column1").Value = False
             Next
         Else
             MessageBox.Show("branch destination not selected", "reservation error", MessageBoxButtons.OK)
         End If
-        PrcDisplayAvailableUnits()
+
         'checked list must be changed state only when reserved
     End Sub
 
