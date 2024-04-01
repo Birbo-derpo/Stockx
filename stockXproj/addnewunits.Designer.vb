@@ -22,10 +22,10 @@ Partial Class addnewunits
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.cmbModel = New System.Windows.Forms.ComboBox()
+        Me.cmbColor = New System.Windows.Forms.ComboBox()
+        Me.txtModel = New System.Windows.Forms.TextBox()
+        Me.TxtColor = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -39,35 +39,36 @@ Partial Class addnewunits
         Me.Button7 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'ComboBox1
+        'cmbModel
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(374, 55)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 24)
-        Me.ComboBox1.TabIndex = 0
+        Me.cmbModel.FormattingEnabled = True
+        Me.cmbModel.Items.AddRange(New Object() {"OTHERS"})
+        Me.cmbModel.Location = New System.Drawing.Point(374, 55)
+        Me.cmbModel.Name = "cmbModel"
+        Me.cmbModel.Size = New System.Drawing.Size(121, 24)
+        Me.cmbModel.TabIndex = 0
         '
-        'ComboBox2
+        'cmbColor
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(374, 148)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 24)
-        Me.ComboBox2.TabIndex = 1
+        Me.cmbColor.FormattingEnabled = True
+        Me.cmbColor.Location = New System.Drawing.Point(374, 148)
+        Me.cmbColor.Name = "cmbColor"
+        Me.cmbColor.Size = New System.Drawing.Size(121, 24)
+        Me.cmbColor.TabIndex = 1
         '
-        'TextBox1
+        'txtModel
         '
-        Me.TextBox1.Location = New System.Drawing.Point(374, 85)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox1.TabIndex = 2
+        Me.txtModel.Location = New System.Drawing.Point(374, 85)
+        Me.txtModel.Name = "txtModel"
+        Me.txtModel.Size = New System.Drawing.Size(100, 22)
+        Me.txtModel.TabIndex = 2
         '
-        'TextBox2
+        'TxtColor
         '
-        Me.TextBox2.Location = New System.Drawing.Point(374, 188)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox2.TabIndex = 3
+        Me.TxtColor.Location = New System.Drawing.Point(374, 188)
+        Me.TxtColor.Name = "TxtColor"
+        Me.TxtColor.Size = New System.Drawing.Size(100, 22)
+        Me.TxtColor.TabIndex = 3
         '
         'TextBox3
         '
@@ -182,10 +183,10 @@ Partial Class addnewunits
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.TxtColor)
+        Me.Controls.Add(Me.txtModel)
+        Me.Controls.Add(Me.cmbColor)
+        Me.Controls.Add(Me.cmbModel)
         Me.Name = "addnewunits"
         Me.Text = "addnewunits"
         Me.ResumeLayout(False)
@@ -193,10 +194,10 @@ Partial Class addnewunits
 
     End Sub
 
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents cmbModel As ComboBox
+    Friend WithEvents cmbColor As ComboBox
+    Friend WithEvents txtModel As TextBox
+    Friend WithEvents TxtColor As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
