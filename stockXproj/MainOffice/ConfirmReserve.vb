@@ -145,15 +145,15 @@ Public Class ConfirmReserve
                         End With
                     Catch ex As Exception
 
-                        MessageBox.Show("unit/s reserved", "reserved", MessageBoxButtons.OK)
                     End Try
                 End If
                 Checkcell.Cells("Column1").Value = False
             Next
+            MessageBox.Show("unit/s reserved", "reserved", MessageBoxButtons.OK)
         Else
             MessageBox.Show("branch destination not selected", "reservation error", MessageBoxButtons.OK)
         End If
-
+        PrcDisplayAvailableUnits()
         'checked list must be changed state only when reserved
     End Sub
 
