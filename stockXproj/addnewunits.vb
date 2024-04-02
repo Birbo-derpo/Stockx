@@ -12,7 +12,8 @@ Public Class addnewunits
         Try
             sqlUMTCAdapter = New MySqlDataAdapter()
             datUMTC = New DataTable()
-
+            cmbModel.Items.Clear()
+            cmbModel.Items.Add("OTHERS")
             With command
                 .Parameters.Clear()
                 .CommandText = "prc_DisplayModel"
@@ -23,11 +24,17 @@ Public Class addnewunits
                 sqlUMTCAdapter.Fill(datUMTC)
             End With
 
-
             ' Check if DataTable has rows
             If datUMTC.Rows.Count > 0 Then
+                Dim uniqueModels As New HashSet(Of String)()
+
                 For Each row As DataRow In datUMTC.Rows
-                    cmbModel.Items.Add(row("Model").ToString())
+                    Dim model As String = row("Model").ToString()
+                    If Not uniqueModels.Contains(model) Then
+                        cmbModel.Items.Add(model)
+                        uniqueModels.Add(model)
+
+                    End If
                 Next
             End If
 
@@ -40,50 +47,45 @@ Public Class addnewunits
         End Try
 
 
-
     End Sub
 
    Private Sub DisplayColor()
-        Try
-            ' Ensure there's a selected model in the ComboBox
-            If Not String.IsNullOrEmpty(cmbModel.Text) Then
-                ' Clear existing items in ComboBox
-                cmbColor.Items.Clear()
+        ' Ensure there's a selected model in the ComboBox
+        If Not String.IsNullOrEmpty(cmbModel.Text) Then
+            ' Clear existing items in ComboBox
+            cmbColor.Items.Clear()
 
-                sqlUMTCAdapter = New MySqlDataAdapter()
-                datUMTC = New DataTable()
+            sqlUMTCAdapter = New MySqlDataAdapter()
+            datUMTC = New DataTable()
 
-                With command
-                    .Parameters.Clear()
-                    .CommandText = "prc_DisplayAllColors"
-                    .CommandType = CommandType.StoredProcedure
-                    .Parameters.AddWithValue("@p_model", cmbModel.Text)
-                    sqlUMTCAdapter.SelectCommand = command
-                    datUMTC.Clear()
-                    sqlUMTCAdapter.Fill(datUMTC)
-                End With
+            With command
+                .Parameters.Clear()
+                .CommandText = "prc_DisplayAllColors"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_model", cmbModel.Text)
+                sqlUMTCAdapter.SelectCommand = command
+                datUMTC.Clear()
+                sqlUMTCAdapter.Fill(datUMTC)
+            End With
 
-                ' Check if any data is returned
-                If datUMTC.Rows.Count > 0 Then
-                    ' Filter colors based on the selected model
-                    Dim filteredRows() As DataRow = datUMTC.Select("Model = '" & cmbModel.Text & "'")
-                    For Each row As DataRow In filteredRows
+            If datUMTC.Rows.Count > 0 Then
+                ' Iterate through each row in the DataTable
+                For Each row As DataRow In datUMTC.Rows
+                    ' Check if the "Model" column value matches the selected model
+                    If row("Model").ToString() = cmbModel.Text Then
                         ' Assuming that the color information is in a column named "Color"
+                        ' and price information is in a column named "Price"
                         cmbColor.Items.Add(row("Color").ToString())
-                    Next
-                Else
-                    MessageBox.Show("No color information found for selected model " & cmbModel.Text)
-                End If
-
-                ' Dispose resources
-                sqlUMTCAdapter.Dispose()
-                datUMTC.Dispose()
-
+                        txtPrice.Text = row("Price").ToString()
+                    End If
+                Next
             End If
 
-        Catch ex As Exception
-            MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
+            ' Dispose resources
+            sqlUMTCAdapter.Dispose()
+            datUMTC.Dispose()
+
+        End If
 
     End Sub
 
@@ -113,15 +115,17 @@ Public Class addnewunits
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_Model", txtModel.Text)
                 .Parameters.AddWithValue("@p_color", TxtColor.Text)
+                .Parameters.AddWithValue("@p_price", txtPrice.Text)
                 .ExecuteNonQuery()
 
             End With
             MessageBox.Show("Model Addedd Succesfully", "Saving Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
+           
             TxtColor.Clear()
             txtModel.Clear()
+            txtPrice.Clear()
             DisplayModel()
-
+            DisplayColor()
         Catch ex As Exception
             MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -138,14 +142,29 @@ Public Class addnewunits
         End Try
     End Sub
 
+    Private Sub txtModel_TextChanged(sender As Object, e As EventArgs) Handles txtModel.TextChanged
+
+    End Sub
+
+    Private Sub txtPrice_TextChanged(sender As Object, e As EventArgs) Handles txtPrice.TextChanged
+        If txtModel IsNot Nothing AndAlso txtModel.Text <> "" Then
+            txtPrice.ReadOnly = True
+        Else
+            txtPrice.ReadOnly = False
+        End If
+    End Sub
+
     Private Sub cmbModel_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbModel.SelectedIndexChanged
         If cmbModel.SelectedItem IsNot Nothing Then
             selectedModel = cmbModel.SelectedItem.ToString()
             txtModel.Text = selectedModel
+            DisplayColor()
+
 
             If selectedModel = "OTHERS" Then
                 cmbModel.SelectedIndex = -1
                 txtModel.Clear()
+                txtPrice.Clear()
             End If
         End If
     End Sub
