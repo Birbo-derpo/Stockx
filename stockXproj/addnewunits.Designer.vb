@@ -26,7 +26,7 @@ Partial Class addnewunits
         Me.cmbColor = New System.Windows.Forms.ComboBox()
         Me.txtModel = New System.Windows.Forms.TextBox()
         Me.TxtColor = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtPrice = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -70,12 +70,13 @@ Partial Class addnewunits
         Me.TxtColor.Size = New System.Drawing.Size(100, 22)
         Me.TxtColor.TabIndex = 3
         '
-        'TextBox3
+        'txtPrice
         '
-        Me.TextBox3.Location = New System.Drawing.Point(374, 264)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox3.TabIndex = 4
+        Me.txtPrice.Location = New System.Drawing.Point(374, 261)
+        Me.txtPrice.Name = "txtPrice"
+        Me.txtPrice.ReadOnly = True
+        Me.txtPrice.Size = New System.Drawing.Size(100, 22)
+        Me.txtPrice.TabIndex = 4
         '
         'Label1
         '
@@ -182,7 +183,7 @@ Partial Class addnewunits
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.txtPrice)
         Me.Controls.Add(Me.TxtColor)
         Me.Controls.Add(Me.txtModel)
         Me.Controls.Add(Me.cmbColor)
@@ -198,7 +199,7 @@ Partial Class addnewunits
     Friend WithEvents cmbColor As ComboBox
     Friend WithEvents txtModel As TextBox
     Friend WithEvents TxtColor As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtPrice As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
