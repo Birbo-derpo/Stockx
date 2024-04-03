@@ -195,7 +195,7 @@ Public Class Allstock
     Private Sub Btn_AddCust_Click(sender As Object, e As EventArgs) Handles Btn_AddCust.Click
         action = "update"
         With UpdateStocks
-            .lbl_branch = Grd_Stock.CurrentRow.Cells(0).Value
+            .lbl_branch.Text = Grd_Stock.CurrentRow.Cells(0).Value.ToString()
             .Txt_SIN.Text = MTN
             .Txt_Model.Text = Model
             .Txt_Color.Text = Color

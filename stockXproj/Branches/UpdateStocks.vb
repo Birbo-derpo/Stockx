@@ -27,6 +27,7 @@ Public Class UpdateStocks
                     .Parameters.AddWithValue("@p_TypeOP", Cmb_Type.Text)
                     .Parameters.AddWithValue("@p_SIV", Txt_SIN.Text)
                     .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
+                    .Parameters.AddWithValue("@p_PaymentStatus", txt_PaymentStatus.Text)
                     .ExecuteNonQuery()
                 End With
                 With command
@@ -94,12 +95,21 @@ Public Class UpdateStocks
             Cmb_Term.Enabled = True
             Cmb_Term.ForeColor = Color.Black
             txtterm.ForeColor = Color.Black
+            txt_PaymentStatus.Text = "OnGoing"
         Else
             Cmb_Term.Enabled = False
             Cmb_Term.Text = "" ' Clear the text inside Cmb_Term
             Cmb_Term.ForeColor = Color.Gray
             txtterm.ForeColor = Color.Gray
+            txt_PaymentStatus.Text = "Fully Paid"
         End If
     End Sub
 
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub txt_PaymentStatus_TextChanged(sender As Object, e As EventArgs) Handles txt_PaymentStatus.TextChanged
+
+    End Sub
 End Class
