@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports Microsoft.VisualBasic.ApplicationServices
 Imports MySql.Data.MySqlClient
 
 
@@ -7,6 +8,7 @@ Public Class addnewunits
     Private datUMTC As DataTable
     Dim Mode As String
     Dim selectedModel, selectedColor As String
+
 
     Public Sub DisplayModel()
         Try
@@ -49,7 +51,7 @@ Public Class addnewunits
 
     End Sub
 
-   Private Sub DisplayColor()
+    Private Sub DisplayColor()
         ' Ensure there's a selected model in the ComboBox
         If Not String.IsNullOrEmpty(cmbModel.Text) Then
             ' Clear existing items in ComboBox
@@ -77,6 +79,9 @@ Public Class addnewunits
                         ' and price information is in a column named "Price"
                         cmbColor.Items.Add(row("Color").ToString())
                         txtPrice.Text = row("Price").ToString()
+                        txtPrice.ReadOnly = True
+                        btnSave.Visible = False
+
                     End If
                 Next
             End If
@@ -88,17 +93,11 @@ Public Class addnewunits
         End If
 
     End Sub
-
-
-
-
-
-
-
     Private Sub addnewunits_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CheckDatabaseConnection()
         DisplayModel()
         DisplayColor()
+
 
     End Sub
 
@@ -120,7 +119,7 @@ Public Class addnewunits
 
             End With
             MessageBox.Show("Model Addedd Succesfully", "Saving Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
-           
+
             TxtColor.Clear()
             txtModel.Clear()
             txtPrice.Clear()
@@ -132,6 +131,14 @@ Public Class addnewunits
 
     End Sub
 
+    Public Sub changestat()
+        If txtModel.Text <> "" AndAlso cmbModel.SelectedIndex <> -1 Then
+            txtPrice.ReadOnly = True
+        ElseIf btnedit.Enabled AndAlso txtModel.Text <> "" Then
+            txtPrice.ReadOnly = False
+        End If
+    End Sub
+
     Private Sub cmbColor_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbColor.SelectedIndexChanged
 
         Try
@@ -141,17 +148,42 @@ Public Class addnewunits
             MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles btnSave.Click
 
-    Private Sub txtModel_TextChanged(sender As Object, e As EventArgs) Handles txtModel.TextChanged
+        Try
+
+
+            With command
+                .Parameters.Clear()
+                .CommandText = "prc_EditPrice"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_price", txtPrice.Text)
+                .Parameters.AddWithValue("@p_Model", txtModel.Text)
+
+                .ExecuteNonQuery()
+                txtPrice.ReadOnly = True
+                btnSave.Visible = False
+            End With
+            MessageBox.Show("Price Change already Save", "Saving Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+
+
+
+
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+            End Try
+
 
     End Sub
 
-    Private Sub txtPrice_TextChanged(sender As Object, e As EventArgs) Handles txtPrice.TextChanged
-        If txtModel IsNot Nothing AndAlso txtModel.Text <> "" Then
-            txtPrice.ReadOnly = True
-        Else
-            txtPrice.ReadOnly = False
-        End If
+    Private Sub btnedit_Click(sender As Object, e As EventArgs) Handles btnedit.Click
+        txtPrice.ReadOnly = False
+        btnSave.Visible = True
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Me.Close()
     End Sub
 
     Private Sub cmbModel_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbModel.SelectedIndexChanged
@@ -167,5 +199,6 @@ Public Class addnewunits
                 txtPrice.Clear()
             End If
         End If
+
     End Sub
 End Class

@@ -31,9 +31,8 @@ Partial Class addnewunits
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.btnedit = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
@@ -74,7 +73,6 @@ Partial Class addnewunits
         '
         Me.txtPrice.Location = New System.Drawing.Point(374, 261)
         Me.txtPrice.Name = "txtPrice"
-        Me.txtPrice.ReadOnly = True
         Me.txtPrice.Size = New System.Drawing.Size(100, 22)
         Me.txtPrice.TabIndex = 4
         '
@@ -114,36 +112,28 @@ Partial Class addnewunits
         Me.Button1.Text = "ADD"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnedit
         '
-        Me.Button2.Location = New System.Drawing.Point(534, 188)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(81, 23)
-        Me.Button2.TabIndex = 9
-        Me.Button2.Text = "ADD"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnedit.Location = New System.Drawing.Point(534, 264)
+        Me.btnedit.Name = "btnedit"
+        Me.btnedit.Size = New System.Drawing.Size(81, 23)
+        Me.btnedit.TabIndex = 10
+        Me.btnedit.Text = "EDIT"
+        Me.btnedit.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnSave
         '
-        Me.Button3.Location = New System.Drawing.Point(534, 264)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(81, 23)
-        Me.Button3.TabIndex = 10
-        Me.Button3.Text = "EDIT"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(637, 264)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(81, 23)
-        Me.Button4.TabIndex = 11
-        Me.Button4.Text = "SAVE"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnSave.Location = New System.Drawing.Point(637, 264)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(81, 23)
+        Me.btnSave.TabIndex = 11
+        Me.btnSave.Text = "SAVE"
+        Me.btnSave.UseVisualStyleBackColor = True
+        Me.btnSave.Visible = False
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(637, 188)
+        Me.Button5.Location = New System.Drawing.Point(534, 188)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(81, 23)
         Me.Button5.TabIndex = 12
@@ -176,9 +166,8 @@ Partial Class addnewunits
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnSave)
+        Me.Controls.Add(Me.btnedit)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -204,9 +193,8 @@ Partial Class addnewunits
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents btnedit As Button
+    Friend WithEvents btnSave As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents Button6 As Button
     Friend WithEvents Button7 As Button
