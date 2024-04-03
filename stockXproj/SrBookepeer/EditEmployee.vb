@@ -174,4 +174,8 @@ Public Class EditEmployee
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Dispose()
     End Sub
+
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+
+    End Sub
 End Class

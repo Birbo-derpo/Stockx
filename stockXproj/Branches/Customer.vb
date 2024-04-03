@@ -44,10 +44,11 @@ Public Class Customer
                             grd_AllCustomer.Rows(row).Cells(8).Value = DataUMTC.Rows(row).Item("TypeOP").ToString
                             grd_AllCustomer.Rows(row).Cells(9).Value = DataUMTC.Rows(row).Item("TermOP").ToString
                             grd_AllCustomer.Rows(row).Cells(10).Value = DataUMTC.Rows(row).Item("Amount_paid").ToString
-                            grd_AllCustomer.Rows(row).Cells(11).Value = DataUMTC.Rows(row).Item("Price").ToString
-                            grd_AllCustomer.Rows(row).Cells(12).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Date_owned").ToString), "MMM dd, yyyy")
-                            grd_AllCustomer.Rows(row).Cells(13).Value = DataUMTC.Rows(row).Item("SIV").ToString
-                            grd_AllCustomer.Rows(row).Cells(14).Value = DataUMTC.Rows(row).Item("id").ToString
+                            grd_AllCustomer.Rows(row).Cells(11).Value = DataUMTC.Rows(row).Item("Payment_Status").ToString
+                            grd_AllCustomer.Rows(row).Cells(12).Value = DataUMTC.Rows(row).Item("Price").ToString
+                            grd_AllCustomer.Rows(row).Cells(13).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Date_owned").ToString), "MMM dd, yyyy")
+                            grd_AllCustomer.Rows(row).Cells(14).Value = DataUMTC.Rows(row).Item("SIV").ToString
+                            grd_AllCustomer.Rows(row).Cells(15).Value = DataUMTC.Rows(row).Item("id").ToString
 
                             row = row + 1
                         End If
@@ -240,6 +241,10 @@ Public Class Customer
         Else
             PrcDisplayAllCustomers()
         End If
+    End Sub
+
+    Private Sub grd_AllCustomer_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grd_AllCustomer.CellContentClick
+
     End Sub
     'features end
 End Class
