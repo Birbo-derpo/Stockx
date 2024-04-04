@@ -44,7 +44,8 @@ Public Class UpdateStocks
                     .Parameters.AddWithValue("@p_Employee", Username)
                     .ExecuteNonQuery()
                 End With
-            Else 'if action = edit
+
+            ElseIf action = "edit" Then
                 With command
                     .Parameters.Clear()
                     .CommandText = "prc_editTransac"
@@ -73,12 +74,14 @@ Public Class UpdateStocks
                     .ExecuteNonQuery()
                 End With
             End If
+
             With command
                 .Parameters.Clear()
                 .CommandText = "prc_ChangeStat"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_EngineNum", Txt_EngineNumber.Text)
                 .Parameters.AddWithValue("@p_Stat", Cmb_Stat.Text)
+                .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
                 .ExecuteNonQuery()
             End With
         Catch ex As Exception
