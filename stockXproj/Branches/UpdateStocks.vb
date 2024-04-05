@@ -64,7 +64,7 @@ Public Class UpdateStocks
                     .CommandText = "prc_Record"
                     .CommandType = CommandType.StoredProcedure
                     .Parameters.AddWithValue("@p_Action", "Edit Transferred unit")
-                    .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd H:mm:ss"))
+                    .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd"))
                     .Parameters.AddWithValue("@p_Unit", Txt_EngineNumber.Text)
                     .Parameters.AddWithValue("@p_branch", lbl_branch.Text)
                     .Parameters.AddWithValue("@p_FromState", Lbl_Stat.Text)
