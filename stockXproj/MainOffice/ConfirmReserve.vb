@@ -134,7 +134,7 @@ Public Class ConfirmReserve
                             .CommandText = "prc_Record"
                             .CommandType = CommandType.StoredProcedure
                             .Parameters.AddWithValue("@p_Action", "Reserve unit")
-                            .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd H:mm:ss"))
+                            .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd"))
                             .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(6).Value.ToString)
                             .Parameters.AddWithValue("@p_branch", cmb_tobranch.Text)
                             .Parameters.AddWithValue("@p_FromState", "Available")

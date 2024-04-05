@@ -195,7 +195,7 @@ Public Class Reserve
                 Try
                     With command
                         .Parameters.Clear()
-                        .CommandText = "prc_SetUnitDate"
+                        .CommandText = "prc_GetUnitDate"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_state", State)
@@ -206,7 +206,7 @@ Public Class Reserve
                         .CommandText = "prc_Record"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_Action", "Cancel Reservation")
-                        .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd H:mm:ss"))
+                        .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd"))
                         .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_branch", Checkcell.Cells(1).Value.ToString)
                         .Parameters.AddWithValue("@p_FromState", "Reserved")
