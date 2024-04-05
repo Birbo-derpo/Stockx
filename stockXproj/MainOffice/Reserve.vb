@@ -183,4 +183,47 @@ Public Class Reserve
         AvailableStocks.Show()
         Me.Close()
     End Sub
+
+    Private Sub Btn_CancelReserve_Click(sender As Object, e As EventArgs) Handles Btn_CancelReserve.Click
+        'sends to delivery for transit
+        State = "Main"
+        For Each Checkcell As DataGridViewRow In Grd_MotorcycleReserved.Rows
+                'needs to accept only when branches combobox is selected
+
+                If Checkcell.Cells("Column10").Value = True Then
+
+                Try
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_SetUnitDate"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_state", State)
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_Record"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_Action", "Cancel Reservation")
+                        .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd H:mm:ss"))
+                        .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_branch", Checkcell.Cells(1).Value.ToString)
+                        .Parameters.AddWithValue("@p_FromState", "Reserved")
+                        .Parameters.AddWithValue("@p_ToState", State)
+                        .Parameters.AddWithValue("@p_Customer", "none")
+                        .Parameters.AddWithValue("@p_Employee", Username)
+                        .ExecuteNonQuery()
+                    End With
+                Catch ex As Exception
+                End Try
+                    Checkcell.Cells("Column10").Value = False
+                End If
+
+            Next
+        MessageBox.Show("Reservation is now canceled", "Cancel REservation", MessageBoxButtons.OK)
+
+
+        PrcDisplayReservedUnits()
+    End Sub
 End Class

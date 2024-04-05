@@ -31,7 +31,7 @@ Partial Class Deposited
         Me.Btn_Search = New System.Windows.Forms.Button()
         Me.Txt_Search = New System.Windows.Forms.TextBox()
         Me.Cmb_SearchType = New System.Windows.Forms.ComboBox()
-        Me.Btn_Update = New System.Windows.Forms.Button()
+        Me.Btn_Release = New System.Windows.Forms.Button()
         Me.Btn_AllStock = New System.Windows.Forms.Button()
         Me.Btn_Deposited = New System.Windows.Forms.Button()
         Me.Btn_Repossess = New System.Windows.Forms.Button()
@@ -53,6 +53,7 @@ Partial Class Deposited
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.dt = New System.Windows.Forms.DateTimePicker()
+        Me.Btn_ReturnUnit = New System.Windows.Forms.Button()
         CType(Me.Grd_StockDeposit, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -154,18 +155,18 @@ Partial Class Deposited
         Me.Cmb_SearchType.Size = New System.Drawing.Size(283, 26)
         Me.Cmb_SearchType.TabIndex = 45
         '
-        'Btn_Update
+        'Btn_Release
         '
-        Me.Btn_Update.BackColor = System.Drawing.Color.Firebrick
-        Me.Btn_Update.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_Update.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_Update.Location = New System.Drawing.Point(433, 659)
-        Me.Btn_Update.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Btn_Update.Name = "Btn_Update"
-        Me.Btn_Update.Size = New System.Drawing.Size(159, 57)
-        Me.Btn_Update.TabIndex = 44
-        Me.Btn_Update.Text = "RELEASE"
-        Me.Btn_Update.UseVisualStyleBackColor = False
+        Me.Btn_Release.BackColor = System.Drawing.Color.Firebrick
+        Me.Btn_Release.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Release.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Btn_Release.Location = New System.Drawing.Point(433, 659)
+        Me.Btn_Release.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_Release.Name = "Btn_Release"
+        Me.Btn_Release.Size = New System.Drawing.Size(159, 57)
+        Me.Btn_Release.TabIndex = 44
+        Me.Btn_Release.Text = "RELEASE"
+        Me.Btn_Release.UseVisualStyleBackColor = False
         '
         'Btn_AllStock
         '
@@ -389,12 +390,26 @@ Partial Class Deposited
         Me.dt.Size = New System.Drawing.Size(270, 23)
         Me.dt.TabIndex = 75
         '
+        'Btn_ReturnUnit
+        '
+        Me.Btn_ReturnUnit.BackColor = System.Drawing.Color.Firebrick
+        Me.Btn_ReturnUnit.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_ReturnUnit.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Btn_ReturnUnit.Location = New System.Drawing.Point(1351, 659)
+        Me.Btn_ReturnUnit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_ReturnUnit.Name = "Btn_ReturnUnit"
+        Me.Btn_ReturnUnit.Size = New System.Drawing.Size(159, 57)
+        Me.Btn_ReturnUnit.TabIndex = 76
+        Me.Btn_ReturnUnit.Text = "Return Unit"
+        Me.Btn_ReturnUnit.UseVisualStyleBackColor = False
+        '
         'Deposited
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Snow
         Me.ClientSize = New System.Drawing.Size(1924, 769)
+        Me.Controls.Add(Me.Btn_ReturnUnit)
         Me.Controls.Add(Me.dt)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -407,7 +422,7 @@ Partial Class Deposited
         Me.Controls.Add(Me.Btn_Search)
         Me.Controls.Add(Me.Txt_Search)
         Me.Controls.Add(Me.Cmb_SearchType)
-        Me.Controls.Add(Me.Btn_Update)
+        Me.Controls.Add(Me.Btn_Release)
         Me.Controls.Add(Me.Grd_StockDeposit)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Deposited"
@@ -430,7 +445,7 @@ Partial Class Deposited
     Friend WithEvents Btn_Search As Button
     Friend WithEvents Txt_Search As TextBox
     Friend WithEvents Cmb_SearchType As ComboBox
-    Friend WithEvents Btn_Update As Button
+    Friend WithEvents Btn_Release As Button
     Friend WithEvents Btn_AllStock As Button
     Friend WithEvents Btn_Deposited As Button
     Friend WithEvents Btn_Repossess As Button
@@ -452,4 +467,5 @@ Partial Class Deposited
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents dt As DateTimePicker
+    Friend WithEvents Btn_ReturnUnit As Button
 End Class
