@@ -21,12 +21,12 @@ Public Class UpdateStocks
                     .CommandType = CommandType.StoredProcedure
                     .Parameters.AddWithValue("@F_name", Txt_Fname.Text)
                     .Parameters.AddWithValue("@L_name", Txt_Lname.Text)
-                    .Parameters.AddWithValue("@p_EngineNo", Txt_EngineNumber.Text)
                     .Parameters.AddWithValue("@p_Amount", CDbl(Txt_Amount.Text))
                     .Parameters.AddWithValue("@p_TermOE", Cmb_Term.Text)
                     .Parameters.AddWithValue("@p_TypeOP", Cmb_Type.Text)
                     .Parameters.AddWithValue("@p_SIV", Txt_SIN.Text)
                     .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
+                    .Parameters.AddWithValue("@p_EngineNo", Txt_EngineNumber.Text)
                     .Parameters.AddWithValue("@p_PaymentStatus", txt_PaymentStatus.Text)
                     .ExecuteNonQuery()
                 End With
@@ -35,7 +35,7 @@ Public Class UpdateStocks
                     .CommandText = "prc_Record"
                     .CommandType = CommandType.StoredProcedure
                     .Parameters.AddWithValue("@p_Action", "Transfer unit")
-                    .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd H:mm:ss"))
+                    .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd"))
                     .Parameters.AddWithValue("@p_Unit", Txt_EngineNumber.Text)
                     .Parameters.AddWithValue("@p_branch", lbl_branch.Text)
                     .Parameters.AddWithValue("@p_FromState", "In branch")

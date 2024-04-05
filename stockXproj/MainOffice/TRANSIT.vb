@@ -131,7 +131,7 @@ Public Class TRANSIT
                 Try
                     With command
                         .Parameters.Clear()
-                        .CommandText = "prc_SetUnitDate"
+                        .CommandText = "prc_GetUnitDate"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(8).Value.ToString)
                         .Parameters.AddWithValue("@p_state", State)
@@ -142,7 +142,7 @@ Public Class TRANSIT
                         .CommandText = "prc_Record"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_Action", "Cancel Transit")
-                        .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd H:mm:ss"))
+                        .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd"))
                         .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(8).Value.ToString)
                         .Parameters.AddWithValue("@p_branch", Checkcell.Cells(1).Value.ToString)
                         .Parameters.AddWithValue("@p_FromState", "in Transit")
@@ -170,7 +170,7 @@ Public Class TRANSIT
                 Try
                     With command
                         .Parameters.Clear()
-                        .CommandText = "prc_SetUnitDate"
+                        .CommandText = "prc_GetUnitDate"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(8).Value.ToString)
                         .Parameters.AddWithValue("@p_state", State)
