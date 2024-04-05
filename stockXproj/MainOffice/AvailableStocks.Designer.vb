@@ -345,6 +345,7 @@ Partial Class AvailableStocks
         Me.Controls.Add(Me.Grd_Motorcycle)
         Me.Name = "AvailableStocks"
         Me.Text = "AvailableStocks"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Grd_Motorcycle, System.ComponentModel.ISupportInitialize).EndInit()
