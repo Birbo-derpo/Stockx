@@ -14,7 +14,7 @@ Public Class UpdateStocks
 
     Private Sub Btn_Update_Click(sender As Object, e As EventArgs) Handles Btn_Update.Click
         Try
-            If action = "Update" Then
+            If action = "Update" And Txt_SIN.Text <> "" Then
                 With command
                     .Parameters.Clear()
                     .CommandText = "prc_Transact"
@@ -22,7 +22,7 @@ Public Class UpdateStocks
                     .Parameters.AddWithValue("@F_name", Txt_Fname.Text)
                     .Parameters.AddWithValue("@L_name", Txt_Lname.Text)
                     .Parameters.AddWithValue("@p_Amount", CDbl(Txt_Amount.Text))
-                    .Parameters.AddWithValue("@p_TermOE", Cmb_Term.Text)
+                    .Parameters.AddWithValue("@p_TermOP", Cmb_Term.Text)
                     .Parameters.AddWithValue("@p_TypeOP", Cmb_Type.Text)
                     .Parameters.AddWithValue("@p_SIV", Txt_SIN.Text)
                     .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
@@ -30,6 +30,7 @@ Public Class UpdateStocks
                     .Parameters.AddWithValue("@p_PaymentStatus", txt_PaymentStatus.Text)
                     .ExecuteNonQuery()
                 End With
+                MessageBox.Show("Transaction success.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 With command
                     .Parameters.Clear()
                     .CommandText = "prc_Record"
@@ -54,7 +55,7 @@ Public Class UpdateStocks
                     .Parameters.AddWithValue("@F_name", Txt_Fname.Text)
                     .Parameters.AddWithValue("@L_name", Txt_Lname.Text)
                     .Parameters.AddWithValue("@p_Amount", CDbl(Txt_Amount.Text))
-                    .Parameters.AddWithValue("@p_TermOE", Cmb_Term.Text)
+                    .Parameters.AddWithValue("@p_TermOP", Cmb_Term.Text)
                     .Parameters.AddWithValue("@p_TypeOP", Cmb_Type.Text)
                     .Parameters.AddWithValue("@p_SIV", Txt_SIN.Text)
                     .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
@@ -91,8 +92,6 @@ Public Class UpdateStocks
         Me.Close()
     End Sub
 
-
-
     Private Sub Cmb_Type_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Cmb_Type.SelectedIndexChanged
         If Cmb_Type.Text = "Installment Plan" Then
             Cmb_Term.Enabled = True
@@ -108,11 +107,5 @@ Public Class UpdateStocks
         End If
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
 
-    End Sub
-
-    Private Sub txt_PaymentStatus_TextChanged(sender As Object, e As EventArgs) Handles txt_PaymentStatus.TextChanged
-
-    End Sub
 End Class
