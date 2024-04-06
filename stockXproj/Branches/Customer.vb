@@ -29,29 +29,25 @@ Public Class Customer
                     grd_AllCustomer.RowCount = DataUMTC.Rows.Count
                     row = 0
                     While Not DataUMTC.Rows.Count - 1 < row
-                        If DataUMTC.Rows(row).Item("Brnch").ToString = "Main" Then
-                            'skip
-                            row = row + 1
-                        Else
-                            grd_AllCustomer.Rows(row).Cells(0).Value = DataUMTC.Rows(row).Item("L_name").ToString
-                            grd_AllCustomer.Rows(row).Cells(1).Value = DataUMTC.Rows(row).Item("F_name").ToString
-                            grd_AllCustomer.Rows(row).Cells(2).Value = DataUMTC.Rows(row).Item("Stat").ToString
-                            grd_AllCustomer.Rows(row).Cells(3).Value = DataUMTC.Rows(row).Item("Model").ToString
-                            grd_AllCustomer.Rows(row).Cells(4).Value = DataUMTC.Rows(row).Item("Color").ToString
-                            grd_AllCustomer.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Brnch").ToString
-                            grd_AllCustomer.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
-                            grd_AllCustomer.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("FrameNum").ToString
-                            grd_AllCustomer.Rows(row).Cells(8).Value = DataUMTC.Rows(row).Item("TypeOP").ToString
-                            grd_AllCustomer.Rows(row).Cells(9).Value = DataUMTC.Rows(row).Item("TermOP").ToString
-                            grd_AllCustomer.Rows(row).Cells(10).Value = DataUMTC.Rows(row).Item("Amount_paid").ToString
-                            grd_AllCustomer.Rows(row).Cells(11).Value = DataUMTC.Rows(row).Item("Payment_Status").ToString
-                            grd_AllCustomer.Rows(row).Cells(12).Value = DataUMTC.Rows(row).Item("Price").ToString
-                            grd_AllCustomer.Rows(row).Cells(13).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Date_owned").ToString), "MMM dd, yyyy")
-                            grd_AllCustomer.Rows(row).Cells(14).Value = DataUMTC.Rows(row).Item("SIV").ToString
-                            grd_AllCustomer.Rows(row).Cells(15).Value = DataUMTC.Rows(row).Item("id").ToString
 
-                            row = row + 1
-                        End If
+                        grd_AllCustomer.Rows(row).Cells(0).Value = DataUMTC.Rows(row).Item("L_name").ToString
+                        grd_AllCustomer.Rows(row).Cells(1).Value = DataUMTC.Rows(row).Item("F_name").ToString
+                        grd_AllCustomer.Rows(row).Cells(2).Value = DataUMTC.Rows(row).Item("Stat").ToString
+                        grd_AllCustomer.Rows(row).Cells(3).Value = DataUMTC.Rows(row).Item("Model").ToString
+                        grd_AllCustomer.Rows(row).Cells(4).Value = DataUMTC.Rows(row).Item("Color").ToString
+                        grd_AllCustomer.Rows(row).Cells(5).Value = DataUMTC.Rows(row).Item("Brnch").ToString
+                        grd_AllCustomer.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
+                        grd_AllCustomer.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("FrameNum").ToString
+                        grd_AllCustomer.Rows(row).Cells(8).Value = DataUMTC.Rows(row).Item("TypeOP").ToString
+                        grd_AllCustomer.Rows(row).Cells(9).Value = DataUMTC.Rows(row).Item("TermOP").ToString
+                        grd_AllCustomer.Rows(row).Cells(10).Value = DataUMTC.Rows(row).Item("Amount_paid").ToString
+                        grd_AllCustomer.Rows(row).Cells(11).Value = DataUMTC.Rows(row).Item("Price").ToString
+                        grd_AllCustomer.Rows(row).Cells(12).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Date_ordered").ToString), "MMM dd, yyyy")
+                        grd_AllCustomer.Rows(row).Cells(13).Value = DataUMTC.Rows(row).Item("SIV").ToString
+                        grd_AllCustomer.Rows(row).Cells(14).Value = DataUMTC.Rows(row).Item("Payment_Status").ToString
+                        grd_AllCustomer.Rows(row).Cells(15).Value = DataUMTC.Rows(row).Item("id").ToString
+
+                        row = row + 1
                     End While
                 Else
                     MessageBox.Show("No Available Records", "Records", MessageBoxButtons.OK, MessageBoxIcon.Question)
@@ -97,9 +93,10 @@ Public Class Customer
                         grd_AllCustomer.Rows(row).Cells(9).Value = DataUMTC.Rows(row).Item("TermOP").ToString
                         grd_AllCustomer.Rows(row).Cells(10).Value = DataUMTC.Rows(row).Item("Amount_paid").ToString
                         grd_AllCustomer.Rows(row).Cells(11).Value = DataUMTC.Rows(row).Item("Price").ToString
-                        grd_AllCustomer.Rows(row).Cells(12).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Date_owned").ToString), "MMM dd, yyyy")
+                        grd_AllCustomer.Rows(row).Cells(12).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Date_ordered").ToString), "MMM dd, yyyy")
                         grd_AllCustomer.Rows(row).Cells(13).Value = DataUMTC.Rows(row).Item("SIV").ToString
-                        grd_AllCustomer.Rows(row).Cells(14).Value = DataUMTC.Rows(row).Item("id").ToString
+                        grd_AllCustomer.Rows(row).Cells(14).Value = DataUMTC.Rows(row).Item("Payment_Status").ToString
+                        grd_AllCustomer.Rows(row).Cells(15).Value = DataUMTC.Rows(row).Item("id").ToString
 
 
                         row = row + 1
@@ -147,9 +144,10 @@ Public Class Customer
                         grd_AllCustomer.Rows(row).Cells(9).Value = DataUMTC.Rows(row).Item("TermOP").ToString
                         grd_AllCustomer.Rows(row).Cells(10).Value = DataUMTC.Rows(row).Item("Amount_paid").ToString
                         grd_AllCustomer.Rows(row).Cells(11).Value = DataUMTC.Rows(row).Item("Price").ToString
-                        grd_AllCustomer.Rows(row).Cells(12).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Date_owned").ToString), "MMM dd, yyyy")
+                        grd_AllCustomer.Rows(row).Cells(12).Value = Format(Convert.ToDateTime(DataUMTC.Rows(row).Item("Date_ordered").ToString), "MMM dd, yyyy")
                         grd_AllCustomer.Rows(row).Cells(13).Value = DataUMTC.Rows(row).Item("SIV").ToString
-                        grd_AllCustomer.Rows(row).Cells(14).Value = DataUMTC.Rows(row).Item("id").ToString
+                        grd_AllCustomer.Rows(row).Cells(14).Value = DataUMTC.Rows(row).Item("Payment_Status").ToString
+                        grd_AllCustomer.Rows(row).Cells(15).Value = DataUMTC.Rows(row).Item("id").ToString
 
                         row = row + 1
                     End While
@@ -177,7 +175,6 @@ Public Class Customer
             .Txt_SIN.Text = grd_AllCustomer.CurrentRow.Cells(12).Value
             .Txt_Fname.Text = grd_AllCustomer.CurrentRow.Cells(1).Value
             .Txt_Lname.Text = grd_AllCustomer.CurrentRow.Cells(0).Value
-            .dt = grd_AllCustomer.CurrentRow.Cells(12).Value
             .Txt_Amount.Text = grd_AllCustomer.CurrentRow.Cells(10).Value
             .Cmb_Type.Text = grd_AllCustomer.CurrentRow.Cells(8).Value
             .Cmb_Term.Text = grd_AllCustomer.CurrentRow.Cells(9).Value
@@ -204,7 +201,7 @@ Public Class Customer
     End Sub
 
     Private Sub Get_id(sender As Object, e As DataGridViewCellEventArgs) Handles grd_AllCustomer.CellClick
-        Cust_id = CInt(grd_AllCustomer.CurrentRow.Cells(14).Value)
+        Cust_id = CInt(grd_AllCustomer.CurrentRow.Cells(15).Value)
     End Sub
 
     Private Sub Btn_FullPaid_Click(sender As Object, e As EventArgs) Handles Btn_FullPaid.Click
