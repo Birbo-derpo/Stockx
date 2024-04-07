@@ -188,6 +188,7 @@ Public Class Customer
             .Txt_FrameNumber.Text = grd_AllCustomer.CurrentRow.Cells(7).Value
             .ShowDialog()
         End With
+        PrcDisplayAllCustomers()
     End Sub
     'buttons end
 
@@ -223,7 +224,7 @@ Public Class Customer
             .CommandText = "prc_Record"
             .CommandType = CommandType.StoredProcedure
             .Parameters.AddWithValue("@p_Action", "Edit Transferred unit")
-            .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd H:mm:ss"))
+            .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd H:mm:ss")) 'H:mm:ss  this snip of code is in case if the record with time works 
             .Parameters.AddWithValue("@p_Unit", grd_AllCustomer.CurrentRow.Cells(6).Value)
             .Parameters.AddWithValue("@p_branch", grd_AllCustomer.CurrentRow.Cells(5).Value)
             .Parameters.AddWithValue("@p_FromState", grd_AllCustomer.CurrentRow.Cells(2).Value)
