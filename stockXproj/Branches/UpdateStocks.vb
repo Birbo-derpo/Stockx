@@ -107,5 +107,11 @@ Public Class UpdateStocks
         End If
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
+        getCustomerts.ShowDialog()
+    End Sub
 
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        getCustomerts.ShowDialog()
+    End Sub
 End Class
