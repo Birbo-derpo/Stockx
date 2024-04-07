@@ -14,7 +14,7 @@ Public Class UpdateStocks
 
     Private Sub Btn_Update_Click(sender As Object, e As EventArgs) Handles Btn_Update.Click
         Try
-            If action = "Update" And Txt_SIN.Text <> "" Then
+            If action = "Update" Then
                 With command
                     .Parameters.Clear()
                     .CommandText = "prc_Transact"
@@ -86,7 +86,7 @@ Public Class UpdateStocks
                 .ExecuteNonQuery()
             End With
         Catch ex As Exception
-            MessageBox.Show("Data updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("hmmmmm.", "Success?", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End Try
 
         Me.Close()
