@@ -407,7 +407,9 @@ Partial Class Allstock
         Me.Controls.Add(Me.Grd_Stock)
         Me.Controls.Add(Me.Lbl_Branch)
         Me.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+
         Me.Name = "Allstock"
         Me.Text = "AllStock"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
