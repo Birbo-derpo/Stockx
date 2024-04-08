@@ -210,14 +210,15 @@ Public Class Customer
             .Parameters.Clear()
             .CommandText = "prc_editTransac"
             .CommandType = CommandType.StoredProcedure
-            .Parameters.AddWithValue("@p_id", Cust_id)
-            .Parameters.AddWithValue("@F_name", grd_AllCustomer.CurrentRow.Cells(1).Value)
-            .Parameters.AddWithValue("@L_name", grd_AllCustomer.CurrentRow.Cells(0).Value)
+            .Parameters.AddWithValue("@p_id", grd_AllCustomer.CurrentRow.Cells(15).Value)
+            .Parameters.AddWithValue("@p_FName", grd_AllCustomer.CurrentRow.Cells(1).Value)
+            .Parameters.AddWithValue("@p_LName", grd_AllCustomer.CurrentRow.Cells(0).Value)
             .Parameters.AddWithValue("@p_Amount", CDbl(grd_AllCustomer.CurrentRow.Cells(11).Value))
-            .Parameters.AddWithValue("@p_TermOE", grd_AllCustomer.CurrentRow.Cells(9).Value)
+            .Parameters.AddWithValue("@p_TermOP", grd_AllCustomer.CurrentRow.Cells(9).Value)
             .Parameters.AddWithValue("@p_TypeOP", grd_AllCustomer.CurrentRow.Cells(8).Value)
             .Parameters.AddWithValue("@p_SIV", grd_AllCustomer.CurrentRow.Cells(13).Value)
             .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
+            .Parameters.AddWithValue("@p_PaymentStatus", "Fully Paid")
         End With
         With command
             .Parameters.Clear()

@@ -224,12 +224,13 @@ Public Class Reserve
                         .ExecuteNonQuery()
                     End With
                 Catch ex As Exception
+                    MessageBox.Show("Catch Happened", "Catch", MessageBoxButtons.OK)
                 End Try
                 Checkcell.Cells("Column10").Value = False
             End If
 
         Next
-        MessageBox.Show("Reservation is now canceled", "Cancel REservation", MessageBoxButtons.OK)
+        MessageBox.Show("Reservation is now canceled", "Cancel Reservation", MessageBoxButtons.OK)
 
 
         PrcDisplayReservedUnits()

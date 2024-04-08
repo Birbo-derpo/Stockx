@@ -94,10 +94,10 @@ Public Class addMotorcycle
         Else
             Predef_model_list()
             Predef_color_list()
+            CheckDatabaseConnection()
+            DisplayModel()
+            DisplayColor()
         End If
-        CheckDatabaseConnection()
-        DisplayModel()
-        DisplayColor()
 
     End Sub
     Private Sub Btn_Add_Click(sender As Object, e As EventArgs) Handles Btn_Add.Click
