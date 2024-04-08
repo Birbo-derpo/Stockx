@@ -186,12 +186,11 @@ Public Class Reserve
 
     Private Sub Btn_CancelReserve_Click(sender As Object, e As EventArgs) Handles Btn_CancelReserve.Click
         'sends to delivery for transit
-        State = "Main"
+        State = "Available"
         For Each Checkcell As DataGridViewRow In Grd_MotorcycleReserved.Rows
-                'needs to accept only when branches combobox is selected
+            'needs to accept only when branches combobox is selected
 
-                If Checkcell.Cells("Column10").Value = True Then
-
+            If Checkcell.Cells("Column10").Value = True Then
                 Try
                     With command
                         .Parameters.Clear()
@@ -199,6 +198,15 @@ Public Class Reserve
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_state", State)
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_ChangeStat"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_Stat", State)
+                        .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
                         .ExecuteNonQuery()
                     End With
                     With command
@@ -217,10 +225,10 @@ Public Class Reserve
                     End With
                 Catch ex As Exception
                 End Try
-                    Checkcell.Cells("Column10").Value = False
-                End If
+                Checkcell.Cells("Column10").Value = False
+            End If
 
-            Next
+        Next
         MessageBox.Show("Reservation is now canceled", "Cancel REservation", MessageBoxButtons.OK)
 
 

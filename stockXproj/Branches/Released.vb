@@ -261,6 +261,7 @@ Public Class Released
                         .ExecuteNonQuery()
                     End With
                 Catch ex As Exception
+                    MessageBox.Show("unit/s not in branch", "What", MessageBoxButtons.OK)
                 End Try
                 Checkcell.Cells("Column10").Value = False
                 Cust_Name = ""

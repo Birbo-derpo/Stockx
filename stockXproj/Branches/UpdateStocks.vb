@@ -19,8 +19,8 @@ Public Class UpdateStocks
                     .Parameters.Clear()
                     .CommandText = "prc_Transact"
                     .CommandType = CommandType.StoredProcedure
-                    .Parameters.AddWithValue("@F_name", Txt_Fname.Text)
-                    .Parameters.AddWithValue("@L_name", Txt_Lname.Text)
+                    .Parameters.AddWithValue("@p_FName", Txt_Fname.Text)
+                    .Parameters.AddWithValue("@p_LName", Txt_Lname.Text)
                     .Parameters.AddWithValue("@p_Amount", CDbl(Txt_Amount.Text))
                     .Parameters.AddWithValue("@p_TermOP", Cmb_Term.Text)
                     .Parameters.AddWithValue("@p_TypeOP", Cmb_Type.Text)
@@ -30,7 +30,6 @@ Public Class UpdateStocks
                     .Parameters.AddWithValue("@p_PaymentStatus", txt_PaymentStatus.Text)
                     .ExecuteNonQuery()
                 End With
-                MessageBox.Show("Transaction success.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 With command
                     .Parameters.Clear()
                     .CommandText = "prc_Record"
@@ -45,6 +44,7 @@ Public Class UpdateStocks
                     .Parameters.AddWithValue("@p_Employee", Username)
                     .ExecuteNonQuery()
                 End With
+                MessageBox.Show("Transaction success.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             ElseIf action = "edit" Then
                 With command
@@ -52,8 +52,8 @@ Public Class UpdateStocks
                     .CommandText = "prc_editTransac"
                     .CommandType = CommandType.StoredProcedure
                     .Parameters.AddWithValue("@p_id", Cust_id)
-                    .Parameters.AddWithValue("@F_name", Txt_Fname.Text)
-                    .Parameters.AddWithValue("@L_name", Txt_Lname.Text)
+                    .Parameters.AddWithValue("@p_FName", Txt_Fname.Text)
+                    .Parameters.AddWithValue("@p_LName", Txt_Lname.Text)
                     .Parameters.AddWithValue("@p_Amount", CDbl(Txt_Amount.Text))
                     .Parameters.AddWithValue("@p_TermOP", Cmb_Term.Text)
                     .Parameters.AddWithValue("@p_TypeOP", Cmb_Type.Text)

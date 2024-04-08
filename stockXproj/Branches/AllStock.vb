@@ -204,6 +204,11 @@ Public Class Allstock
             .Txt_FrameNumber.Text = Frame_Num
             .ShowDialog()
         End With
+        If Txt_Search.Text = "" Then
+            PrcDisplayAllStock()
+        Else
+            AutofillSearch()
+        End If
     End Sub
     'buttons end
 
