@@ -128,7 +128,11 @@ Public Class MainBranchInventory
     End Sub
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
         action = "Edit"
-        addMotorcycle.ShowDialog()
+
+        'please fill in the editing unit codes
+        With addMotorcycle
+            .ShowDialog()
+        End With
     End Sub
     Private Sub Btndelete_Click(sender As Object, e As EventArgs) Handles btndelete.Click
         Try
@@ -145,6 +149,11 @@ Public Class MainBranchInventory
         Catch ex As Exception
             MessageBox.Show("" & ex.Message)
         End Try
+        If Txt_Search.Text = "" Then
+            PrcDisplayUnits()
+        Else
+            prc_search()
+        End If
     End Sub
 
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles Btn_Search.Click
@@ -219,10 +228,6 @@ Public Class MainBranchInventory
     'form click
     Private Sub Grd_Motorcycle_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_Motorcycle.CellClick
         Engyno = Grd_Motorcycle.CurrentRow.Cells(5).Value
-    End Sub
-
-    Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs) Handles Btn_AvStock.Click
-
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click

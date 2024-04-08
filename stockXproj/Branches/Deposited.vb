@@ -304,7 +304,15 @@ Public Class Deposited
                 Try
                     With command
                         .Parameters.Clear()
-                        .CommandText = "prc_SetUnitDate"
+                        .CommandText = "prc_GetUnitDate"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_Stat", State)
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_ChangeStat"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_Stat", State)

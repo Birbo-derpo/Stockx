@@ -179,14 +179,6 @@ Public Class AvailableStocks
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
-    End Sub
-
-    Private Sub Grd_Motorcycle_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_Motorcycle.CellContentClick
-
-    End Sub
-
     Private Sub Btn_Dashboard_Click(sender As Object, e As EventArgs) Handles Btn_Dashboard.Click
         DashBoard.ShowDialog()
         Me.Close()
@@ -194,6 +186,7 @@ Public Class AvailableStocks
 
     Private Sub Btn_ReservationPage_Click(sender As Object, e As EventArgs) Handles Btn_ReservationPage.Click
         ConfirmReserve.ShowDialog()
+        PrcAvailableUnits()
     End Sub
 
     'dataloader end

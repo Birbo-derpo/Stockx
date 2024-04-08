@@ -63,13 +63,13 @@ Public Class ConfirmReserve
     'filter
     Private Sub TxtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
         If chkAuto.Checked = True Then
-            PrcDisplayMotorcycleWithAutoCompleteInMainInventory()
+            Prc_AutofillSearch()
         Else
 
         End If
     End Sub
 
-    Private Sub PrcDisplayMotorcycleWithAutoCompleteInMainInventory()
+    Private Sub Prc_AutofillSearch()
         sqlUMTCAdapter = New MySqlDataAdapter
         DataUMTC = New DataTable
         Try
@@ -122,7 +122,7 @@ Public Class ConfirmReserve
                     Try
                         With command
                             .Parameters.Clear()
-                            .CommandText = "prc_ReserveTo"
+                            .CommandText = "prc_ReserveTo" 'SQL prc_ReserveTo already sets the date for the reservation
                             .CommandType = CommandType.StoredProcedure
                             .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(6).Value.ToString)
                             .Parameters.AddWithValue("@p_Branch", cmb_tobranch.Text)
@@ -144,7 +144,7 @@ Public Class ConfirmReserve
                             .ExecuteNonQuery()
                         End With
                     Catch ex As Exception
-
+                        MessageBox.Show(" 'Catch' happened", "I think", MessageBoxButtons.OK)
                     End Try
                 End If
                 Checkcell.Cells("Column1").Value = False

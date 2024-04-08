@@ -270,7 +270,11 @@ Public Class Released
         Next
         MessageBox.Show("unit/s now in branch", "in branch", MessageBoxButtons.OK)
 
-        PrcDisplayReleasedStock()
+        If Txt_Search.Text = "" Then
+            PrcDisplayReleasedStock()
+        Else
+            AutofillSearch()
+        End If
     End Sub
 
     Private Sub Prc_GetCustName(p_unit As String)
@@ -304,7 +308,7 @@ Public Class Released
         End If
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Btn_ReturnUnit.Click
         State = "in Branch"
         For Each Checkcell As DataGridViewRow In Grd_StockReleased.Rows
             'needs to accept only when branches combobox is selected
@@ -312,7 +316,15 @@ Public Class Released
                 Try
                     With command
                         .Parameters.Clear()
-                        .CommandText = "prc_SetUnitDate"
+                        .CommandText = "prc_GetUnitDate"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_Stat", State)
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_ChangeStat"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_Stat", State)
@@ -345,15 +357,23 @@ Public Class Released
     End Sub
 
 
-    Private Sub Btn_returndeposite_Click(sender As Object, e As EventArgs) Handles Btn_returndeposite.Click
+    Private Sub Btn_returndeposite_Click(sender As Object, e As EventArgs) Handles Btn_returndeposite.Click 'what button is this supposed to do
         State = "in Branch"
         For Each Checkcell As DataGridViewRow In Grd_StockReleased.Rows
             'needs to accept only when branches combobox is selected
             If Checkcell.Cells("Column10").Value = True Then
                 Try
+                    'With command
+                    '    .Parameters.Clear()
+                    '    .CommandText = "prc_GetUnitDate"
+                    '    .CommandType = CommandType.StoredProcedure
+                    '    .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
+                    '    .Parameters.AddWithValue("@p_Stat", State)
+                    '    .ExecuteNonQuery()
+                    'End With
                     With command
                         .Parameters.Clear()
-                        .CommandText = "prc_SetUnitDate"
+                        .CommandText = "prc_ChangeStat"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_Stat", State)
