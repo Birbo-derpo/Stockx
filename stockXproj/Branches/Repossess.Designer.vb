@@ -51,6 +51,7 @@ Partial Class Repossess
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Btn_CancelRepo = New System.Windows.Forms.Button()
         CType(Me.Grd_StockRepossessed, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -371,12 +372,26 @@ Partial Class Repossess
         Me.Label3.TabIndex = 73
         Me.Label3.Text = "INVENTORY LISTS"
         '
+        'Btn_CancelRepo
+        '
+        Me.Btn_CancelRepo.BackColor = System.Drawing.Color.Firebrick
+        Me.Btn_CancelRepo.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_CancelRepo.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Btn_CancelRepo.Location = New System.Drawing.Point(1276, 652)
+        Me.Btn_CancelRepo.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_CancelRepo.Name = "Btn_CancelRepo"
+        Me.Btn_CancelRepo.Size = New System.Drawing.Size(119, 46)
+        Me.Btn_CancelRepo.TabIndex = 74
+        Me.Btn_CancelRepo.Text = "Cancel Reposession"
+        Me.Btn_CancelRepo.UseVisualStyleBackColor = False
+        '
         'Repossess
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Snow
         Me.ClientSize = New System.Drawing.Size(1515, 730)
+        Me.Controls.Add(Me.Btn_CancelRepo)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox1)
@@ -430,4 +445,5 @@ Partial Class Repossess
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Btn_CancelRepo As Button
 End Class

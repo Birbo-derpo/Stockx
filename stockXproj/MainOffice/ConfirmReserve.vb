@@ -122,10 +122,19 @@ Public Class ConfirmReserve
                     Try
                         With command
                             .Parameters.Clear()
-                            .CommandText = "prc_ReserveTo" 'SQL prc_ReserveTo already sets the date for the reservation
+                            .CommandText = "prc_ReserveTo"
                             .CommandType = CommandType.StoredProcedure
                             .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(6).Value.ToString)
                             .Parameters.AddWithValue("@p_Branch", cmb_tobranch.Text)
+                            .Parameters.AddWithValue("@p_dt", Format(dt.Value, "yyyy-MM-dd"))
+                            .ExecuteNonQuery()
+                        End With
+                        With command
+                            .Parameters.Clear()
+                            .CommandText = "prc_SetUnitDate"
+                            .CommandType = CommandType.StoredProcedure
+                            .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(6).Value.ToString)
+                            .Parameters.AddWithValue("@p_state", "Reserve")
                             .Parameters.AddWithValue("@p_dt", Format(dt.Value, "yyyy-MM-dd"))
                             .ExecuteNonQuery()
                         End With
