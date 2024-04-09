@@ -31,10 +31,10 @@ Partial Class Released
         Me.Btn_Search = New System.Windows.Forms.Button()
         Me.Txt_Search = New System.Windows.Forms.TextBox()
         Me.cmbSearchType = New System.Windows.Forms.ComboBox()
-        Me.Btn_Update = New System.Windows.Forms.Button()
+        Me.Btn_Repossess = New System.Windows.Forms.Button()
         Me.Btn_AllStock = New System.Windows.Forms.Button()
         Me.Btn_Deposited = New System.Windows.Forms.Button()
-        Me.Btn_Repossess = New System.Windows.Forms.Button()
+        Me.Btn_RepossessPage = New System.Windows.Forms.Button()
         Me.Btn_Released = New System.Windows.Forms.Button()
         Me.Grd_StockReleased = New System.Windows.Forms.DataGridView()
         Me.Column10 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
@@ -64,7 +64,7 @@ Partial Class Released
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(1104, 191)
+        Me.Label1.Location = New System.Drawing.Point(1080, 188)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(101, 24)
@@ -78,7 +78,7 @@ Partial Class Released
         Me.Cmb_Branch.FormattingEnabled = True
         Me.Cmb_Branch.Items.AddRange(New Object() {"Bajada", "Davao", "Digos", "Kidapawan", "Tagum", "General Santos"})
         Me.Cmb_Branch.Location = New System.Drawing.Point(1185, 188)
-        Me.Cmb_Branch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Cmb_Branch.Margin = New System.Windows.Forms.Padding(2)
         Me.Cmb_Branch.Name = "Cmb_Branch"
         Me.Cmb_Branch.Size = New System.Drawing.Size(272, 26)
         Me.Cmb_Branch.TabIndex = 65
@@ -89,7 +89,7 @@ Partial Class Released
         Me.Btn_Dashboard.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold)
         Me.Btn_Dashboard.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_Dashboard.Location = New System.Drawing.Point(190, 652)
-        Me.Btn_Dashboard.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Dashboard.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Dashboard.Name = "Btn_Dashboard"
         Me.Btn_Dashboard.Size = New System.Drawing.Size(119, 46)
         Me.Btn_Dashboard.TabIndex = 64
@@ -104,7 +104,7 @@ Partial Class Released
         Me.Btn_AllUnits.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_AllUnits.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Btn_AllUnits.Location = New System.Drawing.Point(3, 54)
-        Me.Btn_AllUnits.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_AllUnits.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_AllUnits.Name = "Btn_AllUnits"
         Me.Btn_AllUnits.Size = New System.Drawing.Size(181, 50)
         Me.Btn_AllUnits.TabIndex = 63
@@ -116,7 +116,7 @@ Partial Class Released
         Me.Chk_Auto.AutoSize = True
         Me.Chk_Auto.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Chk_Auto.Location = New System.Drawing.Point(484, 111)
-        Me.Chk_Auto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Chk_Auto.Margin = New System.Windows.Forms.Padding(2)
         Me.Chk_Auto.Name = "Chk_Auto"
         Me.Chk_Auto.Size = New System.Drawing.Size(132, 21)
         Me.Chk_Auto.TabIndex = 62
@@ -129,7 +129,7 @@ Partial Class Released
         Me.Btn_Search.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold)
         Me.Btn_Search.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_Search.Location = New System.Drawing.Point(590, 72)
-        Me.Btn_Search.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Search.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Search.Name = "Btn_Search"
         Me.Btn_Search.Size = New System.Drawing.Size(93, 34)
         Me.Btn_Search.TabIndex = 61
@@ -140,7 +140,7 @@ Partial Class Released
         '
         Me.Txt_Search.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_Search.Location = New System.Drawing.Point(190, 76)
-        Me.Txt_Search.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_Search.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_Search.Name = "Txt_Search"
         Me.Txt_Search.Size = New System.Drawing.Size(396, 29)
         Me.Txt_Search.TabIndex = 60
@@ -152,23 +152,23 @@ Partial Class Released
         Me.cmbSearchType.FormattingEnabled = True
         Me.cmbSearchType.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
         Me.cmbSearchType.Location = New System.Drawing.Point(190, 107)
-        Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbSearchType.Name = "cmbSearchType"
         Me.cmbSearchType.Size = New System.Drawing.Size(283, 26)
         Me.cmbSearchType.TabIndex = 59
         '
-        'Btn_Update
+        'Btn_Repossess
         '
-        Me.Btn_Update.BackColor = System.Drawing.Color.Firebrick
-        Me.Btn_Update.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold)
-        Me.Btn_Update.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_Update.Location = New System.Drawing.Point(314, 652)
-        Me.Btn_Update.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Btn_Update.Name = "Btn_Update"
-        Me.Btn_Update.Size = New System.Drawing.Size(119, 46)
-        Me.Btn_Update.TabIndex = 58
-        Me.Btn_Update.Text = "REPOSSESS"
-        Me.Btn_Update.UseVisualStyleBackColor = False
+        Me.Btn_Repossess.BackColor = System.Drawing.Color.Firebrick
+        Me.Btn_Repossess.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold)
+        Me.Btn_Repossess.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Btn_Repossess.Location = New System.Drawing.Point(314, 652)
+        Me.Btn_Repossess.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_Repossess.Name = "Btn_Repossess"
+        Me.Btn_Repossess.Size = New System.Drawing.Size(119, 46)
+        Me.Btn_Repossess.TabIndex = 58
+        Me.Btn_Repossess.Text = "REPOSSESS"
+        Me.Btn_Repossess.UseVisualStyleBackColor = False
         '
         'Btn_AllStock
         '
@@ -178,7 +178,7 @@ Partial Class Released
         Me.Btn_AllStock.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_AllStock.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Btn_AllStock.Location = New System.Drawing.Point(3, 108)
-        Me.Btn_AllStock.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_AllStock.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_AllStock.Name = "Btn_AllStock"
         Me.Btn_AllStock.Size = New System.Drawing.Size(181, 50)
         Me.Btn_AllStock.TabIndex = 57
@@ -193,28 +193,28 @@ Partial Class Released
         Me.Btn_Deposited.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Deposited.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Btn_Deposited.Location = New System.Drawing.Point(3, 214)
-        Me.Btn_Deposited.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Deposited.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Deposited.Name = "Btn_Deposited"
         Me.Btn_Deposited.Size = New System.Drawing.Size(181, 50)
         Me.Btn_Deposited.TabIndex = 56
         Me.Btn_Deposited.Text = "DEPOSITED UNITS"
         Me.Btn_Deposited.UseVisualStyleBackColor = False
         '
-        'Btn_Repossess
+        'Btn_RepossessPage
         '
-        Me.Btn_Repossess.BackColor = System.Drawing.Color.Snow
-        Me.Btn_Repossess.FlatAppearance.BorderColor = System.Drawing.Color.Red
-        Me.Btn_Repossess.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Btn_Repossess.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_Repossess.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Btn_Repossess.Location = New System.Drawing.Point(3, 267)
-        Me.Btn_Repossess.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Btn_Repossess.Name = "Btn_Repossess"
-        Me.Btn_Repossess.Size = New System.Drawing.Size(181, 50)
-        Me.Btn_Repossess.TabIndex = 55
-        Me.Btn_Repossess.TabStop = False
-        Me.Btn_Repossess.Text = "REPOSSESED UNITS"
-        Me.Btn_Repossess.UseVisualStyleBackColor = False
+        Me.Btn_RepossessPage.BackColor = System.Drawing.Color.Snow
+        Me.Btn_RepossessPage.FlatAppearance.BorderColor = System.Drawing.Color.Red
+        Me.Btn_RepossessPage.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Btn_RepossessPage.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_RepossessPage.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Btn_RepossessPage.Location = New System.Drawing.Point(3, 267)
+        Me.Btn_RepossessPage.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_RepossessPage.Name = "Btn_RepossessPage"
+        Me.Btn_RepossessPage.Size = New System.Drawing.Size(181, 50)
+        Me.Btn_RepossessPage.TabIndex = 55
+        Me.Btn_RepossessPage.TabStop = False
+        Me.Btn_RepossessPage.Text = "REPOSSESED UNITS"
+        Me.Btn_RepossessPage.UseVisualStyleBackColor = False
         '
         'Btn_Released
         '
@@ -224,7 +224,7 @@ Partial Class Released
         Me.Btn_Released.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Released.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Btn_Released.Location = New System.Drawing.Point(3, 161)
-        Me.Btn_Released.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Released.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Released.Name = "Btn_Released"
         Me.Btn_Released.Size = New System.Drawing.Size(181, 50)
         Me.Btn_Released.TabIndex = 54
@@ -236,7 +236,7 @@ Partial Class Released
         Me.Grd_StockReleased.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grd_StockReleased.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column10, Me.Column7, Me.Column1, Me.Column2, Me.Column3, Me.Column6, Me.Column9, Me.Column4, Me.Column5, Me.Column8})
         Me.Grd_StockReleased.Location = New System.Drawing.Point(190, 233)
-        Me.Grd_StockReleased.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Grd_StockReleased.Margin = New System.Windows.Forms.Padding(2)
         Me.Grd_StockReleased.Name = "Grd_StockReleased"
         Me.Grd_StockReleased.RowHeadersWidth = 51
         Me.Grd_StockReleased.RowTemplate.Height = 24
@@ -330,13 +330,13 @@ Partial Class Released
         Me.GroupBox1.Controls.Add(Me.Btn_AllStock)
         Me.GroupBox1.Controls.Add(Me.Btn_Released)
         Me.GroupBox1.Controls.Add(Me.Btn_Deposited)
-        Me.GroupBox1.Controls.Add(Me.Btn_Repossess)
+        Me.GroupBox1.Controls.Add(Me.Btn_RepossessPage)
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.GroupBox1.Location = New System.Drawing.Point(0, 233)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Size = New System.Drawing.Size(185, 410)
         Me.GroupBox1.TabIndex = 69
         Me.GroupBox1.TabStop = False
@@ -360,7 +360,7 @@ Partial Class Released
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox1.ErrorImage = Nothing
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(186, 174)
         Me.PictureBox1.TabIndex = 70
@@ -392,7 +392,7 @@ Partial Class Released
         '
         Me.dt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dt.Location = New System.Drawing.Point(1162, 83)
-        Me.dt.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dt.Margin = New System.Windows.Forms.Padding(2)
         Me.dt.Name = "dt"
         Me.dt.Size = New System.Drawing.Size(270, 23)
         Me.dt.TabIndex = 74
@@ -404,11 +404,11 @@ Partial Class Released
         Me.Btn_returndeposite.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold)
         Me.Btn_returndeposite.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_returndeposite.Location = New System.Drawing.Point(1108, 662)
-        Me.Btn_returndeposite.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_returndeposite.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_returndeposite.Name = "Btn_returndeposite"
         Me.Btn_returndeposite.Size = New System.Drawing.Size(133, 56)
         Me.Btn_returndeposite.TabIndex = 75
-        Me.Btn_returndeposite.Text = "Return Deposite"
+        Me.Btn_returndeposite.Text = "Cancel Release"
         Me.Btn_returndeposite.UseVisualStyleBackColor = False
         '
         'Btn_ReturnUnit
@@ -418,7 +418,7 @@ Partial Class Released
         Me.Btn_ReturnUnit.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold)
         Me.Btn_ReturnUnit.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_ReturnUnit.Location = New System.Drawing.Point(1258, 662)
-        Me.Btn_ReturnUnit.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_ReturnUnit.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_ReturnUnit.Name = "Btn_ReturnUnit"
         Me.Btn_ReturnUnit.Size = New System.Drawing.Size(133, 56)
         Me.Btn_ReturnUnit.TabIndex = 76
@@ -430,7 +430,7 @@ Partial Class Released
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Snow
-        Me.ClientSize = New System.Drawing.Size(1412, 748)
+        Me.ClientSize = New System.Drawing.Size(1459, 748)
         Me.Controls.Add(Me.Btn_ReturnUnit)
         Me.Controls.Add(Me.Btn_returndeposite)
         Me.Controls.Add(Me.dt)
@@ -445,9 +445,9 @@ Partial Class Released
         Me.Controls.Add(Me.Btn_Search)
         Me.Controls.Add(Me.Txt_Search)
         Me.Controls.Add(Me.cmbSearchType)
-        Me.Controls.Add(Me.Btn_Update)
+        Me.Controls.Add(Me.Btn_Repossess)
         Me.Controls.Add(Me.Grd_StockReleased)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Released"
         Me.Text = "Released"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -468,10 +468,10 @@ Partial Class Released
     Friend WithEvents Btn_Search As Button
     Friend WithEvents Txt_Search As TextBox
     Friend WithEvents cmbSearchType As ComboBox
-    Friend WithEvents Btn_Update As Button
+    Friend WithEvents Btn_Repossess As Button
     Friend WithEvents Btn_AllStock As Button
     Friend WithEvents Btn_Deposited As Button
-    Friend WithEvents Btn_Repossess As Button
+    Friend WithEvents Btn_RepossessPage As Button
     Friend WithEvents Btn_Released As Button
     Friend WithEvents Grd_StockReleased As DataGridView
     Friend WithEvents GroupBox1 As GroupBox

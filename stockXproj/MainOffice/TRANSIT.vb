@@ -74,6 +74,15 @@ Public Class TRANSIT
                     End With
                     With command
                         .Parameters.Clear()
+                        .CommandText = "prc_SetUnitDate"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(6).Value.ToString)
+                        .Parameters.AddWithValue("@p_state", State)
+                        .Parameters.AddWithValue("@p_dt", Format(dt.Value, "yyyy-MM-dd"))
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
                         .CommandText = "prc_SetinBranchDate"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(8).Value.ToString)
