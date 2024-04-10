@@ -1,4 +1,5 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+﻿Imports System.Data.SqlClient
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports MySql.Data.MySqlClient
 
 Public Class ConfirmReserve
@@ -9,10 +10,9 @@ Public Class ConfirmReserve
         Else
             CheckDatabaseConnection()
             PrcDisplayAvailableUnits()
+
         End If
     End Sub
-
-    'dataloader
 
     Private Sub PrcDisplayAvailableUnits()
         sqlUMTCAdapter = New MySqlDataAdapter
@@ -213,5 +213,35 @@ Public Class ConfirmReserve
         Me.Close()
     End Sub
 
-    'Buttons end
+    Private Sub grdMotorcycle_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grdMotorcycle.CellContentClick
+
+        If e.RowIndex >= 0 Then ' Check if clicked on Model column
+            Try
+                Dim selectedModel As String = grdMotorcycle.Rows(e.RowIndex).Cells(3).Value.ToString()
+                Dim selectedColor As String = grdMotorcycle.Rows(e.RowIndex).Cells(4).Value.ToString()
+
+
+                With command
+                    .Parameters.Clear()
+                    .CommandText = "prc_Quantity"
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@p_model", selectedModel)
+                    .Parameters.AddWithValue("@p_color", selectedColor)
+                    sqlUMTCAdapter.SelectCommand = command
+                    DataUMTC.Clear()
+                    sqlUMTCAdapter.Fill(DataUMTC)
+
+                    ' Assuming DataUMTC is a DataTable
+                    If DataUMTC.Rows.Count > 0 Then
+                        Dim totalCount As Integer = Convert.ToInt32(DataUMTC.Rows(0)("TotalCount"))
+                        lbl_Qunatity.Text = "Model: " & selectedModel & ", Total Available Unit: " & totalCount
+                    Else
+                        lbl_Qunatity.Text = "Model: " & selectedModel & " not found."
+                    End If
+                End With
+            Catch ex As Exception
+                ' Handle exceptions here
+            End Try
+        End If
+    End Sub
 End Class
