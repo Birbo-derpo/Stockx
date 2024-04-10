@@ -40,6 +40,7 @@ Partial Class ConfirmReserve
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lbl_Qunatity = New System.Windows.Forms.Label()
         CType(Me.grdMotorcycle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -70,7 +71,7 @@ Partial Class ConfirmReserve
         Me.Btn_ConfirmReserve.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Btn_ConfirmReserve.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_ConfirmReserve.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_ConfirmReserve.Location = New System.Drawing.Point(1100, 438)
+        Me.Btn_ConfirmReserve.Location = New System.Drawing.Point(1100, 471)
         Me.Btn_ConfirmReserve.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_ConfirmReserve.Name = "Btn_ConfirmReserve"
         Me.Btn_ConfirmReserve.Size = New System.Drawing.Size(124, 33)
@@ -131,7 +132,7 @@ Partial Class ConfirmReserve
         Me.Btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Btn_back.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_back.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_back.Location = New System.Drawing.Point(169, 438)
+        Me.Btn_back.Location = New System.Drawing.Point(169, 471)
         Me.Btn_back.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_back.Name = "Btn_back"
         Me.Btn_back.Size = New System.Drawing.Size(124, 33)
@@ -152,8 +153,8 @@ Partial Class ConfirmReserve
         '
         Me.grdMotorcycle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdMotorcycle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
-        Me.grdMotorcycle.Location = New System.Drawing.Point(165, 181)
-        Me.grdMotorcycle.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grdMotorcycle.Location = New System.Drawing.Point(169, 214)
+        Me.grdMotorcycle.Margin = New System.Windows.Forms.Padding(4)
         Me.grdMotorcycle.Name = "grdMotorcycle"
         Me.grdMotorcycle.RowHeadersWidth = 51
         Me.grdMotorcycle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -224,11 +225,21 @@ Partial Class ConfirmReserve
         Me.Column8.Name = "Column8"
         Me.Column8.ReadOnly = True
         '
+        'lbl_Qunatity
+        '
+        Me.lbl_Qunatity.AutoSize = True
+        Me.lbl_Qunatity.Location = New System.Drawing.Point(166, 185)
+        Me.lbl_Qunatity.Name = "lbl_Qunatity"
+        Me.lbl_Qunatity.Size = New System.Drawing.Size(55, 16)
+        Me.lbl_Qunatity.TabIndex = 58
+        Me.lbl_Qunatity.Text = "Quantity"
+        '
         'ConfirmReserve
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1371, 528)
+        Me.Controls.Add(Me.lbl_Qunatity)
         Me.Controls.Add(Me.grdMotorcycle)
         Me.Controls.Add(Me.dt)
         Me.Controls.Add(Me.Btn_back)
@@ -267,4 +278,5 @@ Partial Class ConfirmReserve
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents lbl_Qunatity As Label
 End Class
