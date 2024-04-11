@@ -32,6 +32,15 @@ Public Class UpdateStocks
                 End With
                 With command
                     .Parameters.Clear()
+                    .CommandText = "prc_SetUnitDate"
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.AddWithValue("@p_EngineNum", Txt_EngineNumber.Text)
+                    .Parameters.AddWithValue("@p_state", State)
+                    .Parameters.AddWithValue("@p_dt", Format(dt.Value, "yyyy-MM-dd"))
+                    .ExecuteNonQuery()
+                End With
+                With command
+                    .Parameters.Clear()
                     .CommandText = "prc_Record"
                     .CommandType = CommandType.StoredProcedure
                     .Parameters.AddWithValue("@p_Action", "Transfer unit")
