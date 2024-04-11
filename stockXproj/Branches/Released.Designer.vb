@@ -408,7 +408,7 @@ Partial Class Released
         Me.Btn_returndeposite.Name = "Btn_returndeposite"
         Me.Btn_returndeposite.Size = New System.Drawing.Size(133, 56)
         Me.Btn_returndeposite.TabIndex = 75
-        Me.Btn_returndeposite.Text = "Cancel Release"
+        Me.Btn_returndeposite.Text = "Undo to Deposit"
         Me.Btn_returndeposite.UseVisualStyleBackColor = False
         '
         'Btn_ReturnUnit
@@ -422,7 +422,7 @@ Partial Class Released
         Me.Btn_ReturnUnit.Name = "Btn_ReturnUnit"
         Me.Btn_ReturnUnit.Size = New System.Drawing.Size(133, 56)
         Me.Btn_ReturnUnit.TabIndex = 76
-        Me.Btn_ReturnUnit.Text = "Return Unit"
+        Me.Btn_ReturnUnit.Text = "Return Unit to branch"
         Me.Btn_ReturnUnit.UseVisualStyleBackColor = False
         '
         'Released
