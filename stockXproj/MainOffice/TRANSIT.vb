@@ -76,17 +76,9 @@ Public Class TRANSIT
                         .Parameters.Clear()
                         .CommandText = "prc_SetUnitDate"
                         .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(6).Value.ToString)
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(8).Value.ToString)
                         .Parameters.AddWithValue("@p_state", State)
                         .Parameters.AddWithValue("@p_dt", Format(dt.Value, "yyyy-MM-dd"))
-                        .ExecuteNonQuery()
-                    End With
-                    With command
-                        .Parameters.Clear()
-                        .CommandText = "prc_SetinBranchDate"
-                        .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(8).Value.ToString)
-                        .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
                         .ExecuteNonQuery()
                     End With
                     With command
@@ -134,6 +126,7 @@ Public Class TRANSIT
     End Sub
 
     Private Sub Btn_CancelTransit_Click(sender As Object, e As EventArgs) Handles Btn_CancelTransit.Click
+        'undo's transit
         State = "Reserve"
         For Each Checkcell As DataGridViewRow In Grd_Motorcycle.Rows
             If Checkcell.Cells("Column8").Value = True Then
@@ -182,6 +175,7 @@ Public Class TRANSIT
     End Sub
 
     Private Sub Btn_ReturnUnit_Click(sender As Object, e As EventArgs) Handles Btn_ReturnUnit.Click
+        'literally cancels transit and reservation
         State = "Available"
         For Each Checkcell As DataGridViewRow In Grd_Motorcycle.Rows
             If Checkcell.Cells("Column8").Value = True Then
