@@ -247,6 +247,7 @@ Public Class Deposited
                         .Parameters.AddWithValue("@p_Stat", State)
                         .ExecuteNonQuery()
                     End With
+
                     With command
                         .Parameters.Clear()
                         .CommandText = "prc_SetUnitDate"
@@ -256,12 +257,13 @@ Public Class Deposited
                         .Parameters.AddWithValue("@p_dt", Format(dt.Value, "yyyy-MM-dd"))
                         .ExecuteNonQuery()
                     End With
+
                     With command
                         .Parameters.Clear()
                         .CommandText = "prc_Record"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_Action", "Release unit")
-                        .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd"))
+                        .Parameters.AddWithValue("@p_d", todaysdate)
                         .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_branch", Checkcell.Cells(1).Value.ToString)
                         .Parameters.AddWithValue("@p_FromState", Checkcell.Cells(9).Value.ToString)
@@ -332,7 +334,7 @@ Public Class Deposited
                         .CommandText = "prc_Record"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_Action", "Return Unit to Branch")
-                        .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd"))
+                        .Parameters.AddWithValue("@p_d", todaysdate)
                         .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_branch", Checkcell.Cells(1).Value.ToString)
                         .Parameters.AddWithValue("@p_FromState", Checkcell.Cells(9).Value.ToString)

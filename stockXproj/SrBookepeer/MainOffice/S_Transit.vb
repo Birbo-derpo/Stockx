@@ -70,7 +70,7 @@ Public Class S_Transit
                         .CommandText = "prc_Record"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_Action", "Confirm unit delivery/transfer")
-                        .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd H:mm:ss"))
+                        .Parameters.AddWithValue("@p_d", todaysdate)
                         .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(6).Value.ToString)
                         .Parameters.AddWithValue("@p_branch", Checkcell.Cells(1).Value.ToString)
                         .Parameters.AddWithValue("@p_FromState", "In Transit")

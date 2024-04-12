@@ -379,7 +379,7 @@ Partial Class Repossess
         Me.Btn_CancelRepo.BackColor = System.Drawing.Color.Firebrick
         Me.Btn_CancelRepo.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_CancelRepo.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_CancelRepo.Location = New System.Drawing.Point(1115, 652)
+        Me.Btn_CancelRepo.Location = New System.Drawing.Point(1316, 652)
         Me.Btn_CancelRepo.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_CancelRepo.Name = "Btn_CancelRepo"
         Me.Btn_CancelRepo.Size = New System.Drawing.Size(119, 46)
@@ -406,7 +406,7 @@ Partial Class Repossess
         Me.Btn_ReRelease.Name = "Btn_ReRelease"
         Me.Btn_ReRelease.Size = New System.Drawing.Size(119, 46)
         Me.Btn_ReRelease.TabIndex = 77
-        Me.Btn_ReRelease.Text = "Release unit"
+        Me.Btn_ReRelease.Text = "Re-Release unit"
         Me.Btn_ReRelease.UseVisualStyleBackColor = False
         '
         'Repossess

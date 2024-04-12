@@ -230,7 +230,7 @@ Public Class Repossess
     End Sub
 
     Private Sub Btn_CancelRepo_Click(sender As Object, e As EventArgs) Handles Btn_CancelRepo.Click
-        State = "Deposit"
+        State = "Release"
         For Each Checkcell As DataGridViewRow In Grd_StockRepossessed.Rows
             'needs to accept only when branches combobox is selected
             If Checkcell.Cells("Column10").Value = True Then
@@ -256,7 +256,7 @@ Public Class Repossess
                         .CommandText = "prc_Record"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_Action", "Return Unit to Branch")
-                        .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd"))
+                        .Parameters.AddWithValue("@p_d", todaysdate)
                         .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_branch", Checkcell.Cells(1).Value.ToString)
                         .Parameters.AddWithValue("@p_FromState", Checkcell.Cells(9).Value.ToString)
@@ -328,7 +328,7 @@ Public Class Repossess
                         .CommandText = "prc_Record"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_Action", "Release unit")
-                        .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd"))
+                        .Parameters.AddWithValue("@p_d", todaysdate)
                         .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_branch", Checkcell.Cells(1).Value.ToString)
                         .Parameters.AddWithValue("@p_FromState", Checkcell.Cells(9).Value.ToString)

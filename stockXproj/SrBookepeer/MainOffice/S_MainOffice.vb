@@ -176,7 +176,7 @@ Public Class S_MainOffice
                 .CommandText = "prc_Record"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_Action", "Add Unit")
-                .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd H:mm:ss"))
+                .Parameters.AddWithValue("@p_d", todaysdate)
                 .Parameters.AddWithValue("@p_Unit", Txt_EngineNo.Text)
                 .Parameters.AddWithValue("@p_branch", "Main")
                 .Parameters.AddWithValue("@p_FromState", "none")
@@ -222,6 +222,20 @@ Public Class S_MainOffice
                 .Parameters.AddWithValue("@p_price", Txt_Price.Text)
                 .Parameters.AddWithValue("@p_engine", Txt_EngineNo.Text)
                 .Parameters.AddWithValue("@p_frame", Txt_FrameNo.Text)
+                .ExecuteNonQuery()
+            End With
+            With command
+                .Parameters.Clear()
+                .CommandText = "prc_Record"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_Action", "Edit Unit")
+                .Parameters.AddWithValue("@p_d", todaysdate)
+                .Parameters.AddWithValue("@p_Unit", Txt_EngineNo.Text)
+                .Parameters.AddWithValue("@p_branch", "Main")
+                .Parameters.AddWithValue("@p_FromState", "none")
+                .Parameters.AddWithValue("@p_ToState", "Available")
+                .Parameters.AddWithValue("@p_Customer", "none")
+                .Parameters.AddWithValue("@p_Employee", Username)
                 .ExecuteNonQuery()
             End With
         Catch ex As Exception

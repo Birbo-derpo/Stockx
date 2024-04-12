@@ -54,7 +54,6 @@ Partial Class Released
         Me.Label3 = New System.Windows.Forms.Label()
         Me.dt = New System.Windows.Forms.DateTimePicker()
         Me.Btn_returndeposite = New System.Windows.Forms.Button()
-        Me.Btn_ReturnUnit = New System.Windows.Forms.Button()
         CType(Me.Grd_StockReleased, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -403,27 +402,13 @@ Partial Class Released
         Me.Btn_returndeposite.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Btn_returndeposite.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold)
         Me.Btn_returndeposite.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_returndeposite.Location = New System.Drawing.Point(1108, 662)
+        Me.Btn_returndeposite.Location = New System.Drawing.Point(1263, 647)
         Me.Btn_returndeposite.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_returndeposite.Name = "Btn_returndeposite"
         Me.Btn_returndeposite.Size = New System.Drawing.Size(133, 56)
         Me.Btn_returndeposite.TabIndex = 75
-        Me.Btn_returndeposite.Text = "Undo to Deposit"
+        Me.Btn_returndeposite.Text = "Undo Release"
         Me.Btn_returndeposite.UseVisualStyleBackColor = False
-        '
-        'Btn_ReturnUnit
-        '
-        Me.Btn_ReturnUnit.BackColor = System.Drawing.Color.Firebrick
-        Me.Btn_ReturnUnit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Btn_ReturnUnit.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold)
-        Me.Btn_ReturnUnit.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_ReturnUnit.Location = New System.Drawing.Point(1258, 662)
-        Me.Btn_ReturnUnit.Margin = New System.Windows.Forms.Padding(2)
-        Me.Btn_ReturnUnit.Name = "Btn_ReturnUnit"
-        Me.Btn_ReturnUnit.Size = New System.Drawing.Size(133, 56)
-        Me.Btn_ReturnUnit.TabIndex = 76
-        Me.Btn_ReturnUnit.Text = "Return Unit to branch"
-        Me.Btn_ReturnUnit.UseVisualStyleBackColor = False
         '
         'Released
         '
@@ -431,7 +416,6 @@ Partial Class Released
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Snow
         Me.ClientSize = New System.Drawing.Size(1459, 748)
-        Me.Controls.Add(Me.Btn_ReturnUnit)
         Me.Controls.Add(Me.Btn_returndeposite)
         Me.Controls.Add(Me.dt)
         Me.Controls.Add(Me.Label3)
@@ -493,5 +477,4 @@ Partial Class Released
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents dt As DateTimePicker
     Friend WithEvents Btn_returndeposite As Button
-    Friend WithEvents Btn_ReturnUnit As Button
 End Class

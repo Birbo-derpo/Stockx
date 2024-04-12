@@ -9,7 +9,6 @@ Module Global_Var
             databasepassword, action, State, port As String
     Public EngineNo, Email, Password, Username As String
     Public row, Cust_id As Integer
-
     Public toUser As String
     Public Gmail, Firstname, Lastname, Position, gender, full As String
     Public userGmail As String
@@ -17,4 +16,5 @@ Module Global_Var
     Public Login_stat As Boolean
     Public UserId As Integer
     Public EmployeeId As Integer
+    Public todaysdate As String = String.Format("yyyy-MM-dd", DateTime.Now)
 End Module
