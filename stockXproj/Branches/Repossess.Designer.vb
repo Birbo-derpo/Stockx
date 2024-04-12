@@ -52,6 +52,8 @@ Partial Class Repossess
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Btn_CancelRepo = New System.Windows.Forms.Button()
+        Me.dt = New System.Windows.Forms.DateTimePicker()
+        Me.Btn_ReRelease = New System.Windows.Forms.Button()
         CType(Me.Grd_StockRepossessed, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,7 +63,7 @@ Partial Class Repossess
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(1104, 191)
+        Me.Label1.Location = New System.Drawing.Point(1080, 188)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(101, 24)
@@ -377,7 +379,7 @@ Partial Class Repossess
         Me.Btn_CancelRepo.BackColor = System.Drawing.Color.Firebrick
         Me.Btn_CancelRepo.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_CancelRepo.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_CancelRepo.Location = New System.Drawing.Point(1276, 652)
+        Me.Btn_CancelRepo.Location = New System.Drawing.Point(1316, 652)
         Me.Btn_CancelRepo.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_CancelRepo.Name = "Btn_CancelRepo"
         Me.Btn_CancelRepo.Size = New System.Drawing.Size(119, 46)
@@ -385,12 +387,36 @@ Partial Class Repossess
         Me.Btn_CancelRepo.Text = "Cancel Reposession"
         Me.Btn_CancelRepo.UseVisualStyleBackColor = False
         '
+        'dt
+        '
+        Me.dt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dt.Location = New System.Drawing.Point(1084, 83)
+        Me.dt.Margin = New System.Windows.Forms.Padding(2)
+        Me.dt.Name = "dt"
+        Me.dt.Size = New System.Drawing.Size(270, 23)
+        Me.dt.TabIndex = 76
+        '
+        'Btn_ReRelease
+        '
+        Me.Btn_ReRelease.BackColor = System.Drawing.Color.Firebrick
+        Me.Btn_ReRelease.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_ReRelease.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Btn_ReRelease.Location = New System.Drawing.Point(339, 652)
+        Me.Btn_ReRelease.Margin = New System.Windows.Forms.Padding(2)
+        Me.Btn_ReRelease.Name = "Btn_ReRelease"
+        Me.Btn_ReRelease.Size = New System.Drawing.Size(119, 46)
+        Me.Btn_ReRelease.TabIndex = 77
+        Me.Btn_ReRelease.Text = "Re-Release unit"
+        Me.Btn_ReRelease.UseVisualStyleBackColor = False
+        '
         'Repossess
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Snow
         Me.ClientSize = New System.Drawing.Size(1515, 730)
+        Me.Controls.Add(Me.Btn_ReRelease)
+        Me.Controls.Add(Me.dt)
         Me.Controls.Add(Me.Btn_CancelRepo)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -446,4 +472,6 @@ Partial Class Repossess
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Btn_CancelRepo As Button
+    Friend WithEvents dt As DateTimePicker
+    Friend WithEvents Btn_ReRelease As Button
 End Class

@@ -35,7 +35,7 @@ Public Class UpdateStocks
                     .CommandText = "prc_SetUnitDate"
                     .CommandType = CommandType.StoredProcedure
                     .Parameters.AddWithValue("@p_EngineNum", Txt_EngineNumber.Text)
-                    .Parameters.AddWithValue("@p_state", State)
+                    .Parameters.AddWithValue("@p_state", Cmb_Stat.Text)
                     .Parameters.AddWithValue("@p_dt", Format(dt.Value, "yyyy-MM-dd"))
                     .ExecuteNonQuery()
                 End With
@@ -44,7 +44,7 @@ Public Class UpdateStocks
                     .CommandText = "prc_Record"
                     .CommandType = CommandType.StoredProcedure
                     .Parameters.AddWithValue("@p_Action", "Transfer unit")
-                    .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd"))
+                    .Parameters.AddWithValue("@p_d", todaysdate)
                     .Parameters.AddWithValue("@p_Unit", Txt_EngineNumber.Text)
                     .Parameters.AddWithValue("@p_branch", lbl_branch.Text)
                     .Parameters.AddWithValue("@p_FromState", "In branch")
@@ -74,7 +74,7 @@ Public Class UpdateStocks
                     .CommandText = "prc_Record"
                     .CommandType = CommandType.StoredProcedure
                     .Parameters.AddWithValue("@p_Action", "Edit Transferred unit")
-                    .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd"))
+                    .Parameters.AddWithValue("@p_d", todaysdate)
                     .Parameters.AddWithValue("@p_Unit", Txt_EngineNumber.Text)
                     .Parameters.AddWithValue("@p_branch", lbl_branch.Text)
                     .Parameters.AddWithValue("@p_FromState", Lbl_Stat.Text)

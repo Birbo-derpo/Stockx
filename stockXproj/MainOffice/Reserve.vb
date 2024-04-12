@@ -100,7 +100,7 @@ Public Class Reserve
                             .CommandText = "prc_Record"
                             .CommandType = CommandType.StoredProcedure
                             .Parameters.AddWithValue("@p_Action", "Add MTN")
-                            .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd H:mm:ss"))
+                            .Parameters.AddWithValue("@p_d", todaysdate)
                             .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(7).Value.ToString)
                             .Parameters.AddWithValue("@p_branch", Checkcell.Cells(1).Value.ToString)
                             .Parameters.AddWithValue("@p_FromState", "Available")
@@ -214,7 +214,7 @@ Public Class Reserve
                         .CommandText = "prc_Record"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_Action", "Cancel Reservation")
-                        .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd"))
+                        .Parameters.AddWithValue("@p_d", todaysdate)
                         .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_branch", Checkcell.Cells(1).Value.ToString)
                         .Parameters.AddWithValue("@p_FromState", "Reserved")

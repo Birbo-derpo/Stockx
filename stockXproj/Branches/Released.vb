@@ -249,7 +249,7 @@ Public Class Released
                         .Parameters.Clear()
                         .CommandText = "prc_SetUnitDate"
                         .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(6).Value.ToString)
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_state", State)
                         .Parameters.AddWithValue("@p_dt", Format(dt.Value, "yyyy-MM-dd"))
                         .ExecuteNonQuery()
@@ -259,7 +259,7 @@ Public Class Released
                         .CommandText = "prc_Record"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_Action", "Repossess unit")
-                        .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd H:mm:ss"))
+                        .Parameters.AddWithValue("@p_d", todaysdate)
                         .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_branch", Checkcell.Cells(1).Value.ToString)
                         .Parameters.AddWithValue("@p_FromState", Checkcell.Cells(9).Value.ToString)
@@ -317,57 +317,9 @@ Public Class Released
         End If
     End Sub
 
-    Private Sub Btn_ReturnUnit_Click(sender As Object, e As EventArgs) Handles Btn_ReturnUnit.Click ' idunno what this supposed to do
-        'State = "Repossess"
-        'For Each Checkcell As DataGridViewRow In Grd_StockReleased.Rows
-        '    'needs to accept only when branches combobox is selected
-        '    If Checkcell.Cells("Column10").Value = True Then
-        '        Try
-        '            With command
-        '                .Parameters.Clear()
-        '                .CommandText = "prc_GetUnitDate"
-        '                .CommandType = CommandType.StoredProcedure
-        '                .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
-        '                .Parameters.AddWithValue("@p_Stat", State)
-        '                .ExecuteNonQuery()
-        '            End With
-        '            With command
-        '                .Parameters.Clear()
-        '                .CommandText = "prc_ChangeStat"
-        '                .CommandType = CommandType.StoredProcedure
-        '                .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
-        '                .Parameters.AddWithValue("@p_Stat", State)
-        '                .ExecuteNonQuery()
-        '            End With
-        '            With command
-        '                .Parameters.Clear()
-        '                .CommandText = "prc_Record"
-        '                .CommandType = CommandType.StoredProcedure
-        '                .Parameters.AddWithValue("@p_Action", "Return Unit to Branch")
-        '                .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd"))
-        '                .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(7).Value.ToString)
-        '                .Parameters.AddWithValue("@p_branch", Checkcell.Cells(1).Value.ToString)
-        '                .Parameters.AddWithValue("@p_FromState", Checkcell.Cells(9).Value.ToString)
-        '                .Parameters.AddWithValue("@p_ToState", State)
-        '                .Parameters.AddWithValue("@p_Customer", Cust_Name)
-        '                .Parameters.AddWithValue("@p_Employee", Username)
-        '                .ExecuteNonQuery()
-        '            End With
 
-        '        Catch ex As Exception
-        '        End Try
-        '        Checkcell.Cells("Column10").Value = False
-        '        Cust_Name = ""
-        '    End If
-
-        'Next
-        'MessageBox.Show("unit/s now in branch", "in branch", MessageBoxButtons.OK)
-        'PrcDisplayReleasedStock()
-    End Sub
-
-
-    Private Sub Btn_returndeposite_Click(sender As Object, e As EventArgs) Handles Btn_returndeposite.Click 'what button is this supposed to do
-        State = "in Branch"
+    Private Sub Btn_returndeposite_Click(sender As Object, e As EventArgs) Handles Btn_returndeposite.Click
+        State = "Deposit"
         For Each Checkcell As DataGridViewRow In Grd_StockReleased.Rows
             'needs to accept only when branches combobox is selected
             If Checkcell.Cells("Column10").Value = True Then
@@ -392,12 +344,13 @@ Public Class Released
                         .Parameters.Clear()
                         .CommandText = "prc_Record"
                         .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_Action", "Return Unit to Branch")
-                        .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd"))
+                        .Parameters.AddWithValue("@p_Action", "Undo Release")
+                        .Parameters.AddWithValue("@p_d", todaysdate)
                         .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_branch", Checkcell.Cells(1).Value.ToString)
                         .Parameters.AddWithValue("@p_FromState", Checkcell.Cells(9).Value.ToString)
                         .Parameters.AddWithValue("@p_ToState", State)
+                        Prc_GetCustName(Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_Customer", Cust_Name)
                         .Parameters.AddWithValue("@p_Employee", Username)
                         .ExecuteNonQuery()
@@ -410,7 +363,7 @@ Public Class Released
             End If
 
         Next
-        MessageBox.Show("unit/s now in branch", "in branch", MessageBoxButtons.OK)
+        MessageBox.Show("unit/s returned to deposit", "in branch", MessageBoxButtons.OK)
         PrcDisplayReleasedStock()
     End Sub
 
