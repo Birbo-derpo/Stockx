@@ -20,6 +20,7 @@ Public Class DashBoard
             TotalUnits("General Santos")
             TotalUnits("Kidapawan")
             TotalUnits("Digos")
+            Lbl_CurTime.Text = todaysdate
         End If
 
     End Sub

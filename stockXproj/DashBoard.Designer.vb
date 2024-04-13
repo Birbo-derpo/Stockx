@@ -40,6 +40,7 @@ Partial Class DashBoard
         Me.lblUser = New System.Windows.Forms.Label()
         Me.btnchange = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Lbl_CurTime = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -49,7 +50,7 @@ Partial Class DashBoard
         Me.Btn_MainOffice.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_MainOffice.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_MainOffice.Location = New System.Drawing.Point(453, 225)
-        Me.Btn_MainOffice.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_MainOffice.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_MainOffice.Name = "Btn_MainOffice"
         Me.Btn_MainOffice.Size = New System.Drawing.Size(182, 65)
         Me.Btn_MainOffice.TabIndex = 0
@@ -62,7 +63,7 @@ Partial Class DashBoard
         Me.Btn_Branches.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Branches.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_Branches.Location = New System.Drawing.Point(699, 225)
-        Me.Btn_Branches.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Branches.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Branches.Name = "Btn_Branches"
         Me.Btn_Branches.Size = New System.Drawing.Size(182, 65)
         Me.Btn_Branches.TabIndex = 1
@@ -75,7 +76,7 @@ Partial Class DashBoard
         Me.Btn_Customers.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Customers.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_Customers.Location = New System.Drawing.Point(938, 225)
-        Me.Btn_Customers.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Customers.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Customers.Name = "Btn_Customers"
         Me.Btn_Customers.Size = New System.Drawing.Size(182, 65)
         Me.Btn_Customers.TabIndex = 2
@@ -165,7 +166,7 @@ Partial Class DashBoard
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox1.Location = New System.Drawing.Point(-2, -6)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(1514, 192)
         Me.PictureBox1.TabIndex = 37
@@ -188,7 +189,7 @@ Partial Class DashBoard
         Me.btnLogout.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnLogout.Location = New System.Drawing.Point(699, 312)
-        Me.btnLogout.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnLogout.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(182, 65)
         Me.btnLogout.TabIndex = 54
@@ -231,7 +232,7 @@ Partial Class DashBoard
         Me.btnchange.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnchange.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnchange.Location = New System.Drawing.Point(938, 312)
-        Me.btnchange.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnchange.Margin = New System.Windows.Forms.Padding(2)
         Me.btnchange.Name = "btnchange"
         Me.btnchange.Size = New System.Drawing.Size(182, 65)
         Me.btnchange.TabIndex = 61
@@ -244,18 +245,30 @@ Partial Class DashBoard
         Me.Button1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button1.Location = New System.Drawing.Point(453, 312)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(182, 65)
         Me.Button1.TabIndex = 62
         Me.Button1.Text = "Edit Info"
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'Lbl_CurTime
+        '
+        Me.Lbl_CurTime.AutoSize = True
+        Me.Lbl_CurTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_CurTime.Location = New System.Drawing.Point(21, 357)
+        Me.Lbl_CurTime.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Lbl_CurTime.Name = "Lbl_CurTime"
+        Me.Lbl_CurTime.Size = New System.Drawing.Size(101, 20)
+        Me.Lbl_CurTime.TabIndex = 63
+        Me.Lbl_CurTime.Text = "Today's time:"
+        '
         'DashBoard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1443, 749)
+        Me.Controls.Add(Me.Lbl_CurTime)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnchange)
         Me.Controls.Add(Me.lblPositionn)
@@ -274,7 +287,7 @@ Partial Class DashBoard
         Me.Controls.Add(Me.Btn_Customers)
         Me.Controls.Add(Me.Btn_Branches)
         Me.Controls.Add(Me.Btn_MainOffice)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "DashBoard"
         Me.Text = "DashBoard"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -302,4 +315,5 @@ Partial Class DashBoard
     Friend WithEvents lblUser As Label
     Friend WithEvents btnchange As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents Lbl_CurTime As Label
 End Class

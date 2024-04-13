@@ -16,5 +16,6 @@ Module Global_Var
     Public Login_stat As Boolean
     Public UserId As Integer
     Public EmployeeId As Integer
-    Public todaysdate As String = String.Format("yyyy-MM-dd", DateTime.Now)
+    Dim regDate As Date = Date.Now()
+    Public todaysdate As String = regDate.ToString("MMM dd, yyyy")
 End Module
