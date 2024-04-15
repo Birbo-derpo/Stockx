@@ -109,7 +109,7 @@ Public Class UpdateStocks
             txt_PaymentStatus.Text = "OnGoing"
         Else
             Cmb_Term.Enabled = False
-            Cmb_Term.Text = "" ' Clear the text inside Cmb_Term
+            Cmb_Term.Text = "none" ' Clear the text inside Cmb_Term
             Cmb_Term.ForeColor = Color.Gray
             txtterm.ForeColor = Color.Gray
             txt_PaymentStatus.Text = "Fully Paid"

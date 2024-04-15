@@ -17,5 +17,6 @@ Module Global_Var
     Public UserId As Integer
     Public EmployeeId As Integer
     Dim regDate As Date = Date.Now()
-    Public todaysdate As String = regDate.ToString("MMM dd, yyyy")
+    Public todaysdate As String = regDate.ToString("yyyy-MM-dd")
+
 End Module

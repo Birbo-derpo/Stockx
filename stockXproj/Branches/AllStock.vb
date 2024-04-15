@@ -196,6 +196,7 @@ Public Class Allstock
         action = "update"
         With UpdateStocks
             .lbl_branch.Text = Grd_Stock.CurrentRow.Cells(0).Value.ToString()
+            .Lbl_Stat.Text = Grd_Stock.CurrentRow.Cells(8).Value.ToString()
             .Txt_SIN.Text = MTN
             .Txt_Model.Text = Model
             .Txt_Color.Text = Color
