@@ -109,7 +109,7 @@ Public Class addMotorcycle
                     .CommandText = "prc_AddMotorcycle"
                     .CommandType = CommandType.StoredProcedure
                     .Parameters.AddWithValue("@p_invoice", txtInvoiceNumber.Text)
-                    .Parameters.AddWithValue("@p_dd", todaysdate)
+                    .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
                     .Parameters.AddWithValue("@p_model", Cmb_Model.Text)
                     .Parameters.AddWithValue("@p_color", Cmb_Color.Text)
                     .Parameters.AddWithValue("@p_price", txtPrice.Text)
@@ -122,7 +122,7 @@ Public Class addMotorcycle
                     .CommandText = "prc_Record"
                     .CommandType = CommandType.StoredProcedure
                     .Parameters.AddWithValue("@p_Action", "Add Unit")
-                    .Parameters.AddWithValue("@p_d", todaysdate)
+                    .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd"))
                     .Parameters.AddWithValue("@p_Unit", txtEngineNumber.Text)
                     .Parameters.AddWithValue("@p_branch", "Main")
                     .Parameters.AddWithValue("@p_FromState", "none")
@@ -139,7 +139,7 @@ Public Class addMotorcycle
                     .CommandText = "prc_UpdateMotorcycleByEngineNumber"
                     .CommandType = CommandType.StoredProcedure
                     .Parameters.AddWithValue("@p_invoice", txtInvoiceNumber.Text)
-                    .Parameters.AddWithValue("@p_dd", todaysdate)
+                    .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
                     .Parameters.AddWithValue("@p_model", Cmb_Model.Text)
                     .Parameters.AddWithValue("@p_color", Cmb_Color.Text)
                     .Parameters.AddWithValue("@p_price", txtPrice.Text)
@@ -152,7 +152,7 @@ Public Class addMotorcycle
                     .CommandText = "prc_Record"
                     .CommandType = CommandType.StoredProcedure
                     .Parameters.AddWithValue("@p_Action", "Edit Unit")
-                    .Parameters.AddWithValue("@p_d", todaysdate)
+                    .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd"))
                     .Parameters.AddWithValue("@p_Unit", txtEngineNumber.Text)
                     .Parameters.AddWithValue("@p_branch", "Main")
                     .Parameters.AddWithValue("@p_FromState", "none")
