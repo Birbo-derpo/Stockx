@@ -7,7 +7,6 @@ Public Class UpdateStocks
             Login.Show()
             Me.Close()
         Else
-            lbl_id.Text = ToString(Cust_id)
         End If
 
     End Sub
@@ -68,6 +67,9 @@ Public Class UpdateStocks
                     .Parameters.AddWithValue("@p_TypeOP", Cmb_Type.Text)
                     .Parameters.AddWithValue("@p_SIV", Txt_SIN.Text)
                     .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
+                    .Parameters.AddWithValue("@p_EngineNo", Txt_EngineNumber.Text)
+                    .Parameters.AddWithValue("@p_PaymentStatus", txt_PaymentStatus.Text)
+                    .ExecuteNonQuery()
                 End With
                 With command
                     .Parameters.Clear()
@@ -83,6 +85,7 @@ Public Class UpdateStocks
                     .Parameters.AddWithValue("@p_Employee", Username)
                     .ExecuteNonQuery()
                 End With
+                MessageBox.Show("edit success.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
 
             With command

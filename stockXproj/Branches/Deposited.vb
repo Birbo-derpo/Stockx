@@ -247,7 +247,6 @@ Public Class Deposited
                         .Parameters.AddWithValue("@p_Stat", State)
                         .ExecuteNonQuery()
                     End With
-
                     With command
                         .Parameters.Clear()
                         .CommandText = "prc_SetUnitDate"
