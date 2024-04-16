@@ -125,6 +125,12 @@ Public Class MainBranchInventory
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         action = "Insert"
         addMotorcycle.ShowDialog()
+        If Txt_Search.Text = "" Then
+            PrcDisplayUnits()
+        Else
+            prc_search()
+        End If
+
     End Sub
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
         action = "Edit"
@@ -205,6 +211,11 @@ Public Class MainBranchInventory
     End Sub
     Private Sub Btn_Toreservation_Click(sender As Object, e As EventArgs) Handles Btn_ReservationPage.Click
         ConfirmReserve.ShowDialog()
+        If Txt_Search.Text = "" Then
+            PrcDisplayUnits()
+        Else
+            prc_search()
+        End If
     End Sub
 
     Private Sub Btn_Reserved_Click(sender As Object, e As EventArgs) Handles Btn_Reserved.Click

@@ -61,7 +61,6 @@ Partial Class UpdateStocks
         Me.txt_PaymentStatus = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.lbl_id = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -134,7 +133,7 @@ Partial Class UpdateStocks
         Me.Txt_FrameNumber.BackColor = System.Drawing.SystemColors.Window
         Me.Txt_FrameNumber.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_FrameNumber.Location = New System.Drawing.Point(215, 411)
-        Me.Txt_FrameNumber.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_FrameNumber.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_FrameNumber.Name = "Txt_FrameNumber"
         Me.Txt_FrameNumber.ReadOnly = True
         Me.Txt_FrameNumber.Size = New System.Drawing.Size(280, 26)
@@ -145,7 +144,7 @@ Partial Class UpdateStocks
         Me.Txt_EngineNumber.BackColor = System.Drawing.SystemColors.Window
         Me.Txt_EngineNumber.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_EngineNumber.Location = New System.Drawing.Point(215, 375)
-        Me.Txt_EngineNumber.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_EngineNumber.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_EngineNumber.Name = "Txt_EngineNumber"
         Me.Txt_EngineNumber.ReadOnly = True
         Me.Txt_EngineNumber.Size = New System.Drawing.Size(280, 26)
@@ -156,7 +155,7 @@ Partial Class UpdateStocks
         Me.Txt_Price.BackColor = System.Drawing.SystemColors.Window
         Me.Txt_Price.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_Price.Location = New System.Drawing.Point(216, 341)
-        Me.Txt_Price.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_Price.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_Price.Name = "Txt_Price"
         Me.Txt_Price.ReadOnly = True
         Me.Txt_Price.Size = New System.Drawing.Size(280, 26)
@@ -167,7 +166,7 @@ Partial Class UpdateStocks
         Me.Txt_Color.BackColor = System.Drawing.SystemColors.Window
         Me.Txt_Color.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_Color.Location = New System.Drawing.Point(216, 311)
-        Me.Txt_Color.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_Color.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_Color.Name = "Txt_Color"
         Me.Txt_Color.ReadOnly = True
         Me.Txt_Color.Size = New System.Drawing.Size(280, 26)
@@ -178,7 +177,7 @@ Partial Class UpdateStocks
         Me.Txt_Model.BackColor = System.Drawing.SystemColors.Window
         Me.Txt_Model.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_Model.Location = New System.Drawing.Point(216, 282)
-        Me.Txt_Model.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_Model.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_Model.Name = "Txt_Model"
         Me.Txt_Model.ReadOnly = True
         Me.Txt_Model.Size = New System.Drawing.Size(280, 26)
@@ -188,7 +187,7 @@ Partial Class UpdateStocks
         '
         Me.dt.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dt.Location = New System.Drawing.Point(697, 307)
-        Me.dt.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dt.Margin = New System.Windows.Forms.Padding(2)
         Me.dt.Name = "dt"
         Me.dt.Size = New System.Drawing.Size(240, 26)
         Me.dt.TabIndex = 58
@@ -219,7 +218,7 @@ Partial Class UpdateStocks
         '
         Me.Txt_Amount.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_Amount.Location = New System.Drawing.Point(697, 334)
-        Me.Txt_Amount.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_Amount.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_Amount.Name = "Txt_Amount"
         Me.Txt_Amount.Size = New System.Drawing.Size(240, 26)
         Me.Txt_Amount.TabIndex = 66
@@ -244,7 +243,7 @@ Partial Class UpdateStocks
         Me.Cmb_Term.FormattingEnabled = True
         Me.Cmb_Term.Items.AddRange(New Object() {"12 Months", "24 Months", "36 Months"})
         Me.Cmb_Term.Location = New System.Drawing.Point(697, 397)
-        Me.Cmb_Term.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Cmb_Term.Margin = New System.Windows.Forms.Padding(2)
         Me.Cmb_Term.Name = "Cmb_Term"
         Me.Cmb_Term.Size = New System.Drawing.Size(240, 26)
         Me.Cmb_Term.TabIndex = 70
@@ -265,7 +264,7 @@ Partial Class UpdateStocks
         '
         Me.Txt_SIN.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_SIN.Location = New System.Drawing.Point(221, 240)
-        Me.Txt_SIN.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_SIN.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_SIN.Name = "Txt_SIN"
         Me.Txt_SIN.Size = New System.Drawing.Size(280, 29)
         Me.Txt_SIN.TabIndex = 73
@@ -276,7 +275,7 @@ Partial Class UpdateStocks
         Me.Btn_Update.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Update.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_Update.Location = New System.Drawing.Point(318, 498)
-        Me.Btn_Update.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Update.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Update.Name = "Btn_Update"
         Me.Btn_Update.Size = New System.Drawing.Size(107, 39)
         Me.Btn_Update.TabIndex = 75
@@ -300,7 +299,7 @@ Partial Class UpdateStocks
         Me.Cmb_Type.FormattingEnabled = True
         Me.Cmb_Type.Items.AddRange(New Object() {"Cash On Delivery", "Cash Onsite", "Installment Plan"})
         Me.Cmb_Type.Location = New System.Drawing.Point(697, 364)
-        Me.Cmb_Type.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Cmb_Type.Margin = New System.Windows.Forms.Padding(2)
         Me.Cmb_Type.Name = "Cmb_Type"
         Me.Cmb_Type.Size = New System.Drawing.Size(240, 26)
         Me.Cmb_Type.TabIndex = 77
@@ -311,7 +310,7 @@ Partial Class UpdateStocks
         Me.Cmb_Stat.FormattingEnabled = True
         Me.Cmb_Stat.Items.AddRange(New Object() {"Release", "Deposit"})
         Me.Cmb_Stat.Location = New System.Drawing.Point(697, 425)
-        Me.Cmb_Stat.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Cmb_Stat.Margin = New System.Windows.Forms.Padding(2)
         Me.Cmb_Stat.Name = "Cmb_Stat"
         Me.Cmb_Stat.Size = New System.Drawing.Size(240, 26)
         Me.Cmb_Stat.TabIndex = 79
@@ -342,7 +341,7 @@ Partial Class UpdateStocks
         '
         Me.Txt_Fname.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_Fname.Location = New System.Drawing.Point(697, 240)
-        Me.Txt_Fname.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_Fname.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_Fname.Name = "Txt_Fname"
         Me.Txt_Fname.Size = New System.Drawing.Size(240, 26)
         Me.Txt_Fname.TabIndex = 64
@@ -362,7 +361,7 @@ Partial Class UpdateStocks
         '
         Me.Txt_Lname.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_Lname.Location = New System.Drawing.Point(697, 273)
-        Me.Txt_Lname.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_Lname.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_Lname.Name = "Txt_Lname"
         Me.Txt_Lname.Size = New System.Drawing.Size(240, 26)
         Me.Txt_Lname.TabIndex = 80
@@ -383,7 +382,7 @@ Partial Class UpdateStocks
         Me.Button1.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button1.Location = New System.Drawing.Point(430, 498)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(107, 39)
         Me.Button1.TabIndex = 84
@@ -461,7 +460,7 @@ Partial Class UpdateStocks
         '
         Me.txt_PaymentStatus.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_PaymentStatus.Location = New System.Drawing.Point(697, 467)
-        Me.txt_PaymentStatus.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txt_PaymentStatus.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_PaymentStatus.Name = "txt_PaymentStatus"
         Me.txt_PaymentStatus.ReadOnly = True
         Me.txt_PaymentStatus.Size = New System.Drawing.Size(240, 26)
@@ -473,7 +472,7 @@ Partial Class UpdateStocks
         Me.Button2.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button2.Location = New System.Drawing.Point(542, 498)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(107, 39)
         Me.Button2.TabIndex = 98
@@ -485,27 +484,17 @@ Partial Class UpdateStocks
         Me.PictureBox1.BackgroundImage = Global.stockXproj.My.Resources.Resources.Add_a_subheading__1_
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.Location = New System.Drawing.Point(-1, -2)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(959, 148)
         Me.PictureBox1.TabIndex = 82
         Me.PictureBox1.TabStop = False
-        '
-        'lbl_id
-        '
-        Me.lbl_id.AutoSize = True
-        Me.lbl_id.Location = New System.Drawing.Point(348, 170)
-        Me.lbl_id.Name = "lbl_id"
-        Me.lbl_id.Size = New System.Drawing.Size(45, 13)
-        Me.lbl_id.TabIndex = 99
-        Me.lbl_id.Text = "Label18"
         '
         'UpdateStocks
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(985, 546)
-        Me.Controls.Add(Me.lbl_id)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.txt_PaymentStatus)
         Me.Controls.Add(Me.Label17)
@@ -545,7 +534,7 @@ Partial Class UpdateStocks
         Me.Controls.Add(Me.Txt_Color)
         Me.Controls.Add(Me.Txt_Model)
         Me.Controls.Add(Me.Motor)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "UpdateStocks"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "UpdateStocks"
@@ -594,5 +583,4 @@ Partial Class UpdateStocks
     Friend WithEvents Label17 As Label
     Friend WithEvents txt_PaymentStatus As TextBox
     Friend WithEvents Button2 As Button
-    Friend WithEvents lbl_id As Label
 End Class
