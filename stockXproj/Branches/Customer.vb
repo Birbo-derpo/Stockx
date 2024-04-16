@@ -202,7 +202,7 @@ Public Class Customer
     End Sub
 
     Private Sub Get_id(sender As Object, e As DataGridViewCellEventArgs) Handles grd_AllCustomer.CellClick
-        Cust_id = CInt(grd_AllCustomer.CurrentRow.Cells(15).Value)
+        Cust_id = grd_AllCustomer.CurrentRow.Cells(15).Value
     End Sub
 
     Private Sub Btn_FullPaid_Click(sender As Object, e As EventArgs) Handles Btn_FullPaid.Click

@@ -7,14 +7,14 @@ Public Class UpdateStocks
             Login.Show()
             Me.Close()
         Else
-
+            lbl_id.Text = ToString(Cust_id)
         End If
 
     End Sub
 
     Private Sub Btn_Update_Click(sender As Object, e As EventArgs) Handles Btn_Update.Click
         Try
-            If action = "Update" Then
+            If action = "update" Then
                 With command
                     .Parameters.Clear()
                     .CommandText = "prc_Transact"
