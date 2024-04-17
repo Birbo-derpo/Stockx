@@ -242,8 +242,5 @@ Public Class Customer
         End If
     End Sub
 
-    Private Sub grd_AllCustomer_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grd_AllCustomer.CellContentClick
-
-    End Sub
     'features end
 End Class

@@ -10,7 +10,6 @@ Public Class Repossess
             CheckDatabaseConnection()
             PrcDisplayRepossessedStock()
         End If
-
     End Sub
 
     Private Sub PrcDisplayRepossessedStock()
