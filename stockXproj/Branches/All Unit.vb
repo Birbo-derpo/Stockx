@@ -3,6 +3,7 @@
 Public Class All_Unit
     'dataloader
     Private Sub All_Unit_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         If Login_stat <> True Then
             Login.Show()
             Me.Close()
@@ -10,6 +11,7 @@ Public Class All_Unit
             CheckDatabaseConnection()
             PrcDisplayAllStock()
         End If
+
 
     End Sub
     Private Sub PrcDisplayAllStock()

@@ -9,6 +9,7 @@ Public Class UpdateStocks
         Else
         End If
 
+
     End Sub
 
     Private Sub Btn_Update_Click(sender As Object, e As EventArgs) Handles Btn_Update.Click
@@ -125,5 +126,9 @@ Public Class UpdateStocks
 
     Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
         getCustomerts.ShowDialog()
+    End Sub
+
+    Private Sub Label18_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class

@@ -3,6 +3,7 @@
 Public Class Deposited
     Private Cust_Name As String
     Private Sub Deposited_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         If Login_stat <> True Then
             Login.Show()
             Me.Close()
@@ -10,6 +11,7 @@ Public Class Deposited
             CheckDatabaseConnection()
             PrcDisplayDepositedStock()
         End If
+
 
     End Sub
     'dataloader
