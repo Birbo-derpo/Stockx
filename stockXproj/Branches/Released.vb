@@ -240,19 +240,20 @@ Public Class Released
                 Try
                     With command
                         .Parameters.Clear()
-                        .CommandText = "prc_ChangeStat"
-                        .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
-                        .Parameters.AddWithValue("@p_Stat", State)
-                        .ExecuteNonQuery()
-                    End With
-                    With command
-                        .Parameters.Clear()
                         .CommandText = "prc_SetUnitDate"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_state", State)
                         .Parameters.AddWithValue("@p_dt", Format(dt.Value, "yyyy-MM-dd"))
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_ChangeStat"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_Stat", State)
+                        .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
                         .ExecuteNonQuery()
                     End With
                     With command
@@ -271,7 +272,7 @@ Public Class Released
                         .ExecuteNonQuery()
                     End With
                 Catch ex As Exception
-                    MessageBox.Show("unit/s not in branch", "What", MessageBoxButtons.OK)
+                    MessageBox.Show("" & ex.Message)
                 End Try
                 Checkcell.Cells("Column10").Value = False
                 Cust_Name = ""
@@ -294,7 +295,7 @@ Public Class Released
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_getCustomerName"
+                .CommandText = "prc_GetCustomerName"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_Unit", p_unit)
                 sqlUMTCAdapter.SelectCommand = command
@@ -339,6 +340,7 @@ Public Class Released
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_Stat", State)
+                        .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
                         .ExecuteNonQuery()
                     End With
                     With command

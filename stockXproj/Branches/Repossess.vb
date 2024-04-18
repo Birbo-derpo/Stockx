@@ -239,7 +239,7 @@ Public Class Repossess
                         .CommandText = "prc_GetUnitDate"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
-                        .Parameters.AddWithValue("@p_Stat", State)
+                        .Parameters.AddWithValue("@p_state", State)
                         .ExecuteNonQuery()
                     End With
                     With command
@@ -248,6 +248,7 @@ Public Class Repossess
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_Stat", State)
+                        .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
                         .ExecuteNonQuery()
                     End With
                     With command
@@ -267,6 +268,7 @@ Public Class Repossess
                     End With
 
                 Catch ex As Exception
+                    MessageBox.Show("" & ex.Message)
                 End Try
                 Checkcell.Cells("Column10").Value = False
                 Cust_Name = ""
@@ -289,7 +291,7 @@ Public Class Repossess
                 sqlUMTCAdapter.SelectCommand = command
                 DataUMTC.Clear()
                 sqlUMTCAdapter.Fill(DataUMTC)
-                Cust_Name = DataUMTC.Rows(row).Item("Customer").ToString
+                Cust_Name = DataUMTC.Rows(0).Item("Customer").ToString
             End With
             sqlUMTCAdapter.Dispose()
             DataUMTC.Dispose()
@@ -307,19 +309,20 @@ Public Class Repossess
                 Try
                     With command
                         .Parameters.Clear()
-                        .CommandText = "prc_ChangeStat"
-                        .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
-                        .Parameters.AddWithValue("@p_Stat", State)
-                        .ExecuteNonQuery()
-                    End With
-                    With command
-                        .Parameters.Clear()
                         .CommandText = "prc_SetUnitDate"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_state", State)
                         .Parameters.AddWithValue("@p_dt", Format(dt.Value, "yyyy-MM-dd"))
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_ChangeStat"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_Stat", State)
+                        .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
                         .ExecuteNonQuery()
                     End With
                     With command
