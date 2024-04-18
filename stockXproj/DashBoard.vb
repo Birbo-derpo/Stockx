@@ -7,6 +7,8 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView
 
 Public Class DashBoard
     Private Sub DashBoard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        CheckDatabaseConnection()
         If Login_stat <> True Then
             Login.Show()
             Me.Close()
@@ -143,5 +145,13 @@ Public Class DashBoard
         Else
             MessageBox.Show("User data not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
+    End Sub
+
+    Private Sub Lbl_Bajada_Click(sender As Object, e As EventArgs) Handles Lbl_Bajada.Click
+
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+
     End Sub
 End Class

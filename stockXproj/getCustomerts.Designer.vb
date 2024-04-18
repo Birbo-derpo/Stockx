@@ -39,7 +39,7 @@ Partial Class getCustomerts
         Me.grd_GetCustomer.Name = "grd_GetCustomer"
         Me.grd_GetCustomer.RowHeadersWidth = 51
         Me.grd_GetCustomer.RowTemplate.Height = 24
-        Me.grd_GetCustomer.Size = New System.Drawing.Size(864, 488)
+        Me.grd_GetCustomer.Size = New System.Drawing.Size(853, 488)
         Me.grd_GetCustomer.TabIndex = 0
         '
         'Column1

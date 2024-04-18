@@ -239,7 +239,8 @@ Partial Class addMotorcycle
         '
         'PictureBox2
         '
-        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox2.BackgroundImage = Global.stockXproj.My.Resources.Resources.HONDA_COLOR
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox2.Location = New System.Drawing.Point(203, 2)
         Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox2.Name = "PictureBox2"
@@ -251,12 +252,12 @@ Partial Class addMotorcycle
         '
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Firebrick
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Font = New System.Drawing.Font("Book Antiqua", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label8.Location = New System.Drawing.Point(221, 18)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(308, 36)
+        Me.Label8.Size = New System.Drawing.Size(318, 35)
         Me.Label8.TabIndex = 74
         Me.Label8.Text = "ADD MOTORCYCLE" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -306,6 +307,7 @@ Partial Class addMotorcycle
         Me.Controls.Add(Me.txtEngineNumber)
         Me.Controls.Add(Me.txtPrice)
         Me.Controls.Add(Me.txtInvoiceNumber)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "addMotorcycle"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
