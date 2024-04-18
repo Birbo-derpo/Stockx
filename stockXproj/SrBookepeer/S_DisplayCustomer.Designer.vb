@@ -147,7 +147,8 @@ Partial Class S_DisplayCustomer
         'PictureBox3
         '
         Me.PictureBox3.BackColor = System.Drawing.SystemColors.Control
-        Me.PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox3.BackgroundImage = Global.stockXproj.My.Resources.Resources.HONDA_COLOR
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox3.Location = New System.Drawing.Point(-5, 188)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(1538, 168)
@@ -176,7 +177,7 @@ Partial Class S_DisplayCustomer
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label1.Location = New System.Drawing.Point(12, 195)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(311, 52)
+        Me.Label1.Size = New System.Drawing.Size(303, 51)
         Me.Label1.TabIndex = 89
         Me.Label1.Text = "CUSTOMERS"
         '

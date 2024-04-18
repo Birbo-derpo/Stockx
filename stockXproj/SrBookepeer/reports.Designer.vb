@@ -24,6 +24,10 @@ Partial Class reports
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(reports))
         Me.grd_report = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cmb_Month = New System.Windows.Forms.ComboBox()
         Me.btnTagum = New System.Windows.Forms.Button()
         Me.btnDavao = New System.Windows.Forms.Button()
@@ -39,10 +43,6 @@ Partial Class reports
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.grd_report, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -60,6 +60,38 @@ Partial Class reports
         Me.grd_report.RowTemplate.Height = 24
         Me.grd_report.Size = New System.Drawing.Size(823, 385)
         Me.grd_report.TabIndex = 0
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "BRANCH"
+        Me.Column1.MinimumWidth = 6
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Width = 139
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "MODEL"
+        Me.Column2.MinimumWidth = 6
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 150
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "ENGINE NUMBER"
+        Me.Column3.MinimumWidth = 6
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 150
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "DATE"
+        Me.Column4.MinimumWidth = 6
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 125
         '
         'cmb_Month
         '
@@ -196,7 +228,8 @@ Partial Class reports
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.SystemColors.Control
-        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox2.BackgroundImage = Global.stockXproj.My.Resources.Resources.HONDA_COLOR
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox2.Location = New System.Drawing.Point(-5, 188)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(1538, 168)
@@ -211,7 +244,7 @@ Partial Class reports
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label1.Location = New System.Drawing.Point(12, 195)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(445, 52)
+        Me.Label1.Size = New System.Drawing.Size(434, 51)
         Me.Label1.TabIndex = 83
         Me.Label1.Text = "BRANCH REPORTS"
         '
@@ -238,38 +271,6 @@ Partial Class reports
         Me.PictureBox3.Size = New System.Drawing.Size(241, 190)
         Me.PictureBox3.TabIndex = 85
         Me.PictureBox3.TabStop = False
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "BRANCH"
-        Me.Column1.MinimumWidth = 6
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Width = 139
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "MODEL"
-        Me.Column2.MinimumWidth = 6
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Width = 150
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "ENGINE NUMBER"
-        Me.Column3.MinimumWidth = 6
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        Me.Column3.Width = 150
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "DATE"
-        Me.Column4.MinimumWidth = 6
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        Me.Column4.Width = 125
         '
         'reports
         '

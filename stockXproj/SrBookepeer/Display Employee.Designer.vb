@@ -204,6 +204,7 @@ Partial Class Display_Employee
         '
         Me.PictureBox2.BackColor = System.Drawing.SystemColors.Control
         Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox2.Location = New System.Drawing.Point(0, 192)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(1538, 168)
@@ -218,7 +219,7 @@ Partial Class Display_Employee
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label1.Location = New System.Drawing.Point(12, 195)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(294, 52)
+        Me.Label1.Size = New System.Drawing.Size(286, 51)
         Me.Label1.TabIndex = 76
         Me.Label1.Text = "EMPLOYEES"
         '
