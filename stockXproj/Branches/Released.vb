@@ -123,7 +123,6 @@ Public Class Released
         Me.Close()
     End Sub
 
-
     Private Sub Btn_Deposited_Click(sender As Object, e As EventArgs) Handles Btn_Deposited.Click
         Deposited.Show()
         Me.Close()
@@ -232,7 +231,7 @@ Public Class Released
         End Try
     End Sub
 
-    Private Sub Btn_Repossess_Click(sender As Object, e As EventArgs) Handles Btn_Repossess.Click, Btn_RepossessPage.Click
+    Private Sub Btn_Repossess_Click(sender As Object, e As EventArgs) Handles Btn_Repossess.Click
         State = "Repossess"
         For Each Checkcell As DataGridViewRow In Grd_StockReleased.Rows
             'needs to accept only when branches combobox is selected
@@ -279,7 +278,7 @@ Public Class Released
             End If
 
         Next
-        MessageBox.Show("unit/s now in branch", "in branch", MessageBoxButtons.OK)
+        MessageBox.Show("unit/s Repossessed", "Repossessed", MessageBoxButtons.OK)
 
         If Txt_Search.Text = "" Then
             PrcDisplayReleasedStock()
@@ -301,7 +300,7 @@ Public Class Released
                 sqlUMTCAdapter.SelectCommand = command
                 DataUMTC.Clear()
                 sqlUMTCAdapter.Fill(DataUMTC)
-                Cust_Name = DataUMTC.Rows(row).Item("Customer").ToString
+                Cust_Name = DataUMTC.Rows(0).Item("Customer").ToString
             End With
             sqlUMTCAdapter.Dispose()
             DataUMTC.Dispose()
@@ -332,6 +331,7 @@ Public Class Released
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_Stat", State)
+                        .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
                         .ExecuteNonQuery()
                     End With
                     With command

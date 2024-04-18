@@ -48,7 +48,6 @@ Public Class Repossess
                         End If
                     End While
                 Else
-
                     MessageBox.Show("No Available Records", "Records", MessageBoxButtons.OK, MessageBoxIcon.Question)
                 End If
             End With
@@ -285,7 +284,7 @@ Public Class Repossess
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_getCustomerName"
+                .CommandText = "prc_GetCustomerName"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_Unit", p_unit)
                 sqlUMTCAdapter.SelectCommand = command

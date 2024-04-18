@@ -293,7 +293,7 @@ Public Class Deposited
 
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_getCustomerName"
+                .CommandText = "prc_GetCustomerName"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_Unit", p_unit)
                 sqlUMTCAdapter.SelectCommand = command
