@@ -33,6 +33,7 @@ Partial Class change
         Me.Label5 = New System.Windows.Forms.Label()
         Me.lblcorrect = New System.Windows.Forms.Label()
         Me.lblcorrectconfirm = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'txtnewpass
@@ -138,11 +139,21 @@ Partial Class change
         Me.lblcorrectconfirm.Text = "*"
         Me.lblcorrectconfirm.Visible = False
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(429, 224)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 11
+        Me.Button1.Text = "CLOSE"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'change
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(960, 563)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblcorrectconfirm)
         Me.Controls.Add(Me.lblcorrect)
         Me.Controls.Add(Me.Label5)
@@ -172,4 +183,5 @@ Partial Class change
     Friend WithEvents Label5 As Label
     Friend WithEvents lblcorrect As Label
     Friend WithEvents lblcorrectconfirm As Label
+    Friend WithEvents Button1 As Button
 End Class

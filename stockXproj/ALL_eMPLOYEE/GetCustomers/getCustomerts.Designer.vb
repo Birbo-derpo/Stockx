@@ -28,6 +28,7 @@ Partial Class getCustomerts
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btn_AddCustomer = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.grd_GetCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -75,7 +76,7 @@ Partial Class getCustomerts
         Me.btn_AddCustomer.BackColor = System.Drawing.Color.Firebrick
         Me.btn_AddCustomer.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_AddCustomer.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btn_AddCustomer.Location = New System.Drawing.Point(465, 576)
+        Me.btn_AddCustomer.Location = New System.Drawing.Point(396, 567)
         Me.btn_AddCustomer.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btn_AddCustomer.Name = "btn_AddCustomer"
         Me.btn_AddCustomer.Size = New System.Drawing.Size(159, 57)
@@ -83,11 +84,25 @@ Partial Class getCustomerts
         Me.btn_AddCustomer.Text = "ADD CUSTOMER"
         Me.btn_AddCustomer.UseVisualStyleBackColor = False
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Firebrick
+        Me.Button1.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button1.Location = New System.Drawing.Point(561, 567)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(159, 57)
+        Me.Button1.TabIndex = 29
+        Me.Button1.Text = "CLOSE"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'getCustomerts
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1117, 680)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btn_AddCustomer)
         Me.Controls.Add(Me.grd_GetCustomer)
         Me.Name = "getCustomerts"
@@ -103,4 +118,5 @@ Partial Class getCustomerts
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents btn_AddCustomer As Button
+    Friend WithEvents Button1 As Button
 End Class

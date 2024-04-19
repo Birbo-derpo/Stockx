@@ -37,6 +37,7 @@ Partial Class ChangePasswordEmployee
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.btnclose = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -100,7 +101,7 @@ Partial Class ChangePasswordEmployee
         Me.btnChange.BackColor = System.Drawing.Color.Firebrick
         Me.btnChange.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnChange.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnChange.Location = New System.Drawing.Point(322, 558)
+        Me.btnChange.Location = New System.Drawing.Point(242, 563)
         Me.btnChange.Name = "btnChange"
         Me.btnChange.Size = New System.Drawing.Size(115, 41)
         Me.btnChange.TabIndex = 15
@@ -195,9 +196,21 @@ Partial Class ChangePasswordEmployee
         Me.Label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label7.Location = New System.Drawing.Point(202, 249)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(369, 40)
+        Me.Label7.Size = New System.Drawing.Size(356, 38)
         Me.Label7.TabIndex = 75
         Me.Label7.Text = "CHANGE PASSWORD"
+        '
+        'btnclose
+        '
+        Me.btnclose.BackColor = System.Drawing.Color.Firebrick
+        Me.btnclose.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnclose.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnclose.Location = New System.Drawing.Point(363, 563)
+        Me.btnclose.Name = "btnclose"
+        Me.btnclose.Size = New System.Drawing.Size(115, 41)
+        Me.btnclose.TabIndex = 76
+        Me.btnclose.Text = "CLOSE"
+        Me.btnclose.UseVisualStyleBackColor = False
         '
         'ChangePasswordEmployee
         '
@@ -205,6 +218,7 @@ Partial Class ChangePasswordEmployee
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Snow
         Me.ClientSize = New System.Drawing.Size(773, 626)
+        Me.Controls.Add(Me.btnclose)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.PictureBox2)
@@ -244,4 +258,5 @@ Partial Class ChangePasswordEmployee
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
+    Friend WithEvents btnclose As Button
 End Class

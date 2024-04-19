@@ -86,7 +86,7 @@ Public Class DashBoard
 
     Private Sub btnchange_Click(sender As Object, e As EventArgs) Handles btnchange.Click
         ChangePasswordEmployee.ShowDialog()
-        Me.Hide()
+
     End Sub
     Private Sub prcDisplayCurrentUser()
         Try

@@ -38,6 +38,7 @@ Partial Class S_DisplayCustomer
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Chk_Auto = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Btn_Dashboard = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -52,7 +53,7 @@ Partial Class S_DisplayCustomer
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(1059, 390)
+        Me.DataGridView1.Size = New System.Drawing.Size(1057, 390)
         Me.DataGridView1.TabIndex = 38
         '
         'Column1
@@ -181,11 +182,27 @@ Partial Class S_DisplayCustomer
         Me.Label1.TabIndex = 89
         Me.Label1.Text = "CUSTOMERS"
         '
+        'Btn_Dashboard
+        '
+        Me.Btn_Dashboard.BackColor = System.Drawing.Color.Firebrick
+        Me.Btn_Dashboard.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Btn_Dashboard.FlatAppearance.BorderSize = 10
+        Me.Btn_Dashboard.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Dashboard.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Btn_Dashboard.Location = New System.Drawing.Point(233, 772)
+        Me.Btn_Dashboard.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_Dashboard.Name = "Btn_Dashboard"
+        Me.Btn_Dashboard.Size = New System.Drawing.Size(159, 57)
+        Me.Btn_Dashboard.TabIndex = 90
+        Me.Btn_Dashboard.Text = "DASHBOARD"
+        Me.Btn_Dashboard.UseVisualStyleBackColor = False
+        '
         'S_DisplayCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1748, 969)
+        Me.Controls.Add(Me.Btn_Dashboard)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Chk_Auto)
         Me.Controls.Add(Me.PictureBox2)
@@ -221,4 +238,5 @@ Partial Class S_DisplayCustomer
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Chk_Auto As CheckBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents Btn_Dashboard As Button
 End Class

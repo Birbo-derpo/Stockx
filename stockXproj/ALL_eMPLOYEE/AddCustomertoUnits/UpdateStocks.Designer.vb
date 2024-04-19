@@ -62,6 +62,7 @@ Partial Class UpdateStocks
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label18 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -480,11 +481,25 @@ Partial Class UpdateStocks
         Me.Label18.TabIndex = 99
         Me.Label18.Text = "UPDATE STOCKS"
         '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.Firebrick
+        Me.Button3.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button3.Location = New System.Drawing.Point(386, 604)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(159, 57)
+        Me.Button3.TabIndex = 100
+        Me.Button3.Text = "CLOSE"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
         'UpdateStocks
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1313, 672)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.txt_PaymentStatus)
@@ -575,4 +590,5 @@ Partial Class UpdateStocks
     Friend WithEvents txt_PaymentStatus As TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Label18 As Label
+    Friend WithEvents Button3 As Button
 End Class

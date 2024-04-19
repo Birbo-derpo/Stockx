@@ -44,7 +44,7 @@ Partial Class Login
         Me.Email_Field.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Email_Field.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Email_Field.Location = New System.Drawing.Point(217, 354)
-        Me.Email_Field.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Email_Field.Margin = New System.Windows.Forms.Padding(4)
         Me.Email_Field.Name = "Email_Field"
         Me.Email_Field.Size = New System.Drawing.Size(323, 30)
         Me.Email_Field.TabIndex = 0
@@ -56,7 +56,7 @@ Partial Class Login
         Me.Pass_Field.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Pass_Field.ForeColor = System.Drawing.SystemColors.WindowText
         Me.Pass_Field.Location = New System.Drawing.Point(217, 437)
-        Me.Pass_Field.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Pass_Field.Margin = New System.Windows.Forms.Padding(4)
         Me.Pass_Field.Name = "Pass_Field"
         Me.Pass_Field.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.Pass_Field.Size = New System.Drawing.Size(323, 30)
@@ -91,7 +91,7 @@ Partial Class Login
         Me.Btn_Login.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Login.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Btn_Login.Location = New System.Drawing.Point(256, 475)
-        Me.Btn_Login.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Btn_Login.Margin = New System.Windows.Forms.Padding(4)
         Me.Btn_Login.Name = "Btn_Login"
         Me.Btn_Login.Size = New System.Drawing.Size(115, 41)
         Me.Btn_Login.TabIndex = 4
@@ -105,7 +105,7 @@ Partial Class Login
         Me.Btn_Cancel.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Cancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Btn_Cancel.Location = New System.Drawing.Point(379, 475)
-        Me.Btn_Cancel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Btn_Cancel.Margin = New System.Windows.Forms.Padding(4)
         Me.Btn_Cancel.Name = "Btn_Cancel"
         Me.Btn_Cancel.Size = New System.Drawing.Size(115, 41)
         Me.Btn_Cancel.TabIndex = 5
@@ -165,7 +165,7 @@ Partial Class Login
         Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label3.Location = New System.Drawing.Point(309, 248)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(133, 40)
+        Me.Label3.Size = New System.Drawing.Size(129, 38)
         Me.Label3.TabIndex = 73
         Me.Label3.Text = "LOG IN"
         '
@@ -186,8 +186,9 @@ Partial Class Login
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Email_Field)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Login"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()

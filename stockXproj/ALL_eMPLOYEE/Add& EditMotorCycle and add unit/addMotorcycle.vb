@@ -77,6 +77,8 @@ Public Class addMotorcycle
                         txtPrice.ReadOnly = True
 
 
+
+
                     End If
                 Next
             End If
@@ -293,18 +295,23 @@ Public Class addMotorcycle
     End Sub
 
     Private Sub Cmb_Model_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Cmb_Model.SelectedIndexChanged
+
+        Cmb_Color.SelectedIndex = -1
         If Cmb_Model.SelectedItem IsNot Nothing Then
             selectedModel = Cmb_Model.SelectedItem.ToString()
             DisplayColor()
+
+
+
         End If
+
     End Sub
 
     Private Sub Cmb_Color_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Cmb_Color.SelectedIndexChanged
 
         If Cmb_Color.SelectedItem IsNot Nothing Then
-                selectedColor = Cmb_Color.SelectedItem.ToString()
-
-            End If
+            selectedColor = Cmb_Color.SelectedItem.ToString()
+        End If
 
     End Sub
 End Class
