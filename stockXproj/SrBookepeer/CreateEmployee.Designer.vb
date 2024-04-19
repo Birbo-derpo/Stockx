@@ -39,6 +39,7 @@ Partial Class CreateEmployee
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -162,7 +163,7 @@ Partial Class CreateEmployee
         Me.Create.FlatAppearance.BorderSize = 2
         Me.Create.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Create.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Create.Location = New System.Drawing.Point(326, 547)
+        Me.Create.Location = New System.Drawing.Point(269, 547)
         Me.Create.Name = "Create"
         Me.Create.Size = New System.Drawing.Size(116, 46)
         Me.Create.TabIndex = 12
@@ -203,12 +204,27 @@ Partial Class CreateEmployee
         Me.Label7.Text = "CREATE  EMPLOYEE " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " ACCOUNT"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Firebrick
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
+        Me.Button1.FlatAppearance.BorderSize = 2
+        Me.Button1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button1.Location = New System.Drawing.Point(391, 547)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(116, 46)
+        Me.Button1.TabIndex = 17
+        Me.Button1.Text = "CLOSE"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'CreateEmployee
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Snow
         Me.ClientSize = New System.Drawing.Size(773, 626)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
@@ -253,4 +269,5 @@ Partial Class CreateEmployee
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label7 As Label
+    Friend WithEvents Button1 As Button
 End Class

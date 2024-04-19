@@ -35,6 +35,7 @@ Partial Class Forgot_Password
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -94,7 +95,7 @@ Partial Class Forgot_Password
         Me.btnVerify.BackColor = System.Drawing.Color.Firebrick
         Me.btnVerify.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnVerify.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnVerify.Location = New System.Drawing.Point(322, 558)
+        Me.btnVerify.Location = New System.Drawing.Point(264, 558)
         Me.btnVerify.Name = "btnVerify"
         Me.btnVerify.Size = New System.Drawing.Size(115, 41)
         Me.btnVerify.TabIndex = 5
@@ -152,7 +153,7 @@ Partial Class Forgot_Password
         Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Label3.Location = New System.Drawing.Point(257, 251)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(253, 40)
+        Me.Label3.Size = New System.Drawing.Size(246, 38)
         Me.Label3.TabIndex = 74
         Me.Label3.Text = "VERIFICATION"
         '
@@ -176,12 +177,25 @@ Partial Class Forgot_Password
         Me.Label5.TabIndex = 76
         Me.Label5.Text = "*Password given by Google for security purposes.*"
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Firebrick
+        Me.Button1.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button1.Location = New System.Drawing.Point(385, 558)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(115, 41)
+        Me.Button1.TabIndex = 77
+        Me.Button1.Text = "CLOSE"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'Forgot_Password
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Snow
         Me.ClientSize = New System.Drawing.Size(773, 626)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label3)
@@ -217,4 +231,5 @@ Partial Class Forgot_Password
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents Button1 As Button
 End Class

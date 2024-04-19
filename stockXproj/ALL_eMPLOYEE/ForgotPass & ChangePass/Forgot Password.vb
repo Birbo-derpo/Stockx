@@ -16,6 +16,10 @@ Public Class Forgot_Password
 
     Dim gmail, from, Pass, MessageBody, randomCode As String
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+    End Sub
+
     Private Sub Forgot_Password_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub

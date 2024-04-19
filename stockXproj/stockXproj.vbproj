@@ -158,16 +158,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="addMotorcycle.Designer.vb">
+    <Compile Include="ALL_eMPLOYEE\Add&amp; EditMotorCycle and add unit\addMotorcycle.Designer.vb">
       <DependentUpon>addMotorcycle.vb</DependentUpon>
     </Compile>
-    <Compile Include="addMotorcycle.vb">
+    <Compile Include="ALL_eMPLOYEE\Add&amp; EditMotorCycle and add unit\addMotorcycle.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addnewunits.Designer.vb">
+    <Compile Include="ALL_eMPLOYEE\Add&amp; EditMotorCycle and add unit\addnewunits.Designer.vb">
       <DependentUpon>addnewunits.vb</DependentUpon>
     </Compile>
-    <Compile Include="addnewunits.vb">
+    <Compile Include="ALL_eMPLOYEE\Add&amp; EditMotorCycle and add unit\addnewunits.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Addsrbookeeper.Designer.vb">
@@ -176,52 +176,44 @@
     <Compile Include="Addsrbookeeper.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Branches\All Unit.Designer.vb">
+    <Compile Include="Inventory Manager\Branches\All Unit.Designer.vb">
       <DependentUpon>All Unit.vb</DependentUpon>
     </Compile>
-    <Compile Include="Branches\All Unit.vb">
+    <Compile Include="Inventory Manager\Branches\All Unit.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="change.Designer.vb">
+    <Compile Include="ALL_eMPLOYEE\ForgotPass &amp; ChangePass\change.Designer.vb">
       <DependentUpon>change.vb</DependentUpon>
     </Compile>
-    <Compile Include="change.vb">
+    <Compile Include="ALL_eMPLOYEE\ForgotPass &amp; ChangePass\change.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChangePasswordEmployee.Designer.vb">
+    <Compile Include="ALL_eMPLOYEE\ForgotPass &amp; ChangePass\ChangePasswordEmployee.Designer.vb">
       <DependentUpon>ChangePasswordEmployee.vb</DependentUpon>
     </Compile>
-    <Compile Include="ChangePasswordEmployee.vb">
+    <Compile Include="ALL_eMPLOYEE\ForgotPass &amp; ChangePass\ChangePasswordEmployee.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DashBoard.Designer.vb">
+    <Compile Include="Inventory Manager\DashBoard\DashBoard.Designer.vb">
       <DependentUpon>DashBoard.vb</DependentUpon>
     </Compile>
-    <Compile Include="DashBoard.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DisplayAllCustomers.Designer.vb">
-      <DependentUpon>DisplayAllCustomers.vb</DependentUpon>
-    </Compile>
-    <Compile Include="DisplayAllCustomers.vb">
+    <Compile Include="Inventory Manager\DashBoard\DashBoard.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Employee_Or_SrBookeeper.Designer.vb">
       <DependentUpon>Employee_Or_SrBookeeper.vb</DependentUpon>
     </Compile>
-    <Compile Include="Employee_Or_SrBookeeper.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forgot Password.Designer.vb">
+    <Compile Include="Employee_Or_SrBookeeper.vb" />
+    <Compile Include="ALL_eMPLOYEE\ForgotPass &amp; ChangePass\Forgot Password.Designer.vb">
       <DependentUpon>Forgot Password.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forgot Password.vb">
+    <Compile Include="ALL_eMPLOYEE\ForgotPass &amp; ChangePass\Forgot Password.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="getCustomerts.Designer.vb">
+    <Compile Include="ALL_eMPLOYEE\GetCustomers\getCustomerts.Designer.vb">
       <DependentUpon>getCustomerts.vb</DependentUpon>
     </Compile>
-    <Compile Include="getCustomerts.vb">
+    <Compile Include="ALL_eMPLOYEE\GetCustomers\getCustomerts.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Global_Procedure.vb" />
@@ -231,12 +223,6 @@
     <Compile Include="HondaHomePage.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginSrBookeeper.Designer.vb">
-      <DependentUpon>LoginSrBookeeper.vb</DependentUpon>
-    </Compile>
-    <Compile Include="LoginSrBookeeper.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Main.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -244,41 +230,41 @@
       <DependentUpon>Main.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.vb">
+    <Compile Include="ALL_eMPLOYEE\LOGIN\Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
-    <Compile Include="Login.vb">
+    <Compile Include="ALL_eMPLOYEE\LOGIN\Login.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Global_var.vb" />
-    <Compile Include="MainOffice\AvailableStocks.Designer.vb">
+    <Compile Include="Inventory Manager\MainOffice\AvailableStocks.Designer.vb">
       <DependentUpon>AvailableStocks.vb</DependentUpon>
     </Compile>
-    <Compile Include="MainOffice\AvailableStocks.vb">
+    <Compile Include="Inventory Manager\MainOffice\AvailableStocks.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainOffice\MainBranchInventory.Designer.vb">
+    <Compile Include="Inventory Manager\MainOffice\MainBranchInventory.Designer.vb">
       <DependentUpon>MainBranchInventory.vb</DependentUpon>
     </Compile>
-    <Compile Include="MainOffice\MainBranchInventory.vb">
+    <Compile Include="Inventory Manager\MainOffice\MainBranchInventory.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainOffice\ConfirmReserve.Designer.vb">
+    <Compile Include="ALL_eMPLOYEE\ConfirmReserve\ConfirmReserve.Designer.vb">
       <DependentUpon>ConfirmReserve.vb</DependentUpon>
     </Compile>
-    <Compile Include="MainOffice\ConfirmReserve.vb">
+    <Compile Include="ALL_eMPLOYEE\ConfirmReserve\ConfirmReserve.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainOffice\Reserve.Designer.vb">
+    <Compile Include="Inventory Manager\MainOffice\Reserve.Designer.vb">
       <DependentUpon>Reserve.vb</DependentUpon>
     </Compile>
-    <Compile Include="MainOffice\Reserve.vb">
+    <Compile Include="Inventory Manager\MainOffice\Reserve.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainOffice\TRANSIT.Designer.vb">
+    <Compile Include="Inventory Manager\MainOffice\TRANSIT.Designer.vb">
       <DependentUpon>TRANSIT.vb</DependentUpon>
     </Compile>
-    <Compile Include="MainOffice\TRANSIT.vb">
+    <Compile Include="Inventory Manager\MainOffice\TRANSIT.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\Application1.Designer.vb">
@@ -302,40 +288,40 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Branches\AllStock.Designer.vb">
+    <Compile Include="Inventory Manager\Branches\AllStock.Designer.vb">
       <DependentUpon>AllStock.vb</DependentUpon>
     </Compile>
-    <Compile Include="Branches\AllStock.vb">
+    <Compile Include="Inventory Manager\Branches\AllStock.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Branches\Customer.Designer.vb">
+    <Compile Include="ALL_eMPLOYEE\DisplayAllCutomers\Customer.Designer.vb">
       <DependentUpon>Customer.vb</DependentUpon>
     </Compile>
-    <Compile Include="Branches\Customer.vb">
+    <Compile Include="ALL_eMPLOYEE\DisplayAllCutomers\Customer.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Branches\Deposited.Designer.vb">
+    <Compile Include="Inventory Manager\Branches\Deposited.Designer.vb">
       <DependentUpon>Deposited.vb</DependentUpon>
     </Compile>
-    <Compile Include="Branches\Deposited.vb">
+    <Compile Include="Inventory Manager\Branches\Deposited.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Branches\Released.Designer.vb">
+    <Compile Include="Inventory Manager\Branches\Released.Designer.vb">
       <DependentUpon>Released.vb</DependentUpon>
     </Compile>
-    <Compile Include="Branches\Released.vb">
+    <Compile Include="Inventory Manager\Branches\Released.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Branches\Repossess.Designer.vb">
+    <Compile Include="Inventory Manager\Branches\Repossess.Designer.vb">
       <DependentUpon>Repossess.vb</DependentUpon>
     </Compile>
-    <Compile Include="Branches\Repossess.vb">
+    <Compile Include="Inventory Manager\Branches\Repossess.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Branches\UpdateStocks.Designer.vb">
+    <Compile Include="ALL_eMPLOYEE\AddCustomertoUnits\UpdateStocks.Designer.vb">
       <DependentUpon>UpdateStocks.vb</DependentUpon>
     </Compile>
-    <Compile Include="Branches\UpdateStocks.vb">
+    <Compile Include="ALL_eMPLOYEE\AddCustomertoUnits\UpdateStocks.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SrBookepeer\CreateEmployee.Designer.vb">
@@ -350,10 +336,10 @@
     <Compile Include="SrBookepeer\Display Employee.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SrBookepeer\EditEmployee.Designer.vb">
+    <Compile Include="SrBookepeer\EditEmployee\EditEmployee.Designer.vb">
       <DependentUpon>EditEmployee.vb</DependentUpon>
     </Compile>
-    <Compile Include="SrBookepeer\EditEmployee.vb">
+    <Compile Include="SrBookepeer\EditEmployee\EditEmployee.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SrBookepeer\MainOffice\Employeree Acounts.Designer.vb">
@@ -380,10 +366,10 @@
     <Compile Include="SrBookepeer\S_DisplayCustomer.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SrBookepeer\S_dashboard.Designer.vb">
+    <Compile Include="SrBookepeer\Dashboard\S_dashboard.Designer.vb">
       <DependentUpon>S_dashboard.vb</DependentUpon>
     </Compile>
-    <Compile Include="SrBookepeer\S_dashboard.vb">
+    <Compile Include="SrBookepeer\Dashboard\S_dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SrBookepeer\MainOffice\S_confirmReserve.Designer.vb">
@@ -448,64 +434,58 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="addMotorcycle.resx">
+    <EmbeddedResource Include="ALL_eMPLOYEE\Add&amp; EditMotorCycle and add unit\addMotorcycle.resx">
       <DependentUpon>addMotorcycle.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addnewunits.resx">
+    <EmbeddedResource Include="ALL_eMPLOYEE\Add&amp; EditMotorCycle and add unit\addnewunits.resx">
       <DependentUpon>addnewunits.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Addsrbookeeper.resx">
       <DependentUpon>Addsrbookeeper.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Branches\All Unit.resx">
+    <EmbeddedResource Include="Inventory Manager\Branches\All Unit.resx">
       <DependentUpon>All Unit.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="change.resx">
+    <EmbeddedResource Include="ALL_eMPLOYEE\ForgotPass &amp; ChangePass\change.resx">
       <DependentUpon>change.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangePasswordEmployee.resx">
+    <EmbeddedResource Include="ALL_eMPLOYEE\ForgotPass &amp; ChangePass\ChangePasswordEmployee.resx">
       <DependentUpon>ChangePasswordEmployee.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DashBoard.resx">
+    <EmbeddedResource Include="Inventory Manager\DashBoard\DashBoard.resx">
       <DependentUpon>DashBoard.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DisplayAllCustomers.resx">
-      <DependentUpon>DisplayAllCustomers.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee_Or_SrBookeeper.resx">
       <DependentUpon>Employee_Or_SrBookeeper.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forgot Password.resx">
+    <EmbeddedResource Include="ALL_eMPLOYEE\ForgotPass &amp; ChangePass\Forgot Password.resx">
       <DependentUpon>Forgot Password.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="getCustomerts.resx">
+    <EmbeddedResource Include="ALL_eMPLOYEE\GetCustomers\getCustomerts.resx">
       <DependentUpon>getCustomerts.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HondaHomePage.resx">
       <DependentUpon>HondaHomePage.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="ALL_eMPLOYEE\LOGIN\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginSrBookeeper.resx">
-      <DependentUpon>LoginSrBookeeper.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainOffice\AvailableStocks.resx">
+    <EmbeddedResource Include="Inventory Manager\MainOffice\AvailableStocks.resx">
       <DependentUpon>AvailableStocks.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainOffice\MainBranchInventory.resx">
+    <EmbeddedResource Include="Inventory Manager\MainOffice\MainBranchInventory.resx">
       <DependentUpon>MainBranchInventory.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainOffice\ConfirmReserve.resx">
+    <EmbeddedResource Include="ALL_eMPLOYEE\ConfirmReserve\ConfirmReserve.resx">
       <DependentUpon>ConfirmReserve.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainOffice\Reserve.resx">
+    <EmbeddedResource Include="Inventory Manager\MainOffice\Reserve.resx">
       <DependentUpon>Reserve.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainOffice\TRANSIT.resx">
+    <EmbeddedResource Include="Inventory Manager\MainOffice\TRANSIT.resx">
       <DependentUpon>TRANSIT.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -514,22 +494,22 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Branches\AllStock.resx">
+    <EmbeddedResource Include="Inventory Manager\Branches\AllStock.resx">
       <DependentUpon>AllStock.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Branches\Customer.resx">
+    <EmbeddedResource Include="ALL_eMPLOYEE\DisplayAllCutomers\Customer.resx">
       <DependentUpon>Customer.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Branches\Deposited.resx">
+    <EmbeddedResource Include="Inventory Manager\Branches\Deposited.resx">
       <DependentUpon>Deposited.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Branches\Released.resx">
+    <EmbeddedResource Include="Inventory Manager\Branches\Released.resx">
       <DependentUpon>Released.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Branches\Repossess.resx">
+    <EmbeddedResource Include="Inventory Manager\Branches\Repossess.resx">
       <DependentUpon>Repossess.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Branches\UpdateStocks.resx">
+    <EmbeddedResource Include="ALL_eMPLOYEE\AddCustomertoUnits\UpdateStocks.resx">
       <DependentUpon>UpdateStocks.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SrBookepeer\CreateEmployee.resx">
@@ -538,7 +518,7 @@
     <EmbeddedResource Include="SrBookepeer\Display Employee.resx">
       <DependentUpon>Display Employee.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SrBookepeer\EditEmployee.resx">
+    <EmbeddedResource Include="SrBookepeer\EditEmployee\EditEmployee.resx">
       <DependentUpon>EditEmployee.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SrBookepeer\MainOffice\Employeree Acounts.resx">
@@ -580,7 +560,7 @@
     <EmbeddedResource Include="SrBookepeer\S_branch\S_repossess.resx">
       <DependentUpon>S_repossess.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SrBookepeer\S_dashboard.resx">
+    <EmbeddedResource Include="SrBookepeer\Dashboard\S_dashboard.resx">
       <DependentUpon>S_dashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SrBookepeer\S_DisplayCustomer.resx">
@@ -621,5 +601,6 @@
   <ItemGroup>
     <None Include="Resources\HONDA COLOR.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

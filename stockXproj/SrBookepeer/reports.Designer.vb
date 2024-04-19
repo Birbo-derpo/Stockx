@@ -43,6 +43,7 @@ Partial Class reports
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Btn_Dashboard = New System.Windows.Forms.Button()
         CType(Me.grd_report, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -272,11 +273,27 @@ Partial Class reports
         Me.PictureBox3.TabIndex = 85
         Me.PictureBox3.TabStop = False
         '
+        'Btn_Dashboard
+        '
+        Me.Btn_Dashboard.BackColor = System.Drawing.Color.Firebrick
+        Me.Btn_Dashboard.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Btn_Dashboard.FlatAppearance.BorderSize = 10
+        Me.Btn_Dashboard.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Dashboard.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Btn_Dashboard.Location = New System.Drawing.Point(527, 760)
+        Me.Btn_Dashboard.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_Dashboard.Name = "Btn_Dashboard"
+        Me.Btn_Dashboard.Size = New System.Drawing.Size(159, 57)
+        Me.Btn_Dashboard.TabIndex = 91
+        Me.Btn_Dashboard.Text = "DASHBOARD"
+        Me.Btn_Dashboard.UseVisualStyleBackColor = False
+        '
         'reports
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1545, 922)
+        Me.Controls.Add(Me.Btn_Dashboard)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label1)
@@ -325,4 +342,5 @@ Partial Class reports
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Btn_Dashboard As Button
 End Class

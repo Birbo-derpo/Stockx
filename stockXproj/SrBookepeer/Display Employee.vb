@@ -141,7 +141,7 @@ Public Class Display_Employee
     End Sub
 
     Private Sub Btn_Edit_Click(sender As Object, e As EventArgs) Handles Btn_Edit.Click
-        Dim EditEmployee As New EditEmployee()
+
 
         With EditEmployee
 
