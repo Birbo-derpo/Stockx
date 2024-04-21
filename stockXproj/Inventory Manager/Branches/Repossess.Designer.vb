@@ -72,11 +72,11 @@ Partial Class Repossess
         'Cmb_Branch
         '
         Me.Cmb_Branch.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
+        Me.Cmb_Branch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Cmb_Branch.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cmb_Branch.FormattingEnabled = True
         Me.Cmb_Branch.Items.AddRange(New Object() {"Bajada", "Davao", "Digos", "Kidapawan", "Tagum", "General Santos"})
         Me.Cmb_Branch.Location = New System.Drawing.Point(1185, 188)
-        Me.Cmb_Branch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Cmb_Branch.Margin = New System.Windows.Forms.Padding(2)
         Me.Cmb_Branch.Name = "Cmb_Branch"
         Me.Cmb_Branch.Size = New System.Drawing.Size(272, 26)
         Me.Cmb_Branch.TabIndex = 65
@@ -87,7 +87,7 @@ Partial Class Repossess
         Me.Btn_Dashboard.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Dashboard.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_Dashboard.Location = New System.Drawing.Point(190, 647)
-        Me.Btn_Dashboard.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Dashboard.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Dashboard.Name = "Btn_Dashboard"
         Me.Btn_Dashboard.Size = New System.Drawing.Size(119, 46)
         Me.Btn_Dashboard.TabIndex = 64
@@ -102,7 +102,7 @@ Partial Class Repossess
         Me.Btn_AllUnits.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_AllUnits.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Btn_AllUnits.Location = New System.Drawing.Point(16, 46)
-        Me.Btn_AllUnits.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_AllUnits.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_AllUnits.Name = "Btn_AllUnits"
         Me.Btn_AllUnits.Size = New System.Drawing.Size(158, 44)
         Me.Btn_AllUnits.TabIndex = 63
@@ -114,7 +114,7 @@ Partial Class Repossess
         Me.Chk_Auto.AutoSize = True
         Me.Chk_Auto.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Chk_Auto.Location = New System.Drawing.Point(484, 195)
-        Me.Chk_Auto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Chk_Auto.Margin = New System.Windows.Forms.Padding(2)
         Me.Chk_Auto.Name = "Chk_Auto"
         Me.Chk_Auto.Size = New System.Drawing.Size(132, 21)
         Me.Chk_Auto.TabIndex = 62
@@ -127,7 +127,7 @@ Partial Class Repossess
         Me.Btn_Search.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold)
         Me.Btn_Search.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_Search.Location = New System.Drawing.Point(674, 158)
-        Me.Btn_Search.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Search.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Search.Name = "Btn_Search"
         Me.Btn_Search.Size = New System.Drawing.Size(93, 34)
         Me.Btn_Search.TabIndex = 61
@@ -138,7 +138,7 @@ Partial Class Repossess
         '
         Me.Txt_Search.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_Search.Location = New System.Drawing.Point(190, 160)
-        Me.Txt_Search.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_Search.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_Search.Name = "Txt_Search"
         Me.Txt_Search.Size = New System.Drawing.Size(481, 29)
         Me.Txt_Search.TabIndex = 60
@@ -146,11 +146,12 @@ Partial Class Repossess
         'cmbSearchType
         '
         Me.cmbSearchType.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
+        Me.cmbSearchType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbSearchType.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbSearchType.FormattingEnabled = True
         Me.cmbSearchType.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
         Me.cmbSearchType.Location = New System.Drawing.Point(190, 191)
-        Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbSearchType.Name = "cmbSearchType"
         Me.cmbSearchType.Size = New System.Drawing.Size(283, 26)
         Me.cmbSearchType.TabIndex = 59
@@ -163,7 +164,7 @@ Partial Class Repossess
         Me.Btn_AllStock.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_AllStock.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Btn_AllStock.Location = New System.Drawing.Point(16, 102)
-        Me.Btn_AllStock.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_AllStock.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_AllStock.Name = "Btn_AllStock"
         Me.Btn_AllStock.Size = New System.Drawing.Size(158, 44)
         Me.Btn_AllStock.TabIndex = 57
@@ -178,7 +179,7 @@ Partial Class Repossess
         Me.Btn_Deposited.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Deposited.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Btn_Deposited.Location = New System.Drawing.Point(16, 211)
-        Me.Btn_Deposited.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Deposited.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Deposited.Name = "Btn_Deposited"
         Me.Btn_Deposited.Size = New System.Drawing.Size(158, 44)
         Me.Btn_Deposited.TabIndex = 56
@@ -193,7 +194,7 @@ Partial Class Repossess
         Me.Btn_Repossess.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Repossess.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Btn_Repossess.Location = New System.Drawing.Point(16, 268)
-        Me.Btn_Repossess.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Repossess.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Repossess.Name = "Btn_Repossess"
         Me.Btn_Repossess.Size = New System.Drawing.Size(158, 44)
         Me.Btn_Repossess.TabIndex = 55
@@ -209,7 +210,7 @@ Partial Class Repossess
         Me.Btn_Released.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Released.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Btn_Released.Location = New System.Drawing.Point(16, 157)
-        Me.Btn_Released.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Released.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Released.Name = "Btn_Released"
         Me.Btn_Released.Size = New System.Drawing.Size(158, 44)
         Me.Btn_Released.TabIndex = 54
@@ -223,7 +224,7 @@ Partial Class Repossess
         Me.Grd_StockRepossessed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grd_StockRepossessed.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column10, Me.Column7, Me.Column1, Me.Column2, Me.Column3, Me.Column6, Me.Column9, Me.Column4, Me.Column5, Me.Column8})
         Me.Grd_StockRepossessed.Location = New System.Drawing.Point(190, 233)
-        Me.Grd_StockRepossessed.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Grd_StockRepossessed.Margin = New System.Windows.Forms.Padding(2)
         Me.Grd_StockRepossessed.Name = "Grd_StockRepossessed"
         Me.Grd_StockRepossessed.RowHeadersWidth = 51
         Me.Grd_StockRepossessed.RowTemplate.Height = 24
@@ -320,9 +321,9 @@ Partial Class Repossess
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.GroupBox1.Location = New System.Drawing.Point(0, 233)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Size = New System.Drawing.Size(185, 410)
         Me.GroupBox1.TabIndex = 70
         Me.GroupBox1.TabStop = False
@@ -334,7 +335,7 @@ Partial Class Repossess
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox1.ErrorImage = Nothing
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(186, 162)
         Me.PictureBox1.TabIndex = 71
@@ -368,7 +369,7 @@ Partial Class Repossess
         Me.Btn_CancelRepo.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_CancelRepo.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_CancelRepo.Location = New System.Drawing.Point(1336, 647)
-        Me.Btn_CancelRepo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_CancelRepo.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_CancelRepo.Name = "Btn_CancelRepo"
         Me.Btn_CancelRepo.Size = New System.Drawing.Size(119, 46)
         Me.Btn_CancelRepo.TabIndex = 74
@@ -379,7 +380,7 @@ Partial Class Repossess
         '
         Me.dt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dt.Location = New System.Drawing.Point(1185, 81)
-        Me.dt.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dt.Margin = New System.Windows.Forms.Padding(2)
         Me.dt.Name = "dt"
         Me.dt.Size = New System.Drawing.Size(270, 23)
         Me.dt.TabIndex = 76
@@ -390,7 +391,7 @@ Partial Class Repossess
         Me.Btn_ReRelease.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_ReRelease.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_ReRelease.Location = New System.Drawing.Point(314, 647)
-        Me.Btn_ReRelease.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_ReRelease.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_ReRelease.Name = "Btn_ReRelease"
         Me.Btn_ReRelease.Size = New System.Drawing.Size(119, 46)
         Me.Btn_ReRelease.TabIndex = 77
@@ -418,7 +419,7 @@ Partial Class Repossess
         Me.Controls.Add(Me.Txt_Search)
         Me.Controls.Add(Me.cmbSearchType)
         Me.Controls.Add(Me.Grd_StockRepossessed)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Repossess"
         Me.Text = "Reposes"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

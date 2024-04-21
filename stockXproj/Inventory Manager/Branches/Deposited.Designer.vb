@@ -71,11 +71,12 @@ Partial Class Deposited
         'Cmb_Branch
         '
         Me.Cmb_Branch.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
+        Me.Cmb_Branch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Cmb_Branch.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Cmb_Branch.FormattingEnabled = True
         Me.Cmb_Branch.Items.AddRange(New Object() {"Bajada", "Davao", "Digos", "Kidapawan", "Tagum", "General Santos"})
         Me.Cmb_Branch.Location = New System.Drawing.Point(1185, 188)
-        Me.Cmb_Branch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Cmb_Branch.Margin = New System.Windows.Forms.Padding(2)
         Me.Cmb_Branch.Name = "Cmb_Branch"
         Me.Cmb_Branch.Size = New System.Drawing.Size(272, 26)
         Me.Cmb_Branch.TabIndex = 51
@@ -86,7 +87,7 @@ Partial Class Deposited
         Me.Btn_Dashboard.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Dashboard.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_Dashboard.Location = New System.Drawing.Point(190, 647)
-        Me.Btn_Dashboard.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Dashboard.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Dashboard.Name = "Btn_Dashboard"
         Me.Btn_Dashboard.Size = New System.Drawing.Size(119, 46)
         Me.Btn_Dashboard.TabIndex = 50
@@ -145,11 +146,12 @@ Partial Class Deposited
         'Cmb_SearchType
         '
         Me.Cmb_SearchType.AutoCompleteCustomSource.AddRange(New String() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
+        Me.Cmb_SearchType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Cmb_SearchType.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Cmb_SearchType.FormattingEnabled = True
         Me.Cmb_SearchType.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
         Me.Cmb_SearchType.Location = New System.Drawing.Point(190, 191)
-        Me.Cmb_SearchType.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Cmb_SearchType.Margin = New System.Windows.Forms.Padding(2)
         Me.Cmb_SearchType.Name = "Cmb_SearchType"
         Me.Cmb_SearchType.Size = New System.Drawing.Size(283, 26)
         Me.Cmb_SearchType.TabIndex = 45
@@ -235,7 +237,7 @@ Partial Class Deposited
         Me.Grd_StockDeposit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grd_StockDeposit.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column10, Me.Column7, Me.Column1, Me.Column2, Me.Column3, Me.Column6, Me.Column9, Me.Column4, Me.Column5, Me.Column8})
         Me.Grd_StockDeposit.Location = New System.Drawing.Point(190, 233)
-        Me.Grd_StockDeposit.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Grd_StockDeposit.Margin = New System.Windows.Forms.Padding(2)
         Me.Grd_StockDeposit.Name = "Grd_StockDeposit"
         Me.Grd_StockDeposit.RowHeadersWidth = 51
         Me.Grd_StockDeposit.RowTemplate.Height = 24
@@ -375,7 +377,7 @@ Partial Class Deposited
         '
         Me.dt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dt.Location = New System.Drawing.Point(1185, 81)
-        Me.dt.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dt.Margin = New System.Windows.Forms.Padding(2)
         Me.dt.Name = "dt"
         Me.dt.Size = New System.Drawing.Size(272, 23)
         Me.dt.TabIndex = 75
@@ -414,7 +416,7 @@ Partial Class Deposited
         Me.Controls.Add(Me.Cmb_SearchType)
         Me.Controls.Add(Me.Btn_Release)
         Me.Controls.Add(Me.Grd_StockDeposit)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Deposited"
         Me.Text = "Diposited"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
