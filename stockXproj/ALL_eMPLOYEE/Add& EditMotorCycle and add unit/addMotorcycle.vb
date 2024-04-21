@@ -94,8 +94,6 @@ Public Class addMotorcycle
             Login.Show()
             Me.Close()
         Else
-            Predef_model_list()
-            Predef_color_list()
             CheckDatabaseConnection()
             DisplayModel()
             DisplayColor()
@@ -231,68 +229,6 @@ Public Class addMotorcycle
     End Function
 
     'end function
-    Private Sub Predef_model_list()
-        Try
-            sqlUMTCAdapter = New MySqlDataAdapter
-            DataUMTC = New DataTable
-
-            With command
-                .Parameters.Clear()
-                .CommandText = "prc_predef_inv_details"
-                .CommandType = CommandType.StoredProcedure
-                .Parameters.AddWithValue("@p_type", "models")
-                sqlUMTCAdapter.SelectCommand = command
-                DataUMTC.Clear()
-                sqlUMTCAdapter.Fill(DataUMTC)
-                If DataUMTC.Rows.Count > 0 Then
-                    row = 0
-                    While Not DataUMTC.Rows.Count - 1 < row
-                        Cmb_Model.Items.Add(DataUMTC.Rows(row).Item("Model").ToString)
-                        row = row + 1
-                    End While
-                Else
-
-                End If
-            End With
-
-            sqlUMTCAdapter.Dispose()
-            DataUMTC.Dispose()
-
-        Catch ex As Exception
-            MessageBox.Show("" & ex.Message)
-        End Try
-    End Sub
-    Private Sub Predef_color_list()
-        Try
-            sqlUMTCAdapter = New MySqlDataAdapter
-            DataUMTC = New DataTable
-
-            With command
-                .Parameters.Clear()
-                .CommandText = "prc_predef_inv_details"
-                .CommandType = CommandType.StoredProcedure
-                .Parameters.AddWithValue("@p_type", "colors")
-                sqlUMTCAdapter.SelectCommand = command
-                DataUMTC.Clear()
-                sqlUMTCAdapter.Fill(DataUMTC)
-                If DataUMTC.Rows.Count > 0 Then
-                    row = 0
-                    While Not DataUMTC.Rows.Count - 1 < row
-                        Cmb_Color.Items.Add(DataUMTC.Rows(row).Item("Color").ToString)
-                        row = row + 1
-                    End While
-                Else
-
-                End If
-            End With
-
-            sqlUMTCAdapter.Dispose()
-            DataUMTC.Dispose()
-
-        Catch ex As Exception
-            MessageBox.Show("" & ex.Message)
-        End Try
-    End Sub
 
     Private Sub Cmb_Model_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Cmb_Model.SelectedIndexChanged
 
@@ -300,9 +236,6 @@ Public Class addMotorcycle
         If Cmb_Model.SelectedItem IsNot Nothing Then
             selectedModel = Cmb_Model.SelectedItem.ToString()
             DisplayColor()
-
-
-
         End If
 
     End Sub

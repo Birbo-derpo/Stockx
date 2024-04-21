@@ -163,6 +163,7 @@ Partial Class TRANSIT
         '
         'cmb_branch
         '
+        Me.cmb_branch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmb_branch.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!)
         Me.cmb_branch.FormattingEnabled = True
         Me.cmb_branch.Items.AddRange(New Object() {"Bajada", "Davao", "Digos", "Kidapawan", "Tagum", "General Santos"})

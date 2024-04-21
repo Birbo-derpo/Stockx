@@ -46,74 +46,84 @@ Partial Class addnewunits
         '
         'cmbModel
         '
+        Me.cmbModel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbModel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbModel.FormattingEnabled = True
         Me.cmbModel.Items.AddRange(New Object() {"OTHERS"})
-        Me.cmbModel.Location = New System.Drawing.Point(463, 123)
+        Me.cmbModel.Location = New System.Drawing.Point(347, 100)
+        Me.cmbModel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cmbModel.Name = "cmbModel"
-        Me.cmbModel.Size = New System.Drawing.Size(274, 31)
+        Me.cmbModel.Size = New System.Drawing.Size(206, 26)
         Me.cmbModel.TabIndex = 0
         '
         'cmbColor
         '
+        Me.cmbColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbColor.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbColor.FormattingEnabled = True
-        Me.cmbColor.Location = New System.Drawing.Point(463, 216)
+        Me.cmbColor.Location = New System.Drawing.Point(347, 176)
+        Me.cmbColor.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cmbColor.Name = "cmbColor"
-        Me.cmbColor.Size = New System.Drawing.Size(274, 31)
+        Me.cmbColor.Size = New System.Drawing.Size(206, 26)
         Me.cmbColor.TabIndex = 1
         '
         'txtModel
         '
         Me.txtModel.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtModel.Location = New System.Drawing.Point(463, 160)
+        Me.txtModel.Location = New System.Drawing.Point(347, 130)
+        Me.txtModel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtModel.Name = "txtModel"
-        Me.txtModel.Size = New System.Drawing.Size(274, 30)
+        Me.txtModel.Size = New System.Drawing.Size(206, 26)
         Me.txtModel.TabIndex = 2
         '
         'TxtColor
         '
         Me.TxtColor.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtColor.Location = New System.Drawing.Point(463, 253)
+        Me.TxtColor.Location = New System.Drawing.Point(347, 206)
+        Me.TxtColor.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TxtColor.Name = "TxtColor"
-        Me.TxtColor.Size = New System.Drawing.Size(274, 30)
+        Me.TxtColor.Size = New System.Drawing.Size(206, 26)
         Me.TxtColor.TabIndex = 3
         '
         'txtPrice
         '
         Me.txtPrice.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPrice.Location = New System.Drawing.Point(463, 324)
+        Me.txtPrice.Location = New System.Drawing.Point(347, 263)
+        Me.txtPrice.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtPrice.Name = "txtPrice"
-        Me.txtPrice.Size = New System.Drawing.Size(274, 30)
+        Me.txtPrice.Size = New System.Drawing.Size(206, 26)
         Me.txtPrice.TabIndex = 4
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(287, 127)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(215, 103)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(155, 23)
+        Me.Label1.Size = New System.Drawing.Size(143, 20)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "LIST OF MODEL"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(292, 220)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(219, 179)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(150, 23)
+        Me.Label2.Size = New System.Drawing.Size(142, 20)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "LIST OF COLOR"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(282, 331)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(212, 269)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(171, 23)
+        Me.Label3.Size = New System.Drawing.Size(159, 20)
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "PRICE OF MODEL"
         '
@@ -122,9 +132,10 @@ Partial Class addnewunits
         Me.Button1.BackColor = System.Drawing.Color.Firebrick
         Me.Button1.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button1.Location = New System.Drawing.Point(743, 155)
+        Me.Button1.Location = New System.Drawing.Point(557, 126)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(124, 42)
+        Me.Button1.Size = New System.Drawing.Size(93, 34)
         Me.Button1.TabIndex = 8
         Me.Button1.Text = "ADD"
         Me.Button1.UseVisualStyleBackColor = False
@@ -134,9 +145,10 @@ Partial Class addnewunits
         Me.btnedit.BackColor = System.Drawing.Color.Firebrick
         Me.btnedit.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnedit.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnedit.Location = New System.Drawing.Point(743, 298)
+        Me.btnedit.Location = New System.Drawing.Point(557, 242)
+        Me.btnedit.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnedit.Name = "btnedit"
-        Me.btnedit.Size = New System.Drawing.Size(124, 42)
+        Me.btnedit.Size = New System.Drawing.Size(93, 34)
         Me.btnedit.TabIndex = 10
         Me.btnedit.Text = "EDIT"
         Me.btnedit.UseVisualStyleBackColor = False
@@ -146,9 +158,10 @@ Partial Class addnewunits
         Me.btnSave.BackColor = System.Drawing.Color.Firebrick
         Me.btnSave.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnSave.Location = New System.Drawing.Point(884, 298)
+        Me.btnSave.Location = New System.Drawing.Point(663, 242)
+        Me.btnSave.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(124, 42)
+        Me.btnSave.Size = New System.Drawing.Size(93, 34)
         Me.btnSave.TabIndex = 11
         Me.btnSave.Text = "SAVE"
         Me.btnSave.UseVisualStyleBackColor = False
@@ -159,9 +172,10 @@ Partial Class addnewunits
         Me.Button5.BackColor = System.Drawing.Color.Firebrick
         Me.Button5.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button5.Location = New System.Drawing.Point(743, 252)
+        Me.Button5.Location = New System.Drawing.Point(557, 205)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(124, 42)
+        Me.Button5.Size = New System.Drawing.Size(93, 34)
         Me.Button5.TabIndex = 12
         Me.Button5.Text = "DELETE"
         Me.Button5.UseVisualStyleBackColor = False
@@ -171,9 +185,10 @@ Partial Class addnewunits
         Me.Button6.BackColor = System.Drawing.Color.Firebrick
         Me.Button6.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button6.Location = New System.Drawing.Point(873, 155)
+        Me.Button6.Location = New System.Drawing.Point(655, 126)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(124, 42)
+        Me.Button6.Size = New System.Drawing.Size(93, 34)
         Me.Button6.TabIndex = 13
         Me.Button6.Text = "DELETE"
         Me.Button6.UseVisualStyleBackColor = False
@@ -183,9 +198,10 @@ Partial Class addnewunits
         Me.Button7.BackColor = System.Drawing.Color.Firebrick
         Me.Button7.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button7.Location = New System.Drawing.Point(541, 439)
+        Me.Button7.Location = New System.Drawing.Point(406, 357)
+        Me.Button7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(124, 42)
+        Me.Button7.Size = New System.Drawing.Size(93, 34)
         Me.Button7.TabIndex = 14
         Me.Button7.Text = "CLOSE"
         Me.Button7.UseVisualStyleBackColor = False
@@ -196,10 +212,10 @@ Partial Class addnewunits
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox1.ErrorImage = Nothing
-        Me.PictureBox1.Location = New System.Drawing.Point(-3, 1)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox1.Location = New System.Drawing.Point(-2, 1)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(205, 149)
+        Me.PictureBox1.Size = New System.Drawing.Size(155, 122)
         Me.PictureBox1.TabIndex = 70
         Me.PictureBox1.TabStop = False
         '
@@ -207,9 +223,10 @@ Partial Class addnewunits
         '
         Me.PictureBox2.BackgroundImage = Global.stockXproj.My.Resources.Resources.HONDA_COLOR
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(202, 2)
+        Me.PictureBox2.Location = New System.Drawing.Point(152, 2)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(809, 64)
+        Me.PictureBox2.Size = New System.Drawing.Size(607, 52)
         Me.PictureBox2.TabIndex = 74
         Me.PictureBox2.TabStop = False
         '
@@ -217,21 +234,20 @@ Partial Class addnewunits
         '
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Firebrick
-        Me.Label8.Font = New System.Drawing.Font("Book Antiqua", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label8.Location = New System.Drawing.Point(222, 18)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(166, 15)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(230, 35)
+        Me.Label8.Size = New System.Drawing.Size(179, 29)
         Me.Label8.TabIndex = 75
         Me.Label8.Text = "ADD MODELS"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'addnewunits
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1009, 503)
+        Me.ClientSize = New System.Drawing.Size(757, 409)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
@@ -249,6 +265,7 @@ Partial Class addnewunits
         Me.Controls.Add(Me.txtModel)
         Me.Controls.Add(Me.cmbColor)
         Me.Controls.Add(Me.cmbModel)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "addnewunits"
         Me.Text = "addnewunits"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
