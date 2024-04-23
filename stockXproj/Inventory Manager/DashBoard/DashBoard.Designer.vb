@@ -210,11 +210,11 @@ Partial Class DashBoard
         '
         Me.lblPositionn.AutoSize = True
         Me.lblPositionn.BackColor = System.Drawing.Color.White
-        Me.lblPositionn.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPositionn.Font = New System.Drawing.Font("Bodoni MT", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPositionn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.lblPositionn.Location = New System.Drawing.Point(99, 418)
+        Me.lblPositionn.Location = New System.Drawing.Point(100, 439)
         Me.lblPositionn.Name = "lblPositionn"
-        Me.lblPositionn.Size = New System.Drawing.Size(99, 23)
+        Me.lblPositionn.Size = New System.Drawing.Size(92, 21)
         Me.lblPositionn.TabIndex = 60
         Me.lblPositionn.Text = "POSITION"
         '
@@ -222,11 +222,11 @@ Partial Class DashBoard
         '
         Me.lblgmail.AutoSize = True
         Me.lblgmail.BackColor = System.Drawing.Color.White
-        Me.lblgmail.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblgmail.Font = New System.Drawing.Font("Bodoni MT", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblgmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.lblgmail.Location = New System.Drawing.Point(109, 376)
+        Me.lblgmail.Location = New System.Drawing.Point(109, 397)
         Me.lblgmail.Name = "lblgmail"
-        Me.lblgmail.Size = New System.Drawing.Size(73, 23)
+        Me.lblgmail.Size = New System.Drawing.Size(66, 21)
         Me.lblgmail.TabIndex = 59
         Me.lblgmail.Text = "GMAIL"
         '
@@ -234,11 +234,11 @@ Partial Class DashBoard
         '
         Me.lblUser.AutoSize = True
         Me.lblUser.BackColor = System.Drawing.Color.White
-        Me.lblUser.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUser.Font = New System.Drawing.Font("Bodoni MT", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUser.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.lblUser.Location = New System.Drawing.Point(118, 338)
+        Me.lblUser.Location = New System.Drawing.Point(111, 357)
         Me.lblUser.Name = "lblUser"
-        Me.lblUser.Size = New System.Drawing.Size(61, 23)
+        Me.lblUser.Size = New System.Drawing.Size(57, 21)
         Me.lblUser.TabIndex = 58
         Me.lblUser.Text = "USER"
         '
@@ -301,7 +301,7 @@ Partial Class DashBoard
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label3.Location = New System.Drawing.Point(973, 227)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(307, 51)
+        Me.Label3.Size = New System.Drawing.Size(301, 51)
         Me.Label3.TabIndex = 71
         Me.Label3.Text = "DASHBOARD"
         '
@@ -340,9 +340,9 @@ Partial Class DashBoard
         Me.PictureBox5.BackColor = System.Drawing.Color.Firebrick
         Me.PictureBox5.BackgroundImage = CType(resources.GetObject("PictureBox5.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox5.Location = New System.Drawing.Point(12, 292)
+        Me.PictureBox5.Location = New System.Drawing.Point(0, 295)
         Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(270, 210)
+        Me.PictureBox5.Size = New System.Drawing.Size(294, 210)
         Me.PictureBox5.TabIndex = 75
         Me.PictureBox5.TabStop = False
         '

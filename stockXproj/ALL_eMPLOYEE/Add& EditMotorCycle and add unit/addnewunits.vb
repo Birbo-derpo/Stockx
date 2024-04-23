@@ -172,7 +172,7 @@ Public Class addnewunits
 
         Catch ex As Exception
             MessageBox.Show("" & ex.Message)
-            End Try
+        End Try
 
 
     End Sub
@@ -184,6 +184,10 @@ Public Class addnewunits
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         Me.Close()
+    End Sub
+
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub cmbModel_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbModel.SelectedIndexChanged
