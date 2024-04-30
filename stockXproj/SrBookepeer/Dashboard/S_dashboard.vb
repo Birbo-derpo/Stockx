@@ -11,6 +11,7 @@ Public Class S_dashboard
     End Sub
 
     Private Sub S_dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         If Login_stat <> True Then
             Login.Show()
             Me.Close()
@@ -25,6 +26,7 @@ Public Class S_dashboard
             AllAvialableUnit("Kidapawan", "In branch")
             AllAvialableUnit("Digos", "In branch")
         End If
+
     End Sub
 
     Private Sub AllAvialableUnit(p_Branch As String, p_Status As String)
@@ -142,5 +144,21 @@ Public Class S_dashboard
     Private Sub Btn_inv_logs_Click(sender As Object, e As EventArgs) Handles Btn_inv_logs.Click
         Sr_Inventory_Records.Show()
         Me.Close()
+    End Sub
+
+    Private Sub lblUser_Click(sender As Object, e As EventArgs) Handles lblUser.Click
+
+    End Sub
+
+    Private Sub lblgmail_Click(sender As Object, e As EventArgs) Handles lblgmail.Click
+
+    End Sub
+
+    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
+
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+
     End Sub
 End Class

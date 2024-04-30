@@ -381,9 +381,7 @@
     <Compile Include="SrBookepeer\MainOffice\S_Reserve.Designer.vb">
       <DependentUpon>S_Reserve.vb</DependentUpon>
     </Compile>
-    <Compile Include="SrBookepeer\MainOffice\S_Reserve.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="SrBookepeer\MainOffice\S_Reserve.vb" />
     <Compile Include="SrBookepeer\MainOffice\S_Transit.Designer.vb">
       <DependentUpon>S_Transit.vb</DependentUpon>
     </Compile>
@@ -393,9 +391,7 @@
     <Compile Include="SrBookepeer\MainOffice\S_MainOffice.Designer.vb">
       <DependentUpon>S_MainOffice.vb</DependentUpon>
     </Compile>
-    <Compile Include="SrBookepeer\MainOffice\S_MainOffice.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="SrBookepeer\MainOffice\S_MainOffice.vb" />
     <Compile Include="SrBookepeer\S_branch\S_repossess.Designer.vb">
       <DependentUpon>S_repossess.vb</DependentUpon>
     </Compile>

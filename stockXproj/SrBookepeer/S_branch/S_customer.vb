@@ -203,5 +203,9 @@ Public Class S_customer
     Private Sub Get_id(sender As Object, e As DataGridViewCellEventArgs)
         Cust_id = CInt(grd_AllCustomer.CurrentRow.Cells(14).Value)
     End Sub
+
+    Private Sub grd_AllCustomer_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grd_AllCustomer.CellContentClick
+
+    End Sub
     'features end
 End Class

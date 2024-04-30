@@ -70,7 +70,7 @@ Partial Class ChangePasswordEmployee
         '
         Me.Label5.AutoSize = True
         Me.Label5.ForeColor = System.Drawing.Color.Red
-        Me.Label5.Location = New System.Drawing.Point(239, 443)
+        Me.Label5.Location = New System.Drawing.Point(206, 443)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(257, 16)
         Me.Label5.TabIndex = 19
@@ -81,11 +81,11 @@ Partial Class ChangePasswordEmployee
         '
         Me.Label4.AutoSize = True
         Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Location = New System.Drawing.Point(239, 530)
+        Me.Label4.Location = New System.Drawing.Point(206, 530)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(236, 16)
+        Me.Label4.Size = New System.Drawing.Size(161, 16)
         Me.Label4.TabIndex = 18
-        Me.Label4.Text = "Password dont match to newPassword"
+        Me.Label4.Text = "Password does not match"
         Me.Label4.Visible = False
         '
         'txtoldpass
@@ -101,9 +101,9 @@ Partial Class ChangePasswordEmployee
         Me.btnChange.BackColor = System.Drawing.Color.Firebrick
         Me.btnChange.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnChange.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnChange.Location = New System.Drawing.Point(242, 563)
+        Me.btnChange.Location = New System.Drawing.Point(237, 563)
         Me.btnChange.Name = "btnChange"
-        Me.btnChange.Size = New System.Drawing.Size(115, 41)
+        Me.btnChange.Size = New System.Drawing.Size(116, 46)
         Me.btnChange.TabIndex = 15
         Me.btnChange.Text = "DONE"
         Me.btnChange.UseVisualStyleBackColor = False
@@ -180,12 +180,12 @@ Partial Class ChangePasswordEmployee
         Me.Label6.BackColor = System.Drawing.Color.Firebrick
         Me.Label6.Font = New System.Drawing.Font("Book Antiqua", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label6.Location = New System.Drawing.Point(227, 189)
+        Me.Label6.Location = New System.Drawing.Point(210, 190)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(323, 32)
+        Me.Label6.Size = New System.Drawing.Size(343, 32)
         Me.Label6.TabIndex = 25
-        Me.Label6.Text = "MANAGE PASSWORD"
+        Me.Label6.Text = "EMPLOYEE PASSWORD"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Label7
@@ -205,9 +205,9 @@ Partial Class ChangePasswordEmployee
         Me.btnclose.BackColor = System.Drawing.Color.Firebrick
         Me.btnclose.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnclose.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnclose.Location = New System.Drawing.Point(363, 563)
+        Me.btnclose.Location = New System.Drawing.Point(359, 563)
         Me.btnclose.Name = "btnclose"
-        Me.btnclose.Size = New System.Drawing.Size(115, 41)
+        Me.btnclose.Size = New System.Drawing.Size(116, 46)
         Me.btnclose.TabIndex = 76
         Me.btnclose.Text = "CLOSE"
         Me.btnclose.UseVisualStyleBackColor = False

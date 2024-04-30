@@ -39,7 +39,7 @@ Public Class change
 
 
 
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+    Private Sub Label5_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -52,7 +52,7 @@ Public Class change
         Else
             ' Hide Label5 if the new password does not meet the requirements
             Label5.Visible = True
-            lblcorrect.Visible = True
+
         End If
     End Sub
 
@@ -65,7 +65,7 @@ Public Class change
 
 
             Label4.Visible = False ' Hide Label4
-            lblcorrectconfirm.Visible = True
+
         End If
     End Sub
 End Class

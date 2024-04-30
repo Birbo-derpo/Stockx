@@ -210,11 +210,11 @@ Partial Class DashBoard
         '
         Me.lblPositionn.AutoSize = True
         Me.lblPositionn.BackColor = System.Drawing.Color.White
-        Me.lblPositionn.Font = New System.Drawing.Font("Bodoni MT", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPositionn.Font = New System.Drawing.Font("Arial Narrow", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPositionn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.lblPositionn.Location = New System.Drawing.Point(100, 439)
+        Me.lblPositionn.Location = New System.Drawing.Point(106, 430)
         Me.lblPositionn.Name = "lblPositionn"
-        Me.lblPositionn.Size = New System.Drawing.Size(92, 21)
+        Me.lblPositionn.Size = New System.Drawing.Size(69, 20)
         Me.lblPositionn.TabIndex = 60
         Me.lblPositionn.Text = "POSITION"
         '
@@ -222,11 +222,11 @@ Partial Class DashBoard
         '
         Me.lblgmail.AutoSize = True
         Me.lblgmail.BackColor = System.Drawing.Color.White
-        Me.lblgmail.Font = New System.Drawing.Font("Bodoni MT", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblgmail.Font = New System.Drawing.Font("Arial Narrow", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblgmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.lblgmail.Location = New System.Drawing.Point(109, 397)
+        Me.lblgmail.Location = New System.Drawing.Point(115, 388)
         Me.lblgmail.Name = "lblgmail"
-        Me.lblgmail.Size = New System.Drawing.Size(66, 21)
+        Me.lblgmail.Size = New System.Drawing.Size(47, 20)
         Me.lblgmail.TabIndex = 59
         Me.lblgmail.Text = "GMAIL"
         '
@@ -234,11 +234,11 @@ Partial Class DashBoard
         '
         Me.lblUser.AutoSize = True
         Me.lblUser.BackColor = System.Drawing.Color.White
-        Me.lblUser.Font = New System.Drawing.Font("Bodoni MT", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUser.Font = New System.Drawing.Font("Arial Narrow", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUser.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.lblUser.Location = New System.Drawing.Point(111, 357)
+        Me.lblUser.Location = New System.Drawing.Point(117, 348)
         Me.lblUser.Name = "lblUser"
-        Me.lblUser.Size = New System.Drawing.Size(57, 21)
+        Me.lblUser.Size = New System.Drawing.Size(43, 20)
         Me.lblUser.TabIndex = 58
         Me.lblUser.Text = "USER"
         '
@@ -420,6 +420,7 @@ Partial Class DashBoard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.Snow
         Me.ClientSize = New System.Drawing.Size(1924, 922)
         Me.Controls.Add(Me.lblPositionn)
         Me.Controls.Add(Me.lblgmail)

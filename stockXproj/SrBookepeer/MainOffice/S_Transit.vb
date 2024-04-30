@@ -105,4 +105,8 @@ Public Class S_Transit
     Private Sub Btn_Transit_Click(sender As Object, e As EventArgs) Handles Btn_Transit.Click
 
     End Sub
+
+    Private Sub dt_ValueChanged(sender As Object, e As EventArgs) Handles dt.ValueChanged
+
+    End Sub
 End Class
