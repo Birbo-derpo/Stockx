@@ -163,7 +163,7 @@ Partial Class CreateEmployee
         Me.Create.FlatAppearance.BorderSize = 2
         Me.Create.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Create.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Create.Location = New System.Drawing.Point(269, 547)
+        Me.Create.Location = New System.Drawing.Point(287, 530)
         Me.Create.Name = "Create"
         Me.Create.Size = New System.Drawing.Size(116, 46)
         Me.Create.TabIndex = 12
@@ -211,7 +211,7 @@ Partial Class CreateEmployee
         Me.Button1.FlatAppearance.BorderSize = 2
         Me.Button1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button1.Location = New System.Drawing.Point(391, 547)
+        Me.Button1.Location = New System.Drawing.Point(409, 530)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(116, 46)
         Me.Button1.TabIndex = 17

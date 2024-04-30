@@ -62,7 +62,7 @@ Partial Class EditEmployee
         Me.Create.FlatAppearance.BorderSize = 2
         Me.Create.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Create.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Create.Location = New System.Drawing.Point(269, 507)
+        Me.Create.Location = New System.Drawing.Point(286, 507)
         Me.Create.Name = "Create"
         Me.Create.Size = New System.Drawing.Size(116, 46)
         Me.Create.TabIndex = 27
@@ -91,6 +91,7 @@ Partial Class EditEmployee
         '
         'txtLast
         '
+        Me.txtLast.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtLast.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLast.Location = New System.Drawing.Point(269, 363)
         Me.txtLast.Name = "txtLast"
@@ -99,6 +100,7 @@ Partial Class EditEmployee
         '
         'txtFirst
         '
+        Me.txtFirst.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtFirst.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtFirst.Location = New System.Drawing.Point(269, 323)
         Me.txtFirst.Name = "txtFirst"
@@ -107,6 +109,7 @@ Partial Class EditEmployee
         '
         'txtGmail
         '
+        Me.txtGmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtGmail.Font = New System.Drawing.Font("Bodoni MT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtGmail.ForeColor = System.Drawing.SystemColors.WindowFrame
         Me.txtGmail.Location = New System.Drawing.Point(269, 279)
@@ -171,7 +174,7 @@ Partial Class EditEmployee
         Me.Button1.FlatAppearance.BorderSize = 2
         Me.Button1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button1.Location = New System.Drawing.Point(391, 507)
+        Me.Button1.Location = New System.Drawing.Point(408, 507)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(116, 46)
         Me.Button1.TabIndex = 30

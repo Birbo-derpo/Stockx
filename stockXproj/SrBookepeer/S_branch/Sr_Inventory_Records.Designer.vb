@@ -22,6 +22,7 @@ Partial Class Sr_Inventory_Records
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Sr_Inventory_Records))
         Me.Grd_Inv_Logs = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -32,18 +33,23 @@ Partial Class Sr_Inventory_Records
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Btn_MainOffice = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         CType(Me.Grd_Inv_Logs, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Grd_Inv_Logs
         '
         Me.Grd_Inv_Logs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grd_Inv_Logs.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column10})
-        Me.Grd_Inv_Logs.Location = New System.Drawing.Point(199, 144)
-        Me.Grd_Inv_Logs.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Grd_Inv_Logs.Location = New System.Drawing.Point(210, 186)
+        Me.Grd_Inv_Logs.Margin = New System.Windows.Forms.Padding(4)
         Me.Grd_Inv_Logs.Name = "Grd_Inv_Logs"
         Me.Grd_Inv_Logs.RowHeadersWidth = 51
-        Me.Grd_Inv_Logs.Size = New System.Drawing.Size(1189, 410)
+        Me.Grd_Inv_Logs.Size = New System.Drawing.Size(1055, 267)
         Me.Grd_Inv_Logs.TabIndex = 0
         '
         'Column1
@@ -113,28 +119,71 @@ Partial Class Sr_Inventory_Records
         'Btn_MainOffice
         '
         Me.Btn_MainOffice.BackColor = System.Drawing.Color.Firebrick
-        Me.Btn_MainOffice.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_MainOffice.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_MainOffice.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_MainOffice.Location = New System.Drawing.Point(199, 605)
+        Me.Btn_MainOffice.Location = New System.Drawing.Point(210, 459)
         Me.Btn_MainOffice.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_MainOffice.Name = "Btn_MainOffice"
-        Me.Btn_MainOffice.Size = New System.Drawing.Size(217, 54)
+        Me.Btn_MainOffice.Size = New System.Drawing.Size(116, 46)
         Me.Btn_MainOffice.TabIndex = 40
-        Me.Btn_MainOffice.Text = "Back"
+        Me.Btn_MainOffice.Text = "BACK"
         Me.Btn_MainOffice.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox1.ErrorImage = Nothing
+        Me.PictureBox1.Location = New System.Drawing.Point(-2, -1)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(211, 177)
+        Me.PictureBox1.TabIndex = 93
+        Me.PictureBox1.TabStop = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Firebrick
+        Me.Label2.Font = New System.Drawing.Font("Book Antiqua", 28.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label2.Location = New System.Drawing.Point(215, 34)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(333, 112)
+        Me.Label2.TabIndex = 94
+        Me.Label2.Text = "INVENTORY " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "RECORDS" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.SystemColors.Control
+        Me.PictureBox3.BackgroundImage = Global.stockXproj.My.Resources.Resources.HONDA_COLOR
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox3.Location = New System.Drawing.Point(-2, -1)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(1538, 177)
+        Me.PictureBox3.TabIndex = 95
+        Me.PictureBox3.TabStop = False
         '
         'Sr_Inventory_Records
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1620, 757)
+        Me.BackColor = System.Drawing.Color.Snow
+        Me.ClientSize = New System.Drawing.Size(1371, 528)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Btn_MainOffice)
         Me.Controls.Add(Me.Grd_Inv_Logs)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Sr_Inventory_Records"
         Me.Text = "Sr_Inventory_Records"
         CType(Me.Grd_Inv_Logs, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -148,4 +197,7 @@ Partial Class Sr_Inventory_Records
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents Column10 As DataGridViewTextBoxColumn
     Friend WithEvents Btn_MainOffice As Button
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents PictureBox3 As PictureBox
 End Class

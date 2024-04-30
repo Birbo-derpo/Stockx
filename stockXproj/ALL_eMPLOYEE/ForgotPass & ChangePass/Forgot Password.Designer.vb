@@ -63,7 +63,7 @@ Partial Class Forgot_Password
         '
         Me.txtcode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtcode.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtcode.Location = New System.Drawing.Point(217, 522)
+        Me.txtcode.Location = New System.Drawing.Point(217, 505)
         Me.txtcode.Name = "txtcode"
         Me.txtcode.Size = New System.Drawing.Size(323, 30)
         Me.txtcode.TabIndex = 2
@@ -72,7 +72,7 @@ Partial Class Forgot_Password
         '
         Me.lblCode.AutoSize = True
         Me.lblCode.Font = New System.Drawing.Font("Bodoni MT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCode.Location = New System.Drawing.Point(212, 492)
+        Me.lblCode.Location = New System.Drawing.Point(212, 475)
         Me.lblCode.Name = "lblCode"
         Me.lblCode.Size = New System.Drawing.Size(56, 27)
         Me.lblCode.TabIndex = 3
@@ -95,9 +95,9 @@ Partial Class Forgot_Password
         Me.btnVerify.BackColor = System.Drawing.Color.Firebrick
         Me.btnVerify.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnVerify.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnVerify.Location = New System.Drawing.Point(264, 558)
+        Me.btnVerify.Location = New System.Drawing.Point(242, 541)
         Me.btnVerify.Name = "btnVerify"
-        Me.btnVerify.Size = New System.Drawing.Size(115, 41)
+        Me.btnVerify.Size = New System.Drawing.Size(116, 46)
         Me.btnVerify.TabIndex = 5
         Me.btnVerify.Text = "VERIFY"
         Me.btnVerify.UseVisualStyleBackColor = False
@@ -171,6 +171,7 @@ Partial Class Forgot_Password
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Bodoni MT", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Tomato
         Me.Label5.Location = New System.Drawing.Point(220, 457)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(306, 18)
@@ -182,9 +183,9 @@ Partial Class Forgot_Password
         Me.Button1.BackColor = System.Drawing.Color.Firebrick
         Me.Button1.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button1.Location = New System.Drawing.Point(385, 558)
+        Me.Button1.Location = New System.Drawing.Point(364, 541)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(115, 41)
+        Me.Button1.Size = New System.Drawing.Size(116, 46)
         Me.Button1.TabIndex = 77
         Me.Button1.Text = "CLOSE"
         Me.Button1.UseVisualStyleBackColor = False

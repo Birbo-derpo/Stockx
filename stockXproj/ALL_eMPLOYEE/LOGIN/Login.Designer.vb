@@ -90,10 +90,10 @@ Partial Class Login
         Me.Btn_Login.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Btn_Login.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Login.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Btn_Login.Location = New System.Drawing.Point(256, 475)
+        Me.Btn_Login.Location = New System.Drawing.Point(255, 475)
         Me.Btn_Login.Margin = New System.Windows.Forms.Padding(4)
         Me.Btn_Login.Name = "Btn_Login"
-        Me.Btn_Login.Size = New System.Drawing.Size(115, 41)
+        Me.Btn_Login.Size = New System.Drawing.Size(116, 46)
         Me.Btn_Login.TabIndex = 4
         Me.Btn_Login.Text = "LOG IN"
         Me.Btn_Login.UseVisualStyleBackColor = False
@@ -107,7 +107,7 @@ Partial Class Login
         Me.Btn_Cancel.Location = New System.Drawing.Point(379, 475)
         Me.Btn_Cancel.Margin = New System.Windows.Forms.Padding(4)
         Me.Btn_Cancel.Name = "Btn_Cancel"
-        Me.Btn_Cancel.Size = New System.Drawing.Size(115, 41)
+        Me.Btn_Cancel.Size = New System.Drawing.Size(116, 46)
         Me.Btn_Cancel.TabIndex = 5
         Me.Btn_Cancel.Text = "CANCEL"
         Me.Btn_Cancel.UseVisualStyleBackColor = False
