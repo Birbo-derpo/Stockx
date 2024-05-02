@@ -369,4 +369,53 @@ Public Class Released
         PrcDisplayReleasedStock()
     End Sub
 
+    Private Sub Btn_ReturnUnit_Click(sender As Object, e As EventArgs) Handles Btn_ReturnUnit.Click
+        State = "in Branch"
+        For Each Checkcell As DataGridViewRow In Grd_StockReleased.Rows
+            'needs to accept only when branches combobox is selected
+            If Checkcell.Cells("Column10").Value = True Then
+                Try
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_GetUnitDate"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_state", State)
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_ChangeStat"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_Stat", State)
+                        .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_Record"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_Action", "Return Unit to Branch")
+                        .Parameters.AddWithValue("@p_d", todaysdate)
+                        .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_branch", Checkcell.Cells(1).Value.ToString)
+                        .Parameters.AddWithValue("@p_FromState", Checkcell.Cells(9).Value.ToString)
+                        .Parameters.AddWithValue("@p_ToState", State)
+                        Prc_GetCustName(Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_Customer", " no longer" + Cust_Name)
+                        .Parameters.AddWithValue("@p_Employee", Username)
+                        .ExecuteNonQuery()
+                    End With
+
+                Catch ex As Exception
+                    MessageBox.Show("" & ex.Message)
+                End Try
+                Cust_Name = ""
+            End If
+
+        Next
+        MessageBox.Show("unit/s now in branch", "in branch", MessageBoxButtons.OK)
+        PrcDisplayReleasedStock()
+    End Sub
 End Class
