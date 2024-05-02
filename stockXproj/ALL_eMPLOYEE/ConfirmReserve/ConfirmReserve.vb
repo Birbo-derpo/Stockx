@@ -4,7 +4,8 @@ Imports MySql.Data.MySqlClient
 
 Public Class ConfirmReserve
     Private Sub ConfirmReserve_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        CheckDatabaseConnection()
+        PrcDisplayAvailableUnits()
     End Sub
 
     Private Sub PrcDisplayAvailableUnits()

@@ -32,7 +32,8 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.stockXproj.HondaHomePage
+
+            Me.MainForm = Global.stockXproj.Flasgscreen
         End Sub
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _

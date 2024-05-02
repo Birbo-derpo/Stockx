@@ -162,7 +162,7 @@ Public Class Customer
     End Sub
     Private Sub Btn_Dashboard_Click(sender As Object, e As EventArgs) Handles Btn_Dashboard.Click
         DashBoard.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub Btn_Edit_Click(sender As Object, e As EventArgs) Handles Btn_Edit.Click
