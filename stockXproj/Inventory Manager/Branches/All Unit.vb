@@ -150,7 +150,7 @@ Public Class All_Unit
                 sqlUMTCAdapter.SelectCommand = command
                 DataUMTC.Clear()
                 sqlUMTCAdapter.Fill(DataUMTC)
-                If DataUMTC.Rows.Count > 0 Then
+                If DataUMTC.Rows.Count > 0 And cmbSearchType.Text <> "" Then
                     Grd_Stock.RowCount = DataUMTC.Rows.Count
                     row = 0
                     While Not DataUMTC.Rows.Count - 1 < row

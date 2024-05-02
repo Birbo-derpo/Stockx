@@ -74,12 +74,6 @@ Public Class S_dashboard
     Private Sub Btnchange_Click(sender As Object, e As EventArgs) Handles btnchange.Click
         ChangePasswordEmployee.ShowDialog()
         Me.Hide()
-
-    End Sub
-
-
-    Private Sub Lbl_Main_Click(sender As Object, e As EventArgs) Handles Lbl_Main.Click
-
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
@@ -138,27 +132,10 @@ Public Class S_dashboard
     Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
         Display_Employee.Show()
         Me.Hide()
-
     End Sub
 
     Private Sub Btn_inv_logs_Click(sender As Object, e As EventArgs) Handles Btn_inv_logs.Click
         Sr_Inventory_Records.Show()
         Me.Close()
-    End Sub
-
-    Private Sub lblUser_Click(sender As Object, e As EventArgs) Handles lblUser.Click
-
-    End Sub
-
-    Private Sub lblgmail_Click(sender As Object, e As EventArgs) Handles lblgmail.Click
-
-    End Sub
-
-    Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
-
-    End Sub
-
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-
     End Sub
 End Class
