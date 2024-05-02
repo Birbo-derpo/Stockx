@@ -54,7 +54,6 @@ Public Class Allstock
                     End While
                 Else
 
-                    MessageBox.Show("No Available Records", "Records", MessageBoxButtons.OK, MessageBoxIcon.Question)
                 End If
             End With
 
@@ -147,7 +146,7 @@ Public Class Allstock
                 sqlUMTCAdapter.SelectCommand = command
                 DataUMTC.Clear()
                 sqlUMTCAdapter.Fill(DataUMTC)
-                If DataUMTC.Rows.Count > 0 Then
+                If DataUMTC.Rows.Count > 0 And cmbSearchType.Text <> "" Then
                     Grd_Stock.RowCount = DataUMTC.Rows.Count
                     row = 0
                     While Not DataUMTC.Rows.Count - 1 < row
@@ -169,8 +168,7 @@ Public Class Allstock
                         End If
                     End While
                 Else
-
-                    MessageBox.Show("No Available Records", "Records", MessageBoxButtons.OK, MessageBoxIcon.Question)
+                    MessageBox.Show("No Available Records Found or Search filter not selected", "Records", MessageBoxButtons.OK, MessageBoxIcon.Question)
                 End If
             End With
 
@@ -194,17 +192,22 @@ Public Class Allstock
     End Sub
     Private Sub Btn_AddCust_Click(sender As Object, e As EventArgs) Handles Btn_AddCust.Click
         action = "update"
-        With UpdateStocks
-            .lbl_branch.Text = Grd_Stock.CurrentRow.Cells(0).Value.ToString()
-            .Lbl_Stat.Text = Grd_Stock.CurrentRow.Cells(8).Value.ToString()
-            .Txt_SIN.Text = MTN
-            .Txt_Model.Text = Model
-            .Txt_Color.Text = Color
-            .Txt_Price.Text = Price
-            .Txt_EngineNumber.Text = Engine_Num
-            .Txt_FrameNumber.Text = Frame_Num
-            .ShowDialog()
-        End With
+        If Engine_Num = "" Then
+            MessageBox.Show("No Records selected", "Records", MessageBoxButtons.OK, MessageBoxIcon.Question)
+        Else
+            With UpdateStocks
+                .lbl_branch.Text = Grd_Stock.CurrentRow.Cells(0).Value.ToString()
+                .Lbl_Stat.Text = Grd_Stock.CurrentRow.Cells(8).Value.ToString()
+                .Txt_SIN.Text = MTN
+                .Txt_Model.Text = Model
+                .Txt_Color.Text = Color
+                .Txt_Price.Text = Price
+                .Txt_EngineNumber.Text = Engine_Num
+                .Txt_FrameNumber.Text = Frame_Num
+                .ShowDialog()
+            End With
+        End If
+
         If Txt_Search.Text = "" Then
             PrcDisplayAllStock()
         Else

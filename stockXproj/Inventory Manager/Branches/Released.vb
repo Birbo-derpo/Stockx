@@ -154,7 +154,7 @@ Public Class Released
                 sqlUMTCAdapter.SelectCommand = command
                 DataUMTC.Clear()
                 sqlUMTCAdapter.Fill(DataUMTC)
-                If DataUMTC.Rows.Count > 0 Then
+                If DataUMTC.Rows.Count > 0 And cmbSearchType.Text <> "" Then
                     Grd_StockReleased.RowCount = DataUMTC.Rows.Count
                     row = 0
                     While Not DataUMTC.Rows.Count - 1 < row
@@ -327,7 +327,7 @@ Public Class Released
                 Try
                     With command
                         .Parameters.Clear()
-                        .CommandText = "prc_GetUnitDate"
+                        .CommandText = "prc_ChangeStat"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_Stat", State)
@@ -336,11 +336,10 @@ Public Class Released
                     End With
                     With command
                         .Parameters.Clear()
-                        .CommandText = "prc_ChangeStat"
+                        .CommandText = "prc_GetUnitDate"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_Stat", State)
-                        .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
                         .ExecuteNonQuery()
                     End With
                     With command
