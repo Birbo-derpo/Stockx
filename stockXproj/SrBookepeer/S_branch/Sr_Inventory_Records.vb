@@ -44,12 +44,16 @@ Public Class Sr_Inventory_Records
                 End If
             End With
 
-            sqlUMTCAdapter.Dispose()
-            DataUMTC.Dispose()
 
         Catch ex As Exception
             MessageBox.Show("" & ex.Message)
         End Try
+        sqlUMTCAdapter.Dispose()
+        DataUMTC.Dispose()
     End Sub
 
+    Private Sub Btn_MainOffice_Click(sender As Object, e As EventArgs) Handles Btn_MainOffice.Click
+        S_dashboard.Show()
+        Me.Close()
+    End Sub
 End Class
