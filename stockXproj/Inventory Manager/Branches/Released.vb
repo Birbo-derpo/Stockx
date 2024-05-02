@@ -408,6 +408,7 @@ Public Class Released
                         .ExecuteNonQuery()
                     End With
 
+
                 Catch ex As Exception
                     MessageBox.Show("" & ex.Message)
                 End Try
