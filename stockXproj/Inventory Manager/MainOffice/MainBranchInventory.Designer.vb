@@ -63,7 +63,7 @@ Partial Class MainBranchInventory
         Me.btnEdit.BackColor = System.Drawing.Color.Firebrick
         Me.btnEdit.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnEdit.Location = New System.Drawing.Point(410, 898)
+        Me.btnEdit.Location = New System.Drawing.Point(410, 896)
         Me.btnEdit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Size = New System.Drawing.Size(159, 57)
