@@ -24,18 +24,8 @@ Public Class MainBranchInventory
 
         action = "Edit"
 
-        'please fill in the editing unit codes
-        With addMotorcycle
-            .txtPrice.Text = Grd_Motorcycle.CurrentRow.Cells(4).Value.ToString()
-            .txtInvoiceNumber.Text = Grd_Motorcycle.CurrentRow.Cells(0).Value.ToString
-            .txtFrameNumber.Text = Grd_Motorcycle.CurrentRow.Cells(6).Value.ToString()
-            .txtEngineNumber.Text = Grd_Motorcycle.CurrentRow.Cells(5).Value.ToString
-            .Cmb_Color.Text = Grd_Motorcycle.CurrentRow.Cells(3).Value.ToString
-            .Cmb_Model.Text = Grd_Motorcycle.CurrentRow.Cells(2).Value.ToString
-            .dt.Value = Format(Convert.ToDateTime(Grd_Motorcycle.CurrentRow.Cells(1).Value), "yyyy,MMM,dd")
 
-            .ShowDialog()
-        End With
+
     End Sub
 
     Private Sub PrcDisplayUnits()
@@ -154,6 +144,24 @@ Public Class MainBranchInventory
 
     End Sub
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
+        With addMotorcycle
+            action = "Edit"
+
+            .txtPrice.Text = Grd_Motorcycle.CurrentRow.Cells(4).Value.ToString()
+            .txtInvoiceNumber.Text = Grd_Motorcycle.CurrentRow.Cells(0).Value.ToString
+            .txtFrameNumber.Text = Grd_Motorcycle.CurrentRow.Cells(6).Value.ToString()
+            .txtEngineNumber.Text = Grd_Motorcycle.CurrentRow.Cells(5).Value.ToString
+            .Cmb_Color.Text = Grd_Motorcycle.CurrentRow.Cells(3).Value.ToString
+            .Cmb_Model.Text = Grd_Motorcycle.CurrentRow.Cells(2).Value.ToString
+            .dt.Value = Format(Convert.ToDateTime(Grd_Motorcycle.CurrentRow.Cells(1).Value), "yyyy,MMM,dd")
+            .ShowDialog()
+
+
+
+
+        End With
+
+
 
     End Sub
     Private Sub Btndelete_Click(sender As Object, e As EventArgs) Handles btndelete.Click

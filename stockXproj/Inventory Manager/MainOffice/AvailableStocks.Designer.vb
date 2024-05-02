@@ -49,6 +49,9 @@ Partial Class AvailableStocks
         Me.Btn_ReservationPage = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnEdit = New System.Windows.Forms.Button()
+        Me.btndelete = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.Grd_Motorcycle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -309,7 +312,7 @@ Partial Class AvailableStocks
         Me.Btn_ReservationPage.BackColor = System.Drawing.Color.Firebrick
         Me.Btn_ReservationPage.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_ReservationPage.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_ReservationPage.Location = New System.Drawing.Point(243, 898)
+        Me.Btn_ReservationPage.Location = New System.Drawing.Point(1799, 896)
         Me.Btn_ReservationPage.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_ReservationPage.Name = "Btn_ReservationPage"
         Me.Btn_ReservationPage.Size = New System.Drawing.Size(159, 57)
@@ -341,12 +344,54 @@ Partial Class AvailableStocks
         Me.PictureBox1.TabIndex = 86
         Me.PictureBox1.TabStop = False
         '
+        'btnEdit
+        '
+        Me.btnEdit.BackColor = System.Drawing.Color.Firebrick
+        Me.btnEdit.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnEdit.Location = New System.Drawing.Point(410, 898)
+        Me.btnEdit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(159, 57)
+        Me.btnEdit.TabIndex = 89
+        Me.btnEdit.Text = "EDIT"
+        Me.btnEdit.UseVisualStyleBackColor = False
+        '
+        'btndelete
+        '
+        Me.btndelete.BackColor = System.Drawing.Color.Firebrick
+        Me.btndelete.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btndelete.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btndelete.Location = New System.Drawing.Point(575, 898)
+        Me.btndelete.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btndelete.Name = "btndelete"
+        Me.btndelete.Size = New System.Drawing.Size(159, 57)
+        Me.btndelete.TabIndex = 88
+        Me.btndelete.Text = "DELETE"
+        Me.btndelete.UseVisualStyleBackColor = False
+        '
+        'btnAdd
+        '
+        Me.btnAdd.BackColor = System.Drawing.Color.Firebrick
+        Me.btnAdd.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnAdd.Location = New System.Drawing.Point(245, 898)
+        Me.btnAdd.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(159, 57)
+        Me.btnAdd.TabIndex = 87
+        Me.btnAdd.Text = "ADD"
+        Me.btnAdd.UseVisualStyleBackColor = False
+        '
         'AvailableStocks
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Snow
         Me.ClientSize = New System.Drawing.Size(1924, 1055)
+        Me.Controls.Add(Me.btnEdit)
+        Me.Controls.Add(Me.btndelete)
+        Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Btn_ReservationPage)
@@ -399,4 +444,7 @@ Partial Class AvailableStocks
     Friend WithEvents Btn_ReservationPage As Button
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnEdit As Button
+    Friend WithEvents btndelete As Button
+    Friend WithEvents btnAdd As Button
 End Class

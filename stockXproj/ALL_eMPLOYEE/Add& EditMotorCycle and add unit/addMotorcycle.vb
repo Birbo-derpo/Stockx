@@ -46,48 +46,44 @@ Public Class addMotorcycle
     End Sub
 
     Private Sub DisplayColor()
-        ' Ensure there's a selected model in the ComboBox
-        If Not String.IsNullOrEmpty(Cmb_Model.Text) Then
-            ' Clear existing items in ComboBox
-            Cmb_Color.Items.Clear()
 
-            sqlUMTCAdapter = New MySqlDataAdapter()
-            datUMTC = New DataTable()
+        sqlUMTCAdapter = New MySqlDataAdapter()
+        datUMTC = New DataTable()
 
-            With command
-                .Parameters.Clear()
-                .CommandText = "prc_DisplayAllColors"
-                .CommandType = CommandType.StoredProcedure
-                .Parameters.AddWithValue("@p_model", Cmb_Model.Text)
-                sqlUMTCAdapter.SelectCommand = command
-                datUMTC.Clear()
-                sqlUMTCAdapter.Fill(datUMTC)
-            End With
+        With command
+            .Parameters.Clear()
+            .CommandText = "prc_DisplayAllColors"
+            .CommandType = CommandType.StoredProcedure
+            .Parameters.AddWithValue("@p_model", Cmb_Model.Text)
+            sqlUMTCAdapter.SelectCommand = command
+            datUMTC.Clear()
+            sqlUMTCAdapter.Fill(datUMTC)
+        End With
 
-            If datUMTC.Rows.Count > 0 Then
-                ' Iterate through each row in the DataTable
-                For Each row As DataRow In datUMTC.Rows
-                    ' Check if the "Model" column value matches the selected model
-                    If row("Model").ToString() = Cmb_Model.Text Then
-                        ' Assuming that the color information is in a column named "Color"
-                        ' and price information is in a column named "Price"
-                        Cmb_Color.Items.Add(row("Color").ToString())
+        If datUMTC.Rows.Count > 0 Then
+            ' Iterate through each row in the DataTable
+            For Each row As DataRow In datUMTC.Rows
+                ' Check if the "Model" column value matches the selected model
+                If row("Model").ToString() = Cmb_Model.Text Then
+                    ' Assuming that the color information is in a column named "Color"
+                    ' and price information is in a column named "Price"
+                    Cmb_Color.Items.Add(row("Color").ToString())
 
-                        txtPrice.Text = row("Price").ToString()
-                        txtPrice.ReadOnly = True
+                    txtPrice.Text = row("Price").ToString()
+                    txtPrice.ReadOnly = True
 
 
 
 
-                    End If
-                Next
-            End If
-
-            ' Dispose resources
-            sqlUMTCAdapter.Dispose()
-            datUMTC.Dispose()
-
+                End If
+            Next
         End If
+
+        ' Dispose resources
+        sqlUMTCAdapter.Dispose()
+        datUMTC.Dispose()
+
+
     End Sub
     Private Sub addMotorcycle_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Login_stat <> True Then
@@ -116,6 +112,8 @@ Public Class addMotorcycle
                     .Parameters.AddWithValue("@p_engine", txtEngineNumber.Text)
                     .Parameters.AddWithValue("@p_frame", txtFrameNumber.Text)
                     .ExecuteNonQuery()
+
+
                 End With
                 With command
                     .Parameters.Clear()
@@ -146,6 +144,18 @@ Public Class addMotorcycle
                     .Parameters.AddWithValue("@p_engine", txtEngineNumber.Text)
                     .Parameters.AddWithValue("@p_frame", txtFrameNumber.Text)
                     .ExecuteNonQuery()
+
+                    Dim result As DialogResult = MessageBox.Show("Are you sure you want to add Motorcycle?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+
+                    If result = DialogResult.Yes Then
+
+                        MainBranchInventory.Show()
+                        Me.Close()
+                    Else
+                        Me.ShowDialog()
+
+                    End If
                 End With
                 With command
                     .Parameters.Clear()
@@ -231,12 +241,22 @@ Public Class addMotorcycle
     'end function
 
     Private Sub Cmb_Model_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Cmb_Model.SelectedIndexChanged
+        If action = "Add" Then
+            Cmb_Color.SelectedIndex = -1
+            If Cmb_Model.SelectedItem IsNot Nothing Then
+                selectedModel = Cmb_Model.SelectedItem.ToString()
+                DisplayColor()
+            End If
 
-        Cmb_Color.SelectedIndex = -1
-        If Cmb_Model.SelectedItem IsNot Nothing Then
-            selectedModel = Cmb_Model.SelectedItem.ToString()
-            DisplayColor()
+        ElseIf action = "Change" Then
+            If Cmb_Model.SelectedItem IsNot Nothing Then
+                selectedModel = Cmb_Model.SelectedItem.ToString()
+                ' DisplayColor()  ' Uncomment this line if you want to display color in edit mode.
+            End If
         End If
+
+
+
 
     End Sub
 

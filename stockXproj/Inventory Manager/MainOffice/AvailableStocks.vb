@@ -1,7 +1,9 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports K4os.Compression.LZ4
+Imports MySql.Data.MySqlClient
 
 Public Class AvailableStocks
     Private datUMTC As DataTable
+    Private Engyno As String
 
     Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs) Handles Btn_AvStock.Click
         MainBranchInventory.Show()
@@ -187,6 +189,57 @@ Public Class AvailableStocks
     Private Sub Btn_ReservationPage_Click(sender As Object, e As EventArgs) Handles Btn_ReservationPage.Click
         ConfirmReserve.ShowDialog()
         PrcAvailableUnits()
+    End Sub
+
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        action = "Insert"
+        addMotorcycle.ShowDialog()
+        If Txt_Search.Text = "" Then
+            PrcAvailableUnits()
+        Else
+            prc_search()
+        End If
+    End Sub
+
+    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
+        With addMotorcycle
+            action = "Edit"
+
+            .txtPrice.Text = Grd_Motorcycle.CurrentRow.Cells(4).Value.ToString()
+            .txtInvoiceNumber.Text = Grd_Motorcycle.CurrentRow.Cells(0).Value.ToString
+            .txtFrameNumber.Text = Grd_Motorcycle.CurrentRow.Cells(6).Value.ToString()
+            .txtEngineNumber.Text = Grd_Motorcycle.CurrentRow.Cells(5).Value.ToString
+            .Cmb_Color.Text = Grd_Motorcycle.CurrentRow.Cells(3).Value.ToString
+            .Cmb_Model.Text = Grd_Motorcycle.CurrentRow.Cells(2).Value.ToString
+            .dt.Value = Format(Convert.ToDateTime(Grd_Motorcycle.CurrentRow.Cells(1).Value), "yyyy,MMM,dd")
+            .ShowDialog()
+
+
+
+
+        End With
+    End Sub
+
+    Private Sub btndelete_Click(sender As Object, e As EventArgs) Handles btndelete.Click
+        Try
+            With command
+                .Parameters.Clear()
+                .CommandText = "prc_DeleteUnitbyEngineNumber"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_EngineNo", Engyno)
+                .ExecuteNonQuery()
+            End With
+            MessageBox.Show("unit Successfully Deleted", "Delete Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            PrcAvailableUnits()
+
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+        If Txt_Search.Text = "" Then
+            PrcAvailableUnits()
+        Else
+            prc_search()
+        End If
     End Sub
 
     'dataloader end
