@@ -176,6 +176,12 @@
     <Compile Include="Addsrbookeeper.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ALL_eMPLOYEE\HondaFlashScreen\Flasgscreen.Designer.vb">
+      <DependentUpon>Flasgscreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ALL_eMPLOYEE\HondaFlashScreen\Flasgscreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Inventory Manager\Branches\All Unit.Designer.vb">
       <DependentUpon>All Unit.vb</DependentUpon>
     </Compile>
@@ -438,6 +444,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Addsrbookeeper.resx">
       <DependentUpon>Addsrbookeeper.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ALL_eMPLOYEE\HondaFlashScreen\Flasgscreen.resx">
+      <DependentUpon>Flasgscreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory Manager\Branches\All Unit.resx">
       <DependentUpon>All Unit.vb</DependentUpon>

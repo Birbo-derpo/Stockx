@@ -154,4 +154,8 @@ Public Class DashBoard
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
 
     End Sub
+
+    Private Sub lblUser_Click(sender As Object, e As EventArgs) Handles lblUser.Click
+
+    End Sub
 End Class
