@@ -1,6 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class S_repossess
+    Private Cust_Name As String
     Private Sub S_repossess_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Login_stat <> True Then
             Login.Show()
@@ -227,7 +228,129 @@ Public Class S_repossess
         End If
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+    Private Sub Prc_GetCustName(p_unit As String)
+        Try
+            sqlUMTCAdapter = New MySqlDataAdapter
+            DataUMTC = New DataTable
 
+            With command
+                .Parameters.Clear()
+                .CommandText = "prc_GetCustomerName"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_Unit", p_unit)
+                sqlUMTCAdapter.SelectCommand = command
+                DataUMTC.Clear()
+                sqlUMTCAdapter.Fill(DataUMTC)
+                Cust_Name = DataUMTC.Rows(0).Item("Customer").ToString
+            End With
+            sqlUMTCAdapter.Dispose()
+            DataUMTC.Dispose()
+
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub Btn_ReRelease_Click(sender As Object, e As EventArgs) Handles Btn_ReRelease.Click
+        State = "Release"
+        For Each Checkcell As DataGridViewRow In Grd_StockRepossessed.Rows
+            'needs to accept only when branches combobox is selected
+            If Checkcell.Cells("Column10").Value = True Then
+                Try
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_SetUnitDate"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_state", State)
+                        .Parameters.AddWithValue("@p_dt", Format(dt.Value, "yyyy-MM-dd"))
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_ChangeStat"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_Stat", State)
+                        .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_Record"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_Action", "Release unit")
+                        .Parameters.AddWithValue("@p_d", todaysdate)
+                        .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_branch", Checkcell.Cells(1).Value.ToString)
+                        .Parameters.AddWithValue("@p_FromState", Checkcell.Cells(9).Value.ToString)
+                        .Parameters.AddWithValue("@p_ToState", State)
+                        Prc_GetCustName(Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_Customer", Cust_Name)
+                        .Parameters.AddWithValue("@p_Employee", Username)
+                        .ExecuteNonQuery()
+                    End With
+
+                Catch ex As Exception
+                End Try
+                Checkcell.Cells("Column10").Value = False
+                Cust_Name = ""
+            End If
+
+        Next
+        MessageBox.Show("unit/s now Re Released", "Re release", MessageBoxButtons.OK)
+        PrcDisplayRepossessedStock()
+
+    End Sub
+
+    Private Sub Btn_CancelRepo_Click(sender As Object, e As EventArgs) Handles Btn_CancelRepo.Click
+        State = "Release"
+        For Each Checkcell As DataGridViewRow In Grd_StockRepossessed.Rows
+            'needs to accept only when branches combobox is selected
+            If Checkcell.Cells("Column10").Value = True Then
+                Try
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_GetUnitDate"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_state", State)
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_ChangeStat"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_Stat", State)
+                        .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_Record"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_Action", "Return Unit to Branch")
+                        .Parameters.AddWithValue("@p_d", todaysdate)
+                        .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_branch", Checkcell.Cells(1).Value.ToString)
+                        .Parameters.AddWithValue("@p_FromState", Checkcell.Cells(9).Value.ToString)
+                        .Parameters.AddWithValue("@p_ToState", State)
+                        Prc_GetCustName(Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_Customer", Cust_Name)
+                        .Parameters.AddWithValue("@p_Employee", Username)
+                        .ExecuteNonQuery()
+                    End With
+
+                Catch ex As Exception
+                    MessageBox.Show("" & ex.Message)
+                End Try
+                Checkcell.Cells("Column10").Value = False
+                Cust_Name = ""
+            End If
+
+        Next
+        MessageBox.Show("unit/s returned to deposit", "in branch", MessageBoxButtons.OK)
+        PrcDisplayRepossessedStock()
     End Sub
 End Class
