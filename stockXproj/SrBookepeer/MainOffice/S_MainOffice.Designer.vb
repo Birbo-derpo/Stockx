@@ -24,10 +24,8 @@ Partial Class S_MainOffice
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(S_MainOffice))
         Me.dt = New System.Windows.Forms.DateTimePicker()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Txt_InvoiceNo = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Btn_AvStock = New System.Windows.Forms.Button()
         Me.Btn_Reserved = New System.Windows.Forms.Button()
         Me.Btn_Transit = New System.Windows.Forms.Button()
@@ -50,7 +48,10 @@ Partial Class S_MainOffice
         Me.Chk_Auto = New System.Windows.Forms.CheckBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnEdit = New System.Windows.Forms.Button()
+        Me.btndelete = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.Btn_ReservationPage = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.Grd_Motorcycle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,36 +66,6 @@ Partial Class S_MainOffice
         Me.dt.Name = "dt"
         Me.dt.Size = New System.Drawing.Size(359, 27)
         Me.dt.TabIndex = 83
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(431, 938)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(66, 25)
-        Me.Label3.TabIndex = 74
-        Me.Label3.Text = "Model"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(239, 938)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(106, 25)
-        Me.Label2.TabIndex = 73
-        Me.Label2.Text = "Invoice no."
-        '
-        'Txt_InvoiceNo
-        '
-        Me.Txt_InvoiceNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Txt_InvoiceNo.Font = New System.Drawing.Font("Arial", 12.0!)
-        Me.Txt_InvoiceNo.Location = New System.Drawing.Point(245, 965)
-        Me.Txt_InvoiceNo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Txt_InvoiceNo.Name = "Txt_InvoiceNo"
-        Me.Txt_InvoiceNo.Size = New System.Drawing.Size(186, 30)
-        Me.Txt_InvoiceNo.TabIndex = 70
         '
         'GroupBox1
         '
@@ -111,6 +82,20 @@ Partial Class S_MainOffice
         Me.GroupBox1.Size = New System.Drawing.Size(247, 581)
         Me.GroupBox1.TabIndex = 68
         Me.GroupBox1.TabStop = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Snow
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Button2.Location = New System.Drawing.Point(19, 110)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(211, 62)
+        Me.Button2.TabIndex = 98
+        Me.Button2.Text = "ALL UNITS"
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Btn_AvStock
         '
@@ -179,7 +164,7 @@ Partial Class S_MainOffice
         Me.Label1.Font = New System.Drawing.Font("Book Antiqua", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(0, 213)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(242, 82)
+        Me.Label1.Size = New System.Drawing.Size(233, 80)
         Me.Label1.TabIndex = 67
         Me.Label1.Text = "INVENTORY " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "      LISTS"
         '
@@ -199,7 +184,7 @@ Partial Class S_MainOffice
         Me.lblTotal.Font = New System.Drawing.Font("Book Antiqua", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotal.Location = New System.Drawing.Point(1572, 255)
         Me.lblTotal.Name = "lblTotal"
-        Me.lblTotal.Size = New System.Drawing.Size(301, 41)
+        Me.lblTotal.Size = New System.Drawing.Size(289, 40)
         Me.lblTotal.TabIndex = 56
         Me.lblTotal.Text = "TOTAL STOCKS:"
         '
@@ -348,19 +333,57 @@ Partial Class S_MainOffice
         Me.PictureBox2.TabIndex = 97
         Me.PictureBox2.TabStop = False
         '
-        'Button2
+        'btnEdit
         '
-        Me.Button2.BackColor = System.Drawing.Color.Snow
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button2.Location = New System.Drawing.Point(19, 110)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(211, 62)
-        Me.Button2.TabIndex = 98
-        Me.Button2.Text = "ALL UNITS"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnEdit.BackColor = System.Drawing.Color.Firebrick
+        Me.btnEdit.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnEdit.Location = New System.Drawing.Point(410, 909)
+        Me.btnEdit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(159, 57)
+        Me.btnEdit.TabIndex = 100
+        Me.btnEdit.Text = "EDIT"
+        Me.btnEdit.UseVisualStyleBackColor = False
+        '
+        'btndelete
+        '
+        Me.btndelete.BackColor = System.Drawing.Color.Firebrick
+        Me.btndelete.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btndelete.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btndelete.Location = New System.Drawing.Point(575, 909)
+        Me.btndelete.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btndelete.Name = "btndelete"
+        Me.btndelete.Size = New System.Drawing.Size(159, 57)
+        Me.btndelete.TabIndex = 99
+        Me.btndelete.Text = "DELETE"
+        Me.btndelete.UseVisualStyleBackColor = False
+        '
+        'btnAdd
+        '
+        Me.btnAdd.BackColor = System.Drawing.Color.Firebrick
+        Me.btnAdd.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnAdd.Location = New System.Drawing.Point(245, 909)
+        Me.btnAdd.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(159, 57)
+        Me.btnAdd.TabIndex = 98
+        Me.btnAdd.Text = "ADD"
+        Me.btnAdd.UseVisualStyleBackColor = False
+        '
+        'Btn_ReservationPage
+        '
+        Me.Btn_ReservationPage.BackColor = System.Drawing.Color.Firebrick
+        Me.Btn_ReservationPage.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_ReservationPage.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Btn_ReservationPage.Location = New System.Drawing.Point(1779, 899)
+        Me.Btn_ReservationPage.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_ReservationPage.Name = "Btn_ReservationPage"
+        Me.Btn_ReservationPage.Size = New System.Drawing.Size(159, 57)
+        Me.Btn_ReservationPage.TabIndex = 101
+        Me.Btn_ReservationPage.Text = "RESERVE"
+        Me.Btn_ReservationPage.UseVisualStyleBackColor = False
         '
         'S_MainOffice
         '
@@ -368,13 +391,14 @@ Partial Class S_MainOffice
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Snow
         Me.ClientSize = New System.Drawing.Size(1924, 1055)
+        Me.Controls.Add(Me.Btn_ReservationPage)
+        Me.Controls.Add(Me.btnEdit)
+        Me.Controls.Add(Me.btndelete)
+        Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.dt)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Txt_InvoiceNo)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Txt_Search)
@@ -397,9 +421,6 @@ Partial Class S_MainOffice
     End Sub
 
     Friend WithEvents dt As DateTimePicker
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Txt_InvoiceNo As TextBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Btn_AvStock As Button
     Friend WithEvents Btn_Reserved As Button
@@ -424,4 +445,8 @@ Partial Class S_MainOffice
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Button2 As Button
+    Friend WithEvents btnEdit As Button
+    Friend WithEvents btndelete As Button
+    Friend WithEvents btnAdd As Button
+    Friend WithEvents Btn_ReservationPage As Button
 End Class
