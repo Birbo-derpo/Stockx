@@ -126,7 +126,7 @@ Public Class DashBoard
         End Try
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Btn_EditInfo_Click(sender As Object, e As EventArgs) Handles Btn_EditInfo.Click
 
         prcDisplayCurrentUser()
 

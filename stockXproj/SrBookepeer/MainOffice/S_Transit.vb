@@ -63,6 +63,16 @@ Public Class S_Transit
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(8).Value.ToString)
                         .Parameters.AddWithValue("@p_Stat", State)
+                        .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_SetUnitDate"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(8).Value.ToString)
+                        .Parameters.AddWithValue("@p_state", State)
+                        .Parameters.AddWithValue("@p_dt", Format(dt.Value, "yyyy-MM-dd"))
                         .ExecuteNonQuery()
                     End With
                     With command
@@ -79,6 +89,7 @@ Public Class S_Transit
                         .Parameters.AddWithValue("@p_Employee", Username)
                         .ExecuteNonQuery()
                     End With
+
                 Catch ex As Exception
                 End Try
             End If
@@ -98,15 +109,102 @@ Public Class S_Transit
         Me.Close()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
+    Private Sub Btn_ReturnUnit_Click(sender As Object, e As EventArgs) Handles Btn_ReturnUnit.Click
+        'literally cancels transit and reservation
+        State = "Available"
+        For Each Checkcell As DataGridViewRow In Grd_Motorcycle.Rows
+            If Checkcell.Cells("Column8").Value = True Then
+                Try
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_GetUnitDate"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(8).Value.ToString)
+                        .Parameters.AddWithValue("@p_state", State)
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_ChangeStat"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(8).Value.ToString)
+                        .Parameters.AddWithValue("@p_Stat", State)
+                        .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_Record"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_Action", "Cancel transit and reservation")
+                        .Parameters.AddWithValue("@p_d", todaysdate)
+                        .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(8).Value.ToString)
+                        .Parameters.AddWithValue("@p_branch", Checkcell.Cells(1).Value.ToString)
+                        .Parameters.AddWithValue("@p_FromState", "in Transit")
+                        .Parameters.AddWithValue("@p_ToState", State)
+                        .Parameters.AddWithValue("@p_Customer", "none")
+                        .Parameters.AddWithValue("@p_Employee", Username)
+                        .ExecuteNonQuery()
+                    End With
+
+                Catch ex As Exception
+                End Try
+                Checkcell.Cells("Column8").Value = False
+            End If
+
+        Next
+        MessageBox.Show("unit/s now in branch", "in branch", MessageBoxButtons.OK)
+
+        PrcDisplayTransitUnits()
     End Sub
 
-    Private Sub Btn_Transit_Click(sender As Object, e As EventArgs) Handles Btn_Transit.Click
+    Private Sub Btn_CancelTransit_Click(sender As Object, e As EventArgs) Handles Btn_CancelTransit.Click
+        'undo's transit
+        State = "Reserve"
+        For Each Checkcell As DataGridViewRow In Grd_Motorcycle.Rows
+            If Checkcell.Cells("Column8").Value = True Then
+                Try
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_GetUnitDate"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(8).Value.ToString)
+                        .Parameters.AddWithValue("@p_state", State)
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_ChangeStat"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(8).Value.ToString)
+                        .Parameters.AddWithValue("@p_Stat", State)
+                        .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_Record"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_Action", "Cancel Transit")
+                        .Parameters.AddWithValue("@p_d", todaysdate)
+                        .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(8).Value.ToString)
+                        .Parameters.AddWithValue("@p_branch", Checkcell.Cells(1).Value.ToString)
+                        .Parameters.AddWithValue("@p_FromState", "in Transit")
+                        .Parameters.AddWithValue("@p_ToState", State)
+                        .Parameters.AddWithValue("@p_Customer", "none")
+                        .Parameters.AddWithValue("@p_Employee", Username)
+                        .ExecuteNonQuery()
+                    End With
 
-    End Sub
+                Catch ex As Exception
+                End Try
+                Checkcell.Cells("Column8").Value = False
+            End If
 
-    Private Sub dt_ValueChanged(sender As Object, e As EventArgs) Handles dt.ValueChanged
+        Next
+        MessageBox.Show("unit/s now in branch", "in branch", MessageBoxButtons.OK)
 
+        PrcDisplayTransitUnits()
     End Sub
 End Class

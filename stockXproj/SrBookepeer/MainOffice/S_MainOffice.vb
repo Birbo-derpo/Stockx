@@ -244,9 +244,6 @@ Public Class S_MainOffice
             .dt.Value = Format(Convert.ToDateTime(Grd_Motorcycle.CurrentRow.Cells(1).Value), "yyyy,MMM,dd")
             .ShowDialog()
 
-
-
-
         End With
     End Sub
 
@@ -273,7 +270,19 @@ Public Class S_MainOffice
     End Sub
 
     Private Sub Btn_ReservationPage_Click(sender As Object, e As EventArgs) Handles Btn_ReservationPage.Click
-        ConfirmReserve.ShowDialog()
-        PrcDisplayUnits()
+        S_confirmReserve.ShowDialog()
+        If Txt_Search.Text = "" Then
+            PrcDisplayUnits()
+        Else
+            prc_search()
+        End If
+
+        'in case when S_confirmReserve page is not needed
+        'ConfirmReserve.ShowDialog()
+        'If Txt_Search.Text = "" Then
+        '    PrcDisplayUnits()
+        'Else
+        '    prc_search()
+        'End If
     End Sub
 End Class
