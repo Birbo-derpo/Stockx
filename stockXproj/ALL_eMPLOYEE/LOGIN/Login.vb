@@ -80,8 +80,6 @@ Public Class Login
 
                         Me.Dispose()
                     End With
-                Else
-                    MessageBox.Show("Only Sr.Bookeeper.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
             End If
 

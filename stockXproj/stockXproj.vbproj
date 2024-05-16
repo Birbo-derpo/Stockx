@@ -387,7 +387,9 @@
     <Compile Include="SrBookepeer\MainOffice\S_Reserve.Designer.vb">
       <DependentUpon>S_Reserve.vb</DependentUpon>
     </Compile>
-    <Compile Include="SrBookepeer\MainOffice\S_Reserve.vb" />
+    <Compile Include="SrBookepeer\MainOffice\S_Reserve.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SrBookepeer\MainOffice\S_Transit.Designer.vb">
       <DependentUpon>S_Transit.vb</DependentUpon>
     </Compile>
