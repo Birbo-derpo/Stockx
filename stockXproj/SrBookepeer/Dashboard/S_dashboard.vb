@@ -138,4 +138,14 @@ Public Class S_dashboard
         Sr_Inventory_Records.Show()
         Me.Close()
     End Sub
+
+    Private Sub Btn_MainOffice_Click(sender As Object, e As EventArgs) Handles Btn_MainOffice.Click
+        S_MainOffice.ShowDialog()
+        Me.Close()
+    End Sub
+
+    Private Sub Btn_Branches_Click(sender As Object, e As EventArgs) Handles Btn_Branches.Click
+        S_AllUnit.ShowDialog()
+        Me.Close()
+    End Sub
 End Class

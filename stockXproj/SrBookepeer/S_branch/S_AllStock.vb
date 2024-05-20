@@ -148,6 +148,11 @@ Public Class S_AllStock
         End Try
     End Sub
 
+    Private Sub Btn_Dashboard_Click(sender As Object, e As EventArgs) Handles Btn_Dashboard.Click
+        S_dashboard.Show()
+        Me.Close()
+    End Sub
+
     Private Sub Grd_Stock_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Grd_Stock.CellContentClick
         Model = Grd_Stock.CurrentRow.Cells(3).Value.ToString
         Color = Grd_Stock.CurrentRow.Cells(5).Value.ToString

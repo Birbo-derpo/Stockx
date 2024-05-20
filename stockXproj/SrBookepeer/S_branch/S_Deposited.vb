@@ -347,4 +347,9 @@ Public Class S_Deposited
         MessageBox.Show("unit/s now in branch", "in branch", MessageBoxButtons.OK)
         PrcDisplayDepositedStock()
     End Sub
+
+    Private Sub Btn_Dashboard_Click_1(sender As Object, e As EventArgs) Handles Btn_Dashboard.Click
+        S_dashboard.Show()
+        Me.Close()
+    End Sub
 End Class

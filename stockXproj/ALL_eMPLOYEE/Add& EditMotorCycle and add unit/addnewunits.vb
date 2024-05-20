@@ -52,6 +52,7 @@ Public Class addnewunits
     End Sub
 
     Private Sub DisplayColor()
+
         ' Ensure there's a selected model in the ComboBox
         If Not String.IsNullOrEmpty(cmbModel.Text) Then
             ' Clear existing items in ComboBox
