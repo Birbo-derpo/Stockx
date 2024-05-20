@@ -12,6 +12,7 @@ Public Class Released
         End If
 
 
+
     End Sub
     'dataloader
     Private Sub PrcDisplayReleasedStock()

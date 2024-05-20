@@ -120,6 +120,7 @@ Public Class UpdateStocks
             txtterm.ForeColor = Color.Black
             txt_PaymentStatus.Text = "OnGoing"
         Else
+            Cmb_Term.SelectedIndex = -1
             Cmb_Term.Enabled = False
             Cmb_Term.ForeColor = Color.Gray
             txtterm.ForeColor = Color.Gray
