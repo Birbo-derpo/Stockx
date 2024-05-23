@@ -191,6 +191,27 @@ Public Class addnewunits
 
     End Sub
 
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Try
+            With command
+                .Parameters.Clear()
+                .CommandText = "prc_DeleteUnit"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_model", txtModel.ToString)
+                .ExecuteNonQuery()
+            End With
+            MessageBox.Show("Model Successfully Deleted", "Delete Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            DisplayModel()
+
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+
+    End Sub
+
     Private Sub cmbModel_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbModel.SelectedIndexChanged
         If cmbModel.SelectedItem IsNot Nothing Then
             selectedModel = cmbModel.SelectedItem.ToString()

@@ -53,7 +53,7 @@ Public Class Sr_Inventory_Records
     End Sub
 
     Private Sub Btn_MainOffice_Click(sender As Object, e As EventArgs) Handles Btn_MainOffice.Click
-        S_dashboard.Show()
+
         Me.Close()
     End Sub
 End Class

@@ -1,11 +1,12 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports K4os.Compression.LZ4
+Imports MySql.Data.MySqlClient
 
 Public Class Display_Employee
 
     Dim Position, Gender As String
     Private Sub btn_Create_Click(sender As Object, e As EventArgs) Handles btn_Create.Click
         CreateEmployee.ShowDialog()
-        Me.Close()
+
     End Sub
 
     Private Sub Display_Employee_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -138,6 +139,28 @@ Public Class Display_Employee
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
+    End Sub
+
+    Private Sub Btn_Dashboard_Click(sender As Object, e As EventArgs) Handles Btn_Dashboard.Click
+        S_dashboard.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub btn_Delete_Click(sender As Object, e As EventArgs) Handles btn_Delete.Click
+        Try
+            With command
+                .Parameters.Clear()
+                .CommandText = "prc_deleteEmployee"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_gmail", grdEmployee.CurrentRow.Cells(0).Value)
+                .ExecuteNonQuery()
+            End With
+            MessageBox.Show("unit Successfully Deleted", "Delete Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            PrcDisplayEmployee()
+
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
     End Sub
 
     Private Sub Btn_Edit_Click(sender As Object, e As EventArgs) Handles Btn_Edit.Click

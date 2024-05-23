@@ -52,12 +52,12 @@ Partial Class reports
         '
         Me.grd_report.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grd_report.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4})
-        Me.grd_report.Location = New System.Drawing.Point(185, 166)
-        Me.grd_report.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.grd_report.Location = New System.Drawing.Point(247, 204)
+        Me.grd_report.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.grd_report.Name = "grd_report"
         Me.grd_report.RowHeadersWidth = 51
         Me.grd_report.RowTemplate.Height = 24
-        Me.grd_report.Size = New System.Drawing.Size(464, 254)
+        Me.grd_report.Size = New System.Drawing.Size(619, 313)
         Me.grd_report.TabIndex = 0
         '
         'Column1
@@ -97,20 +97,20 @@ Partial Class reports
         Me.cmb_Month.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmb_Month.FormattingEnabled = True
         Me.cmb_Month.Items.AddRange(New Object() {"JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER ", "DECEMEBR"})
-        Me.cmb_Month.Location = New System.Drawing.Point(700, 82)
-        Me.cmb_Month.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmb_Month.Location = New System.Drawing.Point(933, 101)
+        Me.cmb_Month.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cmb_Month.Name = "cmb_Month"
-        Me.cmb_Month.Size = New System.Drawing.Size(318, 27)
+        Me.cmb_Month.Size = New System.Drawing.Size(423, 32)
         Me.cmb_Month.TabIndex = 1
         Me.cmb_Month.Text = "MONTH"
         '
         'btnTagum
         '
         Me.btnTagum.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTagum.Location = New System.Drawing.Point(700, 141)
-        Me.btnTagum.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnTagum.Location = New System.Drawing.Point(933, 174)
+        Me.btnTagum.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnTagum.Name = "btnTagum"
-        Me.btnTagum.Size = New System.Drawing.Size(316, 44)
+        Me.btnTagum.Size = New System.Drawing.Size(421, 54)
         Me.btnTagum.TabIndex = 2
         Me.btnTagum.Text = "TAGUM:   "
         Me.btnTagum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -119,10 +119,10 @@ Partial Class reports
         'btnDavao
         '
         Me.btnDavao.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDavao.Location = New System.Drawing.Point(700, 188)
-        Me.btnDavao.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnDavao.Location = New System.Drawing.Point(933, 231)
+        Me.btnDavao.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnDavao.Name = "btnDavao"
-        Me.btnDavao.Size = New System.Drawing.Size(316, 44)
+        Me.btnDavao.Size = New System.Drawing.Size(421, 54)
         Me.btnDavao.TabIndex = 3
         Me.btnDavao.Text = "DAVAO:   "
         Me.btnDavao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -131,10 +131,10 @@ Partial Class reports
         'btnGensan
         '
         Me.btnGensan.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGensan.Location = New System.Drawing.Point(700, 235)
-        Me.btnGensan.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnGensan.Location = New System.Drawing.Point(933, 289)
+        Me.btnGensan.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnGensan.Name = "btnGensan"
-        Me.btnGensan.Size = New System.Drawing.Size(316, 44)
+        Me.btnGensan.Size = New System.Drawing.Size(421, 54)
         Me.btnGensan.TabIndex = 4
         Me.btnGensan.Text = "GENERAL SANTOS:   "
         Me.btnGensan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -143,10 +143,10 @@ Partial Class reports
         'btnDigos
         '
         Me.btnDigos.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDigos.Location = New System.Drawing.Point(700, 329)
-        Me.btnDigos.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnDigos.Location = New System.Drawing.Point(933, 405)
+        Me.btnDigos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnDigos.Name = "btnDigos"
-        Me.btnDigos.Size = New System.Drawing.Size(316, 44)
+        Me.btnDigos.Size = New System.Drawing.Size(421, 54)
         Me.btnDigos.TabIndex = 5
         Me.btnDigos.Text = "DIGOS:   "
         Me.btnDigos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -155,10 +155,10 @@ Partial Class reports
         'btnBajada
         '
         Me.btnBajada.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBajada.Location = New System.Drawing.Point(700, 282)
-        Me.btnBajada.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnBajada.Location = New System.Drawing.Point(933, 347)
+        Me.btnBajada.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnBajada.Name = "btnBajada"
-        Me.btnBajada.Size = New System.Drawing.Size(316, 44)
+        Me.btnBajada.Size = New System.Drawing.Size(421, 54)
         Me.btnBajada.TabIndex = 6
         Me.btnBajada.Text = "BAJADA:   "
         Me.btnBajada.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -167,10 +167,10 @@ Partial Class reports
         'btnKidapawan
         '
         Me.btnKidapawan.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnKidapawan.Location = New System.Drawing.Point(700, 376)
-        Me.btnKidapawan.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnKidapawan.Location = New System.Drawing.Point(933, 463)
+        Me.btnKidapawan.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnKidapawan.Name = "btnKidapawan"
-        Me.btnKidapawan.Size = New System.Drawing.Size(316, 44)
+        Me.btnKidapawan.Size = New System.Drawing.Size(421, 54)
         Me.btnKidapawan.TabIndex = 7
         Me.btnKidapawan.Text = "KIDAPAWAN:   "
         Me.btnKidapawan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -182,10 +182,10 @@ Partial Class reports
         Me.Chk_Auto.BackColor = System.Drawing.Color.Snow
         Me.Chk_Auto.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Chk_Auto.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Chk_Auto.Location = New System.Drawing.Point(479, 119)
-        Me.Chk_Auto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Chk_Auto.Location = New System.Drawing.Point(639, 146)
+        Me.Chk_Auto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Chk_Auto.Name = "Chk_Auto"
-        Me.Chk_Auto.Size = New System.Drawing.Size(132, 21)
+        Me.Chk_Auto.Size = New System.Drawing.Size(154, 24)
         Me.Chk_Auto.TabIndex = 80
         Me.Chk_Auto.Text = "Auto Complete"
         Me.Chk_Auto.UseVisualStyleBackColor = False
@@ -195,10 +195,10 @@ Partial Class reports
         Me.Btn_Search.BackColor = System.Drawing.Color.Firebrick
         Me.Btn_Search.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Search.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_Search.Location = New System.Drawing.Point(585, 82)
-        Me.Btn_Search.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Search.Location = New System.Drawing.Point(780, 101)
+        Me.Btn_Search.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Search.Name = "Btn_Search"
-        Me.Btn_Search.Size = New System.Drawing.Size(87, 37)
+        Me.Btn_Search.Size = New System.Drawing.Size(116, 46)
         Me.Btn_Search.TabIndex = 79
         Me.Btn_Search.Text = "SEARCH"
         Me.Btn_Search.UseVisualStyleBackColor = False
@@ -207,10 +207,10 @@ Partial Class reports
         '
         Me.Txt_Search.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Txt_Search.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txt_Search.Location = New System.Drawing.Point(185, 89)
-        Me.Txt_Search.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_Search.Location = New System.Drawing.Point(247, 110)
+        Me.Txt_Search.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Txt_Search.Name = "Txt_Search"
-        Me.Txt_Search.Size = New System.Drawing.Size(396, 26)
+        Me.Txt_Search.Size = New System.Drawing.Size(527, 30)
         Me.Txt_Search.TabIndex = 78
         '
         'cmb_SearchType
@@ -219,10 +219,10 @@ Partial Class reports
         Me.cmb_SearchType.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmb_SearchType.FormattingEnabled = True
         Me.cmb_SearchType.Items.AddRange(New Object() {"Model", "Engine Number", "Date"})
-        Me.cmb_SearchType.Location = New System.Drawing.Point(185, 119)
-        Me.cmb_SearchType.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmb_SearchType.Location = New System.Drawing.Point(247, 146)
+        Me.cmb_SearchType.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cmb_SearchType.Name = "cmb_SearchType"
-        Me.cmb_SearchType.Size = New System.Drawing.Size(283, 24)
+        Me.cmb_SearchType.Size = New System.Drawing.Size(376, 27)
         Me.cmb_SearchType.TabIndex = 77
         '
         'PictureBox2
@@ -231,9 +231,9 @@ Partial Class reports
         Me.PictureBox2.BackgroundImage = Global.stockXproj.My.Resources.Resources.HONDA_COLOR
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox2.Location = New System.Drawing.Point(1, -2)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(1442, 80)
+        Me.PictureBox2.Size = New System.Drawing.Size(1923, 98)
         Me.PictureBox2.TabIndex = 82
         Me.PictureBox2.TabStop = False
         '
@@ -243,10 +243,9 @@ Partial Class reports
         Me.Label1.BackColor = System.Drawing.Color.Firebrick
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(185, 7)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(247, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(487, 55)
+        Me.Label1.Size = New System.Drawing.Size(602, 69)
         Me.Label1.TabIndex = 83
         Me.Label1.Text = "BRANCH REPORTS"
         '
@@ -257,9 +256,9 @@ Partial Class reports
         Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox3.ErrorImage = Nothing
         Me.PictureBox3.Location = New System.Drawing.Point(1, -2)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(182, 155)
+        Me.PictureBox3.Size = New System.Drawing.Size(241, 190)
         Me.PictureBox3.TabIndex = 85
         Me.PictureBox3.TabStop = False
         '
@@ -270,20 +269,20 @@ Partial Class reports
         Me.Btn_Dashboard.FlatAppearance.BorderSize = 10
         Me.Btn_Dashboard.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Dashboard.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_Dashboard.Location = New System.Drawing.Point(29, 166)
-        Me.Btn_Dashboard.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Dashboard.Location = New System.Drawing.Point(39, 204)
+        Me.Btn_Dashboard.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Btn_Dashboard.Name = "Btn_Dashboard"
-        Me.Btn_Dashboard.Size = New System.Drawing.Size(119, 46)
+        Me.Btn_Dashboard.Size = New System.Drawing.Size(159, 57)
         Me.Btn_Dashboard.TabIndex = 91
         Me.Btn_Dashboard.Text = "DASHBOARD"
         Me.Btn_Dashboard.UseVisualStyleBackColor = False
         '
         'reports
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Snow
-        Me.ClientSize = New System.Drawing.Size(1028, 429)
+        Me.ClientSize = New System.Drawing.Size(1371, 528)
         Me.Controls.Add(Me.Btn_Dashboard)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label1)
@@ -300,8 +299,9 @@ Partial Class reports
         Me.Controls.Add(Me.cmb_Month)
         Me.Controls.Add(Me.grd_report)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "reports"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "aa"
         CType(Me.grd_report, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()

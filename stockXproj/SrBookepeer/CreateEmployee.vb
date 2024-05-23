@@ -57,6 +57,10 @@ Public Class CreateEmployee
     End Sub
 
     Private Sub CreateEmployee_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Me.Activate()
+        Me.BringToFront()
+
         If Login_stat <> True Then
             Login.Show()
             Me.Close()

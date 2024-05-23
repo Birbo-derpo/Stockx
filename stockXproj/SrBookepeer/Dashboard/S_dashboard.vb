@@ -6,8 +6,8 @@ Imports Org.BouncyCastle.Asn1.X509
 Public Class S_dashboard
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        reports.Show()
-        Me.Close()
+        reports.ShowDialog()
+
     End Sub
 
     Private Sub S_dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -126,13 +126,13 @@ Public Class S_dashboard
     End Sub
 
     Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
-        Display_Employee.Show()
-        Me.Hide()
+        Display_Employee.ShowDialog()
+
     End Sub
 
     Private Sub Btn_inv_logs_Click(sender As Object, e As EventArgs) Handles Btn_inv_logs.Click
-        Sr_Inventory_Records.Show()
-        Me.Close()
+        Sr_Inventory_Records.ShowDialog()
+
     End Sub
 
     Private Sub Btn_MainOffice_Click(sender As Object, e As EventArgs) Handles Btn_MainOffice.Click
@@ -143,5 +143,15 @@ Public Class S_dashboard
     Private Sub Btn_Branches_Click(sender As Object, e As EventArgs) Handles Btn_Branches.Click
         S_AllUnit.Show()
         Me.Close()
+    End Sub
+
+    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+
+    End Sub
+
+    Private Sub Btn_Customers_Click(sender As Object, e As EventArgs) Handles Btn_Customers.Click
+        S_customer.Show()
+        Me.Close()
+
     End Sub
 End Class
