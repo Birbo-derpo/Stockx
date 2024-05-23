@@ -102,7 +102,7 @@ Public Class S_AllUnit
     End Sub
 
     Private Sub Btn_AllStock_Click(sender As Object, e As EventArgs) Handles Btn_AllStock.Click
-        S_AllStock.ShowDialog()
+        S_AllStock.Show()
         Me.Close()
     End Sub
 

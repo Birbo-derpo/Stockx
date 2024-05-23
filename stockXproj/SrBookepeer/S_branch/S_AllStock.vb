@@ -18,7 +18,7 @@ Public Class S_AllStock
 
     Private Sub Btn_Repossess_Click(sender As Object, e As EventArgs) Handles Btn_Repossess.Click
         S_repossess.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub Btn_Search_Click(sender As Object, e As EventArgs) Handles Btn_Search.Click
@@ -267,7 +267,5 @@ Public Class S_AllStock
         End Try
 
     End Sub
-
-
 
 End Class

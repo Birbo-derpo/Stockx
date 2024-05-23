@@ -105,7 +105,7 @@ Public Class reports
                 .Parameters.Clear()
                 .CommandText = "prc_SearchByStatusOrBranch"
                 .CommandType = CommandType.StoredProcedure
-                .Parameters.AddWithValue("@p_filter", cmbSearchType.Text)
+                .Parameters.AddWithValue("@p_filter", cmb_SearchType.Text)
                 .Parameters.AddWithValue("@p_search", Txt_Search.Text)
                 .Parameters.AddWithValue("@p_Stat", "Released")
 
@@ -190,7 +190,9 @@ Public Class reports
                 .Parameters.Clear()
                 .CommandText = "prc_SearchByStatusOrBranch"
                 .CommandType = CommandType.StoredProcedure
-                .Parameters.AddWithValue("@p_branch", Txt_Search.Text)
+                .Parameters.AddWithValue("@p_filter", Cmb_SearchType.Text)
+                .Parameters.AddWithValue("@p_search", Txt_Search.Text)
+                .Parameters.AddWithValue("@p_Sbranch", Txt_Search.Text)
                 .Parameters.AddWithValue("@p_Stat", "Released")
 
                 sqlUMTCAdapter.SelectCommand = command

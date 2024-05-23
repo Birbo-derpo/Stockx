@@ -1,4 +1,4 @@
-﻿Public Class Flasgscreen
+﻿Public Class Flashscreen
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 
         Panel2.Left += 10 ' Adjust the Left property instead of Width
