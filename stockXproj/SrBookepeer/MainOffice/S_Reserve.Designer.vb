@@ -24,7 +24,6 @@ Partial Class S_Reserve
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(S_Reserve))
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Btn_AvStock = New System.Windows.Forms.Button()
         Me.Btn_Reserved = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Btn_AllUnits = New System.Windows.Forms.Button()
@@ -63,28 +62,12 @@ Partial Class S_Reserve
         Me.Button1.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button1.Location = New System.Drawing.Point(29, 730)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(119, 46)
         Me.Button1.TabIndex = 56
         Me.Button1.Text = "DASHBOARD"
         Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Btn_AvStock
-        '
-        Me.Btn_AvStock.BackColor = System.Drawing.Color.Snow
-        Me.Btn_AvStock.FlatAppearance.BorderColor = System.Drawing.Color.Red
-        Me.Btn_AvStock.FlatAppearance.BorderSize = 2
-        Me.Btn_AvStock.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Btn_AvStock.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_AvStock.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Btn_AvStock.Location = New System.Drawing.Point(19, 107)
-        Me.Btn_AvStock.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Btn_AvStock.Name = "Btn_AvStock"
-        Me.Btn_AvStock.Size = New System.Drawing.Size(158, 50)
-        Me.Btn_AvStock.TabIndex = 33
-        Me.Btn_AvStock.Text = "AVAILABLE UNITS"
-        Me.Btn_AvStock.UseVisualStyleBackColor = False
         '
         'Btn_Reserved
         '
@@ -95,7 +78,7 @@ Partial Class S_Reserve
         Me.Btn_Reserved.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Reserved.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Btn_Reserved.Location = New System.Drawing.Point(19, 162)
-        Me.Btn_Reserved.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Reserved.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Reserved.Name = "Btn_Reserved"
         Me.Btn_Reserved.Size = New System.Drawing.Size(158, 50)
         Me.Btn_Reserved.TabIndex = 32
@@ -106,14 +89,13 @@ Partial Class S_Reserve
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.MistyRose
         Me.GroupBox1.Controls.Add(Me.Btn_AllUnits)
-        Me.GroupBox1.Controls.Add(Me.Btn_AvStock)
         Me.GroupBox1.Controls.Add(Me.Btn_Reserved)
         Me.GroupBox1.Controls.Add(Me.Btn_Transit)
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.GroupBox1.Location = New System.Drawing.Point(-6, 253)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Size = New System.Drawing.Size(185, 472)
         Me.GroupBox1.TabIndex = 55
         Me.GroupBox1.TabStop = False
@@ -126,8 +108,8 @@ Partial Class S_Reserve
         Me.Btn_AllUnits.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Btn_AllUnits.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_AllUnits.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Btn_AllUnits.Location = New System.Drawing.Point(19, 54)
-        Me.Btn_AllUnits.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_AllUnits.Location = New System.Drawing.Point(19, 108)
+        Me.Btn_AllUnits.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_AllUnits.Name = "Btn_AllUnits"
         Me.Btn_AllUnits.Size = New System.Drawing.Size(158, 50)
         Me.Btn_AllUnits.TabIndex = 97
@@ -143,7 +125,7 @@ Partial Class S_Reserve
         Me.Btn_Transit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Transit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Btn_Transit.Location = New System.Drawing.Point(19, 216)
-        Me.Btn_Transit.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Transit.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Transit.Name = "Btn_Transit"
         Me.Btn_Transit.Size = New System.Drawing.Size(158, 50)
         Me.Btn_Transit.TabIndex = 34
@@ -167,7 +149,7 @@ Partial Class S_Reserve
         Me.txt_MTN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txt_MTN.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_MTN.Location = New System.Drawing.Point(472, 171)
-        Me.txt_MTN.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txt_MTN.Margin = New System.Windows.Forms.Padding(2)
         Me.txt_MTN.Name = "txt_MTN"
         Me.txt_MTN.Size = New System.Drawing.Size(396, 29)
         Me.txt_MTN.TabIndex = 52
@@ -178,7 +160,7 @@ Partial Class S_Reserve
         Me.cmb_branch.FormattingEnabled = True
         Me.cmb_branch.Items.AddRange(New Object() {"Bajada", "Davao", "Digos", "Kidapawan", "Tagum", "General Santos"})
         Me.cmb_branch.Location = New System.Drawing.Point(1179, 207)
-        Me.cmb_branch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmb_branch.Margin = New System.Windows.Forms.Padding(2)
         Me.cmb_branch.Name = "cmb_branch"
         Me.cmb_branch.Size = New System.Drawing.Size(278, 26)
         Me.cmb_branch.TabIndex = 51
@@ -190,7 +172,7 @@ Partial Class S_Reserve
         Me.Btn_Add_MT.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Add_MT.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_Add_MT.Location = New System.Drawing.Point(184, 730)
-        Me.Btn_Add_MT.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Add_MT.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Add_MT.Name = "Btn_Add_MT"
         Me.Btn_Add_MT.Size = New System.Drawing.Size(119, 46)
         Me.Btn_Add_MT.TabIndex = 50
@@ -207,7 +189,7 @@ Partial Class S_Reserve
         Me.Grd_MotorcycleReserved.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grd_MotorcycleReserved.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column10, Me.Column9, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
         Me.Grd_MotorcycleReserved.Location = New System.Drawing.Point(184, 253)
-        Me.Grd_MotorcycleReserved.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Grd_MotorcycleReserved.Margin = New System.Windows.Forms.Padding(2)
         Me.Grd_MotorcycleReserved.Name = "Grd_MotorcycleReserved"
         Me.Grd_MotorcycleReserved.RowHeadersWidth = 51
         Me.Grd_MotorcycleReserved.RowTemplate.Height = 24
@@ -310,7 +292,7 @@ Partial Class S_Reserve
         Me.Btn_CancelReserve.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_CancelReserve.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_CancelReserve.Location = New System.Drawing.Point(1332, 728)
-        Me.Btn_CancelReserve.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_CancelReserve.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_CancelReserve.Name = "Btn_CancelReserve"
         Me.Btn_CancelReserve.Size = New System.Drawing.Size(119, 46)
         Me.Btn_CancelReserve.TabIndex = 47
@@ -334,7 +316,7 @@ Partial Class S_Reserve
         '
         Me.dt.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dt.Location = New System.Drawing.Point(1179, 177)
-        Me.dt.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dt.Margin = New System.Windows.Forms.Padding(2)
         Me.dt.Name = "dt"
         Me.dt.Size = New System.Drawing.Size(278, 23)
         Me.dt.TabIndex = 94
@@ -346,7 +328,7 @@ Partial Class S_Reserve
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox1.ErrorImage = Nothing
         Me.PictureBox1.Location = New System.Drawing.Point(-2, 2)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(182, 155)
         Me.PictureBox1.TabIndex = 95
@@ -357,7 +339,7 @@ Partial Class S_Reserve
         Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox2.Location = New System.Drawing.Point(182, 2)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(1334, 154)
         Me.PictureBox2.TabIndex = 96
@@ -382,7 +364,7 @@ Partial Class S_Reserve
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Btn_CancelReserve)
         Me.Controls.Add(Me.Grd_MotorcycleReserved)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "S_Reserve"
         Me.Text = "Form1"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -396,7 +378,6 @@ Partial Class S_Reserve
     End Sub
 
     Friend WithEvents Button1 As Button
-    Friend WithEvents Btn_AvStock As Button
     Friend WithEvents Btn_Reserved As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Btn_Transit As Button

@@ -104,7 +104,7 @@ Public Class S_Transit
         Me.Close()
     End Sub
 
-    Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs) Handles Btn_AvStock.Click
+    Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs)
         S_MainOffice.Show()
         Me.Close()
     End Sub
@@ -212,4 +212,10 @@ Public Class S_Transit
         S_dashboard.Show()
         Me.Close()
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        S_MainOffice.Show()
+        Me.Close()
+    End Sub
+
 End Class

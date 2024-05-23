@@ -208,8 +208,6 @@ Public Class S_MainOffice
         Me.Close()
     End Sub
 
-
-
     Private Sub Btn_Transit_Click(sender As Object, e As EventArgs) Handles Btn_Transit.Click
         S_Transit.Show()
         Me.Close()
@@ -218,7 +216,6 @@ Public Class S_MainOffice
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         S_dashboard.Show()
         Me.Close()
-
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
@@ -284,5 +281,9 @@ Public Class S_MainOffice
         'Else
         '    prc_search()
         'End If
+    End Sub
+
+    Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class

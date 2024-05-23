@@ -214,9 +214,6 @@ Public Class AvailableStocks
             .dt.Value = Format(Convert.ToDateTime(Grd_Motorcycle.CurrentRow.Cells(1).Value), "yyyy,MMM,dd")
             .ShowDialog()
 
-
-
-
         End With
     End Sub
 
