@@ -33,7 +33,7 @@ Namespace My
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
 
-            Me.MainForm = Global.stockXproj.Flasgscreen
+            Me.MainForm = Global.stockXproj.Flashscreen
         End Sub
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _

@@ -64,7 +64,6 @@ Public Class DashBoard
     Private Sub Btn_MainOffice_Click(sender As Object, e As EventArgs) Handles Btn_MainOffice.Click
         MainBranchInventory.Show()
         Me.Hide()
-
     End Sub
 
     Private Sub Btn_Branches_Click(sender As Object, e As EventArgs) Handles Btn_Branches.Click
@@ -86,7 +85,6 @@ Public Class DashBoard
 
     Private Sub btnchange_Click(sender As Object, e As EventArgs) Handles btnchange.Click
         ChangePasswordEmployee.ShowDialog()
-
     End Sub
     Private Sub prcDisplayCurrentUser()
         Try

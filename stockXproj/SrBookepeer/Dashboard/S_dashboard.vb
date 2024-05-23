@@ -73,7 +73,6 @@ Public Class S_dashboard
 
     Private Sub Btnchange_Click(sender As Object, e As EventArgs) Handles btnchange.Click
         ChangePasswordEmployee.ShowDialog()
-        Me.Hide()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
@@ -85,7 +84,6 @@ Public Class S_dashboard
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         CreateEmployee.ShowDialog()
-        Me.Hide()
     End Sub
 
 
@@ -119,9 +117,6 @@ Public Class S_dashboard
                 End If
             End With
 
-
-
-
             sqlUMTCAdapter.Dispose()
             DataUMTC.Dispose()
 
@@ -141,12 +136,12 @@ Public Class S_dashboard
     End Sub
 
     Private Sub Btn_MainOffice_Click(sender As Object, e As EventArgs) Handles Btn_MainOffice.Click
-        S_MainOffice.ShowDialog()
+        S_MainOffice.Show()
         Me.Close()
     End Sub
 
     Private Sub Btn_Branches_Click(sender As Object, e As EventArgs) Handles Btn_Branches.Click
-        S_AllUnit.ShowDialog()
+        S_AllUnit.Show()
         Me.Close()
     End Sub
 End Class

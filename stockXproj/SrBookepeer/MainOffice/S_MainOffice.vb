@@ -267,23 +267,13 @@ Public Class S_MainOffice
     End Sub
 
     Private Sub Btn_ReservationPage_Click(sender As Object, e As EventArgs) Handles Btn_ReservationPage.Click
-        S_confirmReserve.ShowDialog()
+        ConfirmReserve.ShowDialog()
         If Txt_Search.Text = "" Then
             PrcDisplayUnits()
         Else
             prc_search()
         End If
 
-        'in case when S_confirmReserve page is not needed
-        'ConfirmReserve.ShowDialog()
-        'If Txt_Search.Text = "" Then
-        '    PrcDisplayUnits()
-        'Else
-        '    prc_search()
-        'End If
     End Sub
 
-    Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs)
-
-    End Sub
 End Class
