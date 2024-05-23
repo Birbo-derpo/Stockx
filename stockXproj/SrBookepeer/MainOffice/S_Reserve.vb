@@ -123,13 +123,13 @@ Public Class S_Reserve
         PrcDisplayReservedUnits()
     End Sub
 
-    Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs) Handles Btn_AvStock.Click
-        MainBranchInventory.Show()
+    Private Sub Btn_AvStock_Click(sender As Object, e As EventArgs)
+        S_MainOffice.Show()
         Me.Close()
     End Sub
 
     Private Sub Btn_Transit_Click(sender As Object, e As EventArgs) Handles Btn_Transit.Click
-        TRANSIT.Show()
+        S_Transit.Show()
         Me.Close()
     End Sub
     'buttons end
@@ -179,10 +179,6 @@ Public Class S_Reserve
         Me.Close()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Btn_AvStock.Click
-        AvailableStocks.Show()
-        Me.Close()
-    End Sub
 
     Private Sub Btn_CancelReserve_Click(sender As Object, e As EventArgs) Handles Btn_CancelReserve.Click
         'sends to delivery for transit
@@ -235,4 +231,10 @@ Public Class S_Reserve
 
         PrcDisplayReservedUnits()
     End Sub
+
+    Private Sub Btn_AllUnits_Click(sender As Object, e As EventArgs) Handles Btn_AllUnits.Click
+        S_MainOffice.Show()
+        Me.Close()
+    End Sub
+
 End Class

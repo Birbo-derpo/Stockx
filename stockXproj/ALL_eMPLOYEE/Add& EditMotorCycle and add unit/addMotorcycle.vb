@@ -102,89 +102,94 @@ Public Class addMotorcycle
 
     End Sub
     Private Sub Btn_Add_Click(sender As Object, e As EventArgs) Handles Btn_Add.Click
-        Try
-            If action = "Insert" And fncCheckEngineNo(txtEngineNumber.Text) = False Then
+        If Cmb_Model.Text <> "" And Cmb_Color.Text <> "" And txtPrice.Text <> "" And txtEngineNumber.Text <> "" And txtFrameNumber.Text <> "" And txtInvoiceNumber.Text <> "" Then
+            Try
+                If action = "Insert" And fncCheckEngineNo(txtEngineNumber.Text) = False Then
 
-                With command
-                    .Parameters.Clear()
-                    .CommandText = "prc_AddMotorcycle"
-                    .CommandType = CommandType.StoredProcedure
-                    .Parameters.AddWithValue("@p_invoice", txtInvoiceNumber.Text)
-                    .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
-                    .Parameters.AddWithValue("@p_model", Cmb_Model.Text)
-                    .Parameters.AddWithValue("@p_color", Cmb_Color.Text)
-                    .Parameters.AddWithValue("@p_price", txtPrice.Text)
-                    .Parameters.AddWithValue("@p_engine", txtEngineNumber.Text)
-                    .Parameters.AddWithValue("@p_frame", txtFrameNumber.Text)
-                    .ExecuteNonQuery()
-
-
-                End With
-                With command
-                    .Parameters.Clear()
-                    .CommandText = "prc_Record"
-                    .CommandType = CommandType.StoredProcedure
-                    .Parameters.AddWithValue("@p_Action", "Add Unit")
-                    .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd"))
-                    .Parameters.AddWithValue("@p_Unit", txtEngineNumber.Text)
-                    .Parameters.AddWithValue("@p_branch", "Main")
-                    .Parameters.AddWithValue("@p_FromState", "none")
-                    .Parameters.AddWithValue("@p_ToState", "Available")
-                    .Parameters.AddWithValue("@p_Customer", "none")
-                    .Parameters.AddWithValue("@p_Employee", Username)
-                    .ExecuteNonQuery()
-                End With
-                MessageBox.Show("Record Successfully Save", "Saving Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            ElseIf action = "Edit" Then
-
-                With command
-                    .Parameters.Clear()
-                    .CommandText = "prc_UpdateMotorcycleByEngineNumber"
-                    .CommandType = CommandType.StoredProcedure
-                    .Parameters.AddWithValue("@p_invoice", txtInvoiceNumber.Text)
-                    .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
-                    .Parameters.AddWithValue("@p_model", Cmb_Model.Text)
-                    .Parameters.AddWithValue("@p_color", Cmb_Color.Text)
-                    .Parameters.AddWithValue("@p_price", txtPrice.Text)
-                    .Parameters.AddWithValue("@p_engine", txtEngineNumber.Text)
-                    .Parameters.AddWithValue("@p_frame", txtFrameNumber.Text)
-                    .ExecuteNonQuery()
-
-                    Dim result As DialogResult = MessageBox.Show("Are you sure you want to add Motorcycle?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_AddMotorcycle"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_invoice", txtInvoiceNumber.Text)
+                        .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
+                        .Parameters.AddWithValue("@p_model", Cmb_Model.Text)
+                        .Parameters.AddWithValue("@p_color", Cmb_Color.Text)
+                        .Parameters.AddWithValue("@p_price", txtPrice.Text)
+                        .Parameters.AddWithValue("@p_engine", txtEngineNumber.Text)
+                        .Parameters.AddWithValue("@p_frame", txtFrameNumber.Text)
+                        .ExecuteNonQuery()
 
 
-                    If result = DialogResult.Yes Then
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_Record"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_Action", "Add Unit")
+                        .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd"))
+                        .Parameters.AddWithValue("@p_Unit", txtEngineNumber.Text)
+                        .Parameters.AddWithValue("@p_branch", "Main")
+                        .Parameters.AddWithValue("@p_FromState", "none")
+                        .Parameters.AddWithValue("@p_ToState", "Available")
+                        .Parameters.AddWithValue("@p_Customer", "none")
+                        .Parameters.AddWithValue("@p_Employee", Username)
+                        .ExecuteNonQuery()
+                    End With
+                    MessageBox.Show("Record Successfully Save", "Saving Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                ElseIf action = "Edit" Then
 
-                        MainBranchInventory.Show()
-                        Me.Close()
-                    Else
-                        Me.ShowDialog()
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_UpdateMotorcycleByEngineNumber"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_invoice", txtInvoiceNumber.Text)
+                        .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
+                        .Parameters.AddWithValue("@p_model", Cmb_Model.Text)
+                        .Parameters.AddWithValue("@p_color", Cmb_Color.Text)
+                        .Parameters.AddWithValue("@p_price", txtPrice.Text)
+                        .Parameters.AddWithValue("@p_engine", txtEngineNumber.Text)
+                        .Parameters.AddWithValue("@p_frame", txtFrameNumber.Text)
+                        .ExecuteNonQuery()
 
-                    End If
-                End With
-                With command
-                    .Parameters.Clear()
-                    .CommandText = "prc_Record"
-                    .CommandType = CommandType.StoredProcedure
-                    .Parameters.AddWithValue("@p_Action", "Edit Unit")
-                    .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd"))
-                    .Parameters.AddWithValue("@p_Unit", txtEngineNumber.Text)
-                    .Parameters.AddWithValue("@p_branch", "Main")
-                    .Parameters.AddWithValue("@p_FromState", "none")
-                    .Parameters.AddWithValue("@p_ToState", "Available")
-                    .Parameters.AddWithValue("@p_Customer", "none")
-                    .Parameters.AddWithValue("@p_Employee", Username)
-                    .ExecuteNonQuery()
-                End With
-                MessageBox.Show("Record Successfully Save", "Saving Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Else
-                MessageBox.Show("Engine/Frame number already existed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            End If
+                        Dim result As DialogResult = MessageBox.Show("Are you sure you want to add Motorcycle?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
 
-        Catch ex As Exception
-            MessageBox.Show("" & ex.Message)
-        End Try
+                        If result = DialogResult.Yes Then
+
+                            MainBranchInventory.Show()
+                            Me.Close()
+                        Else
+                            Me.ShowDialog()
+
+                        End If
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_Record"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_Action", "Edit Unit")
+                        .Parameters.AddWithValue("@p_d", Format(dt.Value, "yyyy-MM-dd"))
+                        .Parameters.AddWithValue("@p_Unit", txtEngineNumber.Text)
+                        .Parameters.AddWithValue("@p_branch", "Main")
+                        .Parameters.AddWithValue("@p_FromState", "none")
+                        .Parameters.AddWithValue("@p_ToState", "Available")
+                        .Parameters.AddWithValue("@p_Customer", "none")
+                        .Parameters.AddWithValue("@p_Employee", Username)
+                        .ExecuteNonQuery()
+                    End With
+                    MessageBox.Show("Record Successfully Save", "Saving Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Else
+                    MessageBox.Show("Engine/Frame number already existed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End If
+
+
+            Catch ex As Exception
+                MessageBox.Show("" & ex.Message)
+            End Try
+        Else
+            MessageBox.Show("credentials missing", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+
     End Sub
 
     Private Sub Button_Clear_Click(sender As Object, e As EventArgs) Handles Btn_Clear.Click

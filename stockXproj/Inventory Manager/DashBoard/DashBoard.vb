@@ -80,7 +80,7 @@ Public Class DashBoard
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         Login_stat = False
         Username = ""
-        HondaHomePage.Show()
+        Login.Show()
         Me.Hide()
     End Sub
 
@@ -147,15 +147,4 @@ Public Class DashBoard
         End If
     End Sub
 
-    Private Sub Lbl_Bajada_Click(sender As Object, e As EventArgs) Handles Lbl_Bajada.Click
-
-    End Sub
-
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
-
-    End Sub
-
-    Private Sub lblUser_Click(sender As Object, e As EventArgs) Handles lblUser.Click
-
-    End Sub
 End Class

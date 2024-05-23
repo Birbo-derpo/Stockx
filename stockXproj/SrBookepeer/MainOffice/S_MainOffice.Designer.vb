@@ -26,7 +26,6 @@ Partial Class S_MainOffice
         Me.dt = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Btn_AvStock = New System.Windows.Forms.Button()
         Me.Btn_Reserved = New System.Windows.Forms.Button()
         Me.Btn_Transit = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -62,7 +61,7 @@ Partial Class S_MainOffice
         '
         Me.dt.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dt.Location = New System.Drawing.Point(1184, 178)
-        Me.dt.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dt.Margin = New System.Windows.Forms.Padding(2)
         Me.dt.Name = "dt"
         Me.dt.Size = New System.Drawing.Size(270, 23)
         Me.dt.TabIndex = 83
@@ -71,14 +70,13 @@ Partial Class S_MainOffice
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.MistyRose
         Me.GroupBox1.Controls.Add(Me.Button2)
-        Me.GroupBox1.Controls.Add(Me.Btn_AvStock)
         Me.GroupBox1.Controls.Add(Me.Btn_Reserved)
         Me.GroupBox1.Controls.Add(Me.Btn_Transit)
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.GroupBox1.Location = New System.Drawing.Point(-2, 254)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Size = New System.Drawing.Size(185, 472)
         Me.GroupBox1.TabIndex = 68
         Me.GroupBox1.TabStop = False
@@ -89,29 +87,13 @@ Partial Class S_MainOffice
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button2.Location = New System.Drawing.Point(14, 89)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button2.Location = New System.Drawing.Point(13, 143)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(158, 50)
         Me.Button2.TabIndex = 98
         Me.Button2.Text = "ALL UNITS"
         Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Btn_AvStock
-        '
-        Me.Btn_AvStock.BackColor = System.Drawing.Color.Snow
-        Me.Btn_AvStock.FlatAppearance.BorderColor = System.Drawing.Color.Red
-        Me.Btn_AvStock.FlatAppearance.BorderSize = 3
-        Me.Btn_AvStock.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Btn_AvStock.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_AvStock.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Btn_AvStock.Location = New System.Drawing.Point(14, 143)
-        Me.Btn_AvStock.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Btn_AvStock.Name = "Btn_AvStock"
-        Me.Btn_AvStock.Size = New System.Drawing.Size(158, 50)
-        Me.Btn_AvStock.TabIndex = 33
-        Me.Btn_AvStock.Text = "AVAILABLE STOCKS"
-        Me.Btn_AvStock.UseVisualStyleBackColor = False
         '
         'Btn_Reserved
         '
@@ -122,7 +104,7 @@ Partial Class S_MainOffice
         Me.Btn_Reserved.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Reserved.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Btn_Reserved.Location = New System.Drawing.Point(14, 197)
-        Me.Btn_Reserved.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Reserved.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Reserved.Name = "Btn_Reserved"
         Me.Btn_Reserved.Size = New System.Drawing.Size(158, 50)
         Me.Btn_Reserved.TabIndex = 32
@@ -138,7 +120,7 @@ Partial Class S_MainOffice
         Me.Btn_Transit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Transit.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Btn_Transit.Location = New System.Drawing.Point(14, 252)
-        Me.Btn_Transit.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Transit.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Transit.Name = "Btn_Transit"
         Me.Btn_Transit.Size = New System.Drawing.Size(158, 50)
         Me.Btn_Transit.TabIndex = 34
@@ -151,7 +133,7 @@ Partial Class S_MainOffice
         Me.Button1.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button1.Location = New System.Drawing.Point(29, 730)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(119, 46)
         Me.Button1.TabIndex = 35
@@ -174,7 +156,7 @@ Partial Class S_MainOffice
         Me.Txt_Search.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Txt_Search.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_Search.Location = New System.Drawing.Point(184, 178)
-        Me.Txt_Search.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Txt_Search.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_Search.Name = "Txt_Search"
         Me.Txt_Search.Size = New System.Drawing.Size(396, 26)
         Me.Txt_Search.TabIndex = 61
@@ -280,7 +262,7 @@ Partial Class S_MainOffice
         Me.Btn_Search.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Search.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_Search.Location = New System.Drawing.Point(584, 173)
-        Me.Btn_Search.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_Search.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Search.Name = "Btn_Search"
         Me.Btn_Search.Size = New System.Drawing.Size(93, 34)
         Me.Btn_Search.TabIndex = 62
@@ -294,7 +276,7 @@ Partial Class S_MainOffice
         Me.cmbSearchType.FormattingEnabled = True
         Me.cmbSearchType.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
         Me.cmbSearchType.Location = New System.Drawing.Point(184, 214)
-        Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(2)
         Me.cmbSearchType.Name = "cmbSearchType"
         Me.cmbSearchType.Size = New System.Drawing.Size(283, 24)
         Me.cmbSearchType.TabIndex = 60
@@ -304,7 +286,7 @@ Partial Class S_MainOffice
         Me.Chk_Auto.AutoSize = True
         Me.Chk_Auto.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Chk_Auto.Location = New System.Drawing.Point(478, 214)
-        Me.Chk_Auto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Chk_Auto.Margin = New System.Windows.Forms.Padding(2)
         Me.Chk_Auto.Name = "Chk_Auto"
         Me.Chk_Auto.Size = New System.Drawing.Size(132, 21)
         Me.Chk_Auto.TabIndex = 63
@@ -318,7 +300,7 @@ Partial Class S_MainOffice
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox1.ErrorImage = Nothing
         Me.PictureBox1.Location = New System.Drawing.Point(-2, 2)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(182, 155)
         Me.PictureBox1.TabIndex = 96
@@ -329,7 +311,7 @@ Partial Class S_MainOffice
         Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox2.Location = New System.Drawing.Point(182, 2)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(1334, 154)
         Me.PictureBox2.TabIndex = 97
@@ -341,7 +323,7 @@ Partial Class S_MainOffice
         Me.btnEdit.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnEdit.Location = New System.Drawing.Point(306, 730)
-        Me.btnEdit.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnEdit.Margin = New System.Windows.Forms.Padding(2)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Size = New System.Drawing.Size(119, 46)
         Me.btnEdit.TabIndex = 100
@@ -354,7 +336,7 @@ Partial Class S_MainOffice
         Me.btndelete.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btndelete.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btndelete.Location = New System.Drawing.Point(429, 730)
-        Me.btndelete.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btndelete.Margin = New System.Windows.Forms.Padding(2)
         Me.btndelete.Name = "btndelete"
         Me.btndelete.Size = New System.Drawing.Size(119, 46)
         Me.btndelete.TabIndex = 99
@@ -367,7 +349,7 @@ Partial Class S_MainOffice
         Me.btnAdd.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnAdd.Location = New System.Drawing.Point(182, 730)
-        Me.btnAdd.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnAdd.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(119, 46)
         Me.btnAdd.TabIndex = 98
@@ -380,7 +362,7 @@ Partial Class S_MainOffice
         Me.Btn_ReservationPage.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_ReservationPage.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_ReservationPage.Location = New System.Drawing.Point(1334, 730)
-        Me.Btn_ReservationPage.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_ReservationPage.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_ReservationPage.Name = "Btn_ReservationPage"
         Me.Btn_ReservationPage.Size = New System.Drawing.Size(119, 46)
         Me.Btn_ReservationPage.TabIndex = 101
@@ -409,7 +391,7 @@ Partial Class S_MainOffice
         Me.Controls.Add(Me.Btn_Search)
         Me.Controls.Add(Me.cmbSearchType)
         Me.Controls.Add(Me.Chk_Auto)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "S_MainOffice"
         Me.Text = "S_MainOffice"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -424,7 +406,6 @@ Partial Class S_MainOffice
 
     Friend WithEvents dt As DateTimePicker
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Btn_AvStock As Button
     Friend WithEvents Btn_Reserved As Button
     Friend WithEvents Btn_Transit As Button
     Friend WithEvents Button1 As Button

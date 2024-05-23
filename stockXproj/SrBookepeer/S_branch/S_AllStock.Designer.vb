@@ -62,9 +62,10 @@ Partial Class S_AllStock
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(1445, 258)
+        Me.Label1.Location = New System.Drawing.Point(1084, 210)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(121, 27)
+        Me.Label1.Size = New System.Drawing.Size(97, 22)
         Me.Label1.TabIndex = 79
         Me.Label1.Text = "BRANCH:"
         '
@@ -74,10 +75,10 @@ Partial Class S_AllStock
         Me.cmb_branch.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmb_branch.FormattingEnabled = True
         Me.cmb_branch.Items.AddRange(New Object() {"Bajada", "Davao", "Digos", "Kidapawan", "Tagum", "General Santos"})
-        Me.cmb_branch.Location = New System.Drawing.Point(1572, 255)
-        Me.cmb_branch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.cmb_branch.Location = New System.Drawing.Point(1179, 207)
+        Me.cmb_branch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cmb_branch.Name = "cmb_branch"
-        Me.cmb_branch.Size = New System.Drawing.Size(361, 31)
+        Me.cmb_branch.Size = New System.Drawing.Size(272, 26)
         Me.cmb_branch.TabIndex = 78
         '
         'Btn_Dashboard
@@ -85,10 +86,10 @@ Partial Class S_AllStock
         Me.Btn_Dashboard.BackColor = System.Drawing.Color.Firebrick
         Me.Btn_Dashboard.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Dashboard.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_Dashboard.Location = New System.Drawing.Point(39, 898)
-        Me.Btn_Dashboard.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_Dashboard.Location = New System.Drawing.Point(29, 730)
+        Me.Btn_Dashboard.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Btn_Dashboard.Name = "Btn_Dashboard"
-        Me.Btn_Dashboard.Size = New System.Drawing.Size(159, 57)
+        Me.Btn_Dashboard.Size = New System.Drawing.Size(119, 46)
         Me.Btn_Dashboard.TabIndex = 77
         Me.Btn_Dashboard.Text = "DASHBOARD"
         Me.Btn_Dashboard.UseVisualStyleBackColor = False
@@ -98,10 +99,10 @@ Partial Class S_AllStock
         Me.Btn_AddCust.BackColor = System.Drawing.Color.Firebrick
         Me.Btn_AddCust.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_AddCust.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_AddCust.Location = New System.Drawing.Point(243, 898)
-        Me.Btn_AddCust.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_AddCust.Location = New System.Drawing.Point(182, 730)
+        Me.Btn_AddCust.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Btn_AddCust.Name = "Btn_AddCust"
-        Me.Btn_AddCust.Size = New System.Drawing.Size(159, 57)
+        Me.Btn_AddCust.Size = New System.Drawing.Size(119, 46)
         Me.Btn_AddCust.TabIndex = 72
         Me.Btn_AddCust.Text = "ADD CUSTOMER"
         Me.Btn_AddCust.UseVisualStyleBackColor = False
@@ -110,12 +111,12 @@ Partial Class S_AllStock
         '
         Me.Grd_Stock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grd_Stock.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column7, Me.Column1, Me.Column2, Me.Column3, Me.Column6, Me.Column9, Me.Column4, Me.Column5, Me.Column8})
-        Me.Grd_Stock.Location = New System.Drawing.Point(245, 313)
-        Me.Grd_Stock.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Grd_Stock.Location = New System.Drawing.Point(184, 254)
+        Me.Grd_Stock.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Grd_Stock.Name = "Grd_Stock"
         Me.Grd_Stock.RowHeadersWidth = 51
         Me.Grd_Stock.RowTemplate.Height = 24
-        Me.Grd_Stock.Size = New System.Drawing.Size(1713, 581)
+        Me.Grd_Stock.Size = New System.Drawing.Size(1285, 472)
         Me.Grd_Stock.TabIndex = 71
         '
         'Column7
@@ -198,10 +199,10 @@ Partial Class S_AllStock
         Me.Btn_AllStock.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Btn_AllStock.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_AllStock.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Btn_AllStock.Location = New System.Drawing.Point(19, 176)
-        Me.Btn_AllStock.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_AllStock.Location = New System.Drawing.Point(14, 143)
+        Me.Btn_AllStock.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Btn_AllStock.Name = "Btn_AllStock"
-        Me.Btn_AllStock.Size = New System.Drawing.Size(211, 62)
+        Me.Btn_AllStock.Size = New System.Drawing.Size(158, 50)
         Me.Btn_AllStock.TabIndex = 26
         Me.Btn_AllStock.Text = "AVAILABLE UNITS"
         Me.Btn_AllStock.UseVisualStyleBackColor = False
@@ -214,10 +215,10 @@ Partial Class S_AllStock
         Me.Btn_Released.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Btn_Released.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Released.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Btn_Released.Location = New System.Drawing.Point(19, 242)
-        Me.Btn_Released.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_Released.Location = New System.Drawing.Point(14, 197)
+        Me.Btn_Released.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Btn_Released.Name = "Btn_Released"
-        Me.Btn_Released.Size = New System.Drawing.Size(211, 62)
+        Me.Btn_Released.Size = New System.Drawing.Size(158, 50)
         Me.Btn_Released.TabIndex = 23
         Me.Btn_Released.Text = "RELEASED UNITS"
         Me.Btn_Released.UseVisualStyleBackColor = False
@@ -230,10 +231,10 @@ Partial Class S_AllStock
         Me.Btn_Deposited.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Btn_Deposited.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Deposited.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Btn_Deposited.Location = New System.Drawing.Point(19, 310)
-        Me.Btn_Deposited.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_Deposited.Location = New System.Drawing.Point(14, 252)
+        Me.Btn_Deposited.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Btn_Deposited.Name = "Btn_Deposited"
-        Me.Btn_Deposited.Size = New System.Drawing.Size(211, 62)
+        Me.Btn_Deposited.Size = New System.Drawing.Size(158, 50)
         Me.Btn_Deposited.TabIndex = 25
         Me.Btn_Deposited.Text = "DEPOSIT UNITS"
         Me.Btn_Deposited.UseVisualStyleBackColor = False
@@ -246,10 +247,10 @@ Partial Class S_AllStock
         Me.Btn_Repossess.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Btn_Repossess.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Repossess.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Btn_Repossess.Location = New System.Drawing.Point(19, 377)
-        Me.Btn_Repossess.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_Repossess.Location = New System.Drawing.Point(14, 306)
+        Me.Btn_Repossess.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Btn_Repossess.Name = "Btn_Repossess"
-        Me.Btn_Repossess.Size = New System.Drawing.Size(211, 62)
+        Me.Btn_Repossess.Size = New System.Drawing.Size(158, 50)
         Me.Btn_Repossess.TabIndex = 24
         Me.Btn_Repossess.TabStop = False
         Me.Btn_Repossess.Text = "REPOSSES UNITS"
@@ -258,11 +259,11 @@ Partial Class S_AllStock
         'Chk_Auto
         '
         Me.Chk_Auto.AutoSize = True
-        Me.Chk_Auto.Font = New System.Drawing.Font("Bodoni MT", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Chk_Auto.Location = New System.Drawing.Point(637, 270)
-        Me.Chk_Auto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Chk_Auto.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Chk_Auto.Location = New System.Drawing.Point(478, 219)
+        Me.Chk_Auto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Chk_Auto.Name = "Chk_Auto"
-        Me.Chk_Auto.Size = New System.Drawing.Size(135, 25)
+        Me.Chk_Auto.Size = New System.Drawing.Size(132, 21)
         Me.Chk_Auto.TabIndex = 76
         Me.Chk_Auto.Text = "Auto Complete"
         Me.Chk_Auto.UseVisualStyleBackColor = True
@@ -272,10 +273,10 @@ Partial Class S_AllStock
         Me.Btn_Search.BackColor = System.Drawing.Color.Firebrick
         Me.Btn_Search.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Search.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_Search.Location = New System.Drawing.Point(778, 213)
-        Me.Btn_Search.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_Search.Location = New System.Drawing.Point(584, 173)
+        Me.Btn_Search.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Btn_Search.Name = "Btn_Search"
-        Me.Btn_Search.Size = New System.Drawing.Size(116, 46)
+        Me.Btn_Search.Size = New System.Drawing.Size(87, 37)
         Me.Btn_Search.TabIndex = 75
         Me.Btn_Search.Text = "SEARCH"
         Me.Btn_Search.UseVisualStyleBackColor = False
@@ -284,10 +285,10 @@ Partial Class S_AllStock
         '
         Me.Txt_Search.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Txt_Search.Font = New System.Drawing.Font("Arial", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txt_Search.Location = New System.Drawing.Point(245, 219)
-        Me.Txt_Search.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Txt_Search.Location = New System.Drawing.Point(184, 178)
+        Me.Txt_Search.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Txt_Search.Name = "Txt_Search"
-        Me.Txt_Search.Size = New System.Drawing.Size(527, 34)
+        Me.Txt_Search.Size = New System.Drawing.Size(396, 29)
         Me.Txt_Search.TabIndex = 74
         '
         'cmbSearchType
@@ -296,10 +297,10 @@ Partial Class S_AllStock
         Me.cmbSearchType.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbSearchType.FormattingEnabled = True
         Me.cmbSearchType.Items.AddRange(New Object() {"Model", "Invoice", "Date", "Color", "Price", "Engine Number", "Frame Number"})
-        Me.cmbSearchType.Location = New System.Drawing.Point(245, 263)
-        Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.cmbSearchType.Location = New System.Drawing.Point(184, 214)
+        Me.cmbSearchType.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cmbSearchType.Name = "cmbSearchType"
-        Me.cmbSearchType.Size = New System.Drawing.Size(376, 31)
+        Me.cmbSearchType.Size = New System.Drawing.Size(283, 26)
         Me.cmbSearchType.TabIndex = 73
         '
         'Btn_AllUnits
@@ -310,10 +311,10 @@ Partial Class S_AllStock
         Me.Btn_AllUnits.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Btn_AllUnits.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_AllUnits.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Btn_AllUnits.Location = New System.Drawing.Point(19, 110)
-        Me.Btn_AllUnits.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_AllUnits.Location = New System.Drawing.Point(14, 89)
+        Me.Btn_AllUnits.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Btn_AllUnits.Name = "Btn_AllUnits"
-        Me.Btn_AllUnits.Size = New System.Drawing.Size(211, 62)
+        Me.Btn_AllUnits.Size = New System.Drawing.Size(158, 50)
         Me.Btn_AllUnits.TabIndex = 33
         Me.Btn_AllUnits.Text = "ALL UNITS"
         Me.Btn_AllUnits.UseVisualStyleBackColor = False
@@ -327,20 +328,21 @@ Partial Class S_AllStock
         Me.GroupBox1.Controls.Add(Me.Btn_Deposited)
         Me.GroupBox1.Controls.Add(Me.Btn_Repossess)
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.GroupBox1.Location = New System.Drawing.Point(-8, 313)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox1.Location = New System.Drawing.Point(-6, 254)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GroupBox1.Size = New System.Drawing.Size(247, 581)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(185, 472)
         Me.GroupBox1.TabIndex = 80
         Me.GroupBox1.TabStop = False
         '
         'Lbl_Branch
         '
         Me.Lbl_Branch.AutoSize = True
-        Me.Lbl_Branch.Location = New System.Drawing.Point(-5, 26)
+        Me.Lbl_Branch.Location = New System.Drawing.Point(-4, 21)
+        Me.Lbl_Branch.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Lbl_Branch.Name = "Lbl_Branch"
-        Me.Lbl_Branch.Size = New System.Drawing.Size(75, 16)
+        Me.Lbl_Branch.Size = New System.Drawing.Size(62, 13)
         Me.Lbl_Branch.TabIndex = 70
         Me.Lbl_Branch.Text = "X BRANCH"
         '
@@ -350,10 +352,10 @@ Partial Class S_AllStock
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox1.ErrorImage = Nothing
-        Me.PictureBox1.Location = New System.Drawing.Point(-3, 2)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox1.Location = New System.Drawing.Point(-2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(247, 190)
+        Me.PictureBox1.Size = New System.Drawing.Size(186, 155)
         Me.PictureBox1.TabIndex = 81
         Me.PictureBox1.TabStop = False
         '
@@ -361,18 +363,20 @@ Partial Class S_AllStock
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Arial", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(273, 89)
+        Me.Label3.Location = New System.Drawing.Point(205, 72)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(0, 44)
+        Me.Label3.Size = New System.Drawing.Size(0, 35)
         Me.Label3.TabIndex = 83
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Book Antiqua", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(9, 216)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(7, 176)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(230, 40)
+        Me.Label2.Size = New System.Drawing.Size(191, 31)
         Me.Label2.TabIndex = 82
         Me.Label2.Text = "ALL STOCKS"
         '
@@ -380,19 +384,19 @@ Partial Class S_AllStock
         '
         Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(243, 2)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox2.Location = New System.Drawing.Point(182, 2)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(1788, 190)
+        Me.PictureBox2.Size = New System.Drawing.Size(1341, 154)
         Me.PictureBox2.TabIndex = 84
         Me.PictureBox2.TabStop = False
         '
         'S_AllStock
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Snow
-        Me.ClientSize = New System.Drawing.Size(1924, 1055)
+        Me.ClientSize = New System.Drawing.Size(1443, 857)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -408,7 +412,7 @@ Partial Class S_AllStock
         Me.Controls.Add(Me.cmbSearchType)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Lbl_Branch)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "S_AllStock"
         Me.Text = "Form1"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

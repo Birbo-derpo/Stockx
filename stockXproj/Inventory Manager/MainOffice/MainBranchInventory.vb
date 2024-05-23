@@ -157,8 +157,6 @@ Public Class MainBranchInventory
             .ShowDialog()
 
         End With
-
-
     End Sub
     Private Sub Btndelete_Click(sender As Object, e As EventArgs) Handles btndelete.Click
         Try
@@ -265,5 +263,6 @@ Public Class MainBranchInventory
         AvailableStocks.Show()
         Me.Close()
     End Sub
+
     'end form click
 End Class
