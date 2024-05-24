@@ -2,8 +2,13 @@
 
 Public Class S_AllUnit
     Private Sub S_AllUnit_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CheckDatabaseConnection()
-        PrcDisplayAllStock()
+        If Login_stat <> True Then
+            Login.Show()
+            Me.Close()
+        Else
+            CheckDatabaseConnection()
+            PrcDisplayAllStock()
+        End If
     End Sub
     Private Sub PrcDisplayAllStock()
         Try
@@ -37,7 +42,6 @@ Public Class S_AllUnit
                             Grd_Stock.Rows(row).Cells(6).Value = DataUMTC.Rows(row).Item("EngineNum").ToString
                             Grd_Stock.Rows(row).Cells(7).Value = DataUMTC.Rows(row).Item("Framenum").ToString
                             Grd_Stock.Rows(row).Cells(8).Value = DataUMTC.Rows(row).Item("Stat").ToString
-
                             row = row + 1
                         End If
                     End While
@@ -214,9 +218,6 @@ Public Class S_AllUnit
         End If
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-
-    End Sub
 
     Private Sub Btn_Dashboard_Click(sender As Object, e As EventArgs) Handles Btn_Dashboard.Click
         S_dashboard.Show()

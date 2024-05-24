@@ -151,7 +151,7 @@ Public Class addMotorcycle
                         .Parameters.AddWithValue("@p_frame", txtFrameNumber.Text)
                         .ExecuteNonQuery()
 
-                        Dim result As DialogResult = MessageBox.Show("Are you sure you want to add Motorcycle?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                        Dim result As DialogResult = MessageBox.Show("Are you sure you want to edit Motorcycle?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
 
                         If result = DialogResult.Yes Then
@@ -212,7 +212,8 @@ Public Class addMotorcycle
         txtPrice.Clear()
         Cmb_Color.SelectedIndex = -1
         Cmb_Model.SelectedIndex = -1
-
+        DisplayModel()
+        DisplayColor()
 
     End Sub
 
@@ -259,10 +260,6 @@ Public Class addMotorcycle
                 selectedModel = Cmb_Model.SelectedItem.ToString()
                 DisplayColor()
             End If
-
-
-
-
 
 
     End Sub

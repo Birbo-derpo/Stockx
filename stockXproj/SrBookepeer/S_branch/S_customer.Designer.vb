@@ -58,10 +58,10 @@ Partial Class S_customer
         Me.Btn_Dashboard.BackColor = System.Drawing.Color.Firebrick
         Me.Btn_Dashboard.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Dashboard.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_Dashboard.Location = New System.Drawing.Point(28, 744)
-        Me.Btn_Dashboard.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_Dashboard.Location = New System.Drawing.Point(21, 604)
+        Me.Btn_Dashboard.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Dashboard.Name = "Btn_Dashboard"
-        Me.Btn_Dashboard.Size = New System.Drawing.Size(159, 57)
+        Me.Btn_Dashboard.Size = New System.Drawing.Size(119, 46)
         Me.Btn_Dashboard.TabIndex = 69
         Me.Btn_Dashboard.Text = "DASHBOARD"
         Me.Btn_Dashboard.UseVisualStyleBackColor = False
@@ -71,10 +71,10 @@ Partial Class S_customer
         Me.Btn_Search.BackColor = System.Drawing.Color.Firebrick
         Me.Btn_Search.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Search.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_Search.Location = New System.Drawing.Point(770, 102)
-        Me.Btn_Search.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_Search.Location = New System.Drawing.Point(578, 83)
+        Me.Btn_Search.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Search.Name = "Btn_Search"
-        Me.Btn_Search.Size = New System.Drawing.Size(116, 46)
+        Me.Btn_Search.Size = New System.Drawing.Size(87, 37)
         Me.Btn_Search.TabIndex = 68
         Me.Btn_Search.Text = "SEARCH"
         Me.Btn_Search.UseVisualStyleBackColor = False
@@ -84,10 +84,10 @@ Partial Class S_customer
         Me.Btn_Edit.BackColor = System.Drawing.Color.Firebrick
         Me.Btn_Edit.Font = New System.Drawing.Font("Arial", 10.8!, System.Drawing.FontStyle.Bold)
         Me.Btn_Edit.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Btn_Edit.Location = New System.Drawing.Point(1691, 744)
-        Me.Btn_Edit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_Edit.Location = New System.Drawing.Point(1268, 604)
+        Me.Btn_Edit.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_Edit.Name = "Btn_Edit"
-        Me.Btn_Edit.Size = New System.Drawing.Size(159, 57)
+        Me.Btn_Edit.Size = New System.Drawing.Size(119, 46)
         Me.Btn_Edit.TabIndex = 67
         Me.Btn_Edit.Text = "EDIT"
         Me.Btn_Edit.UseVisualStyleBackColor = False
@@ -97,29 +97,29 @@ Partial Class S_customer
         Me.Cmb_Filter.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Cmb_Filter.FormattingEnabled = True
         Me.Cmb_Filter.Items.AddRange(New Object() {"Last Name", "First Name", "Status", "Model", "Color", "Branch", "Engine no.", "Frame no.", "Type of pay", "Term of pay", "SIV"})
-        Me.Cmb_Filter.Location = New System.Drawing.Point(237, 147)
-        Me.Cmb_Filter.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Cmb_Filter.Location = New System.Drawing.Point(178, 119)
+        Me.Cmb_Filter.Margin = New System.Windows.Forms.Padding(2)
         Me.Cmb_Filter.Name = "Cmb_Filter"
-        Me.Cmb_Filter.Size = New System.Drawing.Size(376, 27)
+        Me.Cmb_Filter.Size = New System.Drawing.Size(283, 24)
         Me.Cmb_Filter.TabIndex = 66
         '
         'Txt_Search
         '
         Me.Txt_Search.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txt_Search.Location = New System.Drawing.Point(237, 110)
-        Me.Txt_Search.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Txt_Search.Location = New System.Drawing.Point(178, 89)
+        Me.Txt_Search.Margin = New System.Windows.Forms.Padding(2)
         Me.Txt_Search.Name = "Txt_Search"
-        Me.Txt_Search.Size = New System.Drawing.Size(527, 30)
+        Me.Txt_Search.Size = New System.Drawing.Size(396, 26)
         Me.Txt_Search.TabIndex = 65
         '
         'Chk_Auto
         '
         Me.Chk_Auto.AutoSize = True
-        Me.Chk_Auto.Font = New System.Drawing.Font("Bodoni MT", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Chk_Auto.Location = New System.Drawing.Point(629, 149)
-        Me.Chk_Auto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Chk_Auto.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Chk_Auto.Location = New System.Drawing.Point(472, 121)
+        Me.Chk_Auto.Margin = New System.Windows.Forms.Padding(2)
         Me.Chk_Auto.Name = "Chk_Auto"
-        Me.Chk_Auto.Size = New System.Drawing.Size(135, 25)
+        Me.Chk_Auto.Size = New System.Drawing.Size(132, 21)
         Me.Chk_Auto.TabIndex = 71
         Me.Chk_Auto.Text = "Auto Complete"
         Me.Chk_Auto.UseVisualStyleBackColor = True
@@ -128,24 +128,27 @@ Partial Class S_customer
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Firebrick
-        Me.Label3.Font = New System.Drawing.Font("Book Antiqua", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label3.Location = New System.Drawing.Point(224, 9)
+        Me.Label3.Location = New System.Drawing.Point(168, 7)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(578, 73)
+        Me.Label3.Size = New System.Drawing.Size(459, 55)
         Me.Label3.TabIndex = 72
         Me.Label3.Text = "CUSTOMER LISTS"
         '
         'grd_AllCustomer
         '
+        Me.grd_AllCustomer.AllowUserToAddRows = False
+        Me.grd_AllCustomer.AllowUserToDeleteRows = False
         Me.grd_AllCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grd_AllCustomer.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column12, Me.Column10, Me.Column13, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column15, Me.Column9, Me.Column11, Me.Column14})
-        Me.grd_AllCustomer.Location = New System.Drawing.Point(28, 235)
-        Me.grd_AllCustomer.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.grd_AllCustomer.Location = New System.Drawing.Point(21, 191)
+        Me.grd_AllCustomer.Margin = New System.Windows.Forms.Padding(2)
         Me.grd_AllCustomer.Name = "grd_AllCustomer"
         Me.grd_AllCustomer.RowHeadersWidth = 51
         Me.grd_AllCustomer.RowTemplate.Height = 24
-        Me.grd_AllCustomer.Size = New System.Drawing.Size(1983, 505)
+        Me.grd_AllCustomer.Size = New System.Drawing.Size(1487, 410)
         Me.grd_AllCustomer.TabIndex = 73
         '
         'Column1
@@ -274,10 +277,10 @@ Partial Class S_customer
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox1.ErrorImage = Nothing
-        Me.PictureBox1.Location = New System.Drawing.Point(0, -3)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox1.Location = New System.Drawing.Point(0, -2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(211, 176)
+        Me.PictureBox1.Size = New System.Drawing.Size(159, 144)
         Me.PictureBox1.TabIndex = 87
         Me.PictureBox1.TabStop = False
         '
@@ -286,17 +289,18 @@ Partial Class S_customer
         Me.PictureBox3.BackColor = System.Drawing.SystemColors.Control
         Me.PictureBox3.BackgroundImage = Global.stockXproj.My.Resources.Resources.HONDA_COLOR
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox3.Location = New System.Drawing.Point(212, -3)
+        Me.PictureBox3.Location = New System.Drawing.Point(159, -2)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(1922, 99)
+        Me.PictureBox3.Size = New System.Drawing.Size(1442, 80)
         Me.PictureBox3.TabIndex = 89
         Me.PictureBox3.TabStop = False
         '
         'S_customer
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1924, 970)
+        Me.ClientSize = New System.Drawing.Size(1443, 788)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.grd_AllCustomer)
         Me.Controls.Add(Me.Label3)
@@ -307,7 +311,7 @@ Partial Class S_customer
         Me.Controls.Add(Me.Txt_Search)
         Me.Controls.Add(Me.Chk_Auto)
         Me.Controls.Add(Me.PictureBox3)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "S_customer"
         Me.Text = "Form1"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

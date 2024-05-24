@@ -108,12 +108,12 @@ Public Class S_Deposited
     End Sub
 
     Private Sub Btn_AllUnits_Click(sender As Object, e As EventArgs) Handles Btn_AllUnits.Click
-        S_AllUnit.ShowDialog()
+        S_AllUnit.Show()
         Me.Close()
     End Sub
 
     Private Sub Btn_AllStock_Click(sender As Object, e As EventArgs) Handles Btn_AllStock.Click
-        S_AllStock.ShowDialog()
+        S_AllStock.Show()
         Me.Close()
     End Sub
 
@@ -306,23 +306,6 @@ Public Class S_Deposited
                 Try
                     With command
                         .Parameters.Clear()
-                        .CommandText = "prc_GetUnitDate"
-                        .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
-                        .Parameters.AddWithValue("@p_state", State)
-                        .ExecuteNonQuery()
-                    End With
-                    With command
-                        .Parameters.Clear()
-                        .CommandText = "prc_ChangeStat"
-                        .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
-                        .Parameters.AddWithValue("@p_Stat", State)
-                        .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
-                        .ExecuteNonQuery()
-                    End With
-                    With command
-                        .Parameters.Clear()
                         .CommandText = "prc_Record"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_Action", "Return Unit to Branch")
@@ -334,6 +317,22 @@ Public Class S_Deposited
                         Prc_GetCustName(Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_Customer", " no longer" + Cust_Name)
                         .Parameters.AddWithValue("@p_Employee", Username)
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_GetUnitDate"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_state", State)
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_ChangeStatUndo"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_Stat", State)
                         .ExecuteNonQuery()
                     End With
 
@@ -350,6 +349,11 @@ Public Class S_Deposited
 
     Private Sub Btn_Dashboard_Click_1(sender As Object, e As EventArgs) Handles Btn_Dashboard.Click
         S_dashboard.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub Btn_Repossess_Click_1(sender As Object, e As EventArgs) Handles Btn_Repossess.Click
+        S_repossess.Show()
         Me.Close()
     End Sub
 End Class

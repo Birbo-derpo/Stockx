@@ -257,6 +257,8 @@ Partial Class S_Released
         '
         'Grd_StockReleased
         '
+        Me.Grd_StockReleased.AllowUserToAddRows = False
+        Me.Grd_StockReleased.AllowUserToDeleteRows = False
         Me.Grd_StockReleased.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grd_StockReleased.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column10, Me.Column7, Me.Column1, Me.Column2, Me.Column3, Me.Column6, Me.Column9, Me.Column4, Me.Column5, Me.Column8})
         Me.Grd_StockReleased.Location = New System.Drawing.Point(184, 254)

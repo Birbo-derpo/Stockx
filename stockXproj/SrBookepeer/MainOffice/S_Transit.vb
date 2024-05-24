@@ -154,7 +154,7 @@ Public Class S_Transit
             End If
 
         Next
-        MessageBox.Show("unit/s now in branch", "in branch", MessageBoxButtons.OK)
+        MessageBox.Show("unit/s Returned to main", "Undo", MessageBoxButtons.OK)
 
         PrcDisplayTransitUnits()
     End Sub
@@ -203,7 +203,7 @@ Public Class S_Transit
             End If
 
         Next
-        MessageBox.Show("unit/s now in branch", "in branch", MessageBoxButtons.OK)
+        MessageBox.Show("transit canceled", "canceled", MessageBoxButtons.OK)
 
         PrcDisplayTransitUnits()
     End Sub

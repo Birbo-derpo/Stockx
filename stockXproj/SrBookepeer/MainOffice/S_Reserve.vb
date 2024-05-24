@@ -58,11 +58,6 @@ Public Class S_Reserve
         End Try
     End Sub
 
-    Private Sub Btn_AddReserve_Click(sender As Object, e As EventArgs) Handles Btn_CancelReserve.Click
-        ConfirmReserve.Show()
-        Me.Close()
-    End Sub
-
     'button start
     Private Sub Btn_Add_MT_Click(sender As Object, e As EventArgs) Handles Btn_Add_MT.Click
         'sends to delivery for transit
@@ -190,23 +185,6 @@ Public Class S_Reserve
                 Try
                     With command
                         .Parameters.Clear()
-                        .CommandText = "prc_GetUnitDate"
-                        .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
-                        .Parameters.AddWithValue("@p_state", State)
-                        .ExecuteNonQuery()
-                    End With
-                    With command
-                        .Parameters.Clear()
-                        .CommandText = "prc_ChangeStat"
-                        .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
-                        .Parameters.AddWithValue("@p_Stat", State)
-                        .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
-                        .ExecuteNonQuery()
-                    End With
-                    With command
-                        .Parameters.Clear()
                         .CommandText = "prc_Record"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_Action", "Cancel Reservation")
@@ -219,6 +197,22 @@ Public Class S_Reserve
                         .Parameters.AddWithValue("@p_Employee", Username)
                         .ExecuteNonQuery()
                     End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_GetUnitDate"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_state", State)
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_ChangeStatUndo"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_Stat", State)
+                        .ExecuteNonQuery()
+                    End With
                 Catch ex As Exception
                     MessageBox.Show("Catch Happened", "Catch", MessageBoxButtons.OK)
                 End Try
@@ -227,8 +221,6 @@ Public Class S_Reserve
 
         Next
         MessageBox.Show("Reservation is now canceled", "Cancel Reservation", MessageBoxButtons.OK)
-
-
         PrcDisplayReservedUnits()
     End Sub
 

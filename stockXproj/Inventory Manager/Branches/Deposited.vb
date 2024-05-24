@@ -316,23 +316,6 @@ Public Class Deposited
                 Try
                     With command
                         .Parameters.Clear()
-                        .CommandText = "prc_GetUnitDate"
-                        .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
-                        .Parameters.AddWithValue("@p_state", State)
-                        .ExecuteNonQuery()
-                    End With
-                    With command
-                        .Parameters.Clear()
-                        .CommandText = "prc_ChangeStat"
-                        .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
-                        .Parameters.AddWithValue("@p_Stat", State)
-                        .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
-                        .ExecuteNonQuery()
-                    End With
-                    With command
-                        .Parameters.Clear()
                         .CommandText = "prc_Record"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_Action", "Return Unit to Branch")
@@ -344,6 +327,22 @@ Public Class Deposited
                         Prc_GetCustName(Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_Customer", " no longer" + Cust_Name)
                         .Parameters.AddWithValue("@p_Employee", Username)
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_GetUnitDate"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_state", State)
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_ChangeStatUndo"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_Stat", State)
                         .ExecuteNonQuery()
                     End With
 

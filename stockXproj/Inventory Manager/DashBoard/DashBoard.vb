@@ -125,7 +125,6 @@ Public Class DashBoard
     End Sub
 
     Private Sub Btn_EditInfo_Click(sender As Object, e As EventArgs) Handles Btn_EditInfo.Click
-
         prcDisplayCurrentUser()
 
         ' Check if the user data is successfully retrieved

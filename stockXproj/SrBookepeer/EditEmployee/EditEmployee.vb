@@ -46,20 +46,12 @@ Public Class EditEmployee
             cmbPosition.SelectedIndex = -1
             cmbGender.SelectedIndex = -1
 
-            Me.Dispose()
-            DashBoard.Show()
-
 
             txtGmail.Clear()
             txtFirst.Clear()
             txtLast.Clear()
             cmbPosition.SelectedIndex = -1
             cmbGender.SelectedIndex = -1
-
-            Me.Dispose()
-            Display_Employee.Show()
-
-
 
 
         Catch ex As Exception
@@ -168,14 +160,10 @@ Public Class EditEmployee
         End If
     End Sub
 
-    Private Sub EditEmployee_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-    End Sub
+
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Close()
     End Sub
 
-    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
-
-    End Sub
 End Class
