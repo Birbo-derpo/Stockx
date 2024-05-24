@@ -168,10 +168,7 @@ Public Class Display_Employee
 
         With EditEmployee
 
-
             .ShowDialog()
-
-
 
             .txtGmail.Text = grdEmployee.CurrentRow.Cells(0).Value.ToString()
             .txtFirst.Text = grdEmployee.CurrentRow.Cells(1).Value.ToString()

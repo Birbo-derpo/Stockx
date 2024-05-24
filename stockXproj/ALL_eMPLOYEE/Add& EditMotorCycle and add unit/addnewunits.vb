@@ -9,7 +9,6 @@ Public Class addnewunits
     Dim Mode As String
     Dim selectedModel, selectedColor As String
 
-
     Public Sub DisplayModel()
         Try
             sqlUMTCAdapter = New MySqlDataAdapter()
@@ -95,10 +94,14 @@ Public Class addnewunits
 
     End Sub
     Private Sub addnewunits_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CheckDatabaseConnection()
-        DisplayModel()
-        DisplayColor()
-
+        If Login_stat <> True Then
+            Login.Show()
+            Me.Close()
+        Else
+            CheckDatabaseConnection()
+            DisplayModel()
+            DisplayColor()
+        End If
 
     End Sub
 
@@ -152,8 +155,6 @@ Public Class addnewunits
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles btnSave.Click
 
         Try
-
-
             With command
                 .Parameters.Clear()
                 .CommandText = "prc_EditPrice"
@@ -167,14 +168,9 @@ Public Class addnewunits
             End With
             MessageBox.Show("Price Change already Save", "Saving Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-
-
-
-
         Catch ex As Exception
             MessageBox.Show("" & ex.Message)
         End Try
-
 
     End Sub
 
@@ -187,15 +183,11 @@ Public Class addnewunits
         Me.Close()
     End Sub
 
-    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Btn_DeleteModel.Click
         Try
             With command
                 .Parameters.Clear()
-                .CommandText = "prc_DeleteUnit"
+                .CommandText = "prc_DeleteModel"
                 .CommandType = CommandType.StoredProcedure
                 .Parameters.AddWithValue("@p_model", txtModel.ToString)
                 .ExecuteNonQuery()
@@ -208,8 +200,22 @@ Public Class addnewunits
         End Try
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Btn_DeleteColor.Click
+        Try
+            With command
+                .Parameters.Clear()
+                .CommandText = "prc_DeleteModelColr"
+                .CommandType = CommandType.StoredProcedure
+                .Parameters.AddWithValue("@p_model", txtModel.ToString)
+                .Parameters.AddWithValue("@p_color", TxtColor.ToString)
+                .ExecuteNonQuery()
+            End With
+            MessageBox.Show("Model Successfully Deleted", "Delete Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            DisplayModel()
 
+        Catch ex As Exception
+            MessageBox.Show("" & ex.Message)
+        End Try
     End Sub
 
     Private Sub cmbModel_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbModel.SelectedIndexChanged
@@ -217,7 +223,6 @@ Public Class addnewunits
             selectedModel = cmbModel.SelectedItem.ToString()
             txtModel.Text = selectedModel
             DisplayColor()
-
 
             If selectedModel = "OTHERS" Then
                 cmbModel.SelectedIndex = -1

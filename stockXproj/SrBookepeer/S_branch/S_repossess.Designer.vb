@@ -243,6 +243,8 @@ Partial Class S_repossess
         '
         'Grd_StockRepossessed
         '
+        Me.Grd_StockRepossessed.AllowUserToAddRows = False
+        Me.Grd_StockRepossessed.AllowUserToDeleteRows = False
         Me.Grd_StockRepossessed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grd_StockRepossessed.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column10, Me.Column7, Me.Column1, Me.Column2, Me.Column3, Me.Column6, Me.Column9, Me.Column4, Me.Column5, Me.Column8})
         Me.Grd_StockRepossessed.Location = New System.Drawing.Point(184, 254)

@@ -296,7 +296,7 @@ Partial Class S_Reserve
         Me.Btn_CancelReserve.Name = "Btn_CancelReserve"
         Me.Btn_CancelReserve.Size = New System.Drawing.Size(119, 46)
         Me.Btn_CancelReserve.TabIndex = 47
-        Me.Btn_CancelReserve.Text = "RESERVE"
+        Me.Btn_CancelReserve.Text = "Cancel Reserve"
         Me.Btn_CancelReserve.UseVisualStyleBackColor = False
         '
         'Label3

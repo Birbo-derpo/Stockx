@@ -133,23 +133,6 @@ Public Class TRANSIT
                 Try
                     With command
                         .Parameters.Clear()
-                        .CommandText = "prc_GetUnitDate"
-                        .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(8).Value.ToString)
-                        .Parameters.AddWithValue("@p_state", State)
-                        .ExecuteNonQuery()
-                    End With
-                    With command
-                        .Parameters.Clear()
-                        .CommandText = "prc_ChangeStat"
-                        .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(8).Value.ToString)
-                        .Parameters.AddWithValue("@p_Stat", State)
-                        .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
-                        .ExecuteNonQuery()
-                    End With
-                    With command
-                        .Parameters.Clear()
                         .CommandText = "prc_Record"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_Action", "Cancel Transit")
@@ -160,6 +143,22 @@ Public Class TRANSIT
                         .Parameters.AddWithValue("@p_ToState", State)
                         .Parameters.AddWithValue("@p_Customer", "none")
                         .Parameters.AddWithValue("@p_Employee", Username)
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_GetUnitDate"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(8).Value.ToString)
+                        .Parameters.AddWithValue("@p_state", State)
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_ChangeStatUndo"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(8).Value.ToString)
+                        .Parameters.AddWithValue("@p_Stat", State)
                         .ExecuteNonQuery()
                     End With
 
@@ -190,11 +189,10 @@ Public Class TRANSIT
                     End With
                     With command
                         .Parameters.Clear()
-                        .CommandText = "prc_ChangeStat"
+                        .CommandText = "prc_ChangeStatUndo"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(8).Value.ToString)
                         .Parameters.AddWithValue("@p_Stat", State)
-                        .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
                         .ExecuteNonQuery()
                     End With
                     With command

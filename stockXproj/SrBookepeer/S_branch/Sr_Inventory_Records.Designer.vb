@@ -43,6 +43,8 @@ Partial Class Sr_Inventory_Records
         '
         'Grd_Inv_Logs
         '
+        Me.Grd_Inv_Logs.AllowUserToAddRows = False
+        Me.Grd_Inv_Logs.AllowUserToDeleteRows = False
         Me.Grd_Inv_Logs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Grd_Inv_Logs.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column10})
         Me.Grd_Inv_Logs.Location = New System.Drawing.Point(158, 151)
@@ -121,7 +123,7 @@ Partial Class Sr_Inventory_Records
         Me.Btn_MainOffice.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_MainOffice.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Btn_MainOffice.Location = New System.Drawing.Point(158, 373)
-        Me.Btn_MainOffice.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Btn_MainOffice.Margin = New System.Windows.Forms.Padding(2)
         Me.Btn_MainOffice.Name = "Btn_MainOffice"
         Me.Btn_MainOffice.Size = New System.Drawing.Size(87, 37)
         Me.Btn_MainOffice.TabIndex = 40
@@ -135,7 +137,7 @@ Partial Class Sr_Inventory_Records
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox1.ErrorImage = Nothing
         Me.PictureBox1.Location = New System.Drawing.Point(-2, -1)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(159, 145)
         Me.PictureBox1.TabIndex = 93
@@ -160,7 +162,7 @@ Partial Class Sr_Inventory_Records
         Me.PictureBox3.BackgroundImage = Global.stockXproj.My.Resources.Resources.HONDA_COLOR
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox3.Location = New System.Drawing.Point(-2, -1)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(1154, 144)
         Me.PictureBox3.TabIndex = 95

@@ -289,6 +289,21 @@ Public Class S_Released
                 Try
                     With command
                         .Parameters.Clear()
+                        .CommandText = "prc_Record"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_Action", "Return Unit to Branch")
+                        .Parameters.AddWithValue("@p_d", todaysdate)
+                        .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_branch", Checkcell.Cells(1).Value.ToString)
+                        .Parameters.AddWithValue("@p_FromState", Checkcell.Cells(9).Value.ToString)
+                        .Parameters.AddWithValue("@p_ToState", State)
+                        Prc_GetCustName(Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_Customer", " no longer" + Cust_Name)
+                        .Parameters.AddWithValue("@p_Employee", Username)
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
                         .CommandText = "prc_GetUnitDate"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
@@ -304,22 +319,6 @@ Public Class S_Released
                         .Parameters.AddWithValue("@p_dd", Format(dt.Value, "yyyy-MM-dd"))
                         .ExecuteNonQuery()
                     End With
-                    With command
-                        .Parameters.Clear()
-                        .CommandText = "prc_Record"
-                        .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_Action", "Return Unit to Branch")
-                        .Parameters.AddWithValue("@p_d", todaysdate)
-                        .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(7).Value.ToString)
-                        .Parameters.AddWithValue("@p_branch", Checkcell.Cells(1).Value.ToString)
-                        .Parameters.AddWithValue("@p_FromState", Checkcell.Cells(9).Value.ToString)
-                        .Parameters.AddWithValue("@p_ToState", State)
-                        Prc_GetCustName(Checkcell.Cells(7).Value.ToString)
-                        .Parameters.AddWithValue("@p_Customer", " no longer" + Cust_Name)
-                        .Parameters.AddWithValue("@p_Employee", Username)
-                        .ExecuteNonQuery()
-                    End With
-
 
                 Catch ex As Exception
                     MessageBox.Show("" & ex.Message)
@@ -340,7 +339,22 @@ Public Class S_Released
                 Try
                     With command
                         .Parameters.Clear()
-                        .CommandText = "prc_ChangeStat"
+                        .CommandText = "prc_Record"
+                        .CommandType = CommandType.StoredProcedure
+                        .Parameters.AddWithValue("@p_Action", "Undo Release")
+                        .Parameters.AddWithValue("@p_d", todaysdate)
+                        .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_branch", Checkcell.Cells(1).Value.ToString)
+                        .Parameters.AddWithValue("@p_FromState", Checkcell.Cells(9).Value.ToString)
+                        .Parameters.AddWithValue("@p_ToState", State)
+                        Prc_GetCustName(Checkcell.Cells(7).Value.ToString)
+                        .Parameters.AddWithValue("@p_Customer", Cust_Name)
+                        .Parameters.AddWithValue("@p_Employee", Username)
+                        .ExecuteNonQuery()
+                    End With
+                    With command
+                        .Parameters.Clear()
+                        .CommandText = "prc_ChangeStatUndo"
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_Stat", State)
@@ -353,21 +367,6 @@ Public Class S_Released
                         .CommandType = CommandType.StoredProcedure
                         .Parameters.AddWithValue("@p_EngineNum", Checkcell.Cells(7).Value.ToString)
                         .Parameters.AddWithValue("@p_Stat", State)
-                        .ExecuteNonQuery()
-                    End With
-                    With command
-                        .Parameters.Clear()
-                        .CommandText = "prc_Record"
-                        .CommandType = CommandType.StoredProcedure
-                        .Parameters.AddWithValue("@p_Action", "Undo Release")
-                        .Parameters.AddWithValue("@p_d", todaysdate)
-                        .Parameters.AddWithValue("@p_Unit", Checkcell.Cells(7).Value.ToString)
-                        .Parameters.AddWithValue("@p_branch", Checkcell.Cells(1).Value.ToString)
-                        .Parameters.AddWithValue("@p_FromState", Checkcell.Cells(9).Value.ToString)
-                        .Parameters.AddWithValue("@p_ToState", State)
-                        Prc_GetCustName(Checkcell.Cells(7).Value.ToString)
-                        .Parameters.AddWithValue("@p_Customer", Cust_Name)
-                        .Parameters.AddWithValue("@p_Employee", Username)
                         .ExecuteNonQuery()
                     End With
 

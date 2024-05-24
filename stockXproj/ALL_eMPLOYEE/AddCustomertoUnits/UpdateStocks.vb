@@ -138,5 +138,6 @@ Public Class UpdateStocks
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Me.Close()
+        Cust_id = 0
     End Sub
 End Class
