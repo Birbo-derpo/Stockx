@@ -74,10 +74,10 @@ Partial Class DashBoard
         Me.Btn_MainOffice.FlatAppearance.BorderSize = 5
         Me.Btn_MainOffice.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_MainOffice.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Btn_MainOffice.Location = New System.Drawing.Point(681, 338)
-        Me.Btn_MainOffice.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_MainOffice.Location = New System.Drawing.Point(511, 275)
+        Me.Btn_MainOffice.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Btn_MainOffice.Name = "Btn_MainOffice"
-        Me.Btn_MainOffice.Size = New System.Drawing.Size(243, 80)
+        Me.Btn_MainOffice.Size = New System.Drawing.Size(182, 65)
         Me.Btn_MainOffice.TabIndex = 0
         Me.Btn_MainOffice.Text = "MAIN OFFICE"
         Me.Btn_MainOffice.UseVisualStyleBackColor = False
@@ -88,10 +88,10 @@ Partial Class DashBoard
         Me.Btn_Branches.FlatAppearance.BorderSize = 5
         Me.Btn_Branches.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Branches.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Btn_Branches.Location = New System.Drawing.Point(930, 338)
-        Me.Btn_Branches.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_Branches.Location = New System.Drawing.Point(698, 275)
+        Me.Btn_Branches.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Btn_Branches.Name = "Btn_Branches"
-        Me.Btn_Branches.Size = New System.Drawing.Size(243, 80)
+        Me.Btn_Branches.Size = New System.Drawing.Size(182, 65)
         Me.Btn_Branches.TabIndex = 1
         Me.Btn_Branches.Text = "BRANCHES"
         Me.Btn_Branches.UseVisualStyleBackColor = False
@@ -102,10 +102,10 @@ Partial Class DashBoard
         Me.Btn_Customers.FlatAppearance.BorderSize = 5
         Me.Btn_Customers.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_Customers.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Btn_Customers.Location = New System.Drawing.Point(1179, 338)
-        Me.Btn_Customers.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_Customers.Location = New System.Drawing.Point(884, 275)
+        Me.Btn_Customers.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Btn_Customers.Name = "Btn_Customers"
-        Me.Btn_Customers.Size = New System.Drawing.Size(243, 80)
+        Me.Btn_Customers.Size = New System.Drawing.Size(182, 65)
         Me.Btn_Customers.TabIndex = 2
         Me.Btn_Customers.Text = "CUSTOMERS"
         Me.Btn_Customers.UseVisualStyleBackColor = False
@@ -116,9 +116,10 @@ Partial Class DashBoard
         Me.Lbl_Main.BackColor = System.Drawing.Color.Firebrick
         Me.Lbl_Main.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl_Main.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Lbl_Main.Location = New System.Drawing.Point(509, 519)
+        Me.Lbl_Main.Location = New System.Drawing.Point(382, 422)
+        Me.Lbl_Main.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Lbl_Main.Name = "Lbl_Main"
-        Me.Lbl_Main.Size = New System.Drawing.Size(247, 35)
+        Me.Lbl_Main.Size = New System.Drawing.Size(198, 29)
         Me.Lbl_Main.TabIndex = 5
         Me.Lbl_Main.Text = "MAIN BRANCH: "
         '
@@ -128,9 +129,10 @@ Partial Class DashBoard
         Me.Lbl_Bajada.BackColor = System.Drawing.Color.Firebrick
         Me.Lbl_Bajada.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl_Bajada.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Lbl_Bajada.Location = New System.Drawing.Point(509, 830)
+        Me.Lbl_Bajada.Location = New System.Drawing.Point(382, 674)
+        Me.Lbl_Bajada.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Lbl_Bajada.Name = "Lbl_Bajada"
-        Me.Lbl_Bajada.Size = New System.Drawing.Size(293, 35)
+        Me.Lbl_Bajada.Size = New System.Drawing.Size(233, 29)
         Me.Lbl_Bajada.TabIndex = 6
         Me.Lbl_Bajada.Text = "BAJADA BRANCH: "
         '
@@ -140,9 +142,10 @@ Partial Class DashBoard
         Me.Lbl_Tagum.BackColor = System.Drawing.Color.Firebrick
         Me.Lbl_Tagum.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl_Tagum.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Lbl_Tagum.Location = New System.Drawing.Point(509, 630)
+        Me.Lbl_Tagum.Location = New System.Drawing.Point(382, 512)
+        Me.Lbl_Tagum.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Lbl_Tagum.Name = "Lbl_Tagum"
-        Me.Lbl_Tagum.Size = New System.Drawing.Size(278, 35)
+        Me.Lbl_Tagum.Size = New System.Drawing.Size(223, 29)
         Me.Lbl_Tagum.TabIndex = 8
         Me.Lbl_Tagum.Text = "TAGUM BRANCH: "
         '
@@ -152,9 +155,10 @@ Partial Class DashBoard
         Me.Lbl_Gensan.BackColor = System.Drawing.Color.Firebrick
         Me.Lbl_Gensan.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl_Gensan.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Lbl_Gensan.Location = New System.Drawing.Point(1283, 519)
+        Me.Lbl_Gensan.Location = New System.Drawing.Point(962, 422)
+        Me.Lbl_Gensan.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Lbl_Gensan.Name = "Lbl_Gensan"
-        Me.Lbl_Gensan.Size = New System.Drawing.Size(299, 35)
+        Me.Lbl_Gensan.Size = New System.Drawing.Size(238, 29)
         Me.Lbl_Gensan.TabIndex = 9
         Me.Lbl_Gensan.Text = "GENSAN BRANCH: "
         '
@@ -164,9 +168,10 @@ Partial Class DashBoard
         Me.Lbl_Davao.BackColor = System.Drawing.Color.Firebrick
         Me.Lbl_Davao.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl_Davao.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Lbl_Davao.Location = New System.Drawing.Point(509, 735)
+        Me.Lbl_Davao.Location = New System.Drawing.Point(382, 597)
+        Me.Lbl_Davao.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Lbl_Davao.Name = "Lbl_Davao"
-        Me.Lbl_Davao.Size = New System.Drawing.Size(274, 35)
+        Me.Lbl_Davao.Size = New System.Drawing.Size(217, 29)
         Me.Lbl_Davao.TabIndex = 10
         Me.Lbl_Davao.Text = "DAVAO BRANCH: "
         '
@@ -176,9 +181,10 @@ Partial Class DashBoard
         Me.Lbl_Kidapawan.BackColor = System.Drawing.Color.Firebrick
         Me.Lbl_Kidapawan.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl_Kidapawan.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Lbl_Kidapawan.Location = New System.Drawing.Point(1283, 630)
+        Me.Lbl_Kidapawan.Location = New System.Drawing.Point(962, 512)
+        Me.Lbl_Kidapawan.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Lbl_Kidapawan.Name = "Lbl_Kidapawan"
-        Me.Lbl_Kidapawan.Size = New System.Drawing.Size(351, 35)
+        Me.Lbl_Kidapawan.Size = New System.Drawing.Size(280, 29)
         Me.Lbl_Kidapawan.TabIndex = 11
         Me.Lbl_Kidapawan.Text = "KIDAPAWAN BRANCH: "
         '
@@ -188,9 +194,10 @@ Partial Class DashBoard
         Me.Lbl_Digos.BackColor = System.Drawing.Color.Firebrick
         Me.Lbl_Digos.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl_Digos.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Lbl_Digos.Location = New System.Drawing.Point(1283, 735)
+        Me.Lbl_Digos.Location = New System.Drawing.Point(962, 597)
+        Me.Lbl_Digos.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Lbl_Digos.Name = "Lbl_Digos"
-        Me.Lbl_Digos.Size = New System.Drawing.Size(267, 35)
+        Me.Lbl_Digos.Size = New System.Drawing.Size(213, 29)
         Me.Lbl_Digos.TabIndex = 12
         Me.Lbl_Digos.Text = "DIGOS BRANCH: "
         '
@@ -199,10 +206,10 @@ Partial Class DashBoard
         Me.btnLogout.BackColor = System.Drawing.Color.IndianRed
         Me.btnLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogout.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnLogout.Location = New System.Drawing.Point(51, 907)
-        Me.btnLogout.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnLogout.Location = New System.Drawing.Point(38, 737)
+        Me.btnLogout.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(203, 52)
+        Me.btnLogout.Size = New System.Drawing.Size(152, 42)
         Me.btnLogout.TabIndex = 54
         Me.btnLogout.Text = "LOG OUT"
         Me.btnLogout.UseVisualStyleBackColor = False
@@ -213,9 +220,10 @@ Partial Class DashBoard
         Me.lblPositionn.BackColor = System.Drawing.Color.White
         Me.lblPositionn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPositionn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.lblPositionn.Location = New System.Drawing.Point(45, 422)
+        Me.lblPositionn.Location = New System.Drawing.Point(34, 343)
+        Me.lblPositionn.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblPositionn.Name = "lblPositionn"
-        Me.lblPositionn.Size = New System.Drawing.Size(78, 18)
+        Me.lblPositionn.Size = New System.Drawing.Size(63, 15)
         Me.lblPositionn.TabIndex = 60
         Me.lblPositionn.Text = "POSITION"
         '
@@ -225,9 +233,10 @@ Partial Class DashBoard
         Me.lblgmail.BackColor = System.Drawing.Color.White
         Me.lblgmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblgmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.lblgmail.Location = New System.Drawing.Point(45, 382)
+        Me.lblgmail.Location = New System.Drawing.Point(34, 310)
+        Me.lblgmail.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblgmail.Name = "lblgmail"
-        Me.lblgmail.Size = New System.Drawing.Size(53, 18)
+        Me.lblgmail.Size = New System.Drawing.Size(44, 15)
         Me.lblgmail.TabIndex = 59
         Me.lblgmail.Text = "GMAIL"
         '
@@ -237,9 +246,10 @@ Partial Class DashBoard
         Me.lblUser.BackColor = System.Drawing.Color.White
         Me.lblUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUser.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.lblUser.Location = New System.Drawing.Point(45, 338)
+        Me.lblUser.Location = New System.Drawing.Point(34, 275)
+        Me.lblUser.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblUser.Name = "lblUser"
-        Me.lblUser.Size = New System.Drawing.Size(50, 18)
+        Me.lblUser.Size = New System.Drawing.Size(41, 15)
         Me.lblUser.TabIndex = 58
         Me.lblUser.Text = "USER"
         '
@@ -248,10 +258,10 @@ Partial Class DashBoard
         Me.btnchange.BackColor = System.Drawing.Color.IndianRed
         Me.btnchange.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnchange.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnchange.Location = New System.Drawing.Point(51, 850)
-        Me.btnchange.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnchange.Location = New System.Drawing.Point(38, 691)
+        Me.btnchange.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnchange.Name = "btnchange"
-        Me.btnchange.Size = New System.Drawing.Size(203, 52)
+        Me.btnchange.Size = New System.Drawing.Size(152, 42)
         Me.btnchange.TabIndex = 61
         Me.btnchange.Text = "CHANGE PASSWORD"
         Me.btnchange.UseVisualStyleBackColor = False
@@ -261,10 +271,10 @@ Partial Class DashBoard
         Me.Btn_EditInfo.BackColor = System.Drawing.Color.IndianRed
         Me.Btn_EditInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btn_EditInfo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Btn_EditInfo.Location = New System.Drawing.Point(51, 795)
-        Me.Btn_EditInfo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Btn_EditInfo.Location = New System.Drawing.Point(38, 646)
+        Me.Btn_EditInfo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Btn_EditInfo.Name = "Btn_EditInfo"
-        Me.Btn_EditInfo.Size = New System.Drawing.Size(203, 52)
+        Me.Btn_EditInfo.Size = New System.Drawing.Size(152, 42)
         Me.Btn_EditInfo.TabIndex = 62
         Me.Btn_EditInfo.Text = "EDIT INFO"
         Me.Btn_EditInfo.UseVisualStyleBackColor = False
@@ -275,9 +285,10 @@ Partial Class DashBoard
         Me.Lbl_CurTime.BackColor = System.Drawing.Color.Firebrick
         Me.Lbl_CurTime.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lbl_CurTime.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Lbl_CurTime.Location = New System.Drawing.Point(56, 240)
+        Me.Lbl_CurTime.Location = New System.Drawing.Point(42, 195)
+        Me.Lbl_CurTime.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Lbl_CurTime.Name = "Lbl_CurTime"
-        Me.Lbl_CurTime.Size = New System.Drawing.Size(193, 36)
+        Me.Lbl_CurTime.Size = New System.Drawing.Size(157, 29)
         Me.Lbl_CurTime.TabIndex = 63
         Me.Lbl_CurTime.Text = "DATE NOW:"
         '
@@ -288,9 +299,9 @@ Partial Class DashBoard
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox1.ErrorImage = Nothing
         Me.PictureBox1.Location = New System.Drawing.Point(0, -2)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(295, 213)
+        Me.PictureBox1.Size = New System.Drawing.Size(222, 174)
         Me.PictureBox1.TabIndex = 69
         Me.PictureBox1.TabStop = False
         '
@@ -300,9 +311,10 @@ Partial Class DashBoard
         Me.Label3.BackColor = System.Drawing.Color.Firebrick
         Me.Label3.Font = New System.Drawing.Font("Arial", 25.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label3.Location = New System.Drawing.Point(973, 226)
+        Me.Label3.Location = New System.Drawing.Point(730, 184)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(301, 51)
+        Me.Label3.Size = New System.Drawing.Size(237, 41)
         Me.Label3.TabIndex = 71
         Me.Label3.Text = "DASHBOARD"
         '
@@ -310,10 +322,10 @@ Partial Class DashBoard
         '
         Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(297, 1)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox2.Location = New System.Drawing.Point(223, 1)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(1755, 210)
+        Me.PictureBox2.Size = New System.Drawing.Size(1316, 171)
         Me.PictureBox2.TabIndex = 72
         Me.PictureBox2.TabStop = False
         '
@@ -321,10 +333,10 @@ Partial Class DashBoard
         '
         Me.PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox3.Location = New System.Drawing.Point(0, 210)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox3.Location = New System.Drawing.Point(0, 171)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(2039, 79)
+        Me.PictureBox3.Size = New System.Drawing.Size(1529, 64)
         Me.PictureBox3.TabIndex = 73
         Me.PictureBox3.TabStop = False
         '
@@ -332,10 +344,10 @@ Partial Class DashBoard
         '
         Me.PictureBox4.BackgroundImage = CType(resources.GetObject("PictureBox4.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox4.Location = New System.Drawing.Point(0, 252)
-        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox4.Location = New System.Drawing.Point(0, 205)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(295, 766)
+        Me.PictureBox4.Size = New System.Drawing.Size(221, 622)
         Me.PictureBox4.TabIndex = 74
         Me.PictureBox4.TabStop = False
         '
@@ -344,10 +356,10 @@ Partial Class DashBoard
         Me.PictureBox5.BackColor = System.Drawing.Color.Firebrick
         Me.PictureBox5.BackgroundImage = CType(resources.GetObject("PictureBox5.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox5.Location = New System.Drawing.Point(0, 295)
-        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox5.Location = New System.Drawing.Point(0, 240)
+        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(293, 210)
+        Me.PictureBox5.Size = New System.Drawing.Size(220, 171)
         Me.PictureBox5.TabIndex = 75
         Me.PictureBox5.TabStop = False
         '
@@ -355,10 +367,10 @@ Partial Class DashBoard
         '
         Me.PictureBox6.BackgroundImage = CType(resources.GetObject("PictureBox6.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox6.Location = New System.Drawing.Point(493, 592)
-        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox6.Location = New System.Drawing.Point(370, 481)
+        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(509, 98)
+        Me.PictureBox6.Size = New System.Drawing.Size(382, 80)
         Me.PictureBox6.TabIndex = 76
         Me.PictureBox6.TabStop = False
         '
@@ -366,10 +378,10 @@ Partial Class DashBoard
         '
         Me.PictureBox7.BackgroundImage = CType(resources.GetObject("PictureBox7.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox7.Location = New System.Drawing.Point(493, 697)
-        Me.PictureBox7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox7.Location = New System.Drawing.Point(370, 566)
+        Me.PictureBox7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(509, 98)
+        Me.PictureBox7.Size = New System.Drawing.Size(382, 80)
         Me.PictureBox7.TabIndex = 77
         Me.PictureBox7.TabStop = False
         '
@@ -377,10 +389,10 @@ Partial Class DashBoard
         '
         Me.PictureBox8.BackgroundImage = CType(resources.GetObject("PictureBox8.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox8.Location = New System.Drawing.Point(493, 798)
-        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox8.Location = New System.Drawing.Point(370, 648)
+        Me.PictureBox8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(509, 98)
+        Me.PictureBox8.Size = New System.Drawing.Size(382, 80)
         Me.PictureBox8.TabIndex = 78
         Me.PictureBox8.TabStop = False
         '
@@ -388,10 +400,10 @@ Partial Class DashBoard
         '
         Me.PictureBox12.BackgroundImage = CType(resources.GetObject("PictureBox12.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox12.Location = New System.Drawing.Point(493, 487)
-        Me.PictureBox12.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox12.Location = New System.Drawing.Point(370, 396)
+        Me.PictureBox12.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox12.Name = "PictureBox12"
-        Me.PictureBox12.Size = New System.Drawing.Size(509, 98)
+        Me.PictureBox12.Size = New System.Drawing.Size(382, 80)
         Me.PictureBox12.TabIndex = 82
         Me.PictureBox12.TabStop = False
         '
@@ -399,10 +411,10 @@ Partial Class DashBoard
         '
         Me.PictureBox9.BackgroundImage = CType(resources.GetObject("PictureBox9.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox9.Location = New System.Drawing.Point(1256, 592)
-        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox9.Location = New System.Drawing.Point(942, 481)
+        Me.PictureBox9.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(509, 98)
+        Me.PictureBox9.Size = New System.Drawing.Size(382, 80)
         Me.PictureBox9.TabIndex = 83
         Me.PictureBox9.TabStop = False
         '
@@ -410,10 +422,10 @@ Partial Class DashBoard
         '
         Me.PictureBox10.BackgroundImage = CType(resources.GetObject("PictureBox10.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox10.Location = New System.Drawing.Point(1256, 697)
-        Me.PictureBox10.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox10.Location = New System.Drawing.Point(942, 566)
+        Me.PictureBox10.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.Size = New System.Drawing.Size(509, 98)
+        Me.PictureBox10.Size = New System.Drawing.Size(382, 80)
         Me.PictureBox10.TabIndex = 84
         Me.PictureBox10.TabStop = False
         '
@@ -421,10 +433,10 @@ Partial Class DashBoard
         '
         Me.PictureBox11.BackgroundImage = CType(resources.GetObject("PictureBox11.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox11.Location = New System.Drawing.Point(1256, 487)
-        Me.PictureBox11.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox11.Location = New System.Drawing.Point(942, 396)
+        Me.PictureBox11.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(509, 98)
+        Me.PictureBox11.Size = New System.Drawing.Size(382, 80)
         Me.PictureBox11.TabIndex = 85
         Me.PictureBox11.TabStop = False
         '
@@ -434,20 +446,20 @@ Partial Class DashBoard
         Me.Button1.FlatAppearance.BorderSize = 5
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button1.Location = New System.Drawing.Point(1428, 338)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button1.Location = New System.Drawing.Point(1071, 275)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(243, 80)
+        Me.Button1.Size = New System.Drawing.Size(182, 65)
         Me.Button1.TabIndex = 86
         Me.Button1.Text = "FORECAST"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'DashBoard
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Snow
-        Me.ClientSize = New System.Drawing.Size(1924, 1008)
+        Me.ClientSize = New System.Drawing.Size(1443, 819)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblPositionn)
         Me.Controls.Add(Me.lblgmail)
@@ -479,7 +491,7 @@ Partial Class DashBoard
         Me.Controls.Add(Me.PictureBox9)
         Me.Controls.Add(Me.PictureBox10)
         Me.Controls.Add(Me.PictureBox11)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "DashBoard"
         Me.Text = "DashBoard"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
