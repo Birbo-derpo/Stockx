@@ -302,7 +302,7 @@ Public Class Machine
 
     Private Sub Cmb_Branch_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Cmb_Branch.SelectedIndexChanged
         ' Trigger the forecast display when the branch selection changes
-        Create_Click(sender, e)
+
     End Sub
 
     Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click

@@ -35,9 +35,10 @@ Partial Class Machine
         Me.Create.FlatAppearance.BorderColor = System.Drawing.Color.Red
         Me.Create.Font = New System.Drawing.Font("Arial", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Create.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Create.Location = New System.Drawing.Point(923, 92)
+        Me.Create.Location = New System.Drawing.Point(692, 75)
+        Me.Create.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Create.Name = "Create"
-        Me.Create.Size = New System.Drawing.Size(115, 41)
+        Me.Create.Size = New System.Drawing.Size(86, 33)
         Me.Create.TabIndex = 26
         Me.Create.Text = "PREDICT"
         Me.Create.UseVisualStyleBackColor = False
@@ -45,10 +46,11 @@ Partial Class Machine
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Bodoni MT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 3)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(9, 2)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(104, 27)
+        Me.Label1.Size = New System.Drawing.Size(95, 24)
         Me.Label1.TabIndex = 27
         Me.Label1.Text = "RESULT:"
         '
@@ -59,42 +61,44 @@ Partial Class Machine
         Me.Cmb_Branch.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Cmb_Branch.FormattingEnabled = True
         Me.Cmb_Branch.Items.AddRange(New Object() {"Bajada", "Davao", "Digos", "Kidapawan", "Tagum", "General Santos"})
-        Me.Cmb_Branch.Location = New System.Drawing.Point(764, 33)
-        Me.Cmb_Branch.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Cmb_Branch.Location = New System.Drawing.Point(573, 27)
+        Me.Cmb_Branch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Cmb_Branch.Name = "Cmb_Branch"
-        Me.Cmb_Branch.Size = New System.Drawing.Size(361, 31)
+        Me.Cmb_Branch.Size = New System.Drawing.Size(272, 26)
         Me.Cmb_Branch.TabIndex = 66
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(6, 33)
+        Me.RichTextBox1.Location = New System.Drawing.Point(4, 27)
+        Me.RichTextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(706, 919)
+        Me.RichTextBox1.Size = New System.Drawing.Size(530, 747)
         Me.RichTextBox1.TabIndex = 67
         Me.RichTextBox1.Text = ""
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Bodoni MT", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(718, 198)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(538, 161)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(133, 27)
+        Me.Label2.Size = New System.Drawing.Size(127, 24)
         Me.Label2.TabIndex = 68
         Me.Label2.Text = "ACCURACY:"
         '
         'Machine
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1224, 953)
+        Me.ClientSize = New System.Drawing.Size(918, 774)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Cmb_Branch)
         Me.Controls.Add(Me.Create)
         Me.Controls.Add(Me.RichTextBox1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Machine"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Machine"
         Me.TopMost = True
         Me.WindowState = System.Windows.Forms.FormWindowState.Minimized
