@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class AvailableStocks
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class AvailableStocks
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AvailableStocks))
         Me.Button1 = New System.Windows.Forms.Button()
@@ -52,6 +52,7 @@ Partial Class AvailableStocks
         Me.btnEdit = New System.Windows.Forms.Button()
         Me.btndelete = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.Grd_Motorcycle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -75,6 +76,7 @@ Partial Class AvailableStocks
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.MistyRose
+        Me.GroupBox1.Controls.Add(Me.CheckBox2)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.Btn_AvStock)
         Me.GroupBox1.Controls.Add(Me.Btn_Reserved)
@@ -383,6 +385,16 @@ Partial Class AvailableStocks
         Me.btnAdd.Text = "ADD"
         Me.btnAdd.UseVisualStyleBackColor = False
         '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(141, 0)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(100, 20)
+        Me.CheckBox2.TabIndex = 90
+        Me.CheckBox2.Text = "CHECK ALL"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
         'AvailableStocks
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -410,6 +422,7 @@ Partial Class AvailableStocks
         Me.Text = "AvailableStocks"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         CType(Me.Grd_Motorcycle, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -447,4 +460,5 @@ Partial Class AvailableStocks
     Friend WithEvents btnEdit As Button
     Friend WithEvents btndelete As Button
     Friend WithEvents btnAdd As Button
+    Friend WithEvents CheckBox2 As CheckBox
 End Class

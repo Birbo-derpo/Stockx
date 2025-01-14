@@ -1,4 +1,5 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Button
+Imports MySql.Data.MySqlClient
 
 Public Class TRANSIT
     Private Sub TRANSIT_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -220,4 +221,14 @@ Public Class TRANSIT
 
         PrcDisplayTransitUnits()
     End Sub
+
+    Private Sub CheckBox2_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox2.CheckedChanged
+        Dim isChecked As Boolean = CheckBox2.Checked
+
+        For Each row As DataGridViewRow In Grd_Motorcycle.Rows
+            ' Assuming the checkbox is in the first column (Column1)
+            row.Cells("Column8").Value = isChecked
+        Next
+    End Sub
+
 End Class

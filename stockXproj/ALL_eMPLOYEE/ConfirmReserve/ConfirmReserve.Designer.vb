@@ -33,10 +33,6 @@ Partial Class ConfirmReserve
         Me.Btn_back = New System.Windows.Forms.Button()
         Me.dt = New System.Windows.Forms.DateTimePicker()
         Me.grdMotorcycle = New System.Windows.Forms.DataGridView()
-        Me.lbl_Qunatity = New System.Windows.Forms.Label()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Column1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -45,6 +41,11 @@ Partial Class ConfirmReserve
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lbl_Qunatity = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         CType(Me.grdMotorcycle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -168,51 +169,6 @@ Partial Class ConfirmReserve
         Me.grdMotorcycle.Size = New System.Drawing.Size(1093, 251)
         Me.grdMotorcycle.TabIndex = 57
         '
-        'lbl_Qunatity
-        '
-        Me.lbl_Qunatity.AutoSize = True
-        Me.lbl_Qunatity.Location = New System.Drawing.Point(227, 195)
-        Me.lbl_Qunatity.Name = "lbl_Qunatity"
-        Me.lbl_Qunatity.Size = New System.Drawing.Size(76, 16)
-        Me.lbl_Qunatity.TabIndex = 58
-        Me.lbl_Qunatity.Text = "QUANTITY"
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox3.ErrorImage = Nothing
-        Me.PictureBox3.Location = New System.Drawing.Point(0, -3)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(211, 177)
-        Me.PictureBox3.TabIndex = 86
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackColor = System.Drawing.SystemColors.Control
-        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(0, -3)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(1922, 99)
-        Me.PictureBox2.TabIndex = 87
-        Me.PictureBox2.TabStop = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Firebrick
-        Me.Label2.Font = New System.Drawing.Font("Book Antiqua", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label2.Location = New System.Drawing.Point(217, 9)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(486, 73)
-        Me.Label2.TabIndex = 88
-        Me.Label2.Text = "RESERVATION"
-        '
         'Column1
         '
         Me.Column1.HeaderText = "SELECT"
@@ -284,12 +240,68 @@ Partial Class ConfirmReserve
         Me.Column8.Name = "Column8"
         Me.Column8.ReadOnly = True
         '
+        'lbl_Qunatity
+        '
+        Me.lbl_Qunatity.AutoSize = True
+        Me.lbl_Qunatity.Location = New System.Drawing.Point(227, 182)
+        Me.lbl_Qunatity.Name = "lbl_Qunatity"
+        Me.lbl_Qunatity.Size = New System.Drawing.Size(76, 16)
+        Me.lbl_Qunatity.TabIndex = 58
+        Me.lbl_Qunatity.Text = "QUANTITY"
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox3.ErrorImage = Nothing
+        Me.PictureBox3.Location = New System.Drawing.Point(0, -3)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(211, 177)
+        Me.PictureBox3.TabIndex = 86
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.SystemColors.Control
+        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox2.Location = New System.Drawing.Point(0, -3)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(1922, 99)
+        Me.PictureBox2.TabIndex = 87
+        Me.PictureBox2.TabStop = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Firebrick
+        Me.Label2.Font = New System.Drawing.Font("Book Antiqua", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label2.Location = New System.Drawing.Point(217, 9)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(486, 73)
+        Me.Label2.TabIndex = 88
+        Me.Label2.Text = "RESERVATION"
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(65, 215)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(97, 20)
+        Me.CheckBox1.TabIndex = 89
+        Me.CheckBox1.Text = "CheckBox1"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'ConfirmReserve
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Snow
         Me.ClientSize = New System.Drawing.Size(1371, 528)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.lbl_Qunatity)
@@ -338,4 +350,5 @@ Partial Class ConfirmReserve
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents CheckBox1 As CheckBox
 End Class

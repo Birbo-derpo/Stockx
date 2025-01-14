@@ -27,10 +27,16 @@ Public Class addMotorcycle
                 For Each row As DataRow In datUMTC.Rows
                     Dim model As String = row("Model").ToString()
                     If Not uniqueModels.Contains(model) Then
-                        Cmb_Model.Items.Add(model)
                         uniqueModels.Add(model)
-
                     End If
+                Next
+
+                ' Sort the models alphabetically
+                Dim sortedModels = uniqueModels.OrderBy(Function(model) model).ToList()
+
+                ' Add sorted models to ComboBox
+                For Each model As String In sortedModels
+                    Cmb_Model.Items.Add(model)
                 Next
             End If
 
@@ -41,12 +47,9 @@ Public Class addMotorcycle
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
         End Try
-
-
     End Sub
 
     Private Sub DisplayColor()
-
         ' Ensure there's a selected model in the ComboBox
         If Not String.IsNullOrEmpty(Cmb_Model.Text) Then
             ' Clear existing items in ComboBox
@@ -76,10 +79,6 @@ Public Class addMotorcycle
 
                         txtPrice.Text = row("Price").ToString()
                         txtPrice.ReadOnly = True
-
-
-
-
                     End If
                 Next
             End If
@@ -90,6 +89,7 @@ Public Class addMotorcycle
 
         End If
     End Sub
+
     Private Sub addMotorcycle_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Login_stat <> True Then
             Login.Show()
@@ -99,8 +99,8 @@ Public Class addMotorcycle
             DisplayModel()
             DisplayColor()
         End If
-
     End Sub
+
     Private Sub Btn_Add_Click(sender As Object, e As EventArgs) Handles Btn_Add.Click
         If Cmb_Model.Text <> "" And Cmb_Color.Text <> "" And txtPrice.Text <> "" And txtEngineNumber.Text <> "" And txtFrameNumber.Text <> "" And txtInvoiceNumber.Text <> "" Then
             Try
@@ -118,9 +118,8 @@ Public Class addMotorcycle
                         .Parameters.AddWithValue("@p_engine", txtEngineNumber.Text)
                         .Parameters.AddWithValue("@p_frame", txtFrameNumber.Text)
                         .ExecuteNonQuery()
-
-
                     End With
+
                     With command
                         .Parameters.Clear()
                         .CommandText = "prc_Record"
@@ -135,7 +134,7 @@ Public Class addMotorcycle
                         .Parameters.AddWithValue("@p_Employee", Username)
                         .ExecuteNonQuery()
                     End With
-                    MessageBox.Show("Record Successfully Save", "Saving Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show("Record Successfully Saved", "Saving Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 ElseIf action = "Edit" Then
 
                     With command
@@ -153,14 +152,11 @@ Public Class addMotorcycle
 
                         Dim result As DialogResult = MessageBox.Show("Are you sure you want to edit Motorcycle?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
-
                         If result = DialogResult.Yes Then
-
                             MainBranchInventory.Show()
                             Me.Close()
                         Else
                             Me.ShowDialog()
-
                         End If
                     End With
                     With command
@@ -177,23 +173,19 @@ Public Class addMotorcycle
                         .Parameters.AddWithValue("@p_Employee", Username)
                         .ExecuteNonQuery()
                     End With
-                    MessageBox.Show("Record Successfully Save", "Saving Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageBox.Show("Record Successfully Saved", "Saving Record", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Else
                     MessageBox.Show("Engine/Frame number already existed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 End If
-
-
             Catch ex As Exception
                 MessageBox.Show("" & ex.Message)
             End Try
         Else
-            MessageBox.Show("credentials missing", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("Credentials missing", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
-
     End Sub
 
     Private Sub Button_Clear_Click(sender As Object, e As EventArgs) Handles Btn_Clear.Click
-
         txtEngineNumber.Clear()
         txtFrameNumber.Clear()
         txtInvoiceNumber.Clear()
@@ -214,7 +206,6 @@ Public Class addMotorcycle
         Cmb_Model.SelectedIndex = -1
         DisplayModel()
         DisplayColor()
-
     End Sub
 
     'function methods
@@ -242,34 +233,26 @@ Public Class addMotorcycle
         sqlUMTCAdapter.Dispose()
         DataUMTC.Dispose()
         Try
-
         Catch ex As Exception
             MessageBox.Show("" & ex.Message)
         End Try
         Return result
     End Function
-
     'end function
 
     Private Sub Cmb_Model_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Cmb_Model.SelectedIndexChanged
-
         Cmb_Color.SelectedIndex = -1
-            txtPrice.Clear()
+        txtPrice.Clear()
 
-            If Cmb_Model.SelectedItem IsNot Nothing Then
-                selectedModel = Cmb_Model.SelectedItem.ToString()
-                DisplayColor()
-            End If
-
-
+        If Cmb_Model.SelectedItem IsNot Nothing Then
+            selectedModel = Cmb_Model.SelectedItem.ToString()
+            DisplayColor()
+        End If
     End Sub
 
     Private Sub Cmb_Color_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Cmb_Color.SelectedIndexChanged
-
         If Cmb_Color.SelectedItem IsNot Nothing Then
             selectedColor = Cmb_Color.SelectedItem.ToString()
-
         End If
-
     End Sub
 End Class

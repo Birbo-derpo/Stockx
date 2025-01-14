@@ -51,6 +51,8 @@ Partial Class Reserve
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         CType(Me.Grd_MotorcycleReserved, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -218,6 +220,8 @@ Partial Class Reserve
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.MistyRose
+        Me.GroupBox1.Controls.Add(Me.CheckBox1)
+        Me.GroupBox1.Controls.Add(Me.CheckBox2)
         Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.Btn_AvStock)
         Me.GroupBox1.Controls.Add(Me.Btn_Reserved)
@@ -356,6 +360,26 @@ Partial Class Reserve
         Me.Label3.TabIndex = 89
         Me.Label3.Text = "RESERVED " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "    UNITS"
         '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(73, 280)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(100, 20)
+        Me.CheckBox2.TabIndex = 91
+        Me.CheckBox2.Text = "CHECK ALL"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(141, 9)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(100, 20)
+        Me.CheckBox1.TabIndex = 91
+        Me.CheckBox1.Text = "CHECK ALL"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'Reserve
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -381,6 +405,7 @@ Partial Class Reserve
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.Grd_MotorcycleReserved, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -415,4 +440,6 @@ Partial Class Reserve
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents CheckBox1 As CheckBox
 End Class

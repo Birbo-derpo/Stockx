@@ -49,6 +49,7 @@ Partial Class TRANSIT
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         CType(Me.Grd_Motorcycle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -179,6 +180,7 @@ Partial Class TRANSIT
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.MistyRose
+        Me.GroupBox1.Controls.Add(Me.CheckBox2)
         Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.Btn_AvStock)
         Me.GroupBox1.Controls.Add(Me.Btn_Reserved)
@@ -340,6 +342,16 @@ Partial Class TRANSIT
         Me.Label2.TabIndex = 88
         Me.Label2.Text = "TRANSIT " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "  UNITS"
         '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(101, 10)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(100, 20)
+        Me.CheckBox2.TabIndex = 93
+        Me.CheckBox2.Text = "CHECK ALL"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
         'TRANSIT
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -364,6 +376,7 @@ Partial Class TRANSIT
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.Grd_Motorcycle, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -396,4 +409,5 @@ Partial Class TRANSIT
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents CheckBox2 As CheckBox
 End Class

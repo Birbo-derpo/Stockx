@@ -2,6 +2,7 @@
 Imports Microsoft.VisualBasic.ApplicationServices
 Imports MySql.Data.MySqlClient
 Imports Mysqlx.XDevAPI.Common
+Imports System.Security.Policy
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView
 
@@ -144,4 +145,14 @@ Public Class DashBoard
         End If
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+
+        Machine.ShowDialog()
+
+
+
+
+
+    End Sub
 End Class

@@ -234,4 +234,14 @@ Public Class Reserve
 
         PrcDisplayReservedUnits()
     End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        Dim isChecked As Boolean = CheckBox1.Checked
+
+        For Each row As DataGridViewRow In Grd_MotorcycleReserved.Rows
+            ' Assuming the checkbox is in the first column (Column1)
+            row.Cells("Column10").Value = isChecked
+        Next
+    End Sub
+
 End Class

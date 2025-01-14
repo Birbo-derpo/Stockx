@@ -239,6 +239,16 @@ Public Class AvailableStocks
         End If
     End Sub
 
+    Private Sub CheckBox2_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox2.CheckedChanged
+        Dim isChecked As Boolean = CheckBox2.Checked
+
+        For Each row As DataGridViewRow In Grd_Motorcycle.Rows
+            ' Assuming the checkbox is in the first column (Column1)
+            row.Cells("Column1").Value = isChecked
+        Next
+    End Sub
+
+
     'dataloader end
 
     'filter
